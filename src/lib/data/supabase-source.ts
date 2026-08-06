@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/static";
 import type {
   Comparable,
   EcoRating,
@@ -11,6 +12,7 @@ import type {
   Region,
 } from "@/lib/types";
 import type { PropertyFilters, ProfessionalFilters } from "./contract";
+import { SUBJECT_PROPERTY_ID as DEFAULT_SUBJECT_ID } from "./properties";
 
 /**
  * Supabase implementation of the data source.
@@ -167,6 +169,19 @@ export async function searchProperties(
   return (data ?? []).map(mapProperty);
 }
 
+/**
+ * Property ids for `generateStaticParams`.
+ *
+ * Uses the cookie-free client: this runs at build time, where there is no
+ * request and therefore no cookie store to read.
+ */
+export async function getPropertyIds(): Promise<string[]> {
+  const supabase = createStaticClient();
+  const { data, error } = await supabase.from("properties").select("id");
+  if (error) throw new Error(`getPropertyIds: ${error.message}`);
+  return (data ?? []).map((r: { id: string }) => r.id);
+}
+
 export async function getLocalities(): Promise<string[]> {
   const supabase = await createClient();
   const { data, error } = await supabase.from("properties").select("locality");
@@ -177,11 +192,25 @@ export async function getLocalities(): Promise<string[]> {
 /* --- Comparables -------------------------------------------------------- */
 
 /**
- * The subject under valuation. Until valuations are persisted per user, this is
- * the most recently listed verified property — a sensible default case file.
+ * The subject under valuation.
+ *
+ * Until valuations are persisted per user there is no real "current case", so
+ * this resolves the same designated record the seeded source uses — otherwise
+ * a local demo and the deployed site would open on different subjects, which is
+ * needlessly confusing. Falls back to the most recently listed verified
+ * property if that record is absent from the database.
  */
 export async function getSubjectProperty(): Promise<Property> {
   const supabase = await createClient();
+
+  const designated = await supabase
+    .from("properties")
+    .select(PROPERTY_SELECT)
+    .eq("id", DEFAULT_SUBJECT_ID)
+    .maybeSingle();
+
+  if (designated.data) return mapProperty(designated.data);
+
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)

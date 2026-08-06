@@ -84,6 +84,11 @@ export async function searchProperties(
   });
 }
 
+/** Property ids for `generateStaticParams`. */
+export async function getPropertyIds(): Promise<string[]> {
+  return properties.map((p) => p.id);
+}
+
 export async function getLocalities(): Promise<string[]> {
   return [...new Set(properties.map((p) => p.locality))].sort();
 }

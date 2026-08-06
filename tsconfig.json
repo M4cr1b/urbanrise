@@ -11,6 +11,9 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    // Node 24 runs the scripts/ TypeScript directly, and its resolver requires
+    // explicit .ts specifiers. Safe alongside noEmit — nothing is emitted.
+    "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [

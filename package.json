@@ -7,11 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "notion:sync": "tsx scripts/notion-sync.ts",
-    "notion:dry": "tsx scripts/notion-sync.ts --dry-run",
     "typecheck": "tsc --noEmit",
     "e2e": "playwright test",
-    "e2e:ui": "playwright test --ui"
+    "e2e:ui": "playwright test --ui",
+    "db:check": "node scripts/db.ts check",
+    "db:migrate": "node scripts/db.ts migrate",
+    "db:seed": "node scripts/db.ts seed",
+    "db:status": "node scripts/db.ts status",
+    "db:diagnose": "node scripts/diagnose.ts",
+    "notion:sync": "node scripts/notion-sync.ts",
+    "notion:dry": "node scripts/notion-sync.ts --dry-run"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
@@ -25,12 +30,13 @@
     "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.20.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
+    "pg": "^8.22.0",
     "tailwindcss": "^4",
-    "tsx": "^4.23.4",
     "typescript": "^5"
   }
 }

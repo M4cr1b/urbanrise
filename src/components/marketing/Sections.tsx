@@ -169,7 +169,13 @@ export function StatsBand({ stats }: { stats: NationalStats }) {
    Featured homes
    ------------------------------------------------------------------------ */
 
-export function PropertyCard({ property }: { property: Property }) {
+export function PropertyCard({
+  property,
+  priority = false,
+}: {
+  property: Property;
+  priority?: boolean;
+}) {
   return (
     <Link
       href={`/property/${property.id}`}
@@ -180,6 +186,9 @@ export function PropertyCard({ property }: { property: Property }) {
           src={property.images[0]}
           alt={`${property.type} at ${property.address}`}
           fill
+          // On phones the search card moves below the reveal, which pulls the
+          // first featured card up into the LCP slot.
+          priority={priority}
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -228,8 +237,8 @@ export function FeaturedHomes({ properties }: { properties: Property[] }) {
         </Link>
       </div>
       <div className="grid gap-gutter md:grid-cols-3">
-        {properties.map((p) => (
-          <PropertyCard key={p.id} property={p} />
+        {properties.map((p, i) => (
+          <PropertyCard key={p.id} property={p} priority={i === 0} />
         ))}
       </div>
     </section>

@@ -11,14 +11,16 @@ import {
 } from "@/components/ui/Badges";
 import { AddToShortlist } from "@/components/workbench/AddToShortlist";
 import { formatCedi, formatDate, formatSqm, pricePerSqm } from "@/lib/format";
-import { getLocalityMarket, getProperties, getPropertyById } from "@/lib/data";
+import { getLocalityMarket, getPropertyIds, getPropertyById } from "@/lib/data";
 
 // Next 16: params is a Promise.
 type Params = Promise<{ id: string }>;
 
 export async function generateStaticParams() {
-  const properties = await getProperties();
-  return properties.map((p) => ({ id: p.id }));
+  // getPropertyIds uses a cookie-free client — this runs at build time, where
+  // there is no request and `cookies()` would throw.
+  const ids = await getPropertyIds();
+  return ids.map((id) => ({ id }));
 }
 
 export async function generateMetadata({
