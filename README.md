@@ -98,21 +98,43 @@ on purpose. A table view is available on the market module for the same reason.
 
 ## Connecting Supabase
 
-1. Copy `.env.example` to `.env.local` and fill in the project URL and
-   publishable (anon) key. Keep the service-role key out of any `NEXT_PUBLIC_`
-   variable and out of version control.
-2. Apply the schema:
+1. Copy `.env.example` to `.env.local` and fill it in. The one people miss is
+   `SUPABASE_DB_URL`: the anon and service-role keys both go through PostgREST,
+   which **cannot execute DDL**, so neither can apply a migration. Schema work
+   needs a Postgres connection string.
+
+2. Apply the schema and load the dataset:
 
    ```bash
-   npx supabase db push          # or paste supabase/migrations/0001_init.sql
+   npm run db:check      # prove the connection works before anything else
+   npm run db:migrate    # apply supabase/migrations/*.sql in order
+   npm run db:seed       # load the Ghanaian dataset
+   npm run db:status     # row counts per table
    ```
 
-   It creates the tables, enables PostGIS with a GiST index on `properties.geom`,
-   adds the `comparables_within` radius-search function, and turns on row level
-   security: reference data is publicly readable (the platform exists to remove
-   information asymmetry), while valuations are private to their author.
+   The migration creates the tables, enables PostGIS with a GiST index on
+   `properties.geom`, adds the `comparables_within` radius-search function, and
+   turns on row level security: reference data is publicly readable (the
+   platform exists to remove information asymmetry), while valuations are
+   private to their author.
+
+   Migrations are recorded in `schema_migrations` and each runs in its own
+   transaction, so re-running is safe and a failure leaves no partial schema.
 
 3. Restart `npm run dev`. The data seam switches over automatically.
+
+### If the database will not connect
+
+```bash
+npm run db:diagnose
+```
+
+Reports which API keys authenticate and probes every Supavisor region for the
+one that owns the project. Worth knowing: **the direct-connection host
+(`db.<ref>.supabase.co`) is IPv6-only on current projects** and simply fails to
+resolve on most networks — the error is `ENOTFOUND`, which reads like a typo but
+is not. Use the **Session pooler** URI (port 5432). Transaction pooler (6543)
+does not handle DDL reliably.
 
 Optionally regenerate types once the schema is live:
 
@@ -146,6 +168,37 @@ opening the portal, no horizontal overflow at any scroll position, the
 reduced-motion fallback, the frozen subject column surviving a horizontal
 scroll, row alignment across every column, the shortlist → analysis → submit
 workflow gate, search filtering, and a console-error sweep of every route.
+
+## Deploying to Vercel
+
+Import the repository at [vercel.com/new](https://vercel.com/new). Framework and
+build settings are detected automatically; nothing needs overriding.
+
+Set these under **Settings → Environment Variables** (Production, Preview and
+Development). Without them the deployment still builds and runs — it falls back
+to the seeded dataset — so a site that looks fine but shows stale data usually
+means a variable is missing rather than broken.
+
+| Variable | Required | Notes |
+|---|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | yes | Bare project URL, e.g. `https://<ref>.supabase.co`. **No trailing path** — not `/rest/v1/`. |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | yes | Publishable / anon key. Reaches the browser by design; RLS is what protects the data. |
+| `SUPABASE_SERVICE_ROLE_KEY` | no | Only for `npm run notion:sync`. Bypasses RLS — never expose it to the client. |
+| `SUPABASE_DB_URL` | no | Migrations are run from a workstation, not from Vercel. Leave unset in the dashboard. |
+| `NOTION_*` | no | Ingestion runs locally. |
+
+Do not add `SUPABASE_DB_URL` to Vercel: the deployed app never needs direct
+Postgres access, and storing the database password where the build can read it
+buys nothing.
+
+### A note on rendering
+
+Every route currently renders dynamically (`ƒ` in the build output), because the
+Supabase server client reads cookies. That is correct but not free — the public
+pages (`/`, `/market`, `/green-hub`, `/professionals`) hit the database on every
+request when their data changes daily at most. Moving those to the cookie-free
+client in `src/lib/supabase/static.ts` with `export const revalidate` would let
+them cache. Worth doing before any real traffic; unnecessary for a prototype.
 
 ## Known gaps
 
