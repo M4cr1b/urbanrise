@@ -23,7 +23,10 @@ import { getFeaturedProperties, getNationalStats } from "@/lib/data";
 export const revalidate = 300;
 
 const HERO_IMAGE = {
-  src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwKKkk3HU99yBynzjFzLpauOpLnH0os43FtAtQTdysQolrLcpH1uPDHT2tp9_lJAmoKKKmT5iNoXWkUCY4Q8LecOAMiDgJ_Qkdth3KQxGKWJIUGMIAKdhniQyr1cmSdPQrnygJ42ml839xvKLz0_ZuSxVEhChIIvQ5X40PpW33Rxtv-alre_Kp4i5e0rmoBYYNNFayfthh05EoJilewOzASQgPOyI5tAabqKjDaxK72_TfKujVqyI",
+  // Served from public/ rather than Google's CDN: the aida-public URLs are
+  // generated assets with no durability guarantee, and this is the first thing
+  // every visitor sees.
+  src: "/hero-eco-home.webp",
   alt: "A sustainable eco-home in Ghana with lush green walls, rooftop solar panels and large glass windows, overlooking the Accra skyline.",
 };
 

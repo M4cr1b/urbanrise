@@ -28,8 +28,21 @@ type Params = Promise<{ id: string }>;
 export async function generateStaticParams() {
   // getPropertyIds uses a cookie-free client — this runs at build time, where
   // there is no request and `cookies()` would throw.
-  const ids = await getPropertyIds();
-  return ids.map((id) => ({ id }));
+  try {
+    const ids = await getPropertyIds();
+    return ids.map((id) => ({ id }));
+  } catch (error) {
+    // Prerendering listings is an optimisation, not a requirement: without this
+    // list the pages simply render on first request instead. Failing the whole
+    // deployment because the database was briefly unreachable during the build
+    // trades a small performance win for an outage, which is the wrong way
+    // round. Logged loudly so a persistent misconfiguration is still visible.
+    console.error(
+      "[property] Could not prerender listing pages; they will render on demand.",
+      error instanceof Error ? error.message : error,
+    );
+    return [];
+  }
 }
 
 export async function generateMetadata({

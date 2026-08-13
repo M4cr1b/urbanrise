@@ -15,7 +15,17 @@ const GREYWATER: GreenFeature = { label: "Greywater recycling", icon: "recycle" 
 const GREEN_WALL: GreenFeature = { label: "Living green wall", icon: "leaf" };
 const BATTERY: GreenFeature = { label: "Battery storage", icon: "battery-charging" };
 
-const IMG = (id: string) => `https://images.unsplash.com/photo-${id}?w=1400&q=75`;
+/**
+ * Listing photography is served from `public/`, not from a third-party host.
+ *
+ * These originally pointed at images.unsplash.com. Next's image optimiser
+ * fetches each one server-side, so a single page view fanned out into several
+ * outbound requests; under the concurrency of a test run or a burst of traffic
+ * Unsplash rate-limits, the optimiser returns 500, and listings render with
+ * empty frames. `scripts/localise-images.ts` pulled them local — keep them
+ * that way.
+ */
+const IMG = (id: string) => `/properties/seed/${id}.webp`;
 
 export const properties: Property[] = [
   // ---- The subject property under valuation ------------------------------

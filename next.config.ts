@@ -2,13 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    // `images.domains` is removed in Next 16 — remotePatterns is the only route.
-    remotePatterns: [
-      // Imagery carried over from the approved design-system mockup.
-      { protocol: "https", hostname: "lh3.googleusercontent.com" },
-      // Property photography for the seeded listings.
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
+    // Every image is now served from public/, so no remote host needs to be
+    // allowed. Keeping this empty is the point: the optimiser can only reach
+    // assets in this deployment, which removes a third party from the render
+    // path and with it the rate-limit failures that produced blank listings.
+    remotePatterns: [],
   },
 };
 
