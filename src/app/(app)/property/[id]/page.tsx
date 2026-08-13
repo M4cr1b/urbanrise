@@ -13,6 +13,15 @@ import { AddToShortlist } from "@/components/workbench/AddToShortlist";
 import { formatCedi, formatDate, formatSqm, pricePerSqm } from "@/lib/format";
 import { getLocalityMarket, getPropertyIds, getPropertyById } from "@/lib/data";
 
+
+/**
+ * Reference data changes on the order of days, not seconds, so the page is
+ * rendered once and reused for five minutes rather than querying Supabase on
+ * every request. Without this each visit opened a fresh connection, which the
+ * database refuses under concurrency.
+ */
+export const revalidate = 300;
+
 // Next 16: params is a Promise.
 type Params = Promise<{ id: string }>;
 

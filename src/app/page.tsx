@@ -13,6 +13,15 @@ import {
 import { PortalReveal } from "@/components/scroll/PortalReveal";
 import { getFeaturedProperties, getNationalStats } from "@/lib/data";
 
+
+/**
+ * Reference data changes on the order of days, not seconds, so the page is
+ * rendered once and reused for five minutes rather than querying Supabase on
+ * every request. Without this each visit opened a fresh connection, which the
+ * database refuses under concurrency.
+ */
+export const revalidate = 300;
+
 const HERO_IMAGE = {
   src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwKKkk3HU99yBynzjFzLpauOpLnH0os43FtAtQTdysQolrLcpH1uPDHT2tp9_lJAmoKKKmT5iNoXWkUCY4Q8LecOAMiDgJ_Qkdth3KQxGKWJIUGMIAKdhniQyr1cmSdPQrnygJ42ml839xvKLz0_ZuSxVEhChIIvQ5X40PpW33Rxtv-alre_Kp4i5e0rmoBYYNNFayfthh05EoJilewOzASQgPOyI5tAabqKjDaxK72_TfKujVqyI",
   alt: "A sustainable eco-home in Ghana with lush green walls, rooftop solar panels and large glass windows, overlooking the Accra skyline.",

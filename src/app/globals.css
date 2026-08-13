@@ -190,6 +190,100 @@
   }
 }
 
+/* ============================================================================
+   Accessibility and touch
+   ========================================================================= */
+
+@layer base {
+  /* A single visible focus treatment everywhere. Keyboard users need to see
+     where they are; `:focus-visible` keeps it off mouse clicks. */
+  :focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Coarse pointers get the 44px minimum touch target the platform HIGs ask
+     for. Applied by input type rather than globally so dense desktop tables
+     are not forced to grow. */
+  @media (pointer: coarse) {
+    button,
+    a[role="button"],
+    [type="button"],
+    [type="submit"],
+    select,
+    summary {
+      min-height: 44px;
+    }
+    /* Opt-out for controls inside a data grid, where 44px would wreck the
+       row rhythm and the target is already large horizontally. */
+    .dense-touch button,
+    .dense-touch a[role="button"] {
+      min-height: 0;
+    }
+  }
+
+  /* Honour the OS motion preference globally, not just in the reveal. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Visible only to screen readers, and to sighted keyboard users on focus. */
+@utility sr-only-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  &:focus {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 100;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    overflow: visible;
+    clip-path: none;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Skeleton shimmer for loading states. */
+@utility skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-container) 25%,
+    var(--color-surface-container-high) 37%,
+    var(--color-surface-container) 63%
+  );
+  background-size: 400% 100%;
+  animation: ur-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes ur-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
 /* The comparables matrix is very wide; keep its scrollbar unobtrusive. */
 @utility scrollbar-slim {
   scrollbar-width: thin;

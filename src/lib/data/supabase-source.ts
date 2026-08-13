@@ -1,5 +1,22 @@
-import { createClient } from "@/lib/supabase/server";
 import { createStaticClient } from "@/lib/supabase/static";
+
+/**
+ * Every read below is public reference data — listings, professionals,
+ * materials, market statistics. None of it is scoped to a signed-in user, so
+ * none of it needs the cookie-bound client.
+ *
+ * That distinction is not cosmetic. Reading `cookies()` opts a route out of
+ * caching entirely, so with the session client every page render hit Supabase
+ * afresh. Under even light concurrency the connection times out and the page
+ * 500s — which is exactly what the test suite caught. Reading anonymously lets
+ * these routes be cached and revalidated on a timer instead.
+ *
+ * When per-user data arrives (a valuer's saved valuations), that query — and
+ * only that query — takes the session client from `@/lib/supabase/server`.
+ */
+function db() {
+  return createStaticClient();
+}
 import type {
   Comparable,
   EcoRating,
@@ -98,7 +115,7 @@ function mapProperty(row: any): Property {
 /* --- Properties --------------------------------------------------------- */
 
 export async function getProperties(): Promise<Property[]> {
-  const supabase = await createClient();
+  const supabase = db();
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
@@ -109,7 +126,7 @@ export async function getProperties(): Promise<Property[]> {
 }
 
 export async function getPropertyById(id: string): Promise<Property | null> {
-  const supabase = await createClient();
+  const supabase = db();
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
@@ -121,7 +138,7 @@ export async function getPropertyById(id: string): Promise<Property | null> {
 }
 
 export async function getFeaturedProperties(): Promise<Property[]> {
-  const supabase = await createClient();
+  const supabase = db();
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
@@ -139,7 +156,7 @@ const ECO_ORDER: EcoRating[] = ["A", "B", "C", "D", "E", "F", "G"];
 export async function searchProperties(
   filters: PropertyFilters = {},
 ): Promise<Property[]> {
-  const supabase = await createClient();
+  const supabase = db();
   let q = supabase.from("properties").select(PROPERTY_SELECT);
 
   if (filters.locality && filters.locality !== "All")
@@ -176,14 +193,14 @@ export async function searchProperties(
  * request and therefore no cookie store to read.
  */
 export async function getPropertyIds(): Promise<string[]> {
-  const supabase = createStaticClient();
+  const supabase = db();
   const { data, error } = await supabase.from("properties").select("id");
   if (error) throw new Error(`getPropertyIds: ${error.message}`);
   return (data ?? []).map((r: { id: string }) => r.id);
 }
 
 export async function getLocalities(): Promise<string[]> {
-  const supabase = await createClient();
+  const supabase = db();
   const { data, error } = await supabase.from("properties").select("locality");
   if (error) throw new Error(`getLocalities: ${error.message}`);
   return [...new Set((data ?? []).map((r: any) => r.locality as string))].sort();
@@ -201,7 +218,7 @@ export async function getLocalities(): Promise<string[]> {
  * property if that record is absent from the database.
  */
 export async function getSubjectProperty(): Promise<Property> {
-  const supabase = await createClient();
+  const supabase = db();
 
   const designated = await supabase
     .from("properties")
@@ -227,7 +244,7 @@ export async function getSubjectProperty(): Promise<Property> {
 export async function getComparables(
   subjectId?: string,
 ): Promise<Comparable[]> {
-  const supabase = await createClient();
+  const supabase = db();
   const id = subjectId ?? (await getSubjectProperty()).id;
 
   // PostGIS does the distance work — ST_DWithin on the GiST index.
@@ -263,7 +280,7 @@ export async function getComparables(
 export async function getProfessionals(
   filters: ProfessionalFilters = {},
 ): Promise<Professional[]> {
-  const supabase = await createClient();
+  const supabase = db();
   let q = supabase.from("professionals").select("*");
 
   if (filters.discipline && filters.discipline !== "All")
@@ -299,7 +316,7 @@ export async function getProfessionals(
 /* --- Market intelligence ------------------------------------------------ */
 
 export async function getLocalityMarkets(): Promise<LocalityMarket[]> {
-  const supabase = await createClient();
+  const supabase = db();
   const { data, error } = await supabase
     .from("market_stats")
     .select("*")
@@ -362,7 +379,7 @@ export async function getNationalStats() {
 /* --- Green Building Hub ------------------------------------------------- */
 
 export async function getMaterials(): Promise<GreenMaterial[]> {
-  const supabase = await createClient();
+  const supabase = db();
   const { data, error } = await supabase
     .from("green_materials")
     .select("*, suppliers ( name )")

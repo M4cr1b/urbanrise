@@ -2,7 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Check, ImageIcon, MapPin, Plus, ShieldCheck } from "lucide-react";
+import {
+  Check,
+  ImageIcon,
+  MapPin,
+  MoveHorizontal,
+  Plus,
+  ShieldCheck,
+} from "lucide-react";
 import type { ReactNode } from "react";
 import { StatusChip, TitleStatusText } from "@/components/ui/Badges";
 import {
@@ -53,7 +60,7 @@ const ROWS: Row[] = [
     label: "Asking price",
     startsGroup: true,
     value: (p) => (
-      <span className="flex flex-col items-end">
+      <span className="flex flex-col md:items-end">
         <span className="font-semibold">{formatCedi(p.askingPrice)}</span>
         <span className="text-[11px] font-normal text-on-surface-variant">
           Listed {formatDate(p.listedDate)}
@@ -67,7 +74,7 @@ const ROWS: Row[] = [
       const last = p.saleHistory[0];
       if (!last) return dash;
       return (
-        <span className="flex flex-col items-end">
+        <span className="flex flex-col md:items-end">
           <span className="font-semibold">{formatCedi(last.price)}</span>
           <span className="text-[11px] font-normal text-on-surface-variant">
             {formatDate(last.date)}
@@ -115,7 +122,7 @@ const ROWS: Row[] = [
         dash
       ) : (
         <span
-          className="text-right text-[11px] leading-tight"
+          className="text-[11px] leading-tight md:text-right"
           title={p.greenFeatures.map((f) => f.label).join(", ")}
         >
           {p.greenFeatures.length} listed
@@ -128,7 +135,7 @@ const ROWS: Row[] = [
   {
     label: "Agent",
     value: (p) => (
-      <span className="flex flex-col items-end text-right">
+      <span className="flex flex-col text-left md:items-end md:text-right">
         <span>{p.agent.firm}</span>
         <span className="text-[11px] font-normal text-on-surface-variant">
           {p.agent.phone}
@@ -157,8 +164,20 @@ const ROWS: Row[] = [
 
 /* ------------------------------------------------------------------------ */
 
-const SUBJECT_W = 280;
-const COL_W = 240;
+/**
+ * Column widths are CSS variables rather than constants so they can shrink on
+ * small screens.
+ *
+ * At the desktop 280/240 a 390px phone shows the frozen subject column and a
+ * sliver of the first comparable — the matrix becomes unreadable exactly where
+ * horizontal scrolling is most awkward. Narrower columns fit the subject plus a
+ * full comparable side by side, which is the minimum for the grid to be doing
+ * its job at all.
+ */
+const COLUMN_VARS =
+  "[--ur-subject-w:150px] [--ur-col-w:150px] " +
+  "sm:[--ur-subject-w:210px] sm:[--ur-col-w:190px] " +
+  "md:[--ur-subject-w:280px] md:[--ur-col-w:240px]";
 
 /** Label-left / value-right cell — the reference repeats labels in every column. */
 function Cell({
@@ -176,14 +195,21 @@ function Cell({
 }) {
   return (
     <div
-      className={`flex items-start justify-between gap-2 border-r border-outline-variant/40 px-3 py-2 font-data text-data-sm ${
+      // Stacked below md, label-left/value-right from md up. At a 150px column
+      // the two cannot sit side by side — they collide, and the value wraps
+      // mid-figure. Stacking keeps every cell readable at phone width and the
+      // row heights still align, because the grid sizes rows across all
+      // columns at once.
+      className={`flex flex-col gap-0.5 border-r border-outline-variant/40 px-2 py-2 font-data text-[12px] md:flex-row md:items-start md:justify-between md:gap-2 md:px-3 md:text-data-sm ${
         striped ? "bg-surface-container-low" : "bg-surface-container-lowest"
       } ${startsGroup ? "border-t-2 border-t-outline-variant" : "border-t border-t-outline-variant/25"} ${
         sticky ? "sticky left-0 z-10" : ""
       }`}
     >
-      <span className="shrink-0 text-on-surface-variant">{label}</span>
-      <span className="min-w-0 text-right font-medium text-on-surface">
+      <span className="text-[11px] text-on-surface-variant md:shrink-0 md:text-data-sm">
+        {label}
+      </span>
+      <span className="min-w-0 font-medium text-on-surface md:text-right">
         {children}
       </span>
     </div>
@@ -199,10 +225,18 @@ export function ComparablesGrid({
 }) {
   const { has, toggle } = useShortlist();
 
-  const columns = `${SUBJECT_W}px repeat(${comparables.length}, ${COL_W}px)`;
+  const columns = `var(--ur-subject-w) repeat(${comparables.length}, var(--ur-col-w))`;
 
   return (
-    <div className="h-full overflow-auto scrollbar-slim">
+    <div className={`dense-touch h-full overflow-auto scrollbar-slim ${COLUMN_VARS}`}>
+      {/* Horizontal scroll is not obvious on a touch screen when the visible
+          columns already look like a complete table. */}
+      <p className="sticky left-0 z-40 flex items-center gap-1.5 bg-surface-container px-3 py-1.5 font-data text-[11px] text-on-surface-variant md:hidden">
+        <MoveHorizontal className="size-3.5 shrink-0" aria-hidden />
+        Swipe to compare {comparables.length} properties · subject column stays
+        fixed
+      </p>
+
       <div className="grid w-max" style={{ gridTemplateColumns: columns }}>
         {/* ---- Address band (sticks to the top while attributes scroll) --- */}
         <div className="sticky left-0 top-0 z-30 flex h-16 flex-col justify-center border-r border-white/10 bg-primary px-3 text-inverse-on-surface">

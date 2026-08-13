@@ -51,3 +51,4 @@ next-env.d.ts
 # local dev logs
 e2e-run.log
 dev*.log
+.shots/

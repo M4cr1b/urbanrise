@@ -35,6 +35,63 @@ const UTILITIES = [
   { href: "/professionals", label: "Legal", icon: ScrollText },
 ];
 
+/** Shared by both layouts so "which module am I in" cannot drift between them. */
+function useIsActive() {
+  const pathname = usePathname();
+  return (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+}
+
+/**
+ * Bottom tab bar for phones.
+ *
+ * Replaces the vertical rail below `md`. Five destinations is the practical
+ * ceiling for a thumb-reachable bar, which is exactly the number of modules —
+ * the utility links live in the footer of each page instead, since Help and
+ * Legal are not things you navigate to mid-task.
+ *
+ * `safe-area-inset-bottom` keeps the row clear of the iOS home indicator.
+ */
+export function ModuleTabBar() {
+  const isActive = useIsActive();
+
+  return (
+    <nav
+      aria-label="Modules"
+      className="border-t border-white/10 bg-primary pb-[env(safe-area-inset-bottom)]"
+    >
+      <ul className="flex">
+        {MODULES.map(({ href, label, icon: Icon }) => {
+          const active = isActive(href);
+          return (
+            <li key={label} className="flex-1">
+              <Link
+                href={href}
+                aria-current={active ? "page" : undefined}
+                className={`flex min-h-[56px] flex-col items-center justify-center gap-1 px-1 py-2 text-center transition-colors ${
+                  active
+                    ? "text-on-primary-container"
+                    : "text-primary-fixed-dim active:bg-white/10"
+                }`}
+              >
+                <Icon className="size-5 shrink-0" aria-hidden />
+                <span className="text-[10px] font-semibold leading-none tracking-tight">
+                  {label}
+                </span>
+                {/* An underline rather than a filled block: at this size a
+                    filled active state swamps the four inactive tabs. */}
+                <span
+                  aria-hidden
+                  className={`h-0.5 w-6 rounded-full ${active ? "bg-on-primary-container" : "bg-transparent"}`}
+                />
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+}
+
 export function ModuleRail() {
   const pathname = usePathname();
 
