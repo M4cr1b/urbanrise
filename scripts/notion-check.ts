@@ -53,6 +53,11 @@ async function main() {
   console.log(
     `token valid — integration "${who.name ?? who.bot?.owner?.type ?? "unknown"}"`,
   );
+  // The workspace matters: an integration can only ever see content in the
+  // workspace it was created in. Sharing from a different workspace silently
+  // does nothing, which looks identical to not having shared at all.
+  console.log(`workspace:  ${who.bot?.workspace_name ?? "(not reported)"}`);
+  console.log(`owner type: ${who.bot?.owner?.type ?? "(unknown)"}`);
 
   // What can it see? Only content explicitly shared with the integration.
   const search = await fetch("https://api.notion.com/v1/search", {
@@ -103,10 +108,13 @@ async function main() {
   if (pages.length > 0) {
     console.log(`\npages (not databases): ${pages.length}`);
     for (const p of pages.slice(0, 10)) {
+      // A page's title lives in whichever property is of type `title`, so it
+      // has to be found by shape rather than by a known key.
+      type TitleProp = { title?: { plain_text: string }[] };
       const title =
         Object.values(p.properties ?? {})
-          .flatMap((v: any) => v?.title ?? [])
-          .map((t: { plain_text: string }) => t.plain_text)
+          .flatMap((v) => (v as TitleProp)?.title ?? [])
+          .map((t) => t.plain_text)
           .join("") || "(untitled)";
       console.log(`  - ${title}  ${p.url ?? ""}`);
     }
