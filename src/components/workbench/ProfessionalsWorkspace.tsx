@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
+
 import { useMemo, useState } from "react";
 import { Mail, Phone, Search, ShieldCheck } from "lucide-react";
 import type { Discipline, Professional, Region } from "@/lib/types";
+import { IS_SINGLE_REGION, PRIMARY_REGION } from "@/lib/regions";
 
 /**
  * The directory of estate professionals.
@@ -68,8 +71,8 @@ export function ProfessionalsWorkspace({
           Find a Professional
         </h1>
         <p className="mt-1 text-body-md text-on-surface-variant">
-          Verified surveyors, valuers, lawyers, architects and engineers across
-          Ghana.
+          Verified surveyors, valuers, lawyers, architects and engineers in{" "}
+          {PRIMARY_REGION}.
         </p>
       </header>
 
@@ -104,12 +107,16 @@ export function ProfessionalsWorkspace({
           value={discipline}
           onChange={(v) => setDiscipline(v as Discipline | "All")}
         />
-        <FilterRow
-          label="Region"
-          options={REGIONS}
-          value={region}
-          onChange={(v) => setRegion(v as Region | "All")}
-        />
+        {/* Only worth offering once coverage spans more than one region;
+            until then every option but one returns nothing. */}
+        {!IS_SINGLE_REGION && (
+          <FilterRow
+            label="Region"
+            options={REGIONS}
+            value={region}
+            onChange={(v) => setRegion(v as Region | "All")}
+          />
+        )}
       </div>
 
       <p className="mb-3 font-data text-data-sm text-on-surface-variant">
@@ -126,34 +133,67 @@ export function ProfessionalsWorkspace({
           {results.map((p) => (
             <li
               key={p.id}
-              className="rounded-md border border-outline-variant/60 bg-surface-container-lowest p-5"
+              className="overflow-hidden rounded-md border border-outline-variant/60 bg-surface-container-lowest"
             >
-              <div className="flex items-start justify-between gap-2">
-                <div>
-                  <h2 className="font-headline text-headline-md text-primary">
-                    {p.name}
-                  </h2>
+              {/* Photograph first: engaging a valuer or lawyer is a personal
+                  decision, and a wall of names tells you nothing about who you
+                  would be dealing with. */}
+              <div className="flex gap-4 p-5">
+                <div className="relative size-20 shrink-0 overflow-hidden rounded-full bg-surface-container ring-1 ring-outline-variant/40 sm:size-24">
+                  {p.photoUrl ? (
+                    <Image
+                      src={p.photoUrl}
+                      alt={`${p.name}, ${p.discipline}`}
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  ) : (
+                    // Monogram for members who have not uploaded a photograph.
+                    // Brand-toned rather than grey, so it reads as a designed
+                    // state and not a broken image.
+                    <span className="flex size-full items-center justify-center bg-primary-container font-headline text-headline-md text-on-primary-container">
+                      {p.name
+                        .split(" ")
+                        .filter(Boolean)
+                        .map((w) => w[0])
+                        .slice(0, 2)
+                        .join("")}
+                    </span>
+                  )}
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="min-w-0">
+                      <h2 className="font-headline text-headline-md text-primary">
+                        {p.name}
+                      </h2>
+                      <p className="font-data text-data-sm text-on-surface-variant">
+                        {p.firm}
+                      </p>
+                    </div>
+                    {p.verified && (
+                      <span
+                        className="flex shrink-0 items-center gap-1 rounded-sm bg-secondary-container px-2 py-1 text-label-caps text-on-secondary-fixed"
+                        title="Registration confirmed with the professional body"
+                      >
+                        <ShieldCheck className="size-3.5" aria-hidden />
+                        Registered
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="mt-2 font-data text-data-sm font-medium text-on-surface">
+                    {p.discipline}
+                  </p>
                   <p className="font-data text-data-sm text-on-surface-variant">
-                    {p.firm}
+                    {p.yearsExperience} years · {p.licenceNo}
                   </p>
                 </div>
-                {p.verified && (
-                  <span
-                    className="flex shrink-0 items-center gap-1 rounded-sm bg-secondary-container px-2 py-1 text-label-caps text-on-secondary-fixed"
-                    title="Registration confirmed with the professional body"
-                  >
-                    <ShieldCheck className="size-3.5" aria-hidden />
-                    Registered
-                  </span>
-                )}
               </div>
 
-              <p className="mt-3 font-data text-data-sm font-medium text-on-surface">
-                {p.discipline}
-              </p>
-              <p className="font-data text-data-sm text-on-surface-variant">
-                {p.region} · {p.yearsExperience} years · {p.licenceNo}
-              </p>
+              <div className="px-5 pb-5">
 
               <ul className="mt-3 flex flex-wrap gap-1.5">
                 {p.specialisms.map((s) => (
@@ -181,6 +221,7 @@ export function ProfessionalsWorkspace({
                   <Mail className="size-3.5" aria-hidden />
                   Email
                 </a>
+                </div>
               </div>
             </li>
           ))}

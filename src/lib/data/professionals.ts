@@ -17,6 +17,7 @@ export const professionals: Professional[] = [
     specialisms: ["Residential valuation", "Mortgage security", "Compensation"],
     phone: "+233 30 276 1140",
     email: "k.asante@asantepartners.com.gh",
+    photoUrl: "/professionals/pro-001.webp",
   },
   {
     id: "PRO-002",
@@ -30,6 +31,7 @@ export const professionals: Professional[] = [
     specialisms: ["Residential valuation", "Green building assessment"],
     phone: "+233 30 279 3366",
     email: "efua@danquahvaluation.gh",
+    photoUrl: "/professionals/pro-002.webp",
   },
   {
     id: "PRO-003",
@@ -43,6 +45,7 @@ export const professionals: Professional[] = [
     specialisms: ["Kumasi residential", "New developments"],
     phone: "+233 32 202 6600",
     email: "sarpong@ashantihomes.gh",
+    photoUrl: "/professionals/pro-003.webp",
   },
   {
     id: "PRO-004",
@@ -56,6 +59,7 @@ export const professionals: Professional[] = [
     specialisms: ["Estate sales", "Off-plan"],
     phone: "+233 30 281 7700",
     email: "a.owusu@regimanuelgray.com",
+    photoUrl: "/professionals/pro-004.webp",
   },
   {
     id: "PRO-005",
@@ -69,6 +73,7 @@ export const professionals: Professional[] = [
     specialisms: ["Conveyancing", "Land title perfection", "Customary land"],
     phone: "+233 30 266 4410",
     email: "narmah@quayelegal.gh",
+    photoUrl: "/professionals/pro-005.webp",
   },
   {
     id: "PRO-006",
@@ -82,6 +87,7 @@ export const professionals: Professional[] = [
     specialisms: ["Conveyancing", "Landlord & tenant"],
     phone: "+233 32 204 8811",
     email: "adjoa@bediakochambers.gh",
+    photoUrl: "/professionals/pro-006.webp",
   },
   {
     id: "PRO-007",
@@ -95,6 +101,7 @@ export const professionals: Professional[] = [
     specialisms: ["Passive cooling", "EDGE certification", "Residential"],
     phone: "+233 30 277 2255",
     email: "selorm@nyahodesign.gh",
+    photoUrl: "/professionals/pro-007.webp",
   },
   {
     id: "PRO-008",
@@ -108,6 +115,7 @@ export const professionals: Professional[] = [
     specialisms: ["Foundations on expansive soils", "Structural surveys"],
     phone: "+233 30 275 9080",
     email: "yaw@boakyestructures.gh",
+    photoUrl: "/professionals/pro-008.webp",
   },
   {
     id: "PRO-009",
@@ -121,6 +129,7 @@ export const professionals: Professional[] = [
     specialisms: ["Cost planning", "Green material substitution"],
     phone: "+233 30 278 6633",
     email: "comfort@adjeicost.gh",
+    photoUrl: "/professionals/pro-009.webp",
   },
   {
     id: "PRO-010",
@@ -134,6 +143,7 @@ export const professionals: Professional[] = [
     specialisms: ["Residential blocks", "Service charge"],
     phone: "+233 30 280 1919",
     email: "kofi@meridianpm.gh",
+    photoUrl: "/professionals/pro-010.webp",
   },
   {
     id: "PRO-011",
@@ -147,6 +157,7 @@ export const professionals: Professional[] = [
     specialisms: ["First-time buyers", "Diaspora mortgages", "Green mortgages"],
     phone: "+233 30 261 0000",
     email: "akua.frimpong@stanbic.com.gh",
+    photoUrl: "/professionals/pro-011.webp",
   },
   {
     id: "PRO-012",
@@ -160,6 +171,7 @@ export const professionals: Professional[] = [
     specialisms: ["Residential valuation", "Rural land"],
     phone: "+233 37 202 4477",
     email: "i.mahama@nva.gh",
+    photoUrl: "/professionals/pro-012.webp",
   },
   {
     id: "PRO-013",
@@ -173,6 +185,7 @@ export const professionals: Professional[] = [
     specialisms: ["Coastal construction", "Corrosion mitigation"],
     phone: "+233 31 202 3355",
     email: "gifty@asamoaheng.gh",
+    photoUrl: "/professionals/pro-013.webp",
   },
   {
     id: "PRO-014",
@@ -186,5 +199,6 @@ export const professionals: Professional[] = [
     specialisms: ["Short-let management"],
     phone: "+233 24 553 1200",
     email: "e.tetteh@tettehfacilities.gh",
+    photoUrl: "/professionals/pro-014.webp",
   },
 ];

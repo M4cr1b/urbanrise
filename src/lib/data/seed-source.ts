@@ -13,6 +13,19 @@ import {
 import { professionals } from "./professionals";
 import { materials } from "./materials";
 import { localityMarkets, nationalStats } from "./market";
+import { isActiveRegion } from "@/lib/regions";
+
+/**
+ * Only records inside the covered region reach the interface.
+ *
+ * Filtered once here rather than at each call site, so a new query cannot
+ * accidentally leak an out-of-scope record — and so widening coverage is a
+ * change to `ACTIVE_REGIONS` alone.
+ */
+const inScope = properties.filter((p) => isActiveRegion(p.region));
+const prosInScope = professionals.filter((p) => isActiveRegion(p.region));
+const marketsInScope = localityMarkets.filter((m) => isActiveRegion(m.region));
+const materialsInScope = materials.filter((m) => isActiveRegion(m.region));
 
 /**
  * Seeded implementation of the data source.
@@ -31,16 +44,16 @@ export async function getNationalStats() {
 // ---------------------------------------------------------------------------
 
 export async function getProperties(): Promise<Property[]> {
-  return properties;
+  return inScope;
 }
 
 export async function getPropertyById(id: string): Promise<Property | null> {
-  return properties.find((p) => p.id === id) ?? null;
+  return inScope.find((p) => p.id === id) ?? null;
 }
 
 export async function getFeaturedProperties(): Promise<Property[]> {
   return FEATURED_PROPERTY_IDS.map(
-    (id) => properties.find((p) => p.id === id)!,
+    (id) => inScope.find((p) => p.id === id)!,
   ).filter(Boolean);
 }
 
@@ -64,7 +77,7 @@ export async function searchProperties(
 
   const ecoCeiling = minEcoRating ? ECO_ORDER.indexOf(minEcoRating) : null;
 
-  return properties.filter((p) => {
+  return inScope.filter((p) => {
     if (locality && locality !== "All" && p.locality !== locality) return false;
     if (type && type !== "All" && p.type !== type) return false;
     if (minBeds != null && p.bedrooms < minBeds) return false;
@@ -86,11 +99,11 @@ export async function searchProperties(
 
 /** Property ids for `generateStaticParams`. */
 export async function getPropertyIds(): Promise<string[]> {
-  return properties.map((p) => p.id);
+  return inScope.map((p) => p.id);
 }
 
 export async function getLocalities(): Promise<string[]> {
-  return [...new Set(properties.map((p) => p.locality))].sort();
+  return [...new Set(inScope.map((p) => p.locality))].sort();
 }
 
 // ---------------------------------------------------------------------------
@@ -115,17 +128,17 @@ function haversineKm(a: [number, number], b: [number, number]): number {
 }
 
 export async function getSubjectProperty(): Promise<Property> {
-  return properties.find((p) => p.id === SUBJECT_PROPERTY_ID)!;
+  return inScope.find((p) => p.id === SUBJECT_PROPERTY_ID)!;
 }
 
 /** Comparable evidence for a subject, nearest first. */
 export async function getComparables(
   subjectId: string = SUBJECT_PROPERTY_ID,
 ): Promise<Comparable[]> {
-  const subject = properties.find((p) => p.id === subjectId);
+  const subject = inScope.find((p) => p.id === subjectId);
   if (!subject) return [];
 
-  return properties
+  return inScope
     .filter((p) => p.id !== subjectId)
     .map((p) => ({ ...p, distanceKm: haversineKm(subject.coords, p.coords) }))
     .sort((a, b) => a.distanceKm - b.distanceKm);
@@ -140,7 +153,7 @@ export async function getProfessionals(
 ): Promise<Professional[]> {
   const { discipline, region, verifiedOnly, query } = filters;
 
-  return professionals.filter((p) => {
+  return prosInScope.filter((p) => {
     if (discipline && discipline !== "All" && p.discipline !== discipline)
       return false;
     if (region && region !== "All" && p.region !== region) return false;
@@ -159,11 +172,11 @@ export async function getProfessionals(
 // ---------------------------------------------------------------------------
 
 export async function getLocalityMarket(locality: string) {
-  return localityMarkets.find((m) => m.locality === locality) ?? null;
+  return marketsInScope.find((m) => m.locality === locality) ?? null;
 }
 
 export async function getLocalityMarkets() {
-  return localityMarkets;
+  return marketsInScope;
 }
 
 // ---------------------------------------------------------------------------
@@ -171,5 +184,5 @@ export async function getLocalityMarkets() {
 // ---------------------------------------------------------------------------
 
 export async function getMaterials() {
-  return materials;
+  return materialsInScope;
 }

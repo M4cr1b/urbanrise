@@ -137,6 +137,8 @@ export interface Professional {
   specialisms: string[];
   phone: string;
   email: string;
+  /** Profile photograph served from /public. */
+  photoUrl: string | null;
 }
 
 export type MaterialCategory =
@@ -147,11 +149,25 @@ export type MaterialCategory =
   | "Water"
   | "Finishes";
 
+/** Where a material can actually be bought — the Green Hub's whole point. */
+export interface Supplier {
+  name: string;
+  locality: string | null;
+  address: string | null;
+  phone: string | null;
+  email: string | null;
+  website: string | null;
+}
+
 export interface GreenMaterial {
   id: string;
   name: string;
   category: MaterialCategory;
   supplier: string;
+  /** Full purchasing detail; `supplier` remains the display name. */
+  supplierDetail: Supplier | null;
+  /** Photograph of the material itself. */
+  imageUrl: string | null;
   region: Region;
   certification: string;
   /** kg CO2e per functional unit — lower is better. */

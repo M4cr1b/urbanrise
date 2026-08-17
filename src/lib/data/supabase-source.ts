@@ -30,6 +30,7 @@ import type {
 } from "@/lib/types";
 import type { PropertyFilters, ProfessionalFilters } from "./contract";
 import { SUBJECT_PROPERTY_ID as DEFAULT_SUBJECT_ID } from "./properties";
+import { ACTIVE_REGIONS } from "@/lib/regions";
 
 /**
  * Supabase implementation of the data source.
@@ -119,6 +120,7 @@ export async function getProperties(): Promise<Property[]> {
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
+    .in("region", ACTIVE_REGIONS)
     .order("asking_price", { ascending: false });
 
   if (error) throw new Error(`getProperties: ${error.message}`);
@@ -130,6 +132,7 @@ export async function getPropertyById(id: string): Promise<Property | null> {
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
+    .in("region", ACTIVE_REGIONS)
     .eq("id", id)
     .maybeSingle();
 
@@ -142,6 +145,7 @@ export async function getFeaturedProperties(): Promise<Property[]> {
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
+    .in("region", ACTIVE_REGIONS)
     .in("eco_rating", ["A", "B"])
     .eq("status", "Available")
     .order("asking_price", { ascending: false })
@@ -157,7 +161,7 @@ export async function searchProperties(
   filters: PropertyFilters = {},
 ): Promise<Property[]> {
   const supabase = db();
-  let q = supabase.from("properties").select(PROPERTY_SELECT);
+  let q = supabase.from("properties").select(PROPERTY_SELECT).in("region", ACTIVE_REGIONS);
 
   if (filters.locality && filters.locality !== "All")
     q = q.eq("locality", filters.locality);
@@ -194,14 +198,14 @@ export async function searchProperties(
  */
 export async function getPropertyIds(): Promise<string[]> {
   const supabase = db();
-  const { data, error } = await supabase.from("properties").select("id");
+  const { data, error } = await supabase.from("properties").select("id").in("region", ACTIVE_REGIONS);
   if (error) throw new Error(`getPropertyIds: ${error.message}`);
   return (data ?? []).map((r: { id: string }) => r.id);
 }
 
 export async function getLocalities(): Promise<string[]> {
   const supabase = db();
-  const { data, error } = await supabase.from("properties").select("locality");
+  const { data, error } = await supabase.from("properties").select("locality").in("region", ACTIVE_REGIONS);
   if (error) throw new Error(`getLocalities: ${error.message}`);
   return [...new Set((data ?? []).map((r: any) => r.locality as string))].sort();
 }
@@ -223,6 +227,7 @@ export async function getSubjectProperty(): Promise<Property> {
   const designated = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
+    .in("region", ACTIVE_REGIONS)
     .eq("id", DEFAULT_SUBJECT_ID)
     .maybeSingle();
 
@@ -231,6 +236,7 @@ export async function getSubjectProperty(): Promise<Property> {
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
+    .in("region", ACTIVE_REGIONS)
     .not("verified_by", "is", null)
     .order("listed_date", { ascending: false })
     .limit(1)
@@ -260,6 +266,7 @@ export async function getComparables(
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
+    .in("region", ACTIVE_REGIONS)
     .in(
       "id",
       rows.map((r) => r.property_id),
@@ -281,7 +288,7 @@ export async function getProfessionals(
   filters: ProfessionalFilters = {},
 ): Promise<Professional[]> {
   const supabase = db();
-  let q = supabase.from("professionals").select("*");
+  let q = supabase.from("professionals").select("*").in("region", ACTIVE_REGIONS);
 
   if (filters.discipline && filters.discipline !== "All")
     q = q.eq("discipline", filters.discipline);
@@ -309,6 +316,7 @@ export async function getProfessionals(
       specialisms: r.specialisms ?? [],
       phone: r.phone ?? "",
       email: r.email ?? "",
+      photoUrl: r.photo_url ?? null,
     }),
   );
 }
@@ -320,6 +328,7 @@ export async function getLocalityMarkets(): Promise<LocalityMarket[]> {
   const { data, error } = await supabase
     .from("market_stats")
     .select("*")
+    .in("region", ACTIVE_REGIONS)
     .order("period", { ascending: true });
 
   if (error) throw new Error(`getLocalityMarkets: ${error.message}`);
@@ -382,7 +391,7 @@ export async function getMaterials(): Promise<GreenMaterial[]> {
   const supabase = db();
   const { data, error } = await supabase
     .from("green_materials")
-    .select("*, suppliers ( name )")
+    .select("*, suppliers ( name, locality, address, phone, email, website )")
     .order("saving_vs_conventional_pct", { ascending: false });
 
   if (error) throw new Error(`getMaterials: ${error.message}`);
@@ -394,6 +403,17 @@ export async function getMaterials(): Promise<GreenMaterial[]> {
       name: r.name,
       category: r.category,
       supplier: supplier?.name ?? "Unknown",
+      supplierDetail: supplier
+        ? {
+            name: supplier.name,
+            locality: supplier.locality ?? null,
+            address: supplier.address ?? null,
+            phone: supplier.phone ?? null,
+            email: supplier.email ?? null,
+            website: supplier.website ?? null,
+          }
+        : null,
+      imageUrl: r.image_url ?? null,
       region: r.region,
       certification: r.certification ?? "",
       carbonKgCo2e: Number(r.carbon_kg_co2e ?? 0),

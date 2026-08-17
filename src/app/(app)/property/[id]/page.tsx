@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, MapPin, Phone, ShieldCheck } from "lucide-react";
@@ -10,8 +9,10 @@ import {
   TitleStatusText,
 } from "@/components/ui/Badges";
 import { AddToShortlist } from "@/components/workbench/AddToShortlist";
+import { Gallery } from "@/components/property/Gallery";
 import { formatCedi, formatDate, formatSqm, pricePerSqm } from "@/lib/format";
 import { getLocalityMarket, getPropertyIds, getPropertyById } from "@/lib/data";
+import { IS_SINGLE_REGION } from "@/lib/regions";
 
 
 /**
@@ -82,16 +83,15 @@ export default async function PropertyPage({ params }: { params: Params }) {
         Back to search
       </Link>
 
-      <div className="relative mb-6 aspect-video overflow-hidden rounded-xl">
-        <Image
-          src={property.images[0]}
+      <div className="relative">
+        <Gallery
+          images={property.images}
           alt={`${property.type} at ${property.address}`}
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 900px"
-          className="object-cover"
         />
-        <EcoBadge rating={property.ecoRating} className="absolute left-4 top-4" />
+        <EcoBadge
+          rating={property.ecoRating}
+          className="pointer-events-none absolute left-4 top-4 z-10"
+        />
       </div>
 
       <header className="mb-8 flex flex-wrap items-start justify-between gap-4">
@@ -101,7 +101,16 @@ export default async function PropertyPage({ params }: { params: Params }) {
           </h1>
           <p className="mt-1 flex items-center gap-1.5 font-data text-data-sm text-on-surface-variant">
             <MapPin className="size-4" aria-hidden />
-            {property.locality} · {property.district} · {property.region}
+            {/* Some imported records carry district == locality, and with a
+                single covered region the region name adds nothing. Print each
+                distinct part once. */}
+            {[
+              property.locality,
+              property.district !== property.locality ? property.district : null,
+              IS_SINGLE_REGION ? null : property.region,
+            ]
+              .filter(Boolean)
+              .join(" · ")}
           </p>
         </div>
         <div className="text-right">

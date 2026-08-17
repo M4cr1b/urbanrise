@@ -21,6 +21,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 185,
     summary:
       "Locally pressed laterite blocks. Cuts embodied carbon against sandcrete by roughly four-fifths and stabilises internal temperature without mechanical cooling.",
+    imageUrl: "/materials/mat-001.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-002",
@@ -35,6 +37,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 940,
     summary:
       "Treated Bambusa vulgaris from managed Ashanti stands, graded for non-load-bearing framing and roof structure.",
+    imageUrl: "/materials/mat-002.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-003",
@@ -49,6 +53,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 128,
     summary:
       "Tema-rolled sheet with 70% post-consumer content and a high-albedo coating that reduces roof-surface gain.",
+    imageUrl: "/materials/mat-003.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-004",
@@ -63,6 +69,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 96,
     summary:
       "Agricultural by-product from Western Region copra processing, pressed into rigid board for ceiling voids.",
+    imageUrl: "/materials/mat-004.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-005",
@@ -77,6 +85,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 68_500,
     summary:
       "Full rooftop array sized for a four-bedroom household, with hybrid inverter. Payback of about five years against current ECG tariffs.",
+    imageUrl: "/materials/mat-005.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-006",
@@ -91,6 +101,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 52_000,
     summary:
       "Displaces the diesel generator that most Accra households still run through outages — the larger emissions saving in practice.",
+    imageUrl: "/materials/mat-006.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-007",
@@ -105,6 +117,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 14_200,
     summary:
       "First-flush diverter, filtration and storage. Covers non-potable household demand through most of the dry season.",
+    imageUrl: "/materials/mat-007.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-008",
@@ -119,6 +133,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 23_800,
     summary:
       "Treats basin and shower water to irrigation standard, cutting mains draw by around a third.",
+    imageUrl: "/materials/mat-008.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-009",
@@ -133,6 +149,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 62,
     summary:
       "Silicate-based, breathable, and negligible off-gassing — relevant where windows stay shut against harmattan dust.",
+    imageUrl: "/materials/mat-009.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-010",
@@ -147,6 +165,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 340,
     summary:
       "Salvaged from demolition across Kumasi, remilled and kiln-dried. No new felling.",
+    imageUrl: "/materials/mat-010.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-011",
@@ -161,6 +181,8 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 210,
     summary:
       "Fired from Eastern Region clay. Higher thermal mass than sheet roofing, which flattens the afternoon peak indoors.",
+    imageUrl: "/materials/mat-011.webp",
+    supplierDetail: null,
   },
   {
     id: "MAT-012",
@@ -175,5 +197,7 @@ export const materials: GreenMaterial[] = [
     pricePerUnit: 74,
     summary:
       "Recycled paper fibre, borate-treated for fire and insect resistance. Blown into ceiling voids on retrofit.",
+    imageUrl: "/materials/mat-012.webp",
+    supplierDetail: null,
   },
 ];

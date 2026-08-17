@@ -3,7 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { RotateCcw, Search } from "lucide-react";
+import { RotateCcw, Search,
+  Image as ImageIcon,
+} from "lucide-react";
 import { StatusChip, TitleStatusText } from "@/components/ui/Badges";
 import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
 import type { EcoRating, Property } from "@/lib/types";
@@ -235,6 +237,14 @@ function ResultRow({ property: p }: { property: Property }) {
             sizes="80px"
             className="object-cover"
           />
+          {/* Says a listing has more to see, so the gallery is discoverable
+              from the results rather than only after opening the page. */}
+          {p.images.length > 1 && (
+            <span className="absolute bottom-0.5 right-0.5 flex items-center gap-0.5 rounded-sm bg-black/65 px-1 py-0.5 font-data text-[10px] text-white">
+              <ImageIcon className="size-2.5" aria-hidden />
+              {p.images.length}
+            </span>
+          )}
         </div>
 
         <div className="min-w-0 flex-1">
