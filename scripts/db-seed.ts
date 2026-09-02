@@ -80,7 +80,7 @@ export async function seed(connect: () => Client) {
            summary        = excluded.summary`,
         [
           p.id, p.address, p.locality, p.district, p.region,
-          p.coords[0], p.coords[1],
+          p.coords?.[0] ?? null, p.coords?.[1] ?? null,
           p.type, p.style, p.bedrooms, p.bathrooms, p.floorAreaSqm,
           p.plotAreaSqm, p.yearBuilt, p.askingPrice, p.listedDate || null,
           p.status, p.tenure, p.titleStatus, p.ecoRating,

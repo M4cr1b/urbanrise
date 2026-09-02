@@ -287,6 +287,49 @@ function normaliseEco(v: string): string | null {
 
 /* --- Mappers ------------------------------------------------------------- */
 
+/**
+ * "image%201.png, image%202.png" -> ["/properties/image-1.webp", ...]
+ *
+ * Notion's CSV export gives a Files & media column as plain filenames, not
+ * URLs, so the only way to resolve an image is to match it against what has
+ * already been extracted into `public/properties/`. Anything that doesn't
+ * match is dropped loudly (not silently) so a stale or renamed export is
+ * visible in the sync output instead of quietly producing an empty gallery.
+ */
+function resolvePropertyImages(raw: string, propertyLabel: string): string[] {
+  const available = new Set(
+    existsSync("public/properties") ? readdirSync("public/properties") : [],
+  );
+  const names = raw
+    .split(",")
+    .map((s) => decodeURIComponent(s.trim()))
+    .filter(Boolean)
+    .map((name) => name.replace(/\s+/g, "-").replace(/\.(png|jpe?g)$/i, ".webp"));
+
+  const found: string[] = [];
+  for (const name of names) {
+    if (available.has(name)) found.push(`/properties/${name}`);
+    else
+      console.warn(
+        `  ⚠ ${propertyLabel}: image file not found in public/properties/: ${name}`,
+      );
+  }
+  return found;
+}
+
+/**
+ * A property's image list, resolved separately from `mapProperty()` since
+ * `images` is not a column on the `properties` table — it lives in
+ * `property_media`, synced as its own step in `main()`.
+ */
+function mapPropertyImages(row: Row): { id: string; images: string[] } {
+  const id =
+    pick(row, "id", "ref", "reference") || `NT-${pick(row, "__id").slice(0, 8)}`;
+  const label = pick(row, "address", "name", "title") || id;
+  const raw = pick(row, "files&media", "filesandmedia", "images", "photos");
+  return { id, images: raw ? resolvePropertyImages(raw, label) : [] };
+}
+
 function mapProperty(row: Row) {
   const lng = num(pick(row, "lng", "longitude"));
   const lat = num(pick(row, "lat", "latitude"));
@@ -357,17 +400,26 @@ function mapMaterial(row: Row) {
 
 /* --- Sync ---------------------------------------------------------------- */
 
-async function loadDataset(name: string, envUrlKey: string): Promise<Row[]> {
+/**
+ * `fromFile` tells the caller whether image sync is possible: a CSV/file
+ * export carries plain filenames (resolvable against `public/properties/`),
+ * while the live Notion API returns temporary signed URLs that cannot be
+ * resolved to a local file.
+ */
+async function loadDataset(
+  name: string,
+  envUrlKey: string,
+): Promise<{ rows: Row[]; fromFile: boolean }> {
   const ref = process.env[envUrlKey];
   if (!ref) {
     console.log(`  ${envUrlKey} not set — skipping ${name}`);
-    return [];
+    return { rows: [], fromFile: false };
   }
 
   // A local export file is the most reliable path and needs no token.
   if (existsSync(ref)) {
     console.log(`  reading ${name} from file ${ref}`);
-    return parseCsv(readFileSync(ref, "utf8"));
+    return { rows: parseCsv(readFileSync(ref, "utf8")), fromFile: true };
   }
 
   // Otherwise treat it as a Notion database id / URL.
@@ -384,7 +436,7 @@ async function loadDataset(name: string, envUrlKey: string): Promise<Row[]> {
   }
 
   console.log(`  reading ${name} from Notion database ${id}`);
-  return readNotionDatabase(id);
+  return { rows: await readNotionDatabase(id), fromFile: false };
 }
 
 async function main() {
@@ -439,18 +491,32 @@ async function main() {
 
   for (const ds of datasets) {
     console.log(`\n${ds.name}:`);
-    const rows = await loadDataset(ds.name, ds.env);
+    const { rows, fromFile } = await loadDataset(ds.name, ds.env);
     if (rows.length === 0) continue;
 
     const mapped = rows.map(ds.map);
     // A row with neither an address nor a name is an empty Notion row.
-    const usable = mapped.filter((r) => Boolean(r.name || r.address));
+    const usableFlags = mapped.map((r) => Boolean(r.name || r.address));
+    const usable = mapped.filter((_, i) => usableFlags[i]);
+    const usableRows = rows.filter((_, i) => usableFlags[i]);
     const skipped = mapped.length - usable.length;
 
     console.log(`  parsed ${mapped.length} rows, ${usable.length} usable${skipped ? `, ${skipped} skipped (no name/address)` : ""}`);
 
     if (DRY_RUN) {
       console.log(`  sample: ${JSON.stringify(usable[0], null, 2)}`);
+      if (ds.name === "properties") {
+        if (fromFile) {
+          for (const row of usableRows) {
+            const { id, images } = mapPropertyImages(row);
+            console.log(`  images ${id}: ${images.length ? images.join(", ") : "(none)"}`);
+          }
+        } else {
+          console.log(
+            "  live Notion API path does not sync images yet — export the database to CSV (point NOTION_PROPERTIES_URL at the file) and re-run for image sync.",
+          );
+        }
+      }
       continue;
     }
 
@@ -461,9 +527,54 @@ async function main() {
     if (error) {
       console.error(`  FAILED: ${error.message}`);
       process.exitCode = 1;
-    } else {
-      console.log(`  upserted ${count ?? usable.length} rows into ${ds.table}`);
+      continue;
     }
+
+    console.log(`  upserted ${count ?? usable.length} rows into ${ds.table}`);
+
+    if (ds.name !== "properties") continue;
+
+    if (!fromFile) {
+      console.warn(
+        "  live Notion API path does not sync images yet — export the database to CSV (point NOTION_PROPERTIES_URL at the file) and re-run for image sync.",
+      );
+      continue;
+    }
+
+    let mediaOk = 0;
+    let mediaFailed = 0;
+    for (const row of usableRows) {
+      const { id, images } = mapPropertyImages(row);
+      if (!id) continue;
+
+      const { error: delErr } = await supabase!
+        .from("property_media")
+        .delete()
+        .eq("property_id", id);
+      if (delErr) {
+        console.error(`  media delete failed for ${id}: ${delErr.message}`);
+        mediaFailed++;
+        continue;
+      }
+
+      if (images.length === 0) {
+        mediaOk++;
+        continue;
+      }
+
+      const { error: insErr } = await supabase!
+        .from("property_media")
+        .insert(images.map((url, sort) => ({ property_id: id, url, sort })));
+      if (insErr) {
+        console.error(`  media insert failed for ${id}: ${insErr.message}`);
+        mediaFailed++;
+      } else {
+        mediaOk++;
+      }
+    }
+    console.log(
+      `  synced media for ${mediaOk}/${usableRows.length} propert${usableRows.length === 1 ? "y" : "ies"}${mediaFailed ? `, ${mediaFailed} failed` : ""}`,
+    );
   }
 
   console.log(DRY_RUN ? "\nDry run complete — nothing written." : "\nSync complete.");

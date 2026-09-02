@@ -77,8 +77,8 @@ export interface Property {
   locality: string;
   district: string;
   region: Region;
-  /** [lng, lat] — matches PostGIS point ordering. */
-  coords: [number, number];
+  /** [lng, lat] — matches PostGIS point ordering. Null when not yet surveyed. */
+  coords: [number, number] | null;
 
   type: PropertyType;
   style: PropertyStyle;
@@ -87,6 +87,10 @@ export interface Property {
   floorAreaSqm: number | null;
   plotAreaSqm: number | null;
   yearBuilt: number | null;
+  /** e.g. "Semi-Furnished". Absent for older listings that predate this field. */
+  furnishing?: string;
+  /** Flat amenity list, e.g. "Wi-Fi", "24-hour Electricity". */
+  facilities?: string[];
 
   /** Cedi. */
   askingPrice: number;
