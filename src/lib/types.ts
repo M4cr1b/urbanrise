@@ -12,6 +12,8 @@ export type PropertyType =
   | "Apartment"
   | "Townhouse"
   | "Compound House"
+  | "Duplex"
+  | "Mansion"
   | "Land";
 
 export type PropertyStyle =
@@ -66,6 +68,8 @@ export interface Agent {
   name: string;
   firm: string;
   phone: string;
+  /** A second contact number, when the listing gave more than one. */
+  secondaryPhone?: string;
   /** Registered with the Ghana Institution of Surveyors. */
   ghisVerified: boolean;
 }

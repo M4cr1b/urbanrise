@@ -219,6 +219,20 @@ export default async function PropertyPage({ params }: { params: Params }) {
               </a>
             }
           />
+          {property.agent.secondaryPhone && (
+            <Field
+              label="Alternative telephone"
+              value={
+                <a
+                  href={`tel:${property.agent.secondaryPhone.replace(/\s/g, "")}`}
+                  className="flex items-center gap-1.5 text-primary hover:underline"
+                >
+                  <Phone className="size-3.5" aria-hidden />
+                  {property.agent.secondaryPhone}
+                </a>
+              }
+            />
+          )}
           <Field
             label="GhIS registered"
             value={property.agent.ghisVerified ? "Yes" : "No"}
