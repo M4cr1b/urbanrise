@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
     // assets in this deployment, which removes a third party from the render
     // path and with it the rate-limit failures that produced blank listings.
     remotePatterns: [],
+    // Next 16 defaults this to [75] and clamps any unlisted `quality` prop
+    // to the nearest allowed value — without this, a gallery's quality={90}
+    // silently becomes 75 sitewide.
+    qualities: [75, 90, 100],
   },
 };
 

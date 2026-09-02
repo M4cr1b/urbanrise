@@ -580,16 +580,17 @@ export const properties: Property[] = [
   },
 
   // ---- Real listings, professionally photographed --------------------------
-  // No coordinates were supplied for these, so `coords` is null and they are
-  // excluded from the comparables workbench (see getComparables) until real
-  // coordinates are added.
+  // coords are suburb/locality-level pins from OpenStreetMap Nominatim (no
+  // exact building coordinates were available in the source data) — accurate
+  // to the neighbourhood, not the parcel. Good enough for the haversine
+  // distance sort in getComparables(); do not treat as survey-grade.
   {
     id: "michelle-camp-gbetsile",
     address: "Michelle Camp, Gbetsile",
     locality: "Gbetsile",
     district: "Kpone-Katamanso Municipal Assembly",
     region: "Greater Accra",
-    coords: null,
+    coords: [-0.0298396, 5.7471821],
     type: "Apartment",
     style: "Detached",
     bedrooms: 2,
@@ -649,7 +650,7 @@ export const properties: Property[] = [
     locality: "East Legon Hills",
     district: "La-Nkwantanang Municipal",
     region: "Greater Accra",
-    coords: null,
+    coords: [-0.1004742, 5.6927588],
     type: "Apartment",
     style: "Detached",
     bedrooms: 3,
@@ -689,9 +690,11 @@ export const properties: Property[] = [
       ghisVerified: false,
     },
     verifiedBy: null,
+    // 02 is the exterior facade shot (verified by direct visual inspection);
+    // it leads the array — every card/thumbnail view uses images[0] as cover.
     images: [
-      "/properties/east-legon-hills/01.webp",
       "/properties/east-legon-hills/02.webp",
+      "/properties/east-legon-hills/01.webp",
       "/properties/east-legon-hills/03.webp",
       "/properties/east-legon-hills/04.webp",
     ],
@@ -704,7 +707,7 @@ export const properties: Property[] = [
     locality: "East Legon",
     district: "La-Nkwantanang Municipal",
     region: "Greater Accra",
-    coords: null,
+    coords: [-0.1617155, 5.6354803],
     type: "Apartment",
     style: "Detached",
     bedrooms: 4,
@@ -740,14 +743,17 @@ export const properties: Property[] = [
       ghisVerified: false,
     },
     verifiedBy: null,
-    // 05 is the one landscape-oriented shot (the other four are portrait), so
-    // it leads the array — every card/thumbnail view uses images[0] as cover.
+    // 02 is the exterior facade shot (verified by direct visual inspection —
+    // the prior "05 is the landscape-oriented shot" note described
+    // orientation, not content; 05 is actually an interior shot). The
+    // exterior leads the array — every card/thumbnail view uses images[0]
+    // as cover.
     images: [
-      "/properties/fairhaven-east-legon/05.webp",
-      "/properties/fairhaven-east-legon/01.webp",
       "/properties/fairhaven-east-legon/02.webp",
+      "/properties/fairhaven-east-legon/01.webp",
       "/properties/fairhaven-east-legon/03.webp",
       "/properties/fairhaven-east-legon/04.webp",
+      "/properties/fairhaven-east-legon/05.webp",
     ],
     summary:
       "Four-bedroom, four-bathroom semi-furnished apartment in FairHaven, East Legon, completed 2025 on a 99-year lease. All bedrooms en suite, with a guest washroom, air conditioning and good road access.",

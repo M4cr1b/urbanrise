@@ -4,9 +4,13 @@
  *   node scripts/import-real-properties.ts
  *
  * Converts each source PNG into a local WebP under public/properties/<slug>/,
- * matching the site's local-only image policy (see next.config.ts) and the
- * resize/quality precedent already set by scripts/localise-images.ts for
- * listing photography. Idempotent: an existing output file is left alone.
+ * matching the site's local-only image policy (see next.config.ts).
+ *
+ * Idempotent: an existing output file is left alone. When re-running solely
+ * to pick up a new `webp({ quality })` setting (not new source images), the
+ * existing outputs under public/properties/<slug>/ must be deleted first,
+ * otherwise the existsSync(dest) check skips every file and nothing
+ * re-converts.
  */
 
 import sharp from "sharp";
@@ -44,7 +48,7 @@ async function main() {
       try {
         const out = await sharp(resolve(srcDir, file))
           .resize(1600, undefined, { withoutEnlargement: true })
-          .webp({ quality: 85 })
+          .webp({ quality: 95 })
           .toBuffer();
         writeFileSync(dest, out);
         converted++;
