@@ -5,6 +5,7 @@ import {
   Bath,
   BedDouble,
   Compass,
+  ImageIcon,
   Leaf,
   LineChart,
   Ruler,
@@ -195,6 +196,12 @@ export function PropertyCard({
         <EcoBadge rating={property.ecoRating} className="absolute left-4 top-4" />
         {property.verifiedBy && (
           <VerifiedBadge className="absolute bottom-4 left-4" />
+        )}
+        {property.images.length > 1 && (
+          <span className="absolute bottom-4 right-4 flex items-center gap-1 rounded-sm bg-black/65 px-1.5 py-0.5 font-data text-[11px] text-white">
+            <ImageIcon className="size-3" aria-hidden />
+            {property.images.length}
+          </span>
         )}
       </div>
       <div className="relative p-6">

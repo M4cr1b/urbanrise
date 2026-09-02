@@ -4,8 +4,8 @@ import Image from "next/image";
 
 import { useMemo, useState } from "react";
 import { Mail, Phone, Search, ShieldCheck } from "lucide-react";
-import type { Discipline, Professional, Region } from "@/lib/types";
-import { IS_SINGLE_REGION, PRIMARY_REGION } from "@/lib/regions";
+import type { Discipline, Professional } from "@/lib/types";
+import { PRIMARY_REGION } from "@/lib/regions";
 
 /**
  * The directory of estate professionals.
@@ -28,31 +28,20 @@ const DISCIPLINES: (Discipline | "All")[] = [
   "Mortgage Consultant",
 ];
 
-const REGIONS: (Region | "All")[] = [
-  "All",
-  "Greater Accra",
-  "Ashanti",
-  "Western",
-  "Eastern",
-  "Central",
-  "Northern",
-];
-
 export function ProfessionalsWorkspace({
   professionals,
 }: {
   professionals: Professional[];
 }) {
   const [discipline, setDiscipline] = useState<Discipline | "All">("All");
-  const [region, setRegion] = useState<Region | "All">("All");
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [q, setQ] = useState("");
+  const [brokenPhotos, setBrokenPhotos] = useState<Set<string>>(new Set());
 
   const results = useMemo(
     () =>
       professionals.filter((p) => {
         if (discipline !== "All" && p.discipline !== discipline) return false;
-        if (region !== "All" && p.region !== region) return false;
         if (verifiedOnly && !p.verified) return false;
         if (q) {
           const hay =
@@ -61,7 +50,7 @@ export function ProfessionalsWorkspace({
         }
         return true;
       }),
-    [professionals, discipline, region, verifiedOnly, q],
+    [professionals, discipline, verifiedOnly, q],
   );
 
   return (
@@ -107,16 +96,6 @@ export function ProfessionalsWorkspace({
           value={discipline}
           onChange={(v) => setDiscipline(v as Discipline | "All")}
         />
-        {/* Only worth offering once coverage spans more than one region;
-            until then every option but one returns nothing. */}
-        {!IS_SINGLE_REGION && (
-          <FilterRow
-            label="Region"
-            options={REGIONS}
-            value={region}
-            onChange={(v) => setRegion(v as Region | "All")}
-          />
-        )}
       </div>
 
       <p className="mb-3 font-data text-data-sm text-on-surface-variant">
@@ -140,13 +119,16 @@ export function ProfessionalsWorkspace({
                   would be dealing with. */}
               <div className="flex gap-4 p-5">
                 <div className="relative size-20 shrink-0 overflow-hidden rounded-full bg-surface-container ring-1 ring-outline-variant/40 sm:size-24">
-                  {p.photoUrl ? (
+                  {p.photoUrl && !brokenPhotos.has(p.id) ? (
                     <Image
                       src={p.photoUrl}
                       alt={`${p.name}, ${p.discipline}`}
                       fill
                       sizes="96px"
                       className="object-cover"
+                      onError={() =>
+                        setBrokenPhotos((prev) => new Set(prev).add(p.id))
+                      }
                     />
                   ) : (
                     // Monogram for members who have not uploaded a photograph.

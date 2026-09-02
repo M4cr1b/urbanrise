@@ -392,6 +392,7 @@ export async function getMaterials(): Promise<GreenMaterial[]> {
   const { data, error } = await supabase
     .from("green_materials")
     .select("*, suppliers ( name, locality, address, phone, email, website )")
+    .in("region", ACTIVE_REGIONS)
     .order("saving_vs_conventional_pct", { ascending: false });
 
   if (error) throw new Error(`getMaterials: ${error.message}`);
