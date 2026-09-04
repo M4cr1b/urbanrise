@@ -13,6 +13,7 @@ import {
   FileText,
   Leaf as LeafIcon,
   Heart,
+  Eye,
 } from "lucide-react";
 import { EcoBadge, StatusChip, TitleStatusText, VerifiedBadge } from "@/components/ui/Badges";
 import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
@@ -125,12 +126,24 @@ function countActiveFilters(f: Filters): number {
   return count;
 }
 
+function getUniqueLocalities(properties: Property[]): string[] {
+  const localities = [...new Set(properties.map(p => p.locality))].sort();
+  return localities;
+}
+
 export function SearchWorkspace({ properties }: { properties: Property[] }) {
   const [f, setF] = useState<Filters>(EMPTY);
+  const [showAll, setShowAll] = useState(false);
   const set = <K extends keyof Filters>(key: K, v: Filters[K]) =>
     setF((prev) => ({ ...prev, [key]: v }));
 
+  const localities = getUniqueLocalities(properties);
+
   const results = useMemo(() => {
+    if (showAll) {
+      return properties.sort((a, b) => b.askingPrice - a.askingPrice);
+    }
+
     const ecoCeiling = f.eco === "All" ? null : ECO_ORDER.indexOf(f.eco as EcoRating);
 
     return properties.filter((p) => {
@@ -151,7 +164,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
       }
       return true;
     });
-  }, [properties, f]);
+  }, [properties, f, showAll]);
 
   const activeFilterCount = countActiveFilters(f);
 
@@ -193,7 +206,25 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
             </div>
             <button
               type="button"
-              onClick={() => setF(EMPTY)}
+              onClick={() => {
+                setShowAll(!showAll);
+                if (!showAll) setF(EMPTY);
+              }}
+              className={`flex items-center gap-2 rounded-md border px-4 py-2.5 font-data text-data-sm transition-colors whitespace-nowrap ${
+                showAll
+                  ? "border-primary bg-primary/10 text-primary hover:bg-primary/20"
+                  : "border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary"
+              }`}
+            >
+              <Heart className="size-4" aria-hidden />
+              {showAll ? "Filtered" : "View All"}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setF(EMPTY);
+                setShowAll(false);
+              }}
               className="flex items-center gap-2 rounded-md border border-outline-variant px-4 py-2.5 font-data text-data-sm text-on-surface-variant hover:border-primary/50 hover:text-primary transition-colors whitespace-nowrap"
             >
               <RotateCcw className="size-4" aria-hidden />
@@ -206,12 +237,39 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
             </button>
           </div>
 
+          {/* Quick locality filters */}
+          {!showAll && (
+            <div className="flex flex-wrap gap-2">
+              <span className="inline-block font-data text-data-sm text-on-surface-variant">Quick browse:</span>
+              {localities.slice(0, 8).map((locality) => (
+                <button
+                  key={locality}
+                  type="button"
+                  onClick={() => {
+                    set("q", locality);
+                    setShowAll(false);
+                  }}
+                  className="rounded-full border border-secondary/50 bg-secondary/10 px-3 py-1 font-data text-data-sm text-secondary hover:bg-secondary/20 transition-colors"
+                >
+                  {locality}
+                </button>
+              ))}
+            </div>
+          )}
+
           {/* Live result count visibility indicator */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between">
             <span className="font-data text-data-sm text-on-surface-variant">
               <strong className="text-on-surface text-data-md font-semibold">{results.length}</strong>{" "}
-              {results.length === 1 ? "property" : "properties"} found
+              {results.length === 1 ? "property" : "properties"}{" "}
+              {showAll ? "in system" : "found"}
             </span>
+            {showAll && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-3 py-1 font-data text-data-sm text-primary">
+                <Eye className="size-3.5" aria-hidden />
+                Viewing all
+              </span>
+            )}
           </div>
         </div>
 
@@ -369,14 +427,57 @@ function PropertyResultCard({
           </span>
         </div>
 
-        {/* Secondary details */}
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-data text-data-sm">
+        {/* Secondary details row 1 */}
+        <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-2 font-data text-data-sm">
           <StatusChip status={p.status} />
           <span className="text-on-surface-variant">
             {p.tenure}
           </span>
           <TitleStatusText status={p.titleStatus} />
         </div>
+
+        {/* Location info */}
+        <div className="mb-3 border-t border-outline-variant/30 pt-3 font-data text-data-sm">
+          <div className="text-on-surface-variant">
+            <span className="font-semibold text-on-surface">{p.locality}</span> • {p.district}
+          </div>
+          <div className="text-on-surface-variant text-data-xs mt-1">
+            {p.address}
+          </div>
+        </div>
+
+        {/* Key specs in compact format */}
+        <div className="grid grid-cols-2 gap-2 border-t border-outline-variant/30 pt-3 font-data text-data-sm text-on-surface-variant">
+          <div>
+            <div className="text-data-xs text-on-surface-variant">Type</div>
+            <div className="font-semibold text-on-surface">{p.type}</div>
+          </div>
+          <div>
+            <div className="text-data-xs text-on-surface-variant">Style</div>
+            <div className="font-semibold text-on-surface">{p.style}</div>
+          </div>
+          <div>
+            <div className="text-data-xs text-on-surface-variant">Plot</div>
+            <div className="font-semibold text-on-surface">{formatSqm(p.plotAreaSqm)}</div>
+          </div>
+          <div>
+            <div className="text-data-xs text-on-surface-variant">Year</div>
+            <div className="font-semibold text-on-surface">{p.yearBuilt}</div>
+          </div>
+        </div>
+
+        {/* Agent info if available */}
+        {p.agent && (
+          <div className="mt-3 border-t border-outline-variant/30 pt-3">
+            <div className="font-data text-data-xs text-on-surface-variant mb-1">
+              Agent
+            </div>
+            <div className="font-data text-data-sm">
+              <div className="font-semibold text-on-surface">{p.agent.name}</div>
+              <div className="text-on-surface-variant text-data-xs">{p.agent.firm}</div>
+            </div>
+          </div>
+        )}
       </div>
     </Link>
   );
