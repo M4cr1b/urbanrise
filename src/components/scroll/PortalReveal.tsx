@@ -233,6 +233,7 @@ export function PortalReveal({ image, hero, children }: Props) {
                 alt={image.alt}
                 fill
                 priority
+                quality={100}
                 sizes="100vw"
                 className="object-cover"
               />
