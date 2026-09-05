@@ -243,7 +243,7 @@ export function FeaturedHomes({ properties }: { properties: Property[] }) {
           View all <ArrowRight className="size-4" aria-hidden />
         </Link>
       </div>
-      <div className="grid gap-gutter md:grid-cols-3">
+      <div className="grid gap-gutter md:grid-cols-2 lg:grid-cols-4">
         {properties.map((p, i) => (
           <PropertyCard key={p.id} property={p} priority={i === 0} />
         ))}

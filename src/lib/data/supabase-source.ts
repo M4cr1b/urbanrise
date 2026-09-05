@@ -29,7 +29,7 @@ import type {
   Region,
 } from "@/lib/types";
 import type { PropertyFilters, ProfessionalFilters } from "./contract";
-import { SUBJECT_PROPERTY_ID as DEFAULT_SUBJECT_ID } from "./properties";
+import { SUBJECT_PROPERTY_ID as DEFAULT_SUBJECT_ID, FEATURED_PROPERTY_IDS } from "./properties";
 import { ACTIVE_REGIONS } from "@/lib/regions";
 
 /**
@@ -146,13 +146,18 @@ export async function getFeaturedProperties(): Promise<Property[]> {
     .from("properties")
     .select(PROPERTY_SELECT)
     .in("region", ACTIVE_REGIONS)
-    .in("eco_rating", ["A", "B"])
-    .eq("status", "Available")
-    .order("asking_price", { ascending: false })
-    .limit(3);
+    .in("id", FEATURED_PROPERTY_IDS);
 
   if (error) throw new Error(`getFeaturedProperties: ${error.message}`);
-  return (data ?? []).map(mapProperty);
+
+  // Re-sort by the order in FEATURED_PROPERTY_IDS since PostgREST .in() doesn't preserve order
+  const dataMap = new Map((data ?? []).map((p) => [p.id, p]));
+  const ordered = FEATURED_PROPERTY_IDS
+    .map((id) => dataMap.get(id))
+    .filter((p): p is typeof data[number] => p != null)
+    .map(mapProperty);
+
+  return ordered;
 }
 
 const ECO_ORDER: EcoRating[] = ["A", "B", "C", "D", "E", "F", "G"];

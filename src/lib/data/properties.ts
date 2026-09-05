@@ -140,11 +140,11 @@ export const properties: Property[] = [
       ghisVerified: false,
     },
     verifiedBy: null,
-    // 02 is the exterior facade shot (verified by direct visual inspection);
+    // 01 is the exterior facade shot (verified via visual inspection of all frames);
     // it leads the array — every card/thumbnail view uses images[0] as cover.
     images: [
-      "/properties/east-legon-hills/02.webp",
       "/properties/east-legon-hills/01.webp",
+      "/properties/east-legon-hills/02.webp",
       "/properties/east-legon-hills/03.webp",
       "/properties/east-legon-hills/04.webp",
     ],
@@ -193,14 +193,11 @@ export const properties: Property[] = [
       ghisVerified: false,
     },
     verifiedBy: null,
-    // 02 is the exterior facade shot (verified by direct visual inspection —
-    // the prior "05 is the landscape-oriented shot" note described
-    // orientation, not content; 05 is actually an interior shot). The
-    // exterior leads the array — every card/thumbnail view uses images[0]
-    // as cover.
+    // 01 is the exterior facade shot (verified via visual inspection of all frames);
+    // it leads the array — every card/thumbnail view uses images[0] as cover.
     images: [
-      "/properties/fairhaven-east-legon/02.webp",
       "/properties/fairhaven-east-legon/01.webp",
+      "/properties/fairhaven-east-legon/02.webp",
       "/properties/fairhaven-east-legon/03.webp",
       "/properties/fairhaven-east-legon/04.webp",
       "/properties/fairhaven-east-legon/05.webp",
@@ -257,8 +254,8 @@ export const properties: Property[] = [
     },
     verifiedBy: null,
     images: [
-      "/properties/east-legon-hills-savehands/01.webp",
       "/properties/east-legon-hills-savehands/02.webp",
+      "/properties/east-legon-hills-savehands/01.webp",
       "/properties/east-legon-hills-savehands/03.webp",
       "/properties/east-legon-hills-savehands/04.webp",
       "/properties/east-legon-hills-savehands/05.webp",
@@ -323,8 +320,8 @@ export const properties: Property[] = [
     },
     verifiedBy: null,
     images: [
-      "/properties/east-legon-hills-thebeast/01.webp",
       "/properties/east-legon-hills-thebeast/02.webp",
+      "/properties/east-legon-hills-thebeast/01.webp",
       "/properties/east-legon-hills-thebeast/03.webp",
       "/properties/east-legon-hills-thebeast/04.webp",
       "/properties/east-legon-hills-thebeast/05.webp",
@@ -447,11 +444,11 @@ export const properties: Property[] = [
     },
     verifiedBy: null,
     images: [
+      "/properties/east-legon-nanakrom/05.webp",
       "/properties/east-legon-nanakrom/01.webp",
       "/properties/east-legon-nanakrom/02.webp",
       "/properties/east-legon-nanakrom/03.webp",
       "/properties/east-legon-nanakrom/04.webp",
-      "/properties/east-legon-nanakrom/05.webp",
       "/properties/east-legon-nanakrom/06.webp",
     ],
     summary:
@@ -497,8 +494,8 @@ export const properties: Property[] = [
     },
     verifiedBy: null,
     images: [
-      "/properties/east-legon-hills-setup/01.webp",
       "/properties/east-legon-hills-setup/02.webp",
+      "/properties/east-legon-hills-setup/01.webp",
       "/properties/east-legon-hills-setup/03.webp",
       "/properties/east-legon-hills-setup/04.webp",
       "/properties/east-legon-hills-setup/05.webp",
@@ -616,10 +613,10 @@ export const properties: Property[] = [
     },
     verifiedBy: null,
     images: [
+      "/properties/east-legon-hills-ace-mansion-2/04.webp",
       "/properties/east-legon-hills-ace-mansion-2/01.webp",
       "/properties/east-legon-hills-ace-mansion-2/02.webp",
       "/properties/east-legon-hills-ace-mansion-2/03.webp",
-      "/properties/east-legon-hills-ace-mansion-2/04.webp",
       "/properties/east-legon-hills-ace-mansion-2/05.webp",
       "/properties/east-legon-hills-ace-mansion-2/06.webp",
       "/properties/east-legon-hills-ace-mansion-2/07.webp",
@@ -674,6 +671,7 @@ export const properties: Property[] = [
     },
     verifiedBy: null,
     images: [
+      "/properties/adjiringanor-ace/08.webp",
       "/properties/adjiringanor-ace/01.webp",
       "/properties/adjiringanor-ace/02.webp",
       "/properties/adjiringanor-ace/03.webp",
@@ -681,7 +679,6 @@ export const properties: Property[] = [
       "/properties/adjiringanor-ace/05.webp",
       "/properties/adjiringanor-ace/06.webp",
       "/properties/adjiringanor-ace/07.webp",
-      "/properties/adjiringanor-ace/08.webp",
     ],
     summary:
       "Four-bedroom, four-bathroom semi-furnished mansion in Adjiringanor, completed 2023. Features a private swimming pool, fitted kitchen, and complete air conditioning.",
@@ -691,9 +688,10 @@ export const properties: Property[] = [
 /** The record currently under valuation in the comparables workbench. */
 export const SUBJECT_PROPERTY_ID = "east-legon-hills-savehands";
 
-/** Curated for the landing page's "Featured homes" row — genuine local photography. */
+/** Curated for the landing page's "Featured homes" row — 4 East Legon Hills properties by value. */
 export const FEATURED_PROPERTY_IDS = [
-  "michelle-camp-gbetsile",
-  "east-legon-hills",
-  "fairhaven-east-legon",
+  "east-legon-hills-ace-mansion-1",
+  "east-legon-hills-savehands",
+  "east-legon-hills-thebeast",
+  "east-legon-hills-ace-mansion-2",
 ];

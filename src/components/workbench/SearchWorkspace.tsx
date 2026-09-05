@@ -21,6 +21,7 @@ import { EcoBadge, StatusChip, TitleStatusText, VerifiedBadge } from "@/componen
 import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
 import { BedDouble, Bath, Ruler } from "lucide-react";
 import type { EcoRating, Property } from "@/lib/types";
+import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
 
 /**
  * The search module.
@@ -36,9 +37,6 @@ const TENURES = ["All", "Freehold", "Leasehold 99yr", "Leasehold 50yr", "Customa
 const TITLES = ["All", "Registered", "Pending", "Unregistered"];
 const STATUSES = ["All", "Available", "Under Offer", "Sold"];
 const ECO = ["All", "A", "B", "C", "D"];
-
-// Imported from the seed data to tag featured cards.
-const FEATURED_PROPERTY_IDS = ["michelle-camp-gbetsile", "east-legon-hills", "fairhaven-east-legon"];
 
 interface Filters {
   q: string;
