@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { ArrowRight, Info, Send } from "lucide-react";
 import { ComparablesGrid } from "./ComparablesGrid";
+import { ComparablesToolbar } from "./ComparablesToolbar";
 import { useShortlist } from "./shortlist-store";
 import type { StageId } from "./WorkflowTabs";
 import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
@@ -72,7 +73,14 @@ export function ComparablesWorkspace({
   const stats = useMemo(() => analyse(subject, picked), [subject, picked]);
 
   if (stage === "comparables") {
-    return <ComparablesGrid subject={subject} comparables={comparables} />;
+    return (
+      <div className="flex h-full flex-col">
+        <ComparablesToolbar comparables={comparables} />
+        <div className="min-h-0 flex-1">
+          <ComparablesGrid subject={subject} comparables={comparables} />
+        </div>
+      </div>
+    );
   }
 
   if (picked.length === 0 && stage !== "submit") {

@@ -3,6 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Leaf, MapPin, Search } from "lucide-react";
+import { PropertySearchField } from "@/components/search/PropertySearchField";
+import type { Property } from "@/lib/types";
 
 const TABS = ["Buy", "Rent", "New Developments"] as const;
 type Tab = (typeof TABS)[number];
@@ -17,7 +19,7 @@ const INTENT: Record<Tab, string> = {
  * The primary entry point into the platform. Submitting hands off to the
  * workbench search with the filters pre-applied.
  */
-export function SearchCard() {
+export function SearchCard({ properties }: { properties: Property[] }) {
   const router = useRouter();
   const [tab, setTab] = useState<Tab>("Buy");
   const [locality, setLocality] = useState("");
@@ -61,19 +63,21 @@ export function SearchCard() {
       <div className="grid grid-cols-1 items-end gap-4 sm:grid-cols-2">
         <label className="flex flex-col gap-2">
           <span className="text-label-caps text-on-surface-variant">Location</span>
-          <span className="relative">
-            <MapPin
-              className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-outline"
-              aria-hidden
-            />
-            <input
-              value={locality}
-              onChange={(e) => setLocality(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && submit()}
-              placeholder="East Legon, Cantonments…"
-              className="w-full rounded-md border border-outline-variant bg-surface py-3 pl-10 pr-4 text-on-surface outline-none transition-all focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
-            />
-          </span>
+          <PropertySearchField
+            properties={properties}
+            value={locality}
+            onChange={setLocality}
+            placeholder="East Legon, Cantonments…"
+            inputClassName="w-full rounded-md border border-outline-variant bg-surface py-3 pl-10 pr-4 text-on-surface outline-none transition-all focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
+            wrapperClassName="relative"
+            onSubmit={submit}
+            icon={
+              <MapPin
+                className="size-4 text-outline"
+                aria-hidden
+              />
+            }
+          />
         </label>
 
         <label className="flex flex-col gap-2">

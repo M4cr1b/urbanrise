@@ -136,11 +136,14 @@ export async function getComparables(
   subjectId: string = SUBJECT_PROPERTY_ID,
 ): Promise<Comparable[]> {
   const subject = inScope.find((p) => p.id === subjectId);
-  if (!subject) return [];
+  if (!subject || !subject.coords) return [];
 
   return inScope
-    .filter((p) => p.id !== subjectId)
-    .map((p) => ({ ...p, distanceKm: haversineKm(subject.coords, p.coords) }))
+    .filter((p) => p.id !== subjectId && p.coords != null)
+    .map((p) => ({
+      ...p,
+      distanceKm: haversineKm(subject.coords!, p.coords!),
+    }))
     .sort((a, b) => a.distanceKm - b.distanceKm);
 }
 

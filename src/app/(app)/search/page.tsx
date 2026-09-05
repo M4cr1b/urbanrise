@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { SearchWorkspace } from "@/components/workbench/SearchWorkspace";
 import { getProperties } from "@/lib/data";
 
@@ -17,5 +18,9 @@ export const metadata: Metadata = {
 
 export default async function SearchPage() {
   const properties = await getProperties();
-  return <SearchWorkspace properties={properties} />;
+  return (
+    <Suspense fallback={<div className="p-8">Loading search…</div>}>
+      <SearchWorkspace properties={properties} />
+    </Suspense>
+  );
 }

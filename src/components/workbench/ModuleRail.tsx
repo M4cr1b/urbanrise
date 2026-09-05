@@ -30,9 +30,9 @@ const MODULES = [
 ];
 
 const UTILITIES = [
-  { href: "/green-hub", label: "Help", icon: HelpCircle },
-  { href: "/market", label: "About", icon: Info },
-  { href: "/professionals", label: "Legal", icon: ScrollText },
+  { href: "/help", label: "Help", icon: HelpCircle },
+  { href: "/about", label: "About", icon: Info },
+  { href: "/legal", label: "Legal", icon: ScrollText },
 ];
 
 /** Shared by both layouts so "which module am I in" cannot drift between them. */

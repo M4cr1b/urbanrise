@@ -156,6 +156,7 @@ export default async function PropertyPage({ params }: { params: Params }) {
             label="Plot area"
             value={property.plotAreaSqm ? formatSqm(property.plotAreaSqm) : "Unknown"}
           />
+          <Field label="Furnishing" value={property.furnishing ?? "Not specified"} />
         </Panel>
 
         <Panel title="Legal">
@@ -218,12 +219,44 @@ export default async function PropertyPage({ params }: { params: Params }) {
               </a>
             }
           />
+          {property.agent.secondaryPhone && (
+            <Field
+              label="Alternative telephone"
+              value={
+                <a
+                  href={`tel:${property.agent.secondaryPhone.replace(/\s/g, "")}`}
+                  className="flex items-center gap-1.5 text-primary hover:underline"
+                >
+                  <Phone className="size-3.5" aria-hidden />
+                  {property.agent.secondaryPhone}
+                </a>
+              }
+            />
+          )}
           <Field
             label="GhIS registered"
             value={property.agent.ghisVerified ? "Yes" : "No"}
           />
         </Panel>
       </div>
+
+      {property.facilities && property.facilities.length > 0 && (
+        <section className="mt-6 rounded-md border border-outline-variant/60 bg-surface-container-lowest p-5">
+          <h2 className="mb-4 font-headline text-headline-md text-primary">
+            Amenities
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {property.facilities.map((facility) => (
+              <span
+                key={facility}
+                className="rounded-full bg-surface-container-high px-3 py-1 font-data text-data-sm text-on-surface"
+              >
+                {facility}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mt-6 rounded-md border border-outline-variant/60 bg-surface-container-lowest p-5">
         <h2 className="mb-4 font-headline text-headline-md text-primary">

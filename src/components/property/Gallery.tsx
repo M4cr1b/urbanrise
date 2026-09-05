@@ -9,11 +9,12 @@ import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
  *
  * The detail page previously rendered `images[0]` and nothing else, so a
  * listing with three photographs showed one and silently discarded the rest.
- * Every uploaded image is now reachable: a main frame, a thumbnail strip, arrow
- * and keyboard navigation, swipe on touch, and a full-screen view.
- *
- * The strip is the important part — a carousel with no thumbnails hides how
- * many images exist, which is the failure being fixed rather than restyled.
+ * Every uploaded image is now reachable: a scroll-snapped strip is the
+ * primary view (native touch/trackpad/mouse scroll, no click required), each
+ * photograph shown whole via `object-contain` rather than cropped to a fixed
+ * box, plus a thumbnail strip, arrow and keyboard navigation, and an optional
+ * full-screen view for anyone who wants it — never a requirement to see a
+ * photo properly.
  */
 export function Gallery({
   images,
@@ -24,14 +25,45 @@ export function Gallery({
 }) {
   const [index, setIndex] = useState(0);
   const [expanded, setExpanded] = useState(false);
-  const touchStartX = useRef<number | null>(null);
   const stripRef = useRef<HTMLDivElement | null>(null);
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const count = images.length;
   const go = useCallback(
-    (next: number) => setIndex(((next % count) + count) % count),
+    (next: number) => {
+      const i = ((next % count) + count) % count;
+      slideRefs.current[i]?.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+      // index itself is set by the IntersectionObserver below, once the
+      // scroll actually lands — that keeps it correct whether it was driven
+      // by this call, a thumbnail click, or the visitor free-scrolling.
+    },
     [count],
   );
+
+  // Tracks which slide is on screen as the strip is scrolled — by click,
+  // keyboard, or a free touch/trackpad scroll with no click at all.
+  useEffect(() => {
+    const root = scrollerRef.current;
+    if (!root) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        const i = Number((visible.target as HTMLElement).dataset.slide);
+        if (!Number.isNaN(i)) setIndex(i);
+      },
+      { root, threshold: [0.6] },
+    );
+    slideRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, [images]);
 
   // Arrow keys work on the gallery; Escape leaves the full-screen view.
   useEffect(() => {
@@ -65,27 +97,37 @@ export function Gallery({
 
   return (
     <section aria-label={`${count} photographs`} className="mb-6">
-      <div className="relative aspect-video overflow-hidden rounded-xl bg-surface-container">
-        <Image
-          key={images[index]}
-          src={images[index]}
-          alt={`${alt} — photograph ${index + 1} of ${count}`}
-          fill
-          priority={index === 0}
-          sizes="(max-width: 1024px) 100vw, 900px"
-          className="object-cover"
-          onTouchStart={(e) => {
-            touchStartX.current = e.touches[0].clientX;
-          }}
-          onTouchEnd={(e) => {
-            const start = touchStartX.current;
-            if (start == null) return;
-            const dx = e.changedTouches[0].clientX - start;
-            // 40px is past an accidental drag but well short of a deliberate scroll.
-            if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
-            touchStartX.current = null;
-          }}
-        />
+      <div className="relative">
+        {/* The primary way to browse: a native, scroll-snapped strip, so
+            every photograph is visible whole (object-contain, not cover) and
+            reachable by touch/trackpad/mouse-wheel scroll with no click at
+            all. "View full size" below stays an optional extra, not the only
+            way to see an uncropped photo. */}
+        <div
+          ref={scrollerRef}
+          className="scrollbar-slim flex max-h-[65vh] snap-x snap-mandatory overflow-x-auto rounded-xl bg-surface-container"
+        >
+          {images.map((src, i) => (
+            <div
+              key={src}
+              ref={(el) => {
+                slideRefs.current[i] = el;
+              }}
+              data-slide={i}
+              className="relative aspect-4/3 w-full shrink-0 snap-center sm:aspect-video"
+            >
+              <Image
+                src={src}
+                alt={`${alt} — photograph ${i + 1} of ${count}`}
+                fill
+                priority={i === 0}
+                quality={90}
+                sizes="(max-width: 1024px) 100vw, 896px"
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
 
         {count > 1 && (
           <>
@@ -119,7 +161,7 @@ export function Gallery({
               key={src}
               data-i={i}
               type="button"
-              onClick={() => setIndex(i)}
+              onClick={() => go(i)}
               aria-label={`Show photograph ${i + 1}`}
               aria-current={i === index}
               className={`relative aspect-4/3 w-24 shrink-0 overflow-hidden rounded-md transition-all sm:w-28 ${
@@ -128,6 +170,9 @@ export function Gallery({
                   : "opacity-65 hover:opacity-100"
               }`}
             >
+              {/* Default quality (75) is fine here — the difference is
+                  imperceptible at ~100px and there's no reason to spend the
+                  extra bytes on a nav thumbnail. */}
               <Image
                 src={src}
                 alt=""
@@ -167,6 +212,7 @@ export function Gallery({
               src={images[index]}
               alt={`${alt} — photograph ${index + 1} of ${count}`}
               fill
+              quality={90}
               sizes="100vw"
               // contain, not cover: at full size the point is to see the whole
               // photograph, not to fill the frame with a crop of it.

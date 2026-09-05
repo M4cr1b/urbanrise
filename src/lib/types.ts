@@ -12,6 +12,8 @@ export type PropertyType =
   | "Apartment"
   | "Townhouse"
   | "Compound House"
+  | "Duplex"
+  | "Mansion"
   | "Land";
 
 export type PropertyStyle =
@@ -66,6 +68,8 @@ export interface Agent {
   name: string;
   firm: string;
   phone: string;
+  /** A second contact number, when the listing gave more than one. */
+  secondaryPhone?: string;
   /** Registered with the Ghana Institution of Surveyors. */
   ghisVerified: boolean;
 }
@@ -77,8 +81,8 @@ export interface Property {
   locality: string;
   district: string;
   region: Region;
-  /** [lng, lat] — matches PostGIS point ordering. */
-  coords: [number, number];
+  /** [lng, lat] — matches PostGIS point ordering. Null when not yet surveyed. */
+  coords: [number, number] | null;
 
   type: PropertyType;
   style: PropertyStyle;
@@ -87,6 +91,10 @@ export interface Property {
   floorAreaSqm: number | null;
   plotAreaSqm: number | null;
   yearBuilt: number | null;
+  /** e.g. "Semi-Furnished". Absent for older listings that predate this field. */
+  furnishing?: string;
+  /** Flat amenity list, e.g. "Wi-Fi", "24-hour Electricity". */
+  facilities?: string[];
 
   /** Cedi. */
   askingPrice: number;

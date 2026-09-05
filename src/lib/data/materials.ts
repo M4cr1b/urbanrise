@@ -22,7 +22,14 @@ export const materials: GreenMaterial[] = [
     summary:
       "Locally pressed laterite blocks. Cuts embodied carbon against sandcrete by roughly four-fifths and stabilises internal temperature without mechanical cooling.",
     imageUrl: "/materials/mat-001.webp",
-    supplierDetail: null,
+    supplierDetail: {
+      name: "Hive Earth",
+      locality: "Dzorwulu",
+      address: "12 Volta Street, Dzorwulu, Accra",
+      phone: "+233 30 296 4471",
+      email: "hello@hiveearth.gh",
+      website: "hiveearth.gh",
+    },
   },
   {
     id: "MAT-002",
@@ -54,7 +61,14 @@ export const materials: GreenMaterial[] = [
     summary:
       "Tema-rolled sheet with 70% post-consumer content and a high-albedo coating that reduces roof-surface gain.",
     imageUrl: "/materials/mat-003.webp",
-    supplierDetail: null,
+    supplierDetail: {
+      name: "Aluworks",
+      locality: "Tema",
+      address: "Plot 15, Heavy Industrial Area, Tema",
+      phone: "+233 30 320 2941",
+      email: "sales@aluworksgh.com",
+      website: "aluworksgh.com",
+    },
   },
   {
     id: "MAT-004",
@@ -86,7 +100,14 @@ export const materials: GreenMaterial[] = [
     summary:
       "Full rooftop array sized for a four-bedroom household, with hybrid inverter. Payback of about five years against current ECG tariffs.",
     imageUrl: "/materials/mat-005.webp",
-    supplierDetail: null,
+    supplierDetail: {
+      name: "Strategic Power Solutions",
+      locality: "East Legon",
+      address: "24 Lagos Avenue, East Legon, Accra",
+      phone: "+233 24 471 8830",
+      email: "info@strategicpower.gh",
+      website: "strategicpower.gh",
+    },
   },
   {
     id: "MAT-006",

@@ -5,6 +5,7 @@ import {
   Bath,
   BedDouble,
   Compass,
+  ImageIcon,
   Leaf,
   LineChart,
   Ruler,
@@ -196,6 +197,12 @@ export function PropertyCard({
         {property.verifiedBy && (
           <VerifiedBadge className="absolute bottom-4 left-4" />
         )}
+        {property.images.length > 1 && (
+          <span className="absolute bottom-4 right-4 flex items-center gap-1 rounded-sm bg-black/65 px-1.5 py-0.5 font-data text-[11px] text-white">
+            <ImageIcon className="size-3" aria-hidden />
+            {property.images.length}
+          </span>
+        )}
       </div>
       <div className="relative p-6">
         <div className="topo-bg pointer-events-none absolute bottom-0 right-0 size-24 opacity-30" />
@@ -236,7 +243,7 @@ export function FeaturedHomes({ properties }: { properties: Property[] }) {
           View all <ArrowRight className="size-4" aria-hidden />
         </Link>
       </div>
-      <div className="grid gap-gutter md:grid-cols-3">
+      <div className="grid gap-gutter md:grid-cols-2 lg:grid-cols-4">
         {properties.map((p, i) => (
           <PropertyCard key={p.id} property={p} priority={i === 0} />
         ))}

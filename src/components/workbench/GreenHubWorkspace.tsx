@@ -11,6 +11,7 @@ import {
   Leaf,
   Mail,
   MapPin,
+  MessageCircle,
   Paintbrush,
   Phone,
   Search,
@@ -33,6 +34,14 @@ import { PRIMARY_REGION } from "@/lib/regions";
    plain words before any number, and ends with a named supplier, their address
    and a tappable phone number.
    ------------------------------------------------------------------------ */
+
+function whatsappUrl(phone: string): string {
+  return `https://wa.me/${phone.replace(/\D/g, "")}`;
+}
+
+function mapSearchUrl(query: string): string {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
 
 const CATEGORY_META: Record<
   MaterialCategory,
@@ -273,6 +282,17 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
                 {supplier.phone}
               </a>
             )}
+            {supplier?.phone && (
+              <a
+                href={whatsappUrl(supplier.phone)}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-1.5 text-primary hover:underline"
+              >
+                <MessageCircle className="size-3.5" aria-hidden />
+                WhatsApp
+              </a>
+            )}
             {supplier?.email && (
               <a
                 href={`mailto:${supplier.email}`}
@@ -280,6 +300,21 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
               >
                 <Mail className="size-3.5" aria-hidden />
                 Email
+              </a>
+            )}
+            {(supplier?.address || supplier?.locality) && (
+              <a
+                href={mapSearchUrl(
+                  [supplier?.address, supplier?.locality]
+                    .filter(Boolean)
+                    .join(", "),
+                )}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-1.5 text-primary hover:underline"
+              >
+                <MapPin className="size-3.5" aria-hidden />
+                View on map
               </a>
             )}
             {supplier?.website && (
