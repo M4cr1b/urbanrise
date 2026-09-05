@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   RotateCcw,
   Search,
@@ -15,6 +16,7 @@ import {
   Heart,
   Eye,
 } from "lucide-react";
+import { PropertySearchField } from "@/components/search/PropertySearchField";
 import { EcoBadge, StatusChip, TitleStatusText, VerifiedBadge } from "@/components/ui/Badges";
 import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
 import { BedDouble, Bath, Ruler } from "lucide-react";
@@ -65,6 +67,53 @@ const EMPTY: Filters = {
   minPrice: "",
   maxPrice: "",
 };
+
+/**
+ * Seed filters from URL search params (fix for the bug where homepage
+ * search form submit params are silently ignored).
+ */
+function buildFiltersFromParams(params: URLSearchParams): Filters {
+  const q = params.get("q") || "";
+  const type = params.get("type") || "All";
+  const style = params.get("style") || "All";
+  const tenure = params.get("tenure") || "All";
+  const title = params.get("title") || "All";
+  const status = params.get("status") || "All";
+  const eco = params.get("eco") || "All";
+  const minBeds = params.get("minBeds") || "";
+  const maxBeds = params.get("maxBeds") || "";
+  const minPrice = params.get("minPrice") || "";
+  const maxPrice = params.get("maxPrice") || "";
+
+  // Validate type, tenure, title, status, eco against known options
+  const validTypes = TYPES.includes(type as typeof TYPES[number])
+    ? type
+    : "All";
+  const validTenure = TENURES.includes(tenure as typeof TENURES[number])
+    ? tenure
+    : "All";
+  const validTitle = TITLES.includes(title as typeof TITLES[number])
+    ? title
+    : "All";
+  const validStatus = STATUSES.includes(status as typeof STATUSES[number])
+    ? status
+    : "All";
+  const validEco = ECO.includes(eco as typeof ECO[number]) ? eco : "All";
+
+  return {
+    q,
+    type: validTypes,
+    style,
+    tenure: validTenure,
+    title: validTitle,
+    status: validStatus,
+    eco: validEco,
+    minBeds,
+    maxBeds,
+    minPrice,
+    maxPrice,
+  };
+}
 
 function FilterGroup({
   label,
@@ -132,7 +181,10 @@ function getUniqueLocalities(properties: Property[]): string[] {
 }
 
 export function SearchWorkspace({ properties }: { properties: Property[] }) {
-  const [f, setF] = useState<Filters>(EMPTY);
+  const searchParams = useSearchParams();
+  const [f, setF] = useState<Filters>(() =>
+    buildFiltersFromParams(searchParams)
+  );
   const [showAll, setShowAll] = useState(false);
   const set = <K extends keyof Filters>(key: K, v: Filters[K]) =>
     setF((prev) => ({ ...prev, [key]: v }));
@@ -176,33 +228,19 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
         <div className="mb-6 flex flex-col gap-4">
           <div className="flex flex-wrap items-start gap-3">
             <div className="relative flex-1 min-w-64">
-              <button
-                type="button"
-                onClick={() => {
-                  const input = document.querySelector('input[placeholder*="Search by"]') as HTMLInputElement;
-                  input?.focus();
-                }}
-                className="pointer-events-auto absolute left-3 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors"
-                aria-label="Focus search input"
-              >
-                <Search className="size-4" aria-hidden />
-              </button>
-              <input
+              <PropertySearchField
+                properties={properties}
                 value={f.q}
-                onChange={(e) => set("q", e.target.value)}
+                onChange={(v) => set("q", v)}
                 placeholder="Search by address, locality or district…"
-                className="w-full rounded-md border border-outline-variant bg-surface py-2.5 pl-10 pr-10 text-body-md outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
+                inputClassName="w-full rounded-md border border-outline-variant bg-surface py-2.5 pl-10 pr-10 text-body-md outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
+                wrapperClassName="w-full"
+                icon={<Search className="size-4" aria-hidden />}
+                onViewAll={(q) => {
+                  set("q", q);
+                  setShowAll(true);
+                }}
               />
-              {f.q && (
-                <button
-                  type="button"
-                  onClick={() => set("q", "")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors"
-                  aria-label="Clear search"
-                >
-                  <X className="size-4" aria-hidden />
-                </button>
-              )}
             </div>
             <button
               type="button"

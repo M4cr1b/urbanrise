@@ -11,7 +11,7 @@ import {
   StatsBand,
 } from "@/components/marketing/Sections";
 import { PortalReveal } from "@/components/scroll/PortalReveal";
-import { getFeaturedProperties, getNationalStats } from "@/lib/data";
+import { getFeaturedProperties, getNationalStats, getProperties } from "@/lib/data";
 
 
 /**
@@ -31,9 +31,10 @@ const HERO_IMAGE = {
 };
 
 export default async function LandingPage() {
-  const [featured, stats] = await Promise.all([
+  const [featured, stats, properties] = await Promise.all([
     getFeaturedProperties(),
     getNationalStats(),
+    getProperties(),
   ]);
 
   return (
@@ -50,7 +51,7 @@ export default async function LandingPage() {
                   wider screens; phones get a direct link and the card itself
                   immediately after the reveal. */}
               <div className="hidden max-w-2xl md:block">
-                <SearchCard />
+                <SearchCard properties={properties} />
               </div>
               <Link
                 href="/search"
@@ -66,7 +67,7 @@ export default async function LandingPage() {
         </PortalReveal>
 
         <div className="px-margin-mobile py-10 md:hidden">
-          <SearchCard />
+          <SearchCard properties={properties} />
         </div>
 
         <StatsBand stats={stats} />
