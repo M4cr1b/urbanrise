@@ -340,9 +340,9 @@ export const properties: Property[] = [
       "Four-bedroom, four-bathroom semi-furnished duplex in East Legon Hills, completed 2022, within a gated community. Comes with a private swimming pool, gym, and CCTV security.",
   },
   {
-    id: "east-legon-adjiganor",
-    address: "East Legon Adjiganor",
-    locality: "Adjiganor",
+    id: "east-legon-adjiringanor",
+    address: "East Legon Adjiringanor",
+    locality: "Adjiringanor",
     district: "Adentan Municipal District",
     region: "Greater Accra",
     coords: [-0.1340291, 5.6457856],
@@ -399,7 +399,7 @@ export const properties: Property[] = [
       "/properties/east-legon-adjiganor/07.webp",
     ],
     summary:
-      "Five-bedroom, five-bathroom semi-furnished duplex in Adjiganor, East Legon, completed 2023. Comes with a private swimming pool, CCTV security, and dedicated parking.",
+      "Five-bedroom, five-bathroom semi-furnished duplex in Adjiringanor, East Legon, completed 2023. Comes with a private swimming pool, CCTV security, and dedicated parking.",
   },
   {
     id: "east-legon-nanakrom",

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import {
@@ -24,7 +25,6 @@ import type { EcoRating, Property } from "@/lib/types";
 import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
 import { FilterChip } from "./FilterChip";
 import { LeaseholdYearModal } from "./LeaseholdYearModal";
-import { PropertyDetailsModal } from "./PropertyDetailsModal";
 
 const TYPES = ["All", "Apartment", "Mansion"];
 const STYLES = ["All", "Detached", "Semi-Detached", "Single Storey", "Multi Storey"];
@@ -171,7 +171,6 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   const [f, setF] = useState<Filters>(() => buildFiltersFromParams(searchParams));
   const [showAll, setShowAll] = useState(false);
   const [openChip, setOpenChip] = useState<string | null>(null);
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [leaseholdModalOpen, setLeaseholdModalOpen] = useState(false);
   const [selectedLeaseYear, setSelectedLeaseYear] = useState<number | null>(
     f.leaseYears ? Number(f.leaseYears) : null
@@ -510,7 +509,6 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                   key={p.id}
                   property={p}
                   isFeatured={FEATURED_PROPERTY_IDS.includes(p.id)}
-                  onOpen={() => setSelectedProperty(p)}
                 />
               ))}
           </div>
@@ -530,17 +528,6 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
           setOpenChip(null);
         }}
       />
-
-      {/* Property details modal */}
-      <PropertyDetailsModal
-        property={selectedProperty}
-        isFeatured={
-          selectedProperty
-            ? FEATURED_PROPERTY_IDS.includes(selectedProperty.id)
-            : false
-        }
-        onClose={() => setSelectedProperty(null)}
-      />
     </div>
   );
 }
@@ -548,18 +535,15 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
 function PropertyResultCard({
   property: p,
   isFeatured,
-  onOpen,
 }: {
   property: Property;
   isFeatured: boolean;
-  onOpen: () => void;
 }) {
   const rate = pricePerSqm(p.askingPrice, p.floorAreaSqm);
 
   return (
-    <button
-      type="button"
-      onClick={onOpen}
+    <Link
+      href={`/property/${p.id}`}
       className="group flex flex-col overflow-hidden rounded-lg border border-primary/10 bg-surface-container-lowest text-left transition-shadow hover:shadow-[var(--shadow-level-2)]"
     >
       {/* Image container with badges - larger proportion */}
@@ -670,6 +654,6 @@ function PropertyResultCard({
           </div>
         )}
       </div>
-    </button>
+    </Link>
   );
 }
