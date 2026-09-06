@@ -40,7 +40,7 @@ export function EcoBadge({
     <span
       // The ring keeps the paler D–G tones legible over photography, where a
       // low-chroma badge otherwise vanishes into a bright sky.
-      className={`leaf-badge inline-flex items-center gap-1 px-3 py-1 text-label-caps font-body shadow-sm ring-1 ring-black/10 ${ECO_TONE[rating]} ${className}`}
+      className={`leaf-badge inline-flex items-center gap-1 px-3 py-1 text-label-caps font-body shadow-sm ring-1 ring-black/10 w-fit shrink-0 self-start ${ECO_TONE[rating]} ${className}`}
     >
       <Leaf className="size-3.5" aria-hidden />
       Eco {rating}
@@ -56,7 +56,7 @@ export function EcoBadge({
 export function VerifiedBadge({ className = "" }: { className?: string }) {
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded bg-surface/90 px-2 py-1 text-label-caps font-body text-primary backdrop-blur-sm ${className}`}
+      className={`inline-flex items-center gap-1 rounded bg-surface/90 px-2 py-1 text-label-caps font-body text-primary backdrop-blur-sm w-fit shrink-0 self-start ${className}`}
     >
       <ShieldCheck className="size-3.5 text-secondary" aria-hidden />
       Verified
@@ -84,7 +84,7 @@ export function StatusChip({
 }) {
   return (
     <span
-      className={`inline-flex items-center rounded-sm px-1.5 py-0.5 text-data-xs font-data font-semibold ${STATUS_TONE[status]} ${className}`}
+      className={`inline-flex items-center rounded-sm px-1.5 py-0.5 text-data-xs font-data font-semibold w-fit shrink-0 self-start ${STATUS_TONE[status]} ${className}`}
     >
       {status}
     </span>
@@ -127,7 +127,7 @@ const FEATURE_ICON = {
 export function GreenFeaturePill({ feature }: { feature: GreenFeature }) {
   const Icon = FEATURE_ICON[feature.icon];
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-outline-variant/60 bg-surface-container-low px-3 py-1 text-data-sm text-on-surface-variant">
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-outline-variant/60 bg-surface-container-low px-3 py-1 text-data-sm text-on-surface-variant w-fit shrink-0 self-start">
       <Icon className="size-3.5 text-secondary" aria-hidden />
       {feature.label}
     </span>

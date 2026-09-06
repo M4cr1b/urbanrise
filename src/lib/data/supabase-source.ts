@@ -43,7 +43,7 @@ import { ACTIVE_REGIONS } from "@/lib/regions";
 const PROPERTY_SELECT = `
   id, address, locality, district, region, lng, lat,
   type, style, bedrooms, bathrooms, floor_area_sqm, plot_area_sqm, year_built,
-  asking_price, listed_date, status, tenure, title_status, eco_rating,
+  asking_price, listed_date, status, tenure, lease_years_remaining, title_status, eco_rating,
   verified_by, summary,
   agents ( name, firm, phone, ghis_verified ),
   property_media ( url, sort ),
@@ -93,6 +93,7 @@ function mapProperty(row: any): Property {
     saleHistory,
 
     tenure: row.tenure ?? "Unknown",
+    leaseYearsRemaining: row.lease_years_remaining != null ? Number(row.lease_years_remaining) : null,
     titleStatus: row.title_status ?? "Unknown",
 
     ecoRating: (row.eco_rating ?? "D") as EcoRating,

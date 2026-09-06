@@ -22,7 +22,8 @@ export type PropertyStyle =
   | "Terrace"
   | "Mid Terrace"
   | "End Terrace"
-  | "Storey"
+  | "Single Storey"
+  | "Multi Storey"
   | "Bungalow"
   | "Purpose Built"
   | "Unknown";
@@ -103,6 +104,7 @@ export interface Property {
   saleHistory: SaleRecord[];
 
   tenure: Tenure;
+  leaseYearsRemaining: number | null;
   titleStatus: TitleStatus;
 
   ecoRating: EcoRating;
