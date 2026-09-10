@@ -128,7 +128,9 @@ function haversineKm(a: [number, number], b: [number, number]): number {
 }
 
 export async function getSubjectProperty(): Promise<Property> {
-  return inScope.find((p) => p.id === SUBJECT_PROPERTY_ID)!;
+  const subject = inScope.find((p) => p.id === SUBJECT_PROPERTY_ID);
+  if (!subject) throw new Error("getSubjectProperty: no properties found");
+  return subject;
 }
 
 /** Comparable evidence for a subject, nearest first. */
