@@ -1,0 +1,324 @@
+================================================================================
+                    PROPERTY DETAILS PAGE - LAYOUT DIAGRAM
+================================================================================
+
+This shows the visual structure of the enhanced property detail page.
+
+================================================================================
+                         DESKTOP VIEW (1024px+)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ← Back to search  (hover effect)                                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                                                                             │
+│                  ┌────────────────────────────────────┐                    │
+│                  │     GALLERY WITH IMAGES           │                    │
+│                  │  (Rounded corners + shadow)       │                    │
+│                  │  [🏷️ Eco Badge] ◄ ► ▼ Thumbnails│                    │
+│                  └────────────────────────────────────┘                    │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┬──────────────┐
+│                      HEADER CARD                             │              │
+│                   (Gradient Background)                      │              │
+│  ADJIRINGANOR DUPLEX                                        │              │
+│  📍 Adjiringanor · Greater Accra    [Available]             │              │
+│                                                              │              │
+│  PROPERTY INFO:                                              │              │
+│  ₵500,000                                 📈 5% vs avg      │              │
+│  ₵2,000/sqm                                                 │              │
+└──────────────────────────────────────────────────────────────┴──────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         QUICK STATS (4-Card Grid)                            │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐                    │
+│  │ 🛏️ 4   │  │ 🚿 2   │  │ 📏 250 │  │ 🏠 Duplex│                    │
+│  │ BEDROOMS │  │BATHROOMS│  │   SQM   │  │   TYPE   │                    │
+│  └──────────┘  └──────────┘  └──────────┘  └──────────┘                    │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                    SUMMARY / DESCRIPTION                                    │
+│  "Beautiful duplex in premium location with modern amenities..."            │
+│  (Text: on-surface-variant, good readability)                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────┬──────────────────────────────────────┐
+│                                        │  STICKY AGENT CARD                   │
+│  PROPERTY SPECS PANEL                  │  ────────────────────────────────   │
+│  ┌─ 🏠 Property type: Duplex          │  │ 👥 Agent Contact                 │
+│  ├─ ✨ Style: Semi-Detached           │  │ ├─ Agent Name (Bold)             │
+│  ├─ 📏 Size: 250 sqm                  │  │ ├─                                │
+│  ├─ 🛏️ Bedrooms: 2                   │  │ │ 📱 [+233 50X XXX XXX]         │
+│  ├─ 🚿 Bathrooms: 2                   │  │ │    PRIMARY PHONE               │
+│  └─ ...more fields...                 │  │ │    (Gradient CTA Button)       │
+│                                        │  │ │                                │
+│  LOCATION PANEL                        │  │ │ 📱 [+233 55X XXX XXX]         │
+│  ┌─ 📍 Address: ...                   │  │ │    ALTERNATIVE PHONE           │
+│  ├─ 📍 District: Adjiringanor        │  │ │    (Secondary color CTA)       │
+│  └─ 📍 Region: Greater Accra         │  │ │                                │
+│                                        │  │ │ 💡 Pro Tip                    │
+│  TENURE & STATUS PANEL                 │  │ │    Contact agent to           │
+│  ├─ 🛡️ Tenure: Freehold              │  │ │    schedule viewing            │
+│  ├─ 🛡️ Status: Available             │  │ └─────────────────────────────    │
+│  └─ ...                               │  │                                   │
+│                                        │  │ (Sticky: Stays here while      │
+│                                        │  │  user scrolls down)            │
+└────────────────────────────────────────┴──────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                    FACILITIES & AMENITIES                                   │
+│                    ✨ (Secondary Color Theme)                               │
+│  ✓ Swimming Pool   ✓ Tennis Court   ✓ Gym   ✓ Garden                      │
+│  ✓ Security Gate   ✓ Parking        ✓ Fitness   ✓ Other                   │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                   SUSTAINABILITY & GREEN FEATURES                            │
+│                    🌿 (Tertiary Color Theme)                                │
+│  [A] Energy & Resource Efficiency Rating - Band A                           │
+│                                                                              │
+│  ┌───────────────────────────┬───────────────────────────┐                 │
+│  │ ☀️ Solar Panels           │ 💧 Water Harvesting      │                 │
+│  └───────────────────────────┴───────────────────────────┘                 │
+│  ┌───────────────────────────┬───────────────────────────┐                 │
+│  │ 🌱 Green Roof             │ 🌾 Rainwater Collection  │                 │
+│  └───────────────────────────┴───────────────────────────┘                 │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         SAFETY NOTICE SECTION                               │
+│  (Standard notice about property viewings)                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                         TABLET VIEW (768px)
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ← Back to search                                                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  GALLERY                                                                    │
+│  ────────────────────────────────────────────────────────────              │
+│  [Image with rounded corners and shadow]                                   │
+│  [Thumbnail strip below]                                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│            HEADER WITH PRICE                                               │
+│  ADJIRINGANOR DUPLEX                  ₵500,000                             │
+│  📍 Adjiringanor · Greater Accra      ₵2,000/sqm                           │
+│  [Available]                           📈 5% vs avg                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  QUICK STATS (2x2 Grid)                                                    │
+│  ┌─────────────┐  ┌─────────────┐                                         │
+│  │ 🛏️ BEDS: 4│  │ 🚿 BATHS: 2│                                         │
+│  └─────────────┘  └─────────────┘                                         │
+│  ┌─────────────┐  ┌─────────────┐                                         │
+│  │ 📏 250 SQM │  │ 🏠 Duplex   │                                         │
+│  └─────────────┘  └─────────────┘                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  DESCRIPTION                                                                │
+│  "Beautiful duplex in premium location..."                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  PROPERTY SPECS PANEL (2-Column Grid)                                      │
+│  ┌─────────────────────┐  ┌─────────────────────┐                        │
+│  │ 🏠 Type: Duplex    │  │ ✨ Style: Detached │                        │
+│  └─────────────────────┘  └─────────────────────┘                        │
+│  ┌─────────────────────┐  ┌─────────────────────┐                        │
+│  │ 📏 Size: 250 sqm  │  │ 🛏️ Beds: 2         │                        │
+│  └─────────────────────┘  └─────────────────────┘                        │
+│  ... more fields in grid ...                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  LOCATION PANEL                                                             │
+│  ├─ 📍 Address: ...                                                        │
+│  └─ 📍 District: Adjiringanor                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  AGENT CONTACT CARD (Not Sticky on Tablet)                                 │
+│  👥 Agent Contact                                                           │
+│  ├─ Agent Name                                                              │
+│  ├─ 📱 [+233 50X XXX XXX] - PRIMARY                                       │
+│  ├─ 📱 [+233 55X XXX XXX] - ALTERNATIVE                                   │
+│  └─ 💡 Pro Tip                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  FACILITIES & AMENITIES                                                     │
+│  ✓ Swimming Pool   ✓ Tennis Court   ✓ Gym   ✓ Garden                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  SUSTAINABILITY                                                             │
+│  [A] Band A Rating                                                         │
+│  ┌────────────────────┐                                                   │
+│  │ ☀️ Solar Panels   │                                                   │
+│  └────────────────────┘                                                   │
+│  ┌────────────────────┐                                                   │
+│  │ 💧 Water Harvest  │                                                   │
+│  └────────────────────┘                                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                         MOBILE VIEW (375px)
+================================================================================
+
+┌───────────────────────────┐
+│ ← Back to search          │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│                           │
+│    GALLERY                │
+│  [Images Stacked]        │
+│  [Thumbnails Below]      │
+│                           │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  HEADER                   │
+│  ADJIRINGANOR             │
+│  DUPLEX                   │
+│  📍 Adjiringanor          │
+│  [Available]              │
+│                           │
+│  ₵500,000                │
+│  ₵2,000/sqm              │
+│  📈 5% vs avg            │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  QUICK STATS              │
+│  ┌─────┐  ┌─────┐        │
+│  │ 🛏️ 4│  │ 🚿 2│        │
+│  └─────┘  └─────┘        │
+│  ┌─────┐  ┌─────┐        │
+│  │ 📏  │  │ 🏠  │        │
+│  │250  │  │Duplex
+│  └─────┘  └─────┘        │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  DESCRIPTION              │
+│  "Beautiful duplex..."    │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  SPECS PANEL              │
+│  🏠 Type: Duplex         │
+│  ✨ Style: Detached      │
+│  📏 Size: 250 sqm        │
+│  🛏️ Beds: 2             │
+│  🚿 Baths: 2            │
+│  ... more ...            │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  LOCATION                 │
+│  📍 Address: ...         │
+│  📍 District: ...        │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  AGENT CONTACT            │
+│  👥 Agent Contact        │
+│  Agent Name              │
+│                          │
+│  📱 [+233 50X XXX]      │
+│  PRIMARY PHONE           │
+│                          │
+│  📱 [+233 55X XXX]      │
+│  ALTERNATIVE             │
+│                          │
+│  💡 Pro Tip             │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  FACILITIES               │
+│  ✓ Swimming Pool         │
+│  ✓ Tennis Court          │
+│  ✓ Gym                   │
+│  ✓ Garden                │
+└───────────────────────────┘
+
+┌───────────────────────────┐
+│  SUSTAINABILITY           │
+│  [A] Band A               │
+│  ☀️ Solar Panels         │
+│  💧 Water Harvest        │
+│  🌱 Green Roof           │
+│  🌾 Rainwater            │
+└───────────────────────────┘
+
+================================================================================
+                            COLOR SCHEME LEGEND
+================================================================================
+
+🟦 PRIMARY: Headers, titles, main CTAs
+  (Example: "ADJIRINGANOR DUPLEX", ₵ Price, Primary Phone Button)
+
+🟩 SECONDARY: Facilities, positive actions
+  (Example: Facility pills, amenities section)
+
+🟪 TERTIARY: Sustainability, environmental info
+  (Example: Green features, eco section)
+
+⬜ BACKGROUNDS: Gradient surfaces
+  (Example: surface → surface-container colors)
+
+⬛ TEXT: Good contrast
+  (Example: on-surface for primary, on-surface-variant for secondary)
+
+================================================================================
+                          INTERACTIVE ELEMENTS
+================================================================================
+
+HOVER EFFECTS:
+
+1. Panel Cards:
+   Default:  Light border, subtle shadow
+   Hover:    Darker border, larger shadow
+
+2. Agent Phone Buttons:
+   Default:  Gradient background
+   Hover:    More vibrant gradient, enhanced shadow
+
+3. Facility Pills:
+   Default:  Muted background
+   Hover:    Brighter background
+
+4. Stat Cards:
+   Default:  Subtle ring effect
+   Hover:    Enhanced shadow, brighter ring
+
+STICKY ELEMENTS:
+
+- Agent Contact Card stays visible while scrolling on desktop
+- Ensures easy access to phone numbers throughout viewing
+
+RESPONSIVE BEHAVIOR:
+
+- Mobile: Single column, all elements stack
+- Tablet: 2-column grid for specs, agent below
+- Desktop: 3-column layout with sticky agent card on right
+
+================================================================================
+                              END OF LAYOUT DIAGRAM
+================================================================================
+
+For actual screenshots, visit: http://localhost:3001/property/[property-id]
