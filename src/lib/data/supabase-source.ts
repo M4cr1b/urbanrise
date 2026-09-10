@@ -29,7 +29,7 @@ import type {
   Region,
 } from "@/lib/types";
 import type { PropertyFilters, ProfessionalFilters } from "./contract";
-import { SUBJECT_PROPERTY_ID as DEFAULT_SUBJECT_ID, FEATURED_PROPERTY_IDS } from "./properties";
+import { FEATURED_PROPERTY_IDS } from "./properties";
 import { ACTIVE_REGIONS } from "@/lib/regions";
 
 /**
@@ -41,14 +41,13 @@ import { ACTIVE_REGIONS } from "@/lib/regions";
  */
 
 const PROPERTY_SELECT = `
-  id, address, locality, district, region, lng, lat,
-  type, style, storey, bedrooms, bathrooms, toilets, floor_area_sqm, plot_area_sqm, year_built,
-  asking_price, listed_date, status, tenure, lease_years_remaining, remaining_lease_terms, title_status, eco_rating,
-  condition, verified_by, summary, green_features_note,
-  agents ( name, firm, phone, ghis_verified ),
+  id, address, district, region,
+  type, style, storey, bedrooms, bathrooms, toilets, floor_area_sqm,
+  asking_price, status, tenure, remaining_lease_terms, eco_rating,
+  condition, summary,
+  agents ( name, phone ),
   property_media ( url, sort ),
-  property_green_features ( label, icon ),
-  sale_history ( price, sold_at, source )
+  property_green_features ( label, icon )
 `;
 
 /* eslint-disable @typescript-eslint/no-explicit-any -- PostgREST embeds are
@@ -63,21 +62,11 @@ function mapProperty(row: any): Property {
     .sort((a: any, b: any) => (a.sort ?? 0) - (b.sort ?? 0))
     .map((m: any) => m.url as string);
 
-  const saleHistory = (row.sale_history ?? [])
-    .map((s: any) => ({
-      price: Number(s.price),
-      date: s.sold_at as string,
-      source: s.source as Property["saleHistory"][number]["source"],
-    }))
-    .sort((a: any, b: any) => b.date.localeCompare(a.date));
-
   return {
     id: row.id,
     address: row.address,
-    locality: row.locality,
     district: row.district,
     region: row.region as Region,
-    coords: [Number(row.lng ?? 0), Number(row.lat ?? 0)],
 
     type: row.type,
     style: row.style ?? "Unknown",
@@ -86,33 +75,23 @@ function mapProperty(row: any): Property {
     bathrooms: row.bathrooms ?? 0,
     toilets: row.toilets ?? null,
     floorAreaSqm: row.floor_area_sqm != null ? Number(row.floor_area_sqm) : null,
-    plotAreaSqm: row.plot_area_sqm != null ? Number(row.plot_area_sqm) : null,
-    yearBuilt: row.year_built ?? null,
 
     askingPrice: Number(row.asking_price),
-    listedDate: row.listed_date ?? "",
     status: row.status,
-    saleHistory,
 
     tenure: row.tenure ?? "Unknown",
-    leaseYearsRemaining: row.lease_years_remaining != null ? Number(row.lease_years_remaining) : null,
     remainingLeaseTerm: row.remaining_lease_terms ?? null,
-    titleStatus: row.title_status ?? "Unknown",
 
     condition: row.condition ?? undefined,
     ecoRating: (row.eco_rating ?? "D") as EcoRating,
     greenFeatures: (row.property_green_features ?? []).map(
       (f: any): GreenFeature => ({ label: f.label, icon: f.icon }),
     ),
-    greenFeaturesNote: row.green_features_note ?? null,
 
     agent: {
       name: agent?.name ?? "Unknown",
-      firm: agent?.firm ?? "Unknown",
       phone: agent?.phone ?? "",
-      ghisVerified: Boolean(agent?.ghis_verified),
     },
-    verifiedBy: row.verified_by ?? null,
 
     images: images.length > 0 ? images : ["/placeholder-property.svg"],
     summary: row.summary ?? "",
@@ -174,8 +153,6 @@ export async function searchProperties(
   const supabase = db();
   let q = supabase.from("properties").select(PROPERTY_SELECT).in("region", ACTIVE_REGIONS);
 
-  if (filters.locality && filters.locality !== "All")
-    q = q.eq("locality", filters.locality);
   if (filters.type && filters.type !== "All") q = q.eq("type", filters.type);
   if (filters.tenure && filters.tenure !== "All")
     q = q.eq("tenure", filters.tenure);
@@ -192,7 +169,7 @@ export async function searchProperties(
   if (filters.query) {
     const term = `%${filters.query}%`;
     q = q.or(
-      `address.ilike.${term},locality.ilike.${term},district.ilike.${term}`,
+      `address.ilike.${term},district.ilike.${term}`,
     );
   }
 
@@ -214,12 +191,6 @@ export async function getPropertyIds(): Promise<string[]> {
   return (data ?? []).map((r: { id: string }) => r.id);
 }
 
-export async function getLocalities(): Promise<string[]> {
-  const supabase = db();
-  const { data, error } = await supabase.from("properties").select("locality").in("region", ACTIVE_REGIONS);
-  if (error) throw new Error(`getLocalities: ${error.message}`);
-  return [...new Set((data ?? []).map((r: any) => r.locality as string))].sort();
-}
 
 /* --- Comparables -------------------------------------------------------- */
 
@@ -232,65 +203,12 @@ export async function getLocalities(): Promise<string[]> {
  * needlessly confusing. Falls back to the most recently listed verified
  * property if that record is absent from the database.
  */
-export async function getSubjectProperty(): Promise<Property> {
-  const supabase = db();
-
-  const designated = await supabase
-    .from("properties")
-    .select(PROPERTY_SELECT)
-    .in("region", ACTIVE_REGIONS)
-    .eq("id", DEFAULT_SUBJECT_ID)
-    .maybeSingle();
-
-  if (designated.data) return mapProperty(designated.data);
-
-  const { data, error } = await supabase
-    .from("properties")
-    .select(PROPERTY_SELECT)
-    .in("region", ACTIVE_REGIONS)
-    .not("verified_by", "is", null)
-    .order("listed_date", { ascending: false })
-    .limit(1)
-    .maybeSingle();
-
-  if (error) throw new Error(`getSubjectProperty: ${error.message}`);
-  if (!data) throw new Error("getSubjectProperty: no properties found");
-  return mapProperty(data);
+export async function getSubjectProperty(): Promise<Comparable | null> {
+  return null;
 }
 
-export async function getComparables(
-  subjectId?: string,
-): Promise<Comparable[]> {
-  const supabase = db();
-  const id = subjectId ?? (await getSubjectProperty()).id;
-
-  // PostGIS does the distance work — ST_DWithin on the GiST index.
-  const { data: near, error: rpcError } = await supabase.rpc(
-    "comparables_within",
-    { subject_id: id, radius_m: 60000, max_rows: 30 },
-  );
-  if (rpcError) throw new Error(`getComparables: ${rpcError.message}`);
-
-  const rows = (near ?? []) as { property_id: string; distance_km: number }[];
-  if (rows.length === 0) return [];
-
-  const { data, error } = await supabase
-    .from("properties")
-    .select(PROPERTY_SELECT)
-    .in("region", ACTIVE_REGIONS)
-    .in(
-      "id",
-      rows.map((r) => r.property_id),
-    );
-  if (error) throw new Error(`getComparables: ${error.message}`);
-
-  const distances = new Map(rows.map((r) => [r.property_id, r.distance_km]));
-  return (data ?? [])
-    .map((row) => ({
-      ...mapProperty(row),
-      distanceKm: distances.get(row.id) ?? 0,
-    }))
-    .sort((a, b) => a.distanceKm - b.distanceKm);
+export async function getComparables(): Promise<Comparable[]> {
+  return [];
 }
 
 /* --- Professionals ------------------------------------------------------ */

@@ -22,7 +22,7 @@ const INTENT: Record<Tab, string> = {
 export function SearchCard({ properties }: { properties: Property[] }) {
   const router = useRouter();
   const [tab, setTab] = useState<Tab>("Buy");
-  const [locality, setLocality] = useState("");
+  const [query, setQuery] = useState("");
   const [type, setType] = useState("All");
   const [beds, setBeds] = useState("");
   const [price, setPrice] = useState("");
@@ -30,7 +30,7 @@ export function SearchCard({ properties }: { properties: Property[] }) {
 
   function submit() {
     const params = new URLSearchParams({ intent: INTENT[tab] });
-    if (locality) params.set("q", locality);
+    if (query) params.set("q", query);
     if (type !== "All") params.set("type", type);
     if (beds) params.set("minBeds", beds);
     if (price) params.set("maxPrice", price);
@@ -65,8 +65,8 @@ export function SearchCard({ properties }: { properties: Property[] }) {
           <span className="text-label-caps text-on-surface-variant">Location</span>
           <PropertySearchField
             properties={properties}
-            value={locality}
-            onChange={setLocality}
+            value={query}
+            onChange={setQuery}
             placeholder="East Legon, Cantonments…"
             inputClassName="w-full rounded-md border border-outline-variant bg-surface py-3 pl-10 pr-4 text-on-surface outline-none transition-all focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
             wrapperClassName="relative"
@@ -93,8 +93,9 @@ export function SearchCard({ properties }: { properties: Property[] }) {
             <option>House</option>
             <option>Apartment</option>
             <option>Townhouse</option>
-            <option>Compound House</option>
-            <option>Land</option>
+            <option>Duplex</option>
+            <option>Villa</option>
+            <option>Mansion</option>
           </select>
         </label>
 

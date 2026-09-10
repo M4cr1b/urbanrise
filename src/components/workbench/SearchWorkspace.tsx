@@ -20,18 +20,16 @@ import {
   Building2,
 } from "lucide-react";
 import { PropertySearchField } from "@/components/search/PropertySearchField";
-import { EcoBadge, VerifiedBadge } from "@/components/ui/Badges";
+import { EcoBadge } from "@/components/ui/Badges";
 import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
 import type { EcoRating, Property } from "@/lib/types";
 import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
 import { FilterChip } from "./FilterChip";
-import { LeaseholdYearModal } from "./LeaseholdYearModal";
 
 const TYPES = ["All", "Apartment", "Mansion", "Townhouse", "Duplex", "Villa"];
 const STYLES = ["All", "Detached", "Semi-Detached"];
 const STOREYS = ["All", "Single Storey", "Multi Storey"];
 const TENURES = ["All", "Freehold", "Leasehold"];
-const TITLES = ["All", "Registered", "Pending", "Unregistered"];
 const STATUSES = ["All", "Available", "Under Offer", "Sold"];
 const ECO = ["All", "A", "B", "C", "D"];
 
@@ -41,8 +39,6 @@ interface Filters {
   style: string;
   storey: string;
   tenure: string;
-  leaseYears: string;
-  title: string;
   status: string;
   eco: string;
   minBeds: string;
@@ -57,8 +53,6 @@ const EMPTY: Filters = {
   style: "All",
   storey: "All",
   tenure: "All",
-  leaseYears: "",
-  title: "All",
   status: "All",
   eco: "All",
   minBeds: "",
@@ -73,8 +67,6 @@ function buildFiltersFromParams(params: URLSearchParams): Filters {
   const style = params.get("style") || "All";
   const storey = params.get("storey") || "All";
   const tenure = params.get("tenure") || "All";
-  const leaseYears = params.get("leaseYears") || "";
-  const title = params.get("title") || "All";
   const status = params.get("status") || "All";
   const eco = params.get("eco") || "All";
   const minBeds = params.get("minBeds") || "";
@@ -86,7 +78,6 @@ function buildFiltersFromParams(params: URLSearchParams): Filters {
   const validStyle = STYLES.includes(style as typeof STYLES[number]) ? style : "All";
   const validStorey = STOREYS.includes(storey as typeof STOREYS[number]) ? storey : "All";
   const validTenure = TENURES.includes(tenure as typeof TENURES[number]) ? tenure : "All";
-  const validTitle = TITLES.includes(title as typeof TITLES[number]) ? title : "All";
   const validStatus = STATUSES.includes(status as typeof STATUSES[number]) ? status : "All";
   const validEco = ECO.includes(eco as typeof ECO[number]) ? eco : "All";
 
@@ -96,8 +87,6 @@ function buildFiltersFromParams(params: URLSearchParams): Filters {
     style: validStyle,
     storey: validStorey,
     tenure: validTenure,
-    leaseYears,
-    title: validTitle,
     status: validStatus,
     eco: validEco,
     minBeds,
@@ -158,8 +147,6 @@ function countActiveFilters(f: Filters): number {
   if (f.style !== "All") count++;
   if (f.storey !== "All") count++;
   if (f.tenure !== "All") count++;
-  if (f.leaseYears) count++;
-  if (f.title !== "All") count++;
   if (f.status !== "All") count++;
   if (f.eco !== "All") count++;
   if (f.minBeds) count++;
@@ -169,9 +156,9 @@ function countActiveFilters(f: Filters): number {
   return count;
 }
 
-function getUniqueLocalities(properties: Property[]): string[] {
-  const localities = [...new Set(properties.map(p => p.locality))].sort();
-  return localities;
+function getUniqueAddresses(properties: Property[]): string[] {
+  const addresses = [...new Set(properties.map(p => p.address))].sort();
+  return addresses;
 }
 
 export function SearchWorkspace({ properties }: { properties: Property[] }) {
@@ -179,15 +166,11 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   const [f, setF] = useState<Filters>(() => buildFiltersFromParams(searchParams));
   const [showAll, setShowAll] = useState(false);
   const [openChip, setOpenChip] = useState<string | null>(null);
-  const [leaseholdModalOpen, setLeaseholdModalOpen] = useState(false);
-  const [selectedLeaseYear, setSelectedLeaseYear] = useState<number | null>(
-    f.leaseYears ? Number(f.leaseYears) : null
-  );
 
   const set = <K extends keyof Filters>(key: K, v: Filters[K]) =>
     setF((prev) => ({ ...prev, [key]: v }));
 
-  const localities = getUniqueLocalities(properties);
+  const addresses = getUniqueAddresses(properties);
 
   const results = useMemo(() => {
     if (showAll) {
@@ -202,13 +185,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
       if (f.storey !== "All" && p.storey !== f.storey) return false;
 
       if (f.tenure === "Freehold" && p.tenure !== "Freehold") return false;
-      if (f.tenure === "Leasehold") {
-        if (!p.tenure.startsWith("Leasehold")) return false;
-        if (f.leaseYears && p.leaseYearsRemaining !== Number(f.leaseYears))
-          return false;
-      }
-
-      if (f.title !== "All" && p.titleStatus !== f.title) return false;
+      if (f.tenure === "Leasehold" && !p.tenure.startsWith("Leasehold")) return false;
       if (f.status !== "All" && p.status !== f.status) return false;
       if (ecoCeiling != null && ECO_ORDER.indexOf(p.ecoRating) > ecoCeiling)
         return false;
@@ -217,7 +194,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
       if (f.minPrice && p.askingPrice < Number(f.minPrice)) return false;
       if (f.maxPrice && p.askingPrice > Number(f.maxPrice)) return false;
       if (f.q) {
-        const hay = `${p.address} ${p.locality} ${p.district} ${p.region}`.toLowerCase();
+        const hay = `${p.address} ${p.district} ${p.region}`.toLowerCase();
         if (!hay.includes(f.q.toLowerCase())) return false;
       }
       return true;
@@ -229,9 +206,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   const getTenureDisplayValue = () => {
     if (f.tenure === "All") return "All";
     if (f.tenure === "Freehold") return "Freehold";
-    if (f.tenure === "Leasehold") {
-      return f.leaseYears ? `Leasehold · ${f.leaseYears}y` : "Leasehold";
-    }
+    if (f.tenure === "Leasehold") return "Leasehold";
     return "All";
   };
 
@@ -247,7 +222,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 properties={properties}
                 value={f.q}
                 onChange={(v) => set("q", v)}
-                placeholder="Search by address, locality or district…"
+                placeholder="Search by address or district…"
                 inputClassName="w-full rounded-md border border-outline-variant bg-surface py-2 pl-10 pr-10 text-body-md outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
                 wrapperClassName="w-full"
                 icon={<Search className="size-4" aria-hidden />}
@@ -278,7 +253,6 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 setF(EMPTY);
                 setShowAll(false);
                 setOpenChip(null);
-                setSelectedLeaseYear(null);
               }}
               className="flex items-center gap-2 rounded-md border border-outline-variant px-3 py-2 font-data text-data-sm text-on-surface-variant hover:border-primary/50 hover:text-primary transition-colors whitespace-nowrap"
             >
@@ -365,31 +339,6 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 value={f.tenure}
                 onChange={(v) => {
                   set("tenure", v);
-                  if (v === "Leasehold") {
-                    setLeaseholdModalOpen(true);
-                  } else {
-                    set("leaseYears", "");
-                    setSelectedLeaseYear(null);
-                    setOpenChip(null);
-                  }
-                }}
-              />
-            </FilterChip>
-
-            <FilterChip
-              label="Title"
-              icon={FileText}
-              value={f.title}
-              isOpen={openChip === "title"}
-              onToggle={() => setOpenChip(openChip === "title" ? null : "title")}
-            >
-              <FilterGroup
-                label="Title status"
-                icon={FileText}
-                options={TITLES}
-                value={f.title}
-                onChange={(v) => {
-                  set("title", v);
                   setOpenChip(null);
                 }}
               />
@@ -501,17 +450,17 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
               <span className="inline-block font-data text-data-sm text-on-surface-variant">
                 Quick browse:
               </span>
-              {localities.slice(0, 6).map((locality) => (
+              {addresses.slice(0, 6).map((address) => (
                 <button
-                  key={locality}
+                  key={address}
                   type="button"
                   onClick={() => {
-                    set("q", locality);
+                    set("q", address);
                     setShowAll(false);
                   }}
                   className="rounded-full border border-secondary/50 bg-secondary/10 px-3 py-1 font-data text-data-sm text-secondary hover:bg-secondary/20 transition-colors"
                 >
-                  {locality}
+                  {address}
                 </button>
               ))}
             </div>
@@ -543,19 +492,6 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
         )}
       </div>
 
-      {/* Leasehold year modal */}
-      <LeaseholdYearModal
-        open={leaseholdModalOpen}
-        initialYear={selectedLeaseYear}
-        onApply={(year) => {
-          setSelectedLeaseYear(year);
-          set("leaseYears", year ? String(year) : "");
-        }}
-        onClose={() => {
-          setLeaseholdModalOpen(false);
-          setOpenChip(null);
-        }}
-      />
     </div>
   );
 }
@@ -589,8 +525,6 @@ function PropertyResultCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
         <EcoBadge rating={p.ecoRating} className="absolute left-3 top-3" />
-
-        {p.verifiedBy && <VerifiedBadge className="absolute bottom-3 left-3" />}
 
         {/* Featured ribbon */}
         {isFeatured && (
@@ -651,7 +585,7 @@ function PropertyResultCard({
         <div className="mb-3 border-t border-outline-variant/20 pt-2 font-data text-data-xs">
           <div className="text-on-surface-variant">
             <span className="font-semibold text-on-surface text-data-sm">
-              {p.locality}
+              {p.address}
             </span>{" "}
             • {p.district}
           </div>
@@ -677,7 +611,6 @@ function PropertyResultCard({
             </div>
             <div className="font-data text-data-xs">
               <div className="font-semibold text-on-surface">{p.agent.name}</div>
-              <div className="text-on-surface-variant">{p.agent.firm}</div>
             </div>
           </div>
         )}

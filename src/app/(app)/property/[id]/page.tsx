@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { ArrowLeft, MapPin, Phone } from "lucide-react";
 import {
   EcoBadge,
   GreenFeaturePill,
   StatusChip,
-  TitleStatusText,
 } from "@/components/ui/Badges";
-import { AddToShortlist } from "@/components/workbench/AddToShortlist";
 import { Gallery } from "@/components/property/Gallery";
 import { SafetyNotice } from "@/components/property/SafetyNotice";
-import { formatCedi, formatDate, formatSqm, pricePerSqm } from "@/lib/format";
+import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
 import { getLocalityMarket, getPropertyIds, getPropertyById } from "@/lib/data";
 import { IS_SINGLE_REGION } from "@/lib/regions";
 
@@ -66,7 +64,7 @@ export default async function PropertyPage({ params }: { params: Params }) {
   const property = await getPropertyById(id);
   if (!property) notFound();
 
-  const market = await getLocalityMarket(property.locality);
+  const market = await getLocalityMarket(property.address);
   const rate = pricePerSqm(property.askingPrice, property.floorAreaSqm);
 
   // How this property's rate sits against its locality — the comparison a
@@ -102,12 +100,8 @@ export default async function PropertyPage({ params }: { params: Params }) {
           </h1>
           <p className="mt-1 flex items-center gap-1.5 font-data text-data-sm text-on-surface-variant">
             <MapPin className="size-4" aria-hidden />
-            {/* Some imported records carry district == locality, and with a
-                single covered region the region name adds nothing. Print each
-                distinct part once. */}
             {[
-              property.locality,
-              property.district !== property.locality ? property.district : null,
+              property.district,
               IS_SINGLE_REGION ? null : property.region,
             ]
               .filter(Boolean)
@@ -143,29 +137,22 @@ export default async function PropertyPage({ params }: { params: Params }) {
         {property.summary}
       </p>
 
-      <AddToShortlist id={property.id} address={property.address} />
-
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         <Panel title="Specs">
           <Field label="Property type" value={property.type} />
           <Field label="Property style" value={property.style} />
           {property.storey && <Field label="Storey" value={property.storey} />}
           <Field label="Property size" value={formatSqm(property.floorAreaSqm)} />
-          <Field
-            label="Plot area"
-            value={property.plotAreaSqm ? formatSqm(property.plotAreaSqm) : "Unknown"}
-          />
           {property.condition && <Field label="Condition" value={property.condition} />}
           <Field label="Furnishing" value={property.furnishing ?? "Not specified"} />
+          {property.selfContained && <Field label="Self-contained" value="Yes" />}
           <Field label="Bedrooms" value={String(property.bedrooms)} />
           <Field label="Bathrooms" value={String(property.bathrooms)} />
           {property.toilets != null && <Field label="Toilets" value={String(property.toilets)} />}
-          <Field label="Year built" value={property.yearBuilt?.toString() ?? "Unknown"} />
         </Panel>
 
         <Panel title="Location">
           <Field label="Address" value={property.address} />
-          <Field label="Locality" value={property.locality} />
           <Field label="District" value={property.district} />
           {!IS_SINGLE_REGION && <Field label="Region" value={property.region} />}
         </Panel>
@@ -175,29 +162,10 @@ export default async function PropertyPage({ params }: { params: Params }) {
           {property.remainingLeaseTerm && (
             <Field label="Remaining lease term" value={property.remainingLeaseTerm} />
           )}
-          <Field
-            label="Lands Commission title"
-            value={<TitleStatusText status={property.titleStatus} />}
-          />
           <Field label="Status" value={property.status} />
-          <Field label="Listed" value={formatDate(property.listedDate)} />
-          <Field
-            label="Verified by"
-            value={
-              property.verifiedBy ? (
-                <span className="flex items-center gap-1.5 text-secondary">
-                  <ShieldCheck className="size-4" aria-hidden />
-                  {property.verifiedBy}
-                </span>
-              ) : (
-                <span className="text-outline">Not yet verified</span>
-              )
-            }
-          />
         </Panel>
 
         <Panel title="Agent & Contact">
-          <Field label="Firm" value={property.agent.firm} />
           <Field label="Agent" value={property.agent.name} />
           <Field
             label="Telephone"
@@ -225,68 +193,6 @@ export default async function PropertyPage({ params }: { params: Params }) {
               }
             />
           )}
-          <Field
-            label="GhIS registered"
-            value={property.agent.ghisVerified ? "Yes" : "No"}
-          />
-        </Panel>
-
-        <Panel title="Sale history">
-          {property.saleHistory.length === 0 ? (
-            <p className="py-2 font-data text-data-sm text-on-surface-variant">
-              No recorded transactions.
-            </p>
-          ) : (
-            property.saleHistory.map((s) => (
-              <Field
-                key={s.date}
-                label={formatDate(s.date)}
-                value={
-                  <span className="flex flex-col items-end">
-                    <span>{formatCedi(s.price)}</span>
-                    <span className="text-[11px] font-normal text-on-surface-variant">
-                      {s.source}
-                    </span>
-                  </span>
-                }
-              />
-            ))
-          )}
-        </Panel>
-
-        <Panel title="Marketing agent">
-          <Field label="Firm" value={property.agent.firm} />
-          <Field label="Contact" value={property.agent.name} />
-          <Field
-            label="Telephone"
-            value={
-              <a
-                href={`tel:${property.agent.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-1.5 text-primary hover:underline"
-              >
-                <Phone className="size-3.5" aria-hidden />
-                {property.agent.phone}
-              </a>
-            }
-          />
-          {property.agent.secondaryPhone && (
-            <Field
-              label="Alternative telephone"
-              value={
-                <a
-                  href={`tel:${property.agent.secondaryPhone.replace(/\s/g, "")}`}
-                  className="flex items-center gap-1.5 text-primary hover:underline"
-                >
-                  <Phone className="size-3.5" aria-hidden />
-                  {property.agent.secondaryPhone}
-                </a>
-              }
-            />
-          )}
-          <Field
-            label="GhIS registered"
-            value={property.agent.ghisVerified ? "Yes" : "No"}
-          />
         </Panel>
       </div>
 
@@ -319,18 +225,12 @@ export default async function PropertyPage({ params }: { params: Params }) {
           </span>
         </div>
         {property.greenFeatures.length > 0 && (
-          <div className="mb-4 flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {property.greenFeatures.map((feature) => (
               <GreenFeaturePill key={feature.label} feature={feature} />
             ))}
           </div>
         )}
-        <div className="flex items-start justify-between gap-4 py-2 font-data text-data-sm">
-          <dt className="text-on-surface-variant">Green features note</dt>
-          <dd className="text-right font-medium text-on-surface">
-            {property.greenFeaturesNote ?? "Not specified"}
-          </dd>
-        </div>
       </section>
 
       <SafetyNotice />

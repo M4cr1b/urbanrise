@@ -37,6 +37,21 @@ export default async function ComparablesPage({
     getComparables(),
   ]);
 
+  if (!subject) {
+    return (
+      <div className="flex items-center justify-center p-8">
+        <div className="max-w-lg rounded-md border border-outline-variant/60 bg-surface-container-lowest p-8 text-center">
+          <h2 className="mb-2 font-headline text-headline-md text-primary">
+            No comparables have been added yet
+          </h2>
+          <p className="text-body-md text-on-surface-variant">
+            Comparables are a separate dataset that will be uploaded separately.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   const active: StageId = VALID_STAGES.includes(stage as StageId)
     ? (stage as StageId)
     : "comparables";

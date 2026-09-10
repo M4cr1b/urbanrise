@@ -21,7 +21,6 @@ export const getProperties = source.getProperties;
 export const getPropertyById = source.getPropertyById;
 export const getFeaturedProperties = source.getFeaturedProperties;
 export const searchProperties = source.searchProperties;
-export const getLocalities = source.getLocalities;
 export const getPropertyIds = source.getPropertyIds;
 
 export const getSubjectProperty = source.getSubjectProperty;

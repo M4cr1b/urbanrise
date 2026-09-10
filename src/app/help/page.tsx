@@ -39,10 +39,9 @@ export default function HelpPage() {
                   What can I search for?
                 </h3>
                 <p>
-                  You can search by address, locality (e.g., "East Legon"),
-                  district, or region. Start typing to see matching properties in
+                  You can search by address or district. Start typing to see matching properties in
                   real time. You can also filter by property type, bedrooms, price
-                  range, tenure, title status, and eco rating.
+                  range, tenure, and eco rating.
                 </p>
               </div>
               <div>

@@ -19,7 +19,7 @@ import {
   formatSqm,
   pricePerSqm,
 } from "@/lib/format";
-import type { Comparable, Property } from "@/lib/types";
+import type { Comparable } from "@/lib/types";
 import { useShortlist } from "./shortlist-store";
 
 /* ---------------------------------------------------------------------------
@@ -35,9 +35,9 @@ import { useShortlist } from "./shortlist-store";
 interface Row {
   label: string;
   /** Rendered for every comparable, and for the subject unless overridden. */
-  value: (p: Property) => ReactNode;
+  value: (p: Comparable) => ReactNode;
   /** Subject-specific rendering — e.g. it has no distance from itself. */
-  subject?: (p: Property) => ReactNode;
+  subject?: (p: Comparable) => ReactNode;
   /** Draw a heavier rule above this row to separate groups of attributes. */
   startsGroup?: boolean;
 }
@@ -130,13 +130,12 @@ const ROWS: Row[] = [
       ),
   },
 
-  { label: "Locality", startsGroup: true, value: (p) => p.locality },
-  { label: "District", value: (p) => p.district },
+  { label: "District", startsGroup: true, value: (p) => p.district },
   {
     label: "Agent",
     value: (p) => (
       <span className="flex flex-col text-left md:items-end md:text-right">
-        <span>{p.agent.firm}</span>
+        <span>{p.agent.name}</span>
         <span className="text-[11px] font-normal text-on-surface-variant">
           {p.agent.phone}
         </span>
@@ -220,7 +219,7 @@ export function ComparablesGrid({
   subject,
   comparables,
 }: {
-  subject: Property;
+  subject: Comparable;
   comparables: Comparable[];
 }) {
   const { has, toggle } = useShortlist();
@@ -348,7 +347,7 @@ function RowCells({
 }: {
   row: Row;
   striped: boolean;
-  subject: Property;
+  subject: Comparable;
   comparables: Comparable[];
 }) {
   return (
@@ -375,7 +374,7 @@ function RowCells({
   );
 }
 
-function PhotoCell({ property }: { property: Property }) {
+function PhotoCell({ property }: { property: Comparable }) {
   return (
     <div className="relative size-full">
       <Image

@@ -10,7 +10,6 @@ import type {
 /** Filter shapes shared by both data sources. */
 
 export interface PropertyFilters {
-  locality?: string;
   type?: PropertyType | "All";
   minBeds?: number;
   maxBeds?: number;

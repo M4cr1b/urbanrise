@@ -7,9 +7,12 @@ import type {
 import type { PropertyFilters, ProfessionalFilters } from "./contract";
 import {
   FEATURED_PROPERTY_IDS,
-  SUBJECT_PROPERTY_ID,
   properties,
 } from "./properties";
+import {
+  comparables,
+  SUBJECT_COMPARABLE_ID,
+} from "./comparables";
 import { professionals } from "./professionals";
 import { materials } from "./materials";
 import { localityMarkets, nationalStats } from "./market";
@@ -63,7 +66,6 @@ export async function searchProperties(
   filters: PropertyFilters = {},
 ): Promise<Property[]> {
   const {
-    locality,
     type,
     minBeds,
     maxBeds,
@@ -78,7 +80,6 @@ export async function searchProperties(
   const ecoCeiling = minEcoRating ? ECO_ORDER.indexOf(minEcoRating) : null;
 
   return inScope.filter((p) => {
-    if (locality && locality !== "All" && p.locality !== locality) return false;
     if (type && type !== "All" && p.type !== type) return false;
     if (minBeds != null && p.bedrooms < minBeds) return false;
     if (maxBeds != null && p.bedrooms > maxBeds) return false;
@@ -90,7 +91,7 @@ export async function searchProperties(
       return false;
     if (query) {
       const haystack =
-        `${p.address} ${p.locality} ${p.district} ${p.summary}`.toLowerCase();
+        `${p.address} ${p.district} ${p.summary}`.toLowerCase();
       if (!haystack.includes(query.toLowerCase())) return false;
     }
     return true;
@@ -102,51 +103,19 @@ export async function getPropertyIds(): Promise<string[]> {
   return inScope.map((p) => p.id);
 }
 
-export async function getLocalities(): Promise<string[]> {
-  return [...new Set(inScope.map((p) => p.locality))].sort();
-}
 
 // ---------------------------------------------------------------------------
 // Comparables
 // ---------------------------------------------------------------------------
 
-/**
- * Great-circle distance in kilometres.
- * Replaced by `ST_Distance` on the PostGIS `geom` column once Supabase is live.
- */
-function haversineKm(a: [number, number], b: [number, number]): number {
-  const R = 6371;
-  const toRad = (d: number) => (d * Math.PI) / 180;
-  const dLat = toRad(b[1] - a[1]);
-  const dLng = toRad(b[0] - a[0]);
-  const lat1 = toRad(a[1]);
-  const lat2 = toRad(b[1]);
-  const h =
-    Math.sin(dLat / 2) ** 2 +
-    Math.sin(dLng / 2) ** 2 * Math.cos(lat1) * Math.cos(lat2);
-  return 2 * R * Math.asin(Math.sqrt(h));
-}
-
-export async function getSubjectProperty(): Promise<Property> {
-  const subject = inScope.find((p) => p.id === SUBJECT_PROPERTY_ID);
-  if (!subject) throw new Error("getSubjectProperty: no properties found");
-  return subject;
+export async function getSubjectProperty(): Promise<Comparable | null> {
+  if (!SUBJECT_COMPARABLE_ID) return null;
+  return comparables.find((c) => c.id === SUBJECT_COMPARABLE_ID) ?? null;
 }
 
 /** Comparable evidence for a subject, nearest first. */
-export async function getComparables(
-  subjectId: string = SUBJECT_PROPERTY_ID,
-): Promise<Comparable[]> {
-  const subject = inScope.find((p) => p.id === subjectId);
-  if (!subject || !subject.coords) return [];
-
-  return inScope
-    .filter((p) => p.id !== subjectId && p.coords != null)
-    .map((p) => ({
-      ...p,
-      distanceKm: haversineKm(subject.coords!, p.coords!),
-    }))
-    .sort((a, b) => a.distanceKm - b.distanceKm);
+export async function getComparables(): Promise<Comparable[]> {
+  return comparables;
 }
 
 // ---------------------------------------------------------------------------

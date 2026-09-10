@@ -32,6 +32,7 @@ export type PropertyStorey =
 /** Ghana's land market is overwhelmingly leasehold; freehold is the exception. */
 export type Tenure =
   | "Freehold"
+  | "Leasehold"
   | "Leasehold 99yr"
   | "Leasehold 50yr"
   | "Customary"
@@ -68,7 +69,6 @@ export interface SaleRecord {
 
 export interface Agent {
   name: string;
-  firm: string;
   phone: string;
   /** A second contact number, when the listing gave more than one. */
   secondaryPhone?: string;
@@ -76,14 +76,59 @@ export interface Agent {
   ghisVerified: boolean;
 }
 
+export interface ListingAgent {
+  name: string;
+  phone: string;
+  /** A second contact number, when the listing gave more than one. */
+  secondaryPhone?: string;
+}
+
 export interface Property {
   id: string;
   /** Street-level address as it would be advertised. */
   address: string;
-  locality: string;
   district: string;
   region: Region;
-  /** [lng, lat] — matches PostGIS point ordering. Null when not yet surveyed. */
+
+  type: PropertyType;
+  style: PropertyStyle;
+  storey?: PropertyStorey | null;
+  bedrooms: number;
+  bathrooms: number;
+  toilets?: number | null;
+  floorAreaSqm: number | null;
+  /** e.g. "Semi-Furnished". Absent for older listings that predate this field. */
+  furnishing?: string;
+  /** e.g. "Newly Built", "Renovated", "Old". */
+  condition?: string;
+  /** Whether the property is self-contained. */
+  selfContained?: boolean;
+  /** Flat amenity list, e.g. "Wi-Fi", "24-hour Electricity". */
+  facilities?: string[];
+
+  /** Cedi. */
+  askingPrice: number;
+  status: ListingStatus;
+
+  tenure: Tenure;
+  /** e.g. "Not specified", "Renewable". */
+  remainingLeaseTerm?: string | null;
+
+  ecoRating: EcoRating;
+  greenFeatures: GreenFeature[];
+
+  agent: ListingAgent;
+
+  images: string[];
+  summary: string;
+}
+
+export interface Comparable {
+  id: string;
+  address: string;
+  district: string;
+  region: Region;
+  /** [lng, lat] — matches PostGIS point ordering. */
   coords: [number, number] | null;
 
   type: PropertyType;
@@ -95,14 +140,10 @@ export interface Property {
   floorAreaSqm: number | null;
   plotAreaSqm: number | null;
   yearBuilt: number | null;
-  /** e.g. "Semi-Furnished". Absent for older listings that predate this field. */
   furnishing?: string;
-  /** e.g. "Newly Built", "Renovated", "Old". */
   condition?: string;
-  /** Flat amenity list, e.g. "Wi-Fi", "24-hour Electricity". */
   facilities?: string[];
 
-  /** Cedi. */
   askingPrice: number;
   listedDate: string;
   status: ListingStatus;
@@ -110,25 +151,19 @@ export interface Property {
 
   tenure: Tenure;
   leaseYearsRemaining: number | null;
-  /** e.g. "Not specified", "Renewable". */
   remainingLeaseTerm?: string | null;
   titleStatus: TitleStatus;
 
   ecoRating: EcoRating;
   greenFeatures: GreenFeature[];
-  /** Free-text note about green/sustainable features, e.g. "Solar panels installed". */
   greenFeaturesNote?: string | null;
 
   agent: Agent;
-  /** Name of the GhIS-registered surveyor who verified the record. */
   verifiedBy: string | null;
 
   images: string[];
   summary: string;
-}
 
-/** A property positioned relative to a subject property under valuation. */
-export interface Comparable extends Property {
   /** Kilometres from the subject. */
   distanceKm: number;
 }

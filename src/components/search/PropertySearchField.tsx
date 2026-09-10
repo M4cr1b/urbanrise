@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, ShieldCheck } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import type { Property } from "@/lib/types";
 import { EcoBadge } from "@/components/ui/Badges";
 import { formatCedi } from "@/lib/format";
@@ -35,7 +35,7 @@ export function PropertySearchField({
   properties,
   value,
   onChange,
-  placeholder = "Search by address, locality or district…",
+  placeholder = "Search by address or district…",
   inputClassName = "",
   wrapperClassName = "",
   maxResults = 5,
@@ -76,7 +76,7 @@ export function PropertySearchField({
     const q = query.toLowerCase();
     return properties
       .filter((p) => {
-        const hay = `${p.address} ${p.locality} ${p.district} ${p.region}`.toLowerCase();
+        const hay = `${p.address} ${p.district} ${p.region}`.toLowerCase();
         return hay.includes(q);
       })
       .sort((a, b) => b.askingPrice - a.askingPrice)
@@ -295,17 +295,12 @@ function ResultRow({
           {p.address}
         </div>
         <div className="text-data-sm text-on-surface-variant">
-          <span className="font-semibold">{p.locality}</span> • {p.district}
+          {p.district}
         </div>
       </div>
 
       {/* Right side: badges + price */}
       <div className="flex shrink-0 items-center gap-2">
-        {/* Verification icon */}
-        {p.verifiedBy && (
-          <ShieldCheck className="size-4 text-secondary" aria-hidden />
-        )}
-
         {/* Eco badge (compact, no padding/shadow) */}
         <EcoBadge rating={p.ecoRating} className="text-data-xs px-2 py-0.5" />
 
