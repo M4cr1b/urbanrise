@@ -17,6 +17,7 @@ import {
   BedDouble,
   Bath,
   Ruler,
+  Building2,
 } from "lucide-react";
 import { PropertySearchField } from "@/components/search/PropertySearchField";
 import { EcoBadge, VerifiedBadge } from "@/components/ui/Badges";
@@ -26,8 +27,9 @@ import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
 import { FilterChip } from "./FilterChip";
 import { LeaseholdYearModal } from "./LeaseholdYearModal";
 
-const TYPES = ["All", "Apartment", "Mansion"];
-const STYLES = ["All", "Detached", "Semi-Detached", "Single Storey", "Multi Storey"];
+const TYPES = ["All", "Apartment", "Mansion", "Townhouse", "Duplex", "Villa"];
+const STYLES = ["All", "Detached", "Semi-Detached"];
+const STOREYS = ["All", "Single Storey", "Multi Storey"];
 const TENURES = ["All", "Freehold", "Leasehold"];
 const TITLES = ["All", "Registered", "Pending", "Unregistered"];
 const STATUSES = ["All", "Available", "Under Offer", "Sold"];
@@ -37,6 +39,7 @@ interface Filters {
   q: string;
   type: string;
   style: string;
+  storey: string;
   tenure: string;
   leaseYears: string;
   title: string;
@@ -52,6 +55,7 @@ const EMPTY: Filters = {
   q: "",
   type: "All",
   style: "All",
+  storey: "All",
   tenure: "All",
   leaseYears: "",
   title: "All",
@@ -67,6 +71,7 @@ function buildFiltersFromParams(params: URLSearchParams): Filters {
   const q = params.get("q") || "";
   const type = params.get("type") || "All";
   const style = params.get("style") || "All";
+  const storey = params.get("storey") || "All";
   const tenure = params.get("tenure") || "All";
   const leaseYears = params.get("leaseYears") || "";
   const title = params.get("title") || "All";
@@ -79,6 +84,7 @@ function buildFiltersFromParams(params: URLSearchParams): Filters {
 
   const validTypes = TYPES.includes(type as typeof TYPES[number]) ? type : "All";
   const validStyle = STYLES.includes(style as typeof STYLES[number]) ? style : "All";
+  const validStorey = STOREYS.includes(storey as typeof STOREYS[number]) ? storey : "All";
   const validTenure = TENURES.includes(tenure as typeof TENURES[number]) ? tenure : "All";
   const validTitle = TITLES.includes(title as typeof TITLES[number]) ? title : "All";
   const validStatus = STATUSES.includes(status as typeof STATUSES[number]) ? status : "All";
@@ -88,6 +94,7 @@ function buildFiltersFromParams(params: URLSearchParams): Filters {
     q,
     type: validTypes,
     style: validStyle,
+    storey: validStorey,
     tenure: validTenure,
     leaseYears,
     title: validTitle,
@@ -149,6 +156,7 @@ function countActiveFilters(f: Filters): number {
   if (f.q) count++;
   if (f.type !== "All") count++;
   if (f.style !== "All") count++;
+  if (f.storey !== "All") count++;
   if (f.tenure !== "All") count++;
   if (f.leaseYears) count++;
   if (f.title !== "All") count++;
@@ -191,6 +199,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
     return properties.filter((p) => {
       if (f.type !== "All" && p.type !== f.type) return false;
       if (f.style !== "All" && p.style !== f.style) return false;
+      if (f.storey !== "All" && p.storey !== f.storey) return false;
 
       if (f.tenure === "Freehold" && p.tenure !== "Freehold") return false;
       if (f.tenure === "Leasehold") {
@@ -318,6 +327,25 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 value={f.style}
                 onChange={(v) => {
                   set("style", v);
+                  setOpenChip(null);
+                }}
+              />
+            </FilterChip>
+
+            <FilterChip
+              label="Storey"
+              icon={Building2}
+              value={f.storey}
+              isOpen={openChip === "storey"}
+              onToggle={() => setOpenChip(openChip === "storey" ? null : "storey")}
+            >
+              <FilterGroup
+                label="Storey"
+                icon={Building2}
+                options={STOREYS}
+                value={f.storey}
+                onChange={(v) => {
+                  set("storey", v);
                   setOpenChip(null);
                 }}
               />

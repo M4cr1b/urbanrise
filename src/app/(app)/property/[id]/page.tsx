@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/Badges";
 import { AddToShortlist } from "@/components/workbench/AddToShortlist";
 import { Gallery } from "@/components/property/Gallery";
+import { SafetyNotice } from "@/components/property/SafetyNotice";
 import { formatCedi, formatDate, formatSqm, pricePerSqm } from "@/lib/format";
 import { getLocalityMarket, getPropertyIds, getPropertyById } from "@/lib/data";
 import { IS_SINGLE_REGION } from "@/lib/regions";
@@ -145,26 +146,40 @@ export default async function PropertyPage({ params }: { params: Params }) {
       <AddToShortlist id={property.id} address={property.address} />
 
       <div className="mt-8 grid gap-6 md:grid-cols-2">
-        <Panel title="Property">
+        <Panel title="Specs">
           <Field label="Property type" value={property.type} />
           <Field label="Property style" value={property.style} />
-          <Field label="Bedrooms" value={String(property.bedrooms)} />
-          <Field label="Bathrooms" value={String(property.bathrooms)} />
-          <Field label="Year built" value={property.yearBuilt?.toString() ?? "Unknown"} />
-          <Field label="Floor area" value={formatSqm(property.floorAreaSqm)} />
+          {property.storey && <Field label="Storey" value={property.storey} />}
+          <Field label="Property size" value={formatSqm(property.floorAreaSqm)} />
           <Field
             label="Plot area"
             value={property.plotAreaSqm ? formatSqm(property.plotAreaSqm) : "Unknown"}
           />
+          {property.condition && <Field label="Condition" value={property.condition} />}
           <Field label="Furnishing" value={property.furnishing ?? "Not specified"} />
+          <Field label="Bedrooms" value={String(property.bedrooms)} />
+          <Field label="Bathrooms" value={String(property.bathrooms)} />
+          {property.toilets != null && <Field label="Toilets" value={String(property.toilets)} />}
+          <Field label="Year built" value={property.yearBuilt?.toString() ?? "Unknown"} />
         </Panel>
 
-        <Panel title="Legal">
+        <Panel title="Location">
+          <Field label="Address" value={property.address} />
+          <Field label="Locality" value={property.locality} />
+          <Field label="District" value={property.district} />
+          {!IS_SINGLE_REGION && <Field label="Region" value={property.region} />}
+        </Panel>
+
+        <Panel title="Tenure & Status">
           <Field label="Tenure" value={property.tenure} />
+          {property.remainingLeaseTerm && (
+            <Field label="Remaining lease term" value={property.remainingLeaseTerm} />
+          )}
           <Field
             label="Lands Commission title"
             value={<TitleStatusText status={property.titleStatus} />}
           />
+          <Field label="Status" value={property.status} />
           <Field label="Listed" value={formatDate(property.listedDate)} />
           <Field
             label="Verified by"
@@ -178,6 +193,41 @@ export default async function PropertyPage({ params }: { params: Params }) {
                 <span className="text-outline">Not yet verified</span>
               )
             }
+          />
+        </Panel>
+
+        <Panel title="Agent & Contact">
+          <Field label="Firm" value={property.agent.firm} />
+          <Field label="Agent" value={property.agent.name} />
+          <Field
+            label="Telephone"
+            value={
+              <a
+                href={`tel:${property.agent.phone.replace(/\s/g, "")}`}
+                className="flex items-center gap-1.5 text-primary hover:underline"
+              >
+                <Phone className="size-3.5" aria-hidden />
+                {property.agent.phone}
+              </a>
+            }
+          />
+          {property.agent.secondaryPhone && (
+            <Field
+              label="Alternative telephone"
+              value={
+                <a
+                  href={`tel:${property.agent.secondaryPhone.replace(/\s/g, "")}`}
+                  className="flex items-center gap-1.5 text-primary hover:underline"
+                >
+                  <Phone className="size-3.5" aria-hidden />
+                  {property.agent.secondaryPhone}
+                </a>
+              }
+            />
+          )}
+          <Field
+            label="GhIS registered"
+            value={property.agent.ghisVerified ? "Yes" : "No"}
           />
         </Panel>
 
@@ -243,7 +293,7 @@ export default async function PropertyPage({ params }: { params: Params }) {
       {property.facilities && property.facilities.length > 0 && (
         <section className="mt-6 rounded-md border border-outline-variant/60 bg-surface-container-lowest p-5">
           <h2 className="mb-4 font-headline text-headline-md text-primary">
-            Amenities
+            Facilities
           </h2>
           <div className="flex flex-wrap gap-2">
             {property.facilities.map((facility) => (
@@ -268,18 +318,22 @@ export default async function PropertyPage({ params }: { params: Params }) {
             Energy and resource efficiency band
           </span>
         </div>
-        {property.greenFeatures.length === 0 ? (
-          <p className="font-data text-data-sm text-on-surface-variant">
-            No green features recorded for this property.
-          </p>
-        ) : (
-          <div className="flex flex-wrap gap-2">
+        {property.greenFeatures.length > 0 && (
+          <div className="mb-4 flex flex-wrap gap-2">
             {property.greenFeatures.map((feature) => (
               <GreenFeaturePill key={feature.label} feature={feature} />
             ))}
           </div>
         )}
+        <div className="flex items-start justify-between gap-4 py-2 font-data text-data-sm">
+          <dt className="text-on-surface-variant">Green features note</dt>
+          <dd className="text-right font-medium text-on-surface">
+            {property.greenFeaturesNote ?? "Not specified"}
+          </dd>
+        </div>
       </section>
+
+      <SafetyNotice />
     </div>
   );
 }

@@ -42,9 +42,9 @@ import { ACTIVE_REGIONS } from "@/lib/regions";
 
 const PROPERTY_SELECT = `
   id, address, locality, district, region, lng, lat,
-  type, style, bedrooms, bathrooms, floor_area_sqm, plot_area_sqm, year_built,
-  asking_price, listed_date, status, tenure, lease_years_remaining, title_status, eco_rating,
-  verified_by, summary,
+  type, style, storey, bedrooms, bathrooms, toilets, floor_area_sqm, plot_area_sqm, year_built,
+  asking_price, listed_date, status, tenure, lease_years_remaining, remaining_lease_terms, title_status, eco_rating,
+  condition, verified_by, summary, green_features_note,
   agents ( name, firm, phone, ghis_verified ),
   property_media ( url, sort ),
   property_green_features ( label, icon ),
@@ -81,8 +81,10 @@ function mapProperty(row: any): Property {
 
     type: row.type,
     style: row.style ?? "Unknown",
+    storey: row.storey ?? null,
     bedrooms: row.bedrooms ?? 0,
     bathrooms: row.bathrooms ?? 0,
+    toilets: row.toilets ?? null,
     floorAreaSqm: row.floor_area_sqm != null ? Number(row.floor_area_sqm) : null,
     plotAreaSqm: row.plot_area_sqm != null ? Number(row.plot_area_sqm) : null,
     yearBuilt: row.year_built ?? null,
@@ -94,12 +96,15 @@ function mapProperty(row: any): Property {
 
     tenure: row.tenure ?? "Unknown",
     leaseYearsRemaining: row.lease_years_remaining != null ? Number(row.lease_years_remaining) : null,
+    remainingLeaseTerm: row.remaining_lease_terms ?? null,
     titleStatus: row.title_status ?? "Unknown",
 
+    condition: row.condition ?? undefined,
     ecoRating: (row.eco_rating ?? "D") as EcoRating,
     greenFeatures: (row.property_green_features ?? []).map(
       (f: any): GreenFeature => ({ label: f.label, icon: f.icon }),
     ),
+    greenFeaturesNote: row.green_features_note ?? null,
 
     agent: {
       name: agent?.name ?? "Unknown",
