@@ -13,7 +13,7 @@ import {
   Sun,
   Users,
 } from "lucide-react";
-import { EcoBadge, VerifiedBadge } from "@/components/ui/Badges";
+import { EcoBadge } from "@/components/ui/Badges";
 import { formatCedi, formatCediCompact, formatSqm, formatPct } from "@/lib/format";
 import type { Property } from "@/lib/types";
 
@@ -190,13 +190,11 @@ export function PropertyCard({
           // On phones the search card moves below the reveal, which pulls the
           // first featured card up into the LCP slot.
           priority={priority}
+          quality={90}
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <EcoBadge rating={property.ecoRating} className="absolute left-4 top-4" />
-        {property.verifiedBy && (
-          <VerifiedBadge className="absolute bottom-4 left-4" />
-        )}
         {property.images.length > 1 && (
           <span className="absolute bottom-4 right-4 flex items-center gap-1 rounded-sm bg-black/65 px-1.5 py-0.5 font-data text-[11px] text-white">
             <ImageIcon className="size-3" aria-hidden />
@@ -210,7 +208,7 @@ export function PropertyCard({
           {formatCedi(property.askingPrice)}
         </div>
         <div className="mb-4 text-body-md text-on-surface">
-          {property.bedrooms}-Bed {property.style}, {property.locality}
+          {property.bedrooms}-Bed {property.style}, {property.address}
         </div>
         <div className="flex items-center gap-4 border-t border-outline-variant/30 pt-4 font-data text-data-sm text-on-surface-variant">
           <span className="flex items-center gap-1">

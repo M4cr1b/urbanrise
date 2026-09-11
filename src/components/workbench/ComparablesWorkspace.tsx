@@ -8,7 +8,7 @@ import { ComparablesToolbar } from "./ComparablesToolbar";
 import { useShortlist } from "./shortlist-store";
 import type { StageId } from "./WorkflowTabs";
 import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
-import type { Comparable, Property } from "@/lib/types";
+import type { Comparable } from "@/lib/types";
 
 /* ---------------------------------------------------------------------------
    Derived analysis.
@@ -28,7 +28,7 @@ function median(values: number[]): number | null {
     : sorted[mid];
 }
 
-function analyse(subject: Property, picked: Comparable[]) {
+function analyse(subject: Comparable, picked: Comparable[]) {
   const rates = picked
     .map((c) => pricePerSqm(c.askingPrice, c.floorAreaSqm))
     .filter((r): r is number => r != null);
@@ -60,7 +60,7 @@ export function ComparablesWorkspace({
   comparables,
   stage,
 }: {
-  subject: Property;
+  subject: Comparable;
   comparables: Comparable[];
   stage: StageId;
 }) {

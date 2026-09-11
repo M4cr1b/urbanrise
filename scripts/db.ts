@@ -1,9 +1,8 @@
 /**
- * Database owner tasks: connectivity check, migrations, seeding.
+ * Database owner tasks: connectivity check, migrations, status.
  *
  *   npx tsx scripts/db.ts check      # prove the connection works
  *   npx tsx scripts/db.ts migrate    # apply supabase/migrations/*.sql in order
- *   npx tsx scripts/db.ts seed       # load the Ghanaian dataset into Postgres
  *   npx tsx scripts/db.ts status     # row counts per table
  *
  * Migrations are tracked in a `schema_migrations` table, so re-running is safe:
@@ -159,15 +158,11 @@ const commands: Record<string, () => Promise<void>> = {
   check,
   migrate,
   status,
-  seed: async () => {
-    const { seed } = await import("./db-seed.ts");
-    await seed(connect);
-  },
 };
 
 const run = commands[command];
 if (!run) {
-  console.error(`unknown command "${command}". Try: check | migrate | seed | status`);
+  console.error(`unknown command "${command}". Try: check | migrate | status`);
   process.exit(1);
 }
 

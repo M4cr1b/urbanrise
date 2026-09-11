@@ -28,7 +28,7 @@ export function ComparablesToolbar({
             properties={comparables}
             value=""
             onChange={() => {}}
-            placeholder="Search comparables by address or locality…"
+            placeholder="Search comparables by address…"
             inputClassName="w-full rounded-md border border-outline-variant bg-surface py-2.5 pl-10 pr-4 text-body-md outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
             wrapperClassName="w-full"
             viewAllHref={(q) =>
