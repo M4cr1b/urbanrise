@@ -190,6 +190,7 @@ export function PropertyCard({
           // On phones the search card moves below the reveal, which pulls the
           // first featured card up into the LCP slot.
           priority={priority}
+          quality={90}
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />

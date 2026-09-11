@@ -44,7 +44,7 @@ const PROPERTY_SELECT = `
   id, address, district, region,
   type, style, storey, bedrooms, bathrooms, toilets, floor_area_sqm,
   asking_price, status, tenure, remaining_lease_terms, eco_rating,
-  condition, summary, furnishing,
+  condition, summary, furnishing, facilities, self_contained,
   agents ( name, phone, secondary_phone ),
   property_media ( url, sort ),
   property_green_features ( label, icon )
@@ -88,6 +88,8 @@ function mapProperty(row: any): Property {
       (f: any): GreenFeature => ({ label: f.label, icon: f.icon }),
     ),
     furnishing: row.furnishing ?? undefined,
+    facilities: row.facilities ?? undefined,
+    selfContained: row.self_contained ?? undefined,
 
     agent: {
       name: agent?.name ?? "Unknown",

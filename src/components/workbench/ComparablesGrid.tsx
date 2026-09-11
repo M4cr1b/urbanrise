@@ -381,6 +381,7 @@ function PhotoCell({ property }: { property: Comparable }) {
         src={property.images[0]}
         alt={`${property.type} at ${property.address}`}
         fill
+        quality={90}
         sizes="280px"
         className="object-cover"
       />

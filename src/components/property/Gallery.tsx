@@ -170,13 +170,11 @@ export function Gallery({
                   : "opacity-65 hover:opacity-100"
               }`}
             >
-              {/* Default quality (75) is fine here — the difference is
-                  imperceptible at ~100px and there's no reason to spend the
-                  extra bytes on a nav thumbnail. */}
               <Image
                 src={src}
                 alt=""
                 fill
+                quality={90}
                 sizes="112px"
                 className="object-cover"
               />

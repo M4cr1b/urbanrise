@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
@@ -50,7 +50,7 @@ export function PropertySearchField({
   const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const listId = `property-search-list-${Math.random().toString(36).slice(2, 9)}`;
+  const listId = `property-search-list-${useId()}`;
 
   // Filter logic: exact same haystack as SearchWorkspace.tsx:161-164
   const getFilteredProperties = (query: string): Property[] => {
@@ -284,6 +284,7 @@ function ResultRow({
           src={p.images[0]}
           alt={`${p.type} at ${p.address}`}
           fill
+          quality={90}
           sizes="56px"
           className="object-cover"
         />
