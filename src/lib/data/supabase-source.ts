@@ -44,8 +44,8 @@ const PROPERTY_SELECT = `
   id, address, district, region,
   type, style, storey, bedrooms, bathrooms, toilets, floor_area_sqm,
   asking_price, status, tenure, remaining_lease_terms, eco_rating,
-  condition, summary,
-  agents ( name, phone ),
+  condition, summary, furnishing,
+  agents ( name, phone, secondary_phone ),
   property_media ( url, sort ),
   property_green_features ( label, icon )
 `;
@@ -87,10 +87,12 @@ function mapProperty(row: any): Property {
     greenFeatures: (row.property_green_features ?? []).map(
       (f: any): GreenFeature => ({ label: f.label, icon: f.icon }),
     ),
+    furnishing: row.furnishing ?? undefined,
 
     agent: {
       name: agent?.name ?? "Unknown",
       phone: agent?.phone ?? "",
+      secondaryPhone: agent?.secondary_phone ?? undefined,
     },
 
     images: images.length > 0 ? images : ["/placeholder-property.svg"],
