@@ -13,14 +13,12 @@ update properties set furnishing = trim(furnishing);
 -- Support a second contact number on agents (property page UI already renders it)
 alter table agents add column if not exists secondary_phone text;
 
--- Link adjiringanor-mansion-stardom to Stardom Real Estate (confirmed by user)
-with new_agent as (
-  insert into agents (name, firm, phone, secondary_phone)
-  values ('Stardom Real Estate', 'Stardom Real Estate', '+233272169194', '+233543069194')
-  on conflict (name) do update set secondary_phone = excluded.secondary_phone
-  returning id
-)
+-- Create Stardom Real Estate agent if it doesn't exist
+insert into agents (name, firm, phone, secondary_phone)
+values ('Stardom Real Estate', 'Stardom Real Estate', '+233272169194', '+233543069194')
+on conflict do nothing;
+
+-- Link adjiringanor-mansion-stardom to Stardom Real Estate
 update properties
-set agent_id = new_agent.id
-from new_agent
+set agent_id = (select id from agents where name = 'Stardom Real Estate' limit 1)
 where properties.id = 'adjiringanor-mansion-stardom' and properties.agent_id is null;
