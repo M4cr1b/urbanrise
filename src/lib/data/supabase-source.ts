@@ -22,12 +22,17 @@ import type {
   EcoRating,
   GreenFeature,
   GreenMaterial,
-  LocalityMarket,
-  MarketPoint,
+  LocalityStats,
+  NationalStats,
   Professional,
   Property,
   Region,
 } from "@/lib/types";
+import {
+  aggregateLocalityStats,
+  aggregateNationalStats,
+  normalizeLocality,
+} from "@/lib/data/market";
 import type { PropertyFilters, ProfessionalFilters } from "./contract";
 import { FEATURED_PROPERTY_IDS } from "./properties";
 import { ACTIVE_REGIONS } from "@/lib/regions";
@@ -256,66 +261,22 @@ export async function getProfessionals(
 
 /* --- Market intelligence ------------------------------------------------ */
 
-export async function getLocalityMarkets(): Promise<LocalityMarket[]> {
-  const supabase = db();
-  const { data, error } = await supabase
-    .from("market_stats")
-    .select("*")
-    .in("region", ACTIVE_REGIONS)
-    .order("period", { ascending: true });
-
-  if (error) throw new Error(`getLocalityMarkets: ${error.message}`);
-
-  // Group the monthly rows into one series per locality; the newest row
-  // supplies the headline figures.
-  const grouped = new Map<string, any[]>();
-  for (const row of data ?? []) {
-    const list = grouped.get(row.locality) ?? [];
-    list.push(row);
-    grouped.set(row.locality, list);
-  }
-
-  return [...grouped.entries()].map(([locality, rows]) => {
-    const latest = rows[rows.length - 1];
-    const series: MarketPoint[] = rows.map((r) => ({
-      period: String(r.period).slice(0, 7),
-      medianPrice: Number(r.median_price ?? 0),
-      avgPricePerSqm: Number(r.avg_price_per_sqm ?? 0),
-      listings: r.listings ?? 0,
-    }));
-
-    return {
-      locality,
-      region: latest.region as Region,
-      medianPrice: Number(latest.median_price ?? 0),
-      avgPricePerSqm: Number(latest.avg_price_per_sqm ?? 0),
-      yoyPct: Number(latest.yoy_pct ?? 0),
-      listings: latest.listings ?? 0,
-      ecoSharePct: Number(latest.eco_share_pct ?? 0),
-      series,
-    };
-  });
+export async function getLocalityMarkets(): Promise<LocalityStats[]> {
+  const properties = await getProperties();
+  return aggregateLocalityStats(properties);
 }
 
 export async function getLocalityMarket(
   locality: string,
-): Promise<LocalityMarket | null> {
+): Promise<LocalityStats | null> {
+  const normalized = normalizeLocality(locality);
   const all = await getLocalityMarkets();
-  return all.find((m) => m.locality === locality) ?? null;
+  return all.find((m) => m.locality === normalized) ?? null;
 }
 
-export async function getNationalStats() {
-  const markets = await getLocalityMarkets();
-  const accra = markets.filter((m) => m.region === "Greater Accra");
-  const medians = accra.map((m) => m.medianPrice).sort((a, b) => a - b);
-  const eastLegon = markets.find((m) => m.locality === "East Legon");
-
-  return {
-    verifiedListings: markets.reduce((sum, m) => sum + m.listings, 0),
-    medianGreaterAccra: medians[Math.floor(medians.length / 2)] ?? 0,
-    medianGreaterAccraYoy: eastLegon?.yoyPct ?? 0,
-    avgPerSqmEastLegon: eastLegon?.avgPricePerSqm ?? 0,
-  };
+export async function getNationalStats(): Promise<NationalStats> {
+  const properties = await getProperties();
+  return aggregateNationalStats(properties);
 }
 
 /* --- Green Building Hub ------------------------------------------------- */

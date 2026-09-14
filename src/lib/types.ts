@@ -233,23 +233,30 @@ export interface GreenMaterial {
   summary: string;
 }
 
-export interface MarketPoint {
-  /** ISO month, e.g. "2026-01". */
-  period: string;
-  medianPrice: number;
-  avgPricePerSqm: number;
+export interface LocalityStats {
+  /** Normalized display name, e.g. "Achimota" (typos/sub-areas collapsed). */
+  locality: string;
+  district: string;
+  region: Region;
+  /** Sample size — always rendered next to every aggregate figure. */
   listings: number;
+  medianPrice: number;
+  minPrice: number;
+  maxPrice: number;
+  /** Average ₵/sqm, computed only over listings with non-null floorAreaSqm. */
+  avgPricePerSqm: number | null;
+  /** How many of `listings` had a usable floor area — shown when < listings. */
+  pricePerSqmSampleSize: number;
+  /** e.g. { min: 3, max: 5 } — "3–5 bedrooms" */
+  bedroomRange: { min: number; max: number };
+  /** Counts per PropertyType present, e.g. { Villa: 2, Duplex: 1 }. */
+  typeMix: Partial<Record<PropertyType, number>>;
+  /** Mode eco rating (ties broken toward the better/lower letter). Never a % on small n. */
+  commonEcoRating: EcoRating;
 }
 
-export interface LocalityMarket {
-  locality: string;
-  region: Region;
-  medianPrice: number;
-  avgPricePerSqm: number;
-  /** Year-on-year change, percent. Negative means decline. */
-  yoyPct: number;
-  listings: number;
-  /** Share of listings rated A or B. */
-  ecoSharePct: number;
-  series: MarketPoint[];
+export interface NationalStats {
+  verifiedListings: number;
+  medianGreaterAccra: number;
+  areaCount: number;
 }

@@ -70,7 +70,9 @@ export default async function PropertyPage({ params }: { params: Params }) {
   // How this property's rate sits against its locality — the comparison a
   // buyer and a valuer both reach for first.
   const vsLocality =
-    rate && market ? Math.round(((rate - market.avgPricePerSqm) / market.avgPricePerSqm) * 100) : null;
+    rate && market && market.avgPricePerSqm != null
+      ? Math.round(((rate - market.avgPricePerSqm) / market.avgPricePerSqm) * 100)
+      : null;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-surface via-surface-container to-surface">

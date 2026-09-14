@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { EcoBadge } from "@/components/ui/Badges";
 import { formatCedi, formatCediCompact, formatSqm, formatPct } from "@/lib/format";
-import type { Property } from "@/lib/types";
+import type { Property, NationalStats } from "@/lib/types";
 
 /* ---------------------------------------------------------------------------
    Hero copy — the left column of the landing stage.
@@ -127,13 +127,6 @@ export function PortalPanel() {
    Stats band
    ------------------------------------------------------------------------ */
 
-export interface NationalStats {
-  verifiedListings: number;
-  medianGreaterAccra: number;
-  medianGreaterAccraYoy: number;
-  avgPerSqmEastLegon: number;
-}
-
 export function StatsBand({ stats }: { stats: NationalStats }) {
   return (
     <section className="border-y border-outline-variant/30 bg-surface-bright py-4">
@@ -147,19 +140,9 @@ export function StatsBand({ stats }: { stats: NationalStats }) {
           <span className="font-semibold">
             {formatCediCompact(stats.medianGreaterAccra)}
           </span>
-          <span
-            className={
-              stats.medianGreaterAccraYoy >= 0 ? "text-secondary" : "text-error"
-            }
-          >
-            {formatPct(stats.medianGreaterAccraYoy)}
-          </span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-on-surface-variant">Avg ₵/sqm · East Legon</span>
-          <span className="font-semibold">
-            ₵{stats.avgPerSqmEastLegon.toLocaleString("en-GH")}
-          </span>
+          <span className="text-on-surface-variant">{stats.areaCount} neighbourhoods tracked</span>
         </div>
       </div>
     </section>
