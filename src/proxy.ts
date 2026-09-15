@@ -16,6 +16,16 @@ import { SUPABASE_ANON_KEY, SUPABASE_URL, isSupabaseConfigured } from "@/lib/sup
  * security enforces that at the database.
  */
 export async function proxy(request: NextRequest) {
+  // Auth session refresh disabled: this call was firing on every page request
+  // (every user browser load + asset navigation) but the app has no login/signup
+  // UI anywhere and browsing is public by design. The cost was high (Auth API
+  // quota per request) with zero benefit. Re-enable this when real
+  // authentication/login UI is implemented and users need persisted sessions.
+  // To re-enable: uncomment the block below and restore the original pattern.
+  if (true) {
+    return NextResponse.next({ request });
+  }
+
   // Without credentials the app runs on seeded data and has no session to
   // refresh, so there is nothing useful to do here.
   if (!isSupabaseConfigured()) {
