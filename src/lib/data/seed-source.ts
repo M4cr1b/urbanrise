@@ -15,7 +15,11 @@ import {
 } from "./comparables";
 import { professionals } from "./professionals";
 import { materials } from "./materials";
-import { localityMarkets, nationalStats } from "./market";
+import {
+  aggregateLocalityStats,
+  aggregateNationalStats,
+  normalizeLocality,
+} from "./market";
 import { isActiveRegion } from "@/lib/regions";
 
 /**
@@ -27,7 +31,6 @@ import { isActiveRegion } from "@/lib/regions";
  */
 const inScope = properties.filter((p) => isActiveRegion(p.region));
 const prosInScope = professionals.filter((p) => isActiveRegion(p.region));
-const marketsInScope = localityMarkets.filter((m) => isActiveRegion(m.region));
 const materialsInScope = materials.filter((m) => isActiveRegion(m.region));
 
 /**
@@ -39,7 +42,7 @@ const materialsInScope = materials.filter((m) => isActiveRegion(m.region));
  */
 
 export async function getNationalStats() {
-  return nationalStats;
+  return aggregateNationalStats(inScope);
 }
 
 // ---------------------------------------------------------------------------
@@ -146,11 +149,13 @@ export async function getProfessionals(
 // ---------------------------------------------------------------------------
 
 export async function getLocalityMarket(locality: string) {
-  return marketsInScope.find((m) => m.locality === locality) ?? null;
+  const normalized = normalizeLocality(locality);
+  const all = aggregateLocalityStats(inScope);
+  return all.find((m) => m.locality === normalized) ?? null;
 }
 
 export async function getLocalityMarkets() {
-  return marketsInScope;
+  return aggregateLocalityStats(inScope);
 }
 
 // ---------------------------------------------------------------------------

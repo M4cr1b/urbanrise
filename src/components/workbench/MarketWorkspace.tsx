@@ -2,75 +2,34 @@
 
 import { useMemo, useState } from "react";
 import {
-  ArrowDownRight,
   ArrowRight,
-  ArrowUpRight,
   Home,
   Info,
   Leaf,
-  Minus,
   Ruler,
   Search,
   TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
-import { formatCediCompact, formatPct } from "@/lib/format";
-import type { LocalityMarket } from "@/lib/types";
+import { formatCediCompact } from "@/lib/format";
+import type { LocalityStats } from "@/lib/types";
 import { PRIMARY_REGION } from "@/lib/regions";
-import { useElementWidth } from "@/components/charts/useElementWidth";
+import { EcoBadge } from "@/components/ui/Badges";
 
 /* ---------------------------------------------------------------------------
    Market intelligence, for people who do not value property for a living.
 
-   The previous version led with median price, cedi per square metre and
-   year-on-year percentages in a dense table — the vocabulary of a valuation
-   report. This version answers the three questions an ordinary buyer actually
-   arrives with:
-
+   Three questions an ordinary buyer actually arrives with:
      1. What do homes cost around here?
-     2. Are prices going up or down?
-     3. Where can I afford, and where is cheaper?
+     2. How much do homes vary in each area?
+     3. Where can I afford?
 
-   Every figure is paired with a plain sentence, and the technical detail is
-   still available but no longer the headline.
+   Every figure is paired with a plain sentence and a sample size, so small
+   samples read as honest rather than authoritative. Visualizations show real
+   data only — no fabricated trends.
    ------------------------------------------------------------------------ */
 
-type SortKey = "price-asc" | "price-desc" | "growth";
-
-/** Plain-language reading of a year-on-year movement. */
-function trendOf(yoy: number) {
-  if (yoy >= 8)
-    return {
-      label: "Rising quickly",
-      plain: "Prices here have gone up sharply over the past year.",
-      icon: ArrowUpRight,
-      tone: "text-secondary",
-      chip: "bg-secondary-container text-on-secondary-container",
-    };
-  if (yoy >= 2)
-    return {
-      label: "Rising",
-      plain: "Prices here are climbing steadily.",
-      icon: ArrowUpRight,
-      tone: "text-secondary",
-      chip: "bg-secondary-container/60 text-on-secondary-container",
-    };
-  if (yoy > -2)
-    return {
-      label: "Steady",
-      plain: "Prices here have barely moved this year.",
-      icon: Minus,
-      tone: "text-on-surface-variant",
-      chip: "bg-surface-container-high text-on-surface-variant",
-    };
-  return {
-    label: "Falling",
-    plain: "Prices here have come down over the past year.",
-    icon: ArrowDownRight,
-    tone: "text-error",
-    chip: "bg-error-container text-on-error-container",
-  };
-}
+type SortKey = "price-asc" | "price-desc" | "listings";
 
 /** Affordability banding, so "where can I afford" is answerable at a glance. */
 function bandOf(median: number) {
@@ -80,7 +39,7 @@ function bandOf(median: number) {
   return { label: "Entry-level", tone: "bg-surface-container-high text-on-surface-variant" };
 }
 
-export function MarketWorkspace({ markets }: { markets: LocalityMarket[] }) {
+export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
   const [sort, setSort] = useState<SortKey>("price-asc");
   const [q, setQ] = useState("");
 
@@ -91,11 +50,11 @@ export function MarketWorkspace({ markets }: { markets: LocalityMarket[] }) {
     const sorted = [...filtered];
     if (sort === "price-asc") sorted.sort((a, b) => a.medianPrice - b.medianPrice);
     else if (sort === "price-desc") sorted.sort((a, b) => b.medianPrice - a.medianPrice);
-    else sorted.sort((a, b) => b.yoyPct - a.yoyPct);
+    else sorted.sort((a, b) => b.listings - a.listings);
     return sorted;
   }, [markets, sort, q]);
 
-  /* Region-level summary: the single most useful number, plus the extremes. */
+  /* Region-level summary: the single most useful numbers. */
   const summary = useMemo(() => {
     if (markets.length === 0) return null;
     const prices = markets.map((m) => m.medianPrice).sort((a, b) => a - b);
@@ -105,9 +64,9 @@ export function MarketWorkspace({ markets }: { markets: LocalityMarket[] }) {
         ? Math.round((prices[mid - 1] + prices[mid]) / 2)
         : prices[mid];
     const cheapest = [...markets].sort((a, b) => a.medianPrice - b.medianPrice)[0];
-    const fastest = [...markets].sort((a, b) => b.yoyPct - a.yoyPct)[0];
+    const mostActive = [...markets].sort((a, b) => b.listings - a.listings)[0];
     const totalListings = markets.reduce((n, m) => n + m.listings, 0);
-    return { typical, cheapest, fastest, totalListings };
+    return { typical, cheapest, mostActive, totalListings };
   }, [markets]);
 
   return (
@@ -118,7 +77,7 @@ export function MarketWorkspace({ markets }: { markets: LocalityMarket[] }) {
         </h1>
         <p className="mt-1 max-w-2xl text-body-md text-on-surface-variant">
           A plain look at prices across each neighbourhood — what you would
-          typically pay, and whether prices are going up or down.
+          typically pay, and how much they vary.
         </p>
       </header>
 
@@ -138,9 +97,9 @@ export function MarketWorkspace({ markets }: { markets: LocalityMarket[] }) {
           />
           <HeadlineTile
             icon={TrendingUp}
-            figure={summary.fastest.locality}
-            label="Fastest rising"
-            plain={`Up ${formatPct(summary.fastest.yoyPct)} over the past year.`}
+            figure={summary.mostActive.locality}
+            label="Most homes listed"
+            plain={`${summary.mostActive.listings} homes currently on the market.`}
           />
           <HeadlineTile
             icon={Search}
@@ -174,7 +133,7 @@ export function MarketWorkspace({ markets }: { markets: LocalityMarket[] }) {
             [
               ["price-asc", "Cheapest first"],
               ["price-desc", "Most expensive"],
-              ["growth", "Rising fastest"],
+              ["listings", "Most listings"],
             ] as const
           ).map(([key, label]) => (
             <button
@@ -202,15 +161,15 @@ export function MarketWorkspace({ markets }: { markets: LocalityMarket[] }) {
 
       {rows.length === 0 && (
         <p className="rounded-xl border border-dashed border-outline-variant bg-surface-container-lowest p-10 text-center text-body-md text-on-surface-variant">
-          No neighbourhood matches “{q}”.
+          No neighbourhood matches "{q}".
         </p>
       )}
 
       <p className="mt-8 flex max-w-3xl items-start gap-2 rounded-md bg-surface-container-low p-4 font-data text-data-sm text-on-surface-variant">
         <Info className="mt-0.5 size-4 shrink-0" aria-hidden />
-        Figures are typical asking prices from listings on UrbanRise, updated as
-        new properties are verified. They are a guide to the market, not a
-        valuation of any particular home.
+        Figures are calculated from live UrbanRise listings. Areas with few homes
+        show a wider price range and a smaller sample — treat those figures as
+        indicative, not definitive.
       </p>
     </div>
   );
@@ -241,10 +200,8 @@ function HeadlineTile({
   );
 }
 
-function LocalityCard({ market: m }: { market: LocalityMarket }) {
-  const trend = trendOf(m.yoyPct);
+function LocalityCard({ market: m }: { market: LocalityStats }) {
   const band = bandOf(m.medianPrice);
-  const TrendIcon = trend.icon;
 
   return (
     <li className="rounded-xl border border-primary/10 bg-surface-container-lowest p-5">
@@ -261,20 +218,10 @@ function LocalityCard({ market: m }: { market: LocalityMarket }) {
         {formatCediCompact(m.medianPrice)}
       </p>
       <p className="mb-4 text-[13px] text-on-surface-variant">
-        typical price for a home here
+        typical price · based on {m.listings} home{m.listings === 1 ? "" : "s"}
       </p>
 
-      <div className={`mb-4 flex items-start gap-2 rounded-md p-3 ${trend.chip}`}>
-        <TrendIcon className="mt-0.5 size-4 shrink-0" aria-hidden />
-        <div>
-          <p className="font-data text-data-sm font-semibold">
-            {trend.label} · {formatPct(m.yoyPct)}
-          </p>
-          <p className="text-[12px] leading-snug opacity-90">{trend.plain}</p>
-        </div>
-      </div>
-
-      <Sparkline series={m.series} rising={m.yoyPct >= 0} />
+      <PriceRangeBar min={m.minPrice} median={m.medianPrice} max={m.maxPrice} />
 
       <dl className="mt-4 grid grid-cols-2 gap-3 border-t border-outline-variant/40 pt-3">
         <div>
@@ -283,87 +230,75 @@ function LocalityCard({ market: m }: { market: LocalityMarket }) {
             Price per sqm
           </dt>
           <dd className="font-data text-data-sm font-semibold text-on-surface">
-            ₵{m.avgPricePerSqm.toLocaleString("en-GH")}
+            {m.avgPricePerSqm != null
+              ? `₵${m.avgPricePerSqm.toLocaleString("en-GH")}${
+                  m.pricePerSqmSampleSize < m.listings
+                    ? ` (${m.pricePerSqmSampleSize} of ${m.listings})`
+                    : ""
+                }`
+              : "Not enough data"}
           </dd>
         </div>
         <div>
           <dt className="flex items-center gap-1.5 text-[11px] uppercase tracking-wide text-on-surface-variant">
             <Leaf className="size-3.5" aria-hidden />
-            Eco-rated homes
+            Typical rating
           </dt>
           <dd className="font-data text-data-sm font-semibold text-on-surface">
-            {m.ecoSharePct}%
+            {m.commonEcoRating}
           </dd>
         </div>
       </dl>
+
+      <div className="mt-3 border-t border-outline-variant/40 pt-3 space-y-1">
+        <div className="text-[12px] text-on-surface-variant">
+          <span className="font-semibold text-on-surface">{m.bedroomRange.min}–{m.bedroomRange.max} bed</span>
+          {Object.keys(m.typeMix).length > 0 && (
+            <>
+              {" · "}
+              <span>mostly {Object.entries(m.typeMix).sort((a, b) => b[1] - a[1])[0][0]}s</span>
+            </>
+          )}
+        </div>
+      </div>
 
       <Link
         href={`/search?q=${encodeURIComponent(m.locality)}`}
         className="mt-4 inline-flex items-center gap-1.5 font-data text-data-sm text-secondary hover:underline"
       >
-        See {m.listings} homes in {m.locality}
+        See {m.listings} home{m.listings === 1 ? "" : "s"} in {m.locality}
         <ArrowRight className="size-4" aria-hidden />
       </Link>
     </li>
   );
 }
 
-/**
- * Two years of monthly prices as a single shape.
- *
- * No axes or gridlines: at this size the only readable message is the
- * direction of travel, and the exact figures are stated above it in words.
- */
-function Sparkline({
-  series,
-  rising,
+function PriceRangeBar({
+  min,
+  median,
+  max,
 }: {
-  series: LocalityMarket["series"];
-  rising: boolean;
+  min: number;
+  median: number;
+  max: number;
 }) {
-  const [ref, width] = useElementWidth<HTMLDivElement>();
-  const height = 44;
-
-  if (series.length < 2) return null;
-
-  const values = series.map((p) => p.medianPrice);
-  const min = Math.min(...values);
-  const max = Math.max(...values);
   const span = max - min || 1;
-  const w = width || 280;
-
-  const points = values
-    .map((v, i) => {
-      const x = (i / (values.length - 1)) * w;
-      const y = height - ((v - min) / span) * (height - 6) - 3;
-      return `${x.toFixed(1)},${y.toFixed(1)}`;
-    })
-    .join(" ");
-
-  const stroke = rising ? "var(--color-secondary)" : "var(--color-error)";
+  const medianPct = ((median - min) / span) * 100;
 
   return (
-    <div ref={ref} className="w-full">
-      <svg
-        width="100%"
-        height={height}
-        viewBox={`0 0 ${w} ${height}`}
-        preserveAspectRatio="none"
-        role="img"
-        aria-label={`Price trend over the past two years: ${rising ? "upward" : "downward"}`}
-      >
-        <polyline
-          points={points}
-          fill="none"
-          stroke={stroke}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+    <div className="w-full">
+      <div className="relative h-2 rounded-full bg-surface-container-high">
+        <div className="absolute inset-y-0 left-0 right-0 rounded-full bg-primary/15" />
+        <div
+          className="absolute top-1/2 size-3 -translate-y-1/2 -translate-x-1/2 rounded-full bg-primary ring-2 ring-surface-container-lowest"
+          style={{ left: `${medianPct}%` }}
+          aria-hidden
         />
-      </svg>
-      <p className="mt-1 text-[11px] text-on-surface-variant">
-        Past two years
-      </p>
+      </div>
+      <div className="mt-1.5 flex justify-between text-[11px] text-on-surface-variant">
+        <span>{formatCediCompact(min)}</span>
+        <span>{formatCediCompact(max)}</span>
+      </div>
     </div>
   );
 }
