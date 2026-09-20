@@ -13,7 +13,8 @@ export type PropertyType =
   | "Townhouse"
   | "Duplex"
   | "Villa"
-  | "Mansion";
+  | "Mansion"
+  | "Bungalow";
 
 export type PropertyStyle =
   | "Detached"
