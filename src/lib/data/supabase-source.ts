@@ -62,10 +62,14 @@ const PROPERTY_SELECT = `
 function mapProperty(row: any): Property {
   const agent = Array.isArray(row.agents) ? row.agents[0] : row.agents;
 
-  const images = (row.property_media ?? [])
-    .slice()
-    .sort((a: any, b: any) => (a.sort ?? 0) - (b.sort ?? 0))
-    .map((m: any) => m.url as string);
+  const images = [
+    ...new Set<string>(
+      (row.property_media ?? [])
+        .slice()
+        .sort((a: any, b: any) => (a.sort ?? 0) - (b.sort ?? 0))
+        .map((m: any) => m.url as string),
+    ),
+  ];
 
   return {
     id: row.id,

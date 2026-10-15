@@ -52,3 +52,7 @@ next-env.d.ts
 e2e-run.log
 dev*.log
 .shots/
+
+# Local property audit snapshots and database backups
+/reports/property-audit-11-36/
+/release/property-corrections-11-36.*

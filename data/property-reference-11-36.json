@@ -1,0 +1,2175 @@
+{
+  "scope": "Properties 11?36",
+  "sourceDocuments": [
+    {
+      "filename": "C:/Users/Admin/Desktop/PROPERTY 11-20 DETAILS.docx",
+      "bytes": 21225,
+      "modifiedUtc": "2026-09-11T14:29:31.703Z",
+      "sha256": "0cf282908519a9c79b07bcf3f2a8f28247b54dff2fd61d65cd233dcdba14be76"
+    },
+    {
+      "filename": "C:/Users/Admin/Desktop/URBAN RISE NEW PROPERTY DETAILS.docx",
+      "bytes": 53588,
+      "modifiedUtc": "2026-09-15T13:36:23.586Z",
+      "sha256": "c216a27d84d6344512c07f43bceb2dbfda92243d71cbb1093d7a8bd4ba485c1a"
+    },
+    {
+      "filename": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "bytes": 51609,
+      "modifiedUtc": "2026-09-27T19:06:13.469Z",
+      "sha256": "9b2528461e1decbf7c7749fb6dee43aef8fe6dcc1274837524446475e57f37aa"
+    }
+  ],
+  "decisions": [
+    {
+      "properties": [
+        36
+      ],
+      "field": "DISTRICT",
+      "value": "Okaikwei North Municipal District",
+      "authority": "Explicit owner confirmation in this conversation on 2026-10-15"
+    },
+    {
+      "properties": [
+        11,
+        12
+      ],
+      "field": "image folder mapping",
+      "value": "Folder 12 maps to listing 11; folder 11 maps to listing 12",
+      "authority": "Byte hashes and agent watermarks"
+    },
+    {
+      "properties": [
+        27,
+        28,
+        30,
+        31
+      ],
+      "field": "STOREY",
+      "authority": "Round two/w.docx agrees with listing type and existing images; older document has conflicting entries"
+    },
+    {
+      "properties": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "field": "ASKING PRICE / CONTACT",
+      "authority": "Use Round two/w.docx; older document swaps prices and phone numbers"
+    },
+    {
+      "properties": [
+        31
+      ],
+      "field": "repeated source entry",
+      "authority": "Identical duplicate in w.docx represents one listing"
+    },
+    {
+      "properties": [
+        14
+      ],
+      "field": "size basis",
+      "value": "Not specified",
+      "authority": "Source only says PROPERTY SIZE; remove unsupported plot description"
+    }
+  ],
+  "properties": [
+    {
+      "number": 11,
+      "slug": "east-legon-hills-mansion-aceholding",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 12,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "East Legon Hills",
+        "PROPERTY TYPE": "Mansion",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "500sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Furnished",
+        "BEDROOM": "5",
+        "BATHROOMS": "5",
+        "TOILET": "6",
+        "ASKING PRICE": "GH₵ 7,517,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen Cabinets, Tiled Floor, Dining Area, Pop Ceiling, Air Conditioning, Balcony, CCTV, Chandelier, Dishwasher, En Suite, Wardrobe, Wi-Fi, TV, Swimming Pool, Sectionals, Refrigerator, Pre-Paid Meter, Microwave, Kitchen Shelf, Hot Water",
+        "AGENT": "Ace Holding",
+        "CONTACT": "+233205504307",
+        "DISTRICT": "Adentan Municipal Assembly",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/08.webp",
+          "sourceFilename": "61192505_MTYwMC0xMjAwLTNmZTc1NmM3ZDg.webp",
+          "sha256": "6718b4aee58da8d561069a9c17a58be84f9f2401bbbcb8df7355d98eaf9959f3"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/01.webp",
+          "sourceFilename": "61192489_ODEwLTEwODAtMjNlMmQ3NzBjNw.webp",
+          "sha256": "a2031665157811675b1a599db84628c04c13e0c2de3ac5fa0a4e40a23caa6684"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/02.webp",
+          "sourceFilename": "61192490_MTA4MC04MTAtNzRiNDE1NTM1Yw.webp",
+          "sha256": "4e2ed8214dea2a35a469f92eaed37fbbb96c51eb232cfc369238ce86eb6e38e9"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/03.webp",
+          "sourceFilename": "61192491_MTA4MC04MTAtNzM5YTU1YzcyMA.webp",
+          "sha256": "3479f55daddd3644d1543eb233657f3698c64456d296c3f4a2f4e559ede01fa4"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/04.webp",
+          "sourceFilename": "61192493_MTA4MC04MTAtZDAxZTVhNGI3OQ.webp",
+          "sha256": "237d3b79b15355ddbf8fdd1103d5d6f97731ccb9167ca023ed550093a37bd9e2"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/05.webp",
+          "sourceFilename": "61192495_MTA4MC04MTAtYTJmOTNmYmNhYQ.webp",
+          "sha256": "ac7b4604be1120f76e60eb550772f88518986f626c1a630518f925bd9343a581"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/06.webp",
+          "sourceFilename": "61192503_MTYwMC0xMjAwLTNhZDA3YzZlODM.webp",
+          "sha256": "11f1ec913b299d32d4a9e9cf086085f0f45d35ef371434215755f7f86084fa1c"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/07.webp",
+          "sourceFilename": "61192504_MTYwMC0xMjAwLTMyMzJhMzJiZDE.webp",
+          "sha256": "7f9157deced7c2db16afa9b63e74e63718307382c3608a1f2ef0eaa1cd96c6ef"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/09.webp",
+          "sourceFilename": "61192506_MTYwMC0xMjAwLWY3NmY1ZmVmMGY.webp",
+          "sha256": "32ec4162f0f1a463e847e879d53d8afda1772fdaf7b7f91a3eee81eac82dbaec"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/10.webp",
+          "sourceFilename": "61192507_MTYwMC0xMjAwLTg1MDY1Yzk2MjI.webp",
+          "sha256": "ba83771e7d641f39a6dd1454ea3e7b63ff059911365afefa003ca2a62772122f"
+        },
+        {
+          "url": "/properties/east-legon-hills-mansion-aceholding/11.webp",
+          "sourceFilename": "61192508_MTYwMC0xMjAwLTFhNmY3ZTg0Njk.webp",
+          "sha256": "f161f189761c5bb1dbceca010dd82f14065789735f899e96e520aff4a86b16f2"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "slug": "adjiriganor-apartment-savehands",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 11,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Adjiriganor",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "100sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-Furnished",
+        "BEDROOM": "6",
+        "BATHROOMS": "6",
+        "TOILET": "6",
+        "ASKING PRICE": "GH₵ 7,223,973",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Sectionals, Tiled Floor, TV, Wardrobe, Wi-Fi, Parking Space",
+        "AGENT": "Save Hands Properties",
+        "CONTACT": "+233591005469 and +233246473121",
+        "DISTRICT": "Adentan Municipal Assembly",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/02.webp",
+          "sourceFilename": "54280528_MTIwMC0xNjAwLTM3MWQ2ZTFkNGQ.webp",
+          "sha256": "8cf6ca3bd3bb9b279d4484f8e1bf584effa1987a02461db9e535407e872b3b26"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/01.webp",
+          "sourceFilename": "54280527_MTIwMC0xNjAwLTlmYWFiOWUwMTY.webp",
+          "sha256": "553dd779ff83c5ae562d5e07277393a7f7cd5dbe493a99c8f8674b6841be232f"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/03.webp",
+          "sourceFilename": "54280529_MTIwMC0xNjAwLTE1YzcyYWVkM2Q.webp",
+          "sha256": "bd5726545f983ba1134f06f8ebed17ae133c251b2e58bd76d2454e2560a2fa92"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/04.webp",
+          "sourceFilename": "54280530_MTIwMC0xNjAwLTc0MTMzZDAyMDE.webp",
+          "sha256": "49fdfdd40799fa23064444b9bb144d86b63dc3339c5cacf3f9030ff1cced8dcf"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/05.webp",
+          "sourceFilename": "54280534_MTIwMC0xNjAwLWVhMTU0MTMwOTU.webp",
+          "sha256": "f0a854db569962a9cbd32856d917d57c5598684c904641d286b1b7c5ab7b416e"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/06.webp",
+          "sourceFilename": "54280535_MTIwMC0xNjAwLTQ3MTcyNmZlZTk.webp",
+          "sha256": "8cffd16c0f69a43ca51743751af26a024f4b5fd3e6d6b43ee9a47a7a60916d38"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/07.webp",
+          "sourceFilename": "54280537_MTIwMC0xNjAwLTUzZjNjYzA1OWY.webp",
+          "sha256": "a00ffe297f12f99c4346639dbed3e532182ef86d0087e925f45703fdc6aa4353"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/08.webp",
+          "sourceFilename": "54280539_MTIwMC0xNjAwLTczODkxZmY3YmY.webp",
+          "sha256": "428c025e72734f27e26a1f7bb03170f3344135164e599bddd7b62628dc97e435"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/09.webp",
+          "sourceFilename": "54280541_MTIwMC0xNjAwLTViZDBlN2VhNDA.webp",
+          "sha256": "fedca6b9916689e6bd0c0ea76df46d29381cf11a3775694e75842aed4943f20c"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/10.webp",
+          "sourceFilename": "54280542_MTIwMC0xNjAwLWI5OGVhZTA1N2M.webp",
+          "sha256": "4a543df78a5b7d980bc0a124e07707a76d485534f653d2b16b3fda255e1fb716"
+        },
+        {
+          "url": "/properties/adjiriganor-apartment-savehands/11.webp",
+          "sourceFilename": "54280543_MTIwMC0xNjAwLWU0MjNlMjg0ZWU.webp",
+          "sha256": "a0d8a9a3379c4b0b8157f98ccd32abe7635c2318d08625d2192f5823f255ad6f"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "slug": "achimota-tantra-hills-duplex-hometrust",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 13,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota Tantra Hills",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "140sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,500,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Home Trust Properties Agency",
+        "CONTACT": "+233550899856 and +233550827422",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/01.webp",
+          "sourceFilename": "60924408_OTYwLTEyODAtODM3MWU4Yzg3OQ.webp",
+          "sha256": "65b302c913c224e48611162dbe1596ae6017cc0daeb4c1b4fbc1084403eb6937"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/02.webp",
+          "sourceFilename": "60924410_OTYwLTEyODAtYTQyYTJkYmI1OQ.webp",
+          "sha256": "ad56de601a7eacfba02bcc85b2140c2cfa93b4cde6f40fd30ee1274644b38a7c"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/03.webp",
+          "sourceFilename": "60924411_OTYwLTEyODAtZjMwYzRjOGE0Zg.webp",
+          "sha256": "4731f6e0915b99d6ff74f5814bf777e916e5253efeae765d1c40e9d2e3d06656"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/04.webp",
+          "sourceFilename": "60924412_OTYwLTEyODAtM2I3ZmUyZjRhZg.webp",
+          "sha256": "ea25b95011f78d56ec6f1dc95a88bd14fb98b168f8727c9c30214761f50655eb"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/05.webp",
+          "sourceFilename": "60924413_OTYwLTEyODAtYzNkZTg4ZTAzMA.webp",
+          "sha256": "1800388be823eb171f8770979f20893c1f25b6874ce6326a56d191777065983e"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/06.webp",
+          "sourceFilename": "60924414_OTYwLTEyODAtYzY0ZTg1NDZmMQ.webp",
+          "sha256": "5d0fa0da71d8bc3950cbe4e40d0f5061eb1f619a242aaea3adabff82d3a0661a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/07.webp",
+          "sourceFilename": "60924415_OTYwLTEyODAtMGNmOTY4NzYyNg.webp",
+          "sha256": "1188cd71f96cab3ad3612c6dfc27e74f5bbfa47a24e765bec920746aabe19863"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/08.webp",
+          "sourceFilename": "60924416_OTYwLTEyODAtMDAxYjAwMGM2ZA.webp",
+          "sha256": "4056abb4567e64fcb5e4e63fd24a55d73940dec27c5733b902a60e624fbaa2ff"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust/09.webp",
+          "sourceFilename": "60924417_OTYwLTEyODAtZmQyNDU4NDIzNg.webp",
+          "sha256": "1231f41b73c2693fd05226924c8f0c5fff25fa4402ced003c53142587d956b49"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "slug": "achimota-mansion-greenyard",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 14,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota Mill 7",
+        "PROPERTY TYPE": "Mansion",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "2000 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-Furnished",
+        "BEDROOM": "5",
+        "BATHROOMS": "5",
+        "TOILET": "6",
+        "ASKING PRICE": "GH₵ 5,500,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Balcony, Chandelier, Dining Area, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Greenyard Properties Inc",
+        "CONTACT": "+233554262896",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-mansion-greenyard/01.webp",
+          "sourceFilename": "44447188_MTI4MC05NjAtMjFjNGNmNjkxMy0x.webp",
+          "sha256": "eefae2573fde139f4b6a0b0ca43392f193ac17df335573cb712190a111db14fb"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/02.webp",
+          "sourceFilename": "44447189_OTYwLTEyODAtMTVmYjQ1MDc3Mi0x.webp",
+          "sha256": "8eb769fdac50edd84c1ef2ab81c82544772a831bb92bb7433fb312cc92e73630"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/03.webp",
+          "sourceFilename": "44447190_OTYwLTEyODAtNTU0NDZmNjE4Yi0x.webp",
+          "sha256": "72c465c01b794c0c68809d5aded215e6388dae2c5c532789a0337d0b6ecd8e89"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/04.webp",
+          "sourceFilename": "44447192_OTYwLTEyODAtOThkYjMwMTE0ZS0x.webp",
+          "sha256": "aa80df3d9cd831389116f10cf4ba440424b9ad4b1d69273dc7e773bd71718a7b"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/05.webp",
+          "sourceFilename": "44447193_MTI4MC05NjAtNDFkMzQ2YjEzNC0x.webp",
+          "sha256": "fb861d4632169f8e64d7d8d3d1a6aaa46307831b24b91518f5ab0b6b48653af3"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/06.webp",
+          "sourceFilename": "44447194_OTYwLTEyODAtMjUxZmI3Y2Q2Ny0x.webp",
+          "sha256": "9b3f23cf1413a60ae4f537e1669c102c305cae1c17beb29e3cb0aad98eb6b32b"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/07.webp",
+          "sourceFilename": "44447195_OTYwLTEyODAtNTUxZDc5OWQ1NC0x.webp",
+          "sha256": "9024818dded4f07e7404a3888aa5367f3f0268a836a5facc167e79a806cd79f7"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/08.webp",
+          "sourceFilename": "44447196_OTYwLTEyODAtZDU0ZGMwNGNkNS0x.webp",
+          "sha256": "7c0804c112ec850bc99bf43816d9fcf3d8a755928b966e5bfcd488313ca6da8f"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/09.webp",
+          "sourceFilename": "44447197_OTYwLTEyODAtMTUxOTEyYjQ0YS0x.webp",
+          "sha256": "4310cd86efcfa2fa1dbc2fc75263435eab3d1380dfb4b090c3a59fd142907bf9"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/10.webp",
+          "sourceFilename": "44447199_MTI4MC05NjAtMGZiNDFkMjg0Mi0x.webp",
+          "sha256": "b283b610a0ae9eb5c32d70dd15f1623bb7099d7958e0c45a5c417b618992f7a8"
+        },
+        {
+          "url": "/properties/achimota-mansion-greenyard/11.webp",
+          "sourceFilename": "44447267_MTI4MC05NjAtYjhiYTFmNTRjZi0x.webp",
+          "sha256": "af9d47e5f47544639ff02ab51391cd615a4ba9ea3778f1004dd0d407d393487f"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "slug": "achimota-kingsby-villa-justice",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 15,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Kingsby",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "850 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 2,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Balcony, Chandelier, Dining Area, En Suite, Hot Water, Kitchen Cabinets, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "Justice",
+        "CONTACT": "+233241334768 and +233508724944",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Not specified",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/01.webp",
+          "sourceFilename": "59604793_ODI4LTExMDQtNDY1YzlmNTg5Nw.webp",
+          "sha256": "ab0190d27c68e27a68ab411b9241e8327a2658264eadcc3c8e75e567baa3e157"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/02.webp",
+          "sourceFilename": "59604797_MTIwMC0xNjAwLTYxN2U0OTBiOTE.webp",
+          "sha256": "11d9c894535ef7d5246284c98c1c1ba81109c44384351bf1343cf6d7dac43c44"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/03.webp",
+          "sourceFilename": "59604799_ODI4LTExMDQtMTM1ZDcxNTE4Nw.webp",
+          "sha256": "8e538d32d86859c512a03839694f300020b14a5a08984f8a32da5bc51c2afb5c"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/04.webp",
+          "sourceFilename": "59604802_ODI4LTExMDQtYjk1ZmRiY2Q1Ng.webp",
+          "sha256": "67d8ebf07b04313d1c2fc65df3b99847a950df6b8d29ef90737fd06808437564"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/05.webp",
+          "sourceFilename": "59604803_MTIwMC0xNjAwLTg1MmNhZTYyN2I.webp",
+          "sha256": "965712b1b95e81f734e837ae5c2f0e609375dad7e662c08a46a59c0c723e15da"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/06.webp",
+          "sourceFilename": "59604804_MTIwMC0xNjAwLWNlMGNhOGU2Mjk.webp",
+          "sha256": "1a50200037b0b940bc61783f95863f196d6ccc4889569077228e65e5d6645a7c"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/07.webp",
+          "sourceFilename": "59604806_MTIwMC0xNjAwLTQ3NTYxOTA4ZjM.webp",
+          "sha256": "51cb04f39b459fc8b7c4f61fce55109591cf0685d82cc8625892715939f3528d"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/08.webp",
+          "sourceFilename": "59604807_ODI4LTExMDQtNDk3MjdhMjFjYw.webp",
+          "sha256": "221267aa731341e029250ff3860be6affc6481e31db061704baf36a9f1e9cd82"
+        },
+        {
+          "url": "/properties/achimota-kingsby-villa-justice/09.webp",
+          "sourceFilename": "59604808_MTIwMC0xNjAwLWJiZGMxMjkwMWI.webp",
+          "sha256": "8605714bc3efc0a8e39f8ad3a5450439c8986148ae08f581d4b8addd51f875de"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "slug": "achimota-duplex-unitedhomes",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 16,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Newly Built",
+        "SELF-CONTAINED": "Yes",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "6",
+        "BATHROOMS": "6",
+        "TOILET": "6",
+        "ASKING PRICE": "GH₵ 5,400,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Dining Area, Dishwasher, En Suite, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Sectionals, Wardrobe",
+        "AGENT": "United Homes",
+        "CONTACT": "+233545640939",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/02.webp",
+          "sourceFilename": "53168718_NzAzLTkwOC04MDI1ZjdlM2Ew.webp",
+          "sha256": "55b2a7c2d6e2e08d30832105498e6ac0dbe17ee0194427fe00dc3b8b7ec86509"
+        },
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/01.webp",
+          "sourceFilename": "53168717_NzAxLTkxMy0zMDc4ZjJiZmEx.webp",
+          "sha256": "ad4c638c25293f83e15afd8d1fa909bc6fa319c4c104f22d0f991b1c5c658119"
+        },
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/03.webp",
+          "sourceFilename": "53168719_NzAzLTkyNS02NWJjOTZkNDNh.webp",
+          "sha256": "61cc9a15b151e46cc6a8e3faeb2a969e667326fcdd91447f1b733a703bc12277"
+        },
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/04.webp",
+          "sourceFilename": "53168720_NzAwLTkyOS1lZTQ5OGUzNzc4.webp",
+          "sha256": "8274ab28f3dfa7775464f84202fc4f3f95c1187cefda94de9e718bea96fb8dcd"
+        },
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/05.webp",
+          "sourceFilename": "53168721_NzAxLTkwNi1lZWRhOTk3YzI3.webp",
+          "sha256": "ff0acf219fa79d256bc6aafed745dbac58cd82b1fae84b500812791d2a0a00ec"
+        },
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/06.webp",
+          "sourceFilename": "53168722_Njk4LTkzNi1iN2I3YWVhNThk.webp",
+          "sha256": "f0b7410faf3cec245c68001bb8d008fc0b4538170b4b9d25fcc72ba42d4bfbb5"
+        },
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/07.webp",
+          "sourceFilename": "53168723_NzAwLTkwOS04ZjM1NTliYzdj.webp",
+          "sha256": "2f9150fc35e30642ee362ed22f6593b383321baf1666b9c40403c99f2ef354e7"
+        },
+        {
+          "url": "/properties/achimota-duplex-unitedhomes/08.webp",
+          "sourceFilename": "53168724_NzA0LTkzMi05M2M4MWFjY2Q0.webp",
+          "sha256": "afc010f4d5f8ff1e7ea8dc37b0c78034e0297aa36b645ad19a6aa1f968d02007"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "slug": "achimota-tantra-hills-duplex-hometrust-ii",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 17,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota Tantra Hills",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "160 sqm",
+        "CONDITION": "Newly Built",
+        "SELF CONTAINED": "Yes",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,000,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen Cabinets, 24-hour Electricity, Tiled Floor, Dining Area, Pop Ceiling, Air Conditioning, Balcony, Chandelier, Dishwasher, En Suite, Hot Water, Kitchen Shelf, Microwave, Pre-Paid Meter, Refrigerator, Sectionals, Wardrobe",
+        "AGENT": "Home Trust Properties Agency",
+        "CONTACT": "+233550899856 and +233550827422",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/01.webp",
+          "sourceFilename": "59482585_MTIwMC0xNjAwLTczOTY2NjI5ZDM.webp",
+          "sha256": "1e98816471edb4cf9beb82636365c71c230ea9637f16e0e9d660fc20d2c3ce1b"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/02.webp",
+          "sourceFilename": "59482587_MTYwMC0xMjAwLTAyMGIxYjQwYzk.webp",
+          "sha256": "563bdd296dda4bca3abee10f35fcde08fcdbac6f43cb01e567fe1ffed45f45c8"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/03.webp",
+          "sourceFilename": "59482589_MTIwMC0xNjAwLTA5OTYzY2ZiOGM.webp",
+          "sha256": "8f3f947662e77f580a4f9f0268f05955a4944b4d1ffd2b498b014d5013c9e654"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/04.webp",
+          "sourceFilename": "59482590_MTYwMC0xMjAwLTZiNTNhNjk1ZTk.webp",
+          "sha256": "528a38981f61d72ada7766f53cc1aefbc1478b113776f5fe464ad94600420c4a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/05.webp",
+          "sourceFilename": "59482591_MTIwMC0xNjAwLTY0MzVjNjE1N2M.webp",
+          "sha256": "4c7d2284debf8bbcde2ae707cb999a401af3d098224331199f05d806f35ac422"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/06.webp",
+          "sourceFilename": "59482592_MTIwMC0xNjAwLTE4Yjc4MzQ4NmM.webp",
+          "sha256": "ce791023d6ecfb613269ae541359a9641e282e4f40268e347e32efda2ddcd38a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/07.webp",
+          "sourceFilename": "59482593_MTIwMC0xNjAwLTMxNTRiZmFiMWQ.webp",
+          "sha256": "598e4d8d26477dd7889e0dcd6161a26f8822994a257dd3525a9b75f2d556604c"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/08.webp",
+          "sourceFilename": "59482594_MTIwMC0xNjAwLTRhYzUwMGQwODg.webp",
+          "sha256": "53b6c9cde6d4adb77593779456e635501c0847d178f125602b3b815ceecbfc53"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/09.webp",
+          "sourceFilename": "59482595_MTYwMC0xMjAwLTEzNzQ1OTk2ZDA.webp",
+          "sha256": "4643f7187acd43772c09a80806914ecee0f541454e71761654b9fd542023211f"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/10.webp",
+          "sourceFilename": "59482599_MTYwMC0xMjAwLTUzZmUyNTQzZmQ.webp",
+          "sha256": "9cadea785ee862ea6913a3a669c7c0f25f9c96ae9a3a2cf9a16e18c08251e7fd"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/11.webp",
+          "sourceFilename": "59482600_MTYwMC0xMjAwLTJjMzQxYmZmYjg.webp",
+          "sha256": "a34c300545c46cf851be4d12c2124c20ce145a608dc6901851edfd569667900a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/12.webp",
+          "sourceFilename": "59482602_MTIwMC0xNjAwLWRjZTU5MGFhNDQ.webp",
+          "sha256": "161237e2543b8e0f8b7c939fac3558529fe6388bc8051da0c5c784f974c31bdf"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/13.webp",
+          "sourceFilename": "59482603_MTIwMC0xNjAwLWI0N2JmMjA2NDA.webp",
+          "sha256": "739fd9c47ee8cac3e6f52d44b8d4bac8079672cb6946331f371f68cc440bfcc9"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-ii/14.webp",
+          "sourceFilename": "59482604_MTYwMC0xMjAwLWQxNzVjNjdlNDI.webp",
+          "sha256": "ebba3b9697635490f1afea5daee10004d4b617ed80d4374ac23f58bea88ee839"
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "slug": "achimota-villa-seekers",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 18,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "900 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "5",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 2,760,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Seekers Realty",
+        "CONTACT": "+233245142942 and +233554420825",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Not specified",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-villa-seekers/01.webp",
+          "sourceFilename": "33340990_MTA4MC0xMzQ5LTI0ZDliMmRmNGItMQ.webp",
+          "sha256": "055d900964bd7fcc174a6a58198fed888c1ee371d7efe69fd22cdfe842a944be"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/02.webp",
+          "sourceFilename": "33340997_MTA4MC0xMzQ3LWYzNDM4OWY1MzItMQ.webp",
+          "sha256": "2c93dccd58d4d76dd25c8241a49697e2567c006f0e01aa4a3e5217841b17bfbb"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/03.webp",
+          "sourceFilename": "33340998_MTA4MC0xMzQ3LWQ0MGYwNzVmNzQtMQ.webp",
+          "sha256": "301949688ba1ce29f38ea8c8e7ed45e05ca4ffd3a31815f86413378153b3995f"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/04.webp",
+          "sourceFilename": "33340999_MTA4MC0xMzQ3LWI1YWI3MmNkYjEtMQ.webp",
+          "sha256": "6629e6542f106695d5e007aa05a3540784a3b09f324d041d1e14b22853e02839"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/05.webp",
+          "sourceFilename": "33341000_MTA4MC0xMzQ3LTE0YzdiZDI4NmUtMQ.webp",
+          "sha256": "e6bc6e2203075ae8e9f70e09befc53746bb403eee87344f82c387266497c2f49"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/06.webp",
+          "sourceFilename": "33341001_MTA4MC0xMzQ3LWVkZWQ1YjljNjUtMQ.webp",
+          "sha256": "705e20e852848aee60d78dd27487582fa2bed0cd09c9240d3887f21a10810600"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/07.webp",
+          "sourceFilename": "33341002_MTA4MC0xMzQ3LTI1MThhYWFkZDYtMQ.webp",
+          "sha256": "369ad6184eb521996ab3f2fd2c954f664cdcdbd068db2a668e9e5ff4c62e4e5b"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/08.webp",
+          "sourceFilename": "33341003_MTA4MC0xMzQ3LTk0MWQ3Nzk0OTAtMQ.webp",
+          "sha256": "6e1e3c88748c7442c981d10d0c00348e7ed4460d47ea7bf340e1fc5f748a579b"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/09.webp",
+          "sourceFilename": "33341004_MTA4MC0xMzQ3LTc3ZDQxNzVhODEtMQ.webp",
+          "sha256": "7459e7a5854e915741a2c62ecfa8f8f45e881145fb437eb59585b0857cb2ad92"
+        },
+        {
+          "url": "/properties/achimota-villa-seekers/10.webp",
+          "sourceFilename": "33341005_MTA4MC0xMzQ3LWU0YmVhYWY1ZTUtMQ.webp",
+          "sha256": "b5ed4f5f8b15565083e2d02fedcc180ee5043c5409e497786f194fb075801405"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "slug": "achimota-tantra-hills-villa-vpproperty",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 19,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota Tantra Hills",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "105 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 3,400,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "VP Property Consult",
+        "CONTACT": "+233206151937",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Not specified",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/01.webp",
+          "sourceFilename": "59495208_ODEwLTEwODAtOWIxZTk1ZTgyMw.webp",
+          "sha256": "ba920d69b411b61244f7d748d7d6a396cf717d1698d353d8b12bbadae6fea9e6"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/02.webp",
+          "sourceFilename": "59495209_MTI4MC05NjAtNjZjZjQ0ZTY5Nw.webp",
+          "sha256": "0a8886c172fa6d2d75e36481cdb4a1e373666662f48e83275b50f2452eb93f01"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/03.webp",
+          "sourceFilename": "59495210_MTI4MC05NjAtZDlkYWUwYTkxNg.webp",
+          "sha256": "ad0b7e5468f3968b62a8c5be34b25ec662fa74effcc66d4088458939e7687758"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/04.webp",
+          "sourceFilename": "59495212_MTI4MC05NjAtNDlkOGZjMjE0MQ.webp",
+          "sha256": "44a120cd910b03a337433cb8692ce7b8b41e0a226ee0d8fc353443361c7dfb2b"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/05.webp",
+          "sourceFilename": "59495213_MTI4MC05NjAtMmRmZWUzMmE2Ng.webp",
+          "sha256": "7d0116fd48f8038a189a71d5b983c30fcaca622f19d70b955529d1e1eea2adda"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/06.webp",
+          "sourceFilename": "59495214_MTI4MC05NjAtYTU0ZmFhZDlmYQ.webp",
+          "sha256": "e0e16a7c58e6b2f37e078dd38d2ccc8c673d3df6ed334e619ec2ce0a564e7b2d"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/07.webp",
+          "sourceFilename": "59495215_MTI4MC05NjAtYTNhZmI4ZmQ1Yw.webp",
+          "sha256": "0cb4affcf1ea1efef34d2a66c658862df0a57285f699c8ba31810112f7a1d654"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/08.webp",
+          "sourceFilename": "59495216_MTA4MC04MTAtMzc5OWNjZGZiYw.webp",
+          "sha256": "951040ec06e5ba43da921cad0a1dcc6420f1eebbd1b65ee41c1c93bfa8758772"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-vpproperty/09.webp",
+          "sourceFilename": "59495217_MTI4MC05NjAtYWI0OTMxYzFmYg.webp",
+          "sha256": "1ba87682f890bdb8a3d87bd578845d24c49189f4dac2db57356af813a68bff06"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "slug": "achimota-villa-nartey",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 20,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "300 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Dining Area, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "Angela Nartey",
+        "CONTACT": "+233203262141",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-villa-nartey/01.webp",
+          "sourceFilename": "55917816_MTIxNy0xNjAwLThlNzE1YWMyZGM.webp",
+          "sha256": "bc4c2edb077e03d82308f9eb966eaf48f8e8bdad548910b664a3583e7f309c04"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/02.webp",
+          "sourceFilename": "55917805_MTIyMC0xNjAwLTUwYTI3OGRmNjk.webp",
+          "sha256": "199d726d242eecc5150f8c88fe42bf8444f33f86a055e0ae06dbb537bef5e48d"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/03.webp",
+          "sourceFilename": "55917806_MTIxNC0xNjAwLTY3NmJhMDNiMDY.webp",
+          "sha256": "e570fa204034dd142e5e19961dd6ebab237ade04c7c2904055cd8eae68773292"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/04.webp",
+          "sourceFilename": "55917809_MTYwMC0xMTkxLTZiZDQ2NzFiNDA.webp",
+          "sha256": "8749573bc4a834f744ab6a03495d537365d90fc3de32b22e87c17aa8d0ef781b"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/05.webp",
+          "sourceFilename": "55917811_MTIwNy0xNjAwLTQ2ZjdhZWI3ZTM.webp",
+          "sha256": "b5872517984b791d6a190b6fa6e2c73bb39bb23973157e907938228a20f7ef76"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/06.webp",
+          "sourceFilename": "55917814_MTI0Ny0xNjAwLWYxZTllNDU1YTc.webp",
+          "sha256": "84901d6541b2f1c5e8dba1a4edb4a4924abdf72cebb6d0295e7c9ee9029e1e0f"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/07.webp",
+          "sourceFilename": "55917815_MTIzMy0xNjAwLWY3NGZkYjBmYzU.webp",
+          "sha256": "6addd554f83c7fc98104b5c1818e887edea04b0b519414b23bba26f9ecbf99c5"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/08.webp",
+          "sourceFilename": "55917822_MTIyMy0xNjAwLWViMzNkODY0NjI.webp",
+          "sha256": "ed5f1a752124aea585be5216f067aed8c87fab3783e73ed713adf427b8d6aa4a"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/09.webp",
+          "sourceFilename": "55917823_MTIxNS0xNjAwLTg0ZTg5ZDM0YjM.webp",
+          "sha256": "254e671651dd3066a55bc00cb5d46e85c5535f36a57ce54c192530d3db2bc1e3"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/10.webp",
+          "sourceFilename": "55917833_MTIyMC0xNjAwLTM4YWQwMmQwNGI.webp",
+          "sha256": "c63e959bb3a8200d337efbe2212f62d10c526c0c46656815d489fe1394309308"
+        },
+        {
+          "url": "/properties/achimota-villa-nartey/11.webp",
+          "sourceFilename": "55917834_MTIxNy0xNjAwLWZhMjI0MzU4ZWU.webp",
+          "sha256": "2e04b0e96d9a360900265f446ae07ab262575076ed0bbf3354c868090eb60896"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "slug": "achimota-kingsby-apartment-roger",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 21,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Kingsby",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "500 sqm",
+        "SELF CONTAINED": "Yes",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,400,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony",
+        "AGENT": "Roger",
+        "CONTACT": "+233246252029",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/01.webp",
+          "sourceFilename": "59055430_ODA5LTEwODAtYjMxOWU5Zjk5Mg.webp",
+          "sha256": "551b07275c1b80390a70f57870b27745ad66638dbd90fc9979464d3bac5315ac"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/02.webp",
+          "sourceFilename": "59055429_ODA5LTEwODAtZWZlZGUyNGY3MA.webp",
+          "sha256": "ee94625168635ea847c5971c1a5aad88b906f324f75831b69bde3d96526bb52c"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/03.webp",
+          "sourceFilename": "59055431_ODA5LTEwODAtZTU1YjM3MjZlZg.webp",
+          "sha256": "307069f11c9bf25d501d318239ba9a82c8efa90b653bb8c8b40ebc3b3d12e0dc"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/04.webp",
+          "sourceFilename": "59055432_ODA5LTEwODAtODg5YzM1NzA1Yw.webp",
+          "sha256": "7bc80e5886c2c008cad229b75b3d1ab46304d0ee707a58d145ce44aee026fa1e"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/05.webp",
+          "sourceFilename": "59055435_ODA5LTEwODAtZmU3ZTI2MGIyMA.webp",
+          "sha256": "b771f3c2bd788b06985636a10829decba587602a51b916e226d35ce4cf9e1617"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/06.webp",
+          "sourceFilename": "59055436_ODA5LTEwODAtZjg4YjY1YzI5Yg.webp",
+          "sha256": "88cb1e91892f461725d6bfcf9c5a287496b33805a964fee34551dffa3fb3914e"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/07.webp",
+          "sourceFilename": "59055437_ODA5LTEwODAtNTEzYmQ1YjkwNg.webp",
+          "sha256": "0e4c6ceb97df232e2812114d387d023077346cf2a7de109553f7f5b5968fef9b"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/08.webp",
+          "sourceFilename": "59055441_ODA5LTEwODAtNzRjOWU4YmUwOQ.webp",
+          "sha256": "054d289e5af3f01753f6b8c0e76c7dd4c9fc97fdac8a28b7819f8c7eca953f6d"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/09.webp",
+          "sourceFilename": "59055442_ODA5LTEwODAtMzg2MTRiMTc0Mw (1).webp",
+          "sha256": "04641d9cebe19af59aa57119e23cb266a56e8c9eaf2d92058828a1984cf2031d"
+        },
+        {
+          "url": "/properties/achimota-kingsby-apartment-roger/10.webp",
+          "sourceFilename": "59055442_ODA5LTEwODAtMzg2MTRiMTc0Mw.webp",
+          "sha256": "8542baade773d9f16307566fbb26f0f41eda6cb7950a168e910dd6abba3bb4f4"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "slug": "achimota-duplex-enbtrust",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 22,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Mile 7",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "1000 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 2,970,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, En Suite, Hot Water, Kitchen Cabinets, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "Enb Trust",
+        "CONTACT": "+233277383079",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-duplex-enbtrust/01.webp",
+          "sourceFilename": "58656221_MTI4MC05NjAtOGRlMWNmYTZiYQ.webp",
+          "sha256": "c0a5b638cd26be2301b7141839839873a225c7a951ed558990dc3e3eb17d0a7c"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/02.webp",
+          "sourceFilename": "58656212_MTI4MC05NjAtOTZkYjJjYWQ0ZA.webp",
+          "sha256": "5b48c8402bdfe9f957f4f595b4051655413fc7bfdbc30739135ea5848143cf1c"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/03.webp",
+          "sourceFilename": "58656213_MTI4MC05NjAtMGI0MmYzY2IzYw.webp",
+          "sha256": "f00c599f119d6ca993916259de49b3443a0b65617edcc9429ce0609194ea5153"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/04.webp",
+          "sourceFilename": "58656214_MTI4MC05NjAtMmY4MjQzMjY5MQ.webp",
+          "sha256": "21a939681a2e31c279e509ebfd50d02432dd4821025bef966929f5720291b2b2"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/05.webp",
+          "sourceFilename": "58656215_MTI4MC05NjAtY2NmMmQxOWYwMg.webp",
+          "sha256": "aa519d52ac34fd9dacd467e15fa36368b3501cb0cebcac65c3317c3469b49dca"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/06.webp",
+          "sourceFilename": "58656216_MTI4MC05NjAtYjM5MGUzODIxOA.webp",
+          "sha256": "77f71317f0bd7146604fea69ccd8e6e62bb4d0b53b88c9d258ed10d32c0225c3"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/07.webp",
+          "sourceFilename": "58656217_MTI4MC05NjAtYThlMmJjZGJhYw.webp",
+          "sha256": "eb3e4a76182c676a3ce9fd505c4a0cfd6fc900837511384ad94eccb2d10b5be7"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/08.webp",
+          "sourceFilename": "58656218_MTI4MC05NjAtOWIzOGFiOGUxNA.webp",
+          "sha256": "26291be4f231c65320338c6856bbc33e4940a86766da2857c1da334801e07d22"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/09.webp",
+          "sourceFilename": "58656219_MTI4MC05NjAtZmMyZDM1Y2U1YQ.webp",
+          "sha256": "7bd7c88c33154ea263d882c4f2565ef1c526cfdc66e9d6b7c36ce851d21f2882"
+        },
+        {
+          "url": "/properties/achimota-duplex-enbtrust/10.webp",
+          "sourceFilename": "58656222_MTI4MC05NjAtMTIzY2I3M2ZlYg.webp",
+          "sha256": "a688e0ee182476ee174674e8efd4e90f8c3be04b7ae40f8a6573dddbf10ad07a"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "slug": "achimota-tantra-hills-duplex-hometrust-iii",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 23,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Tantra Hills",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "140 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 2,700,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen Cabinets, 24-hour Electricity, Tiled Floor, Dining Area, Pop Ceiling, Air Conditioning, Balcony, Chandelier, Dishwasher, En Suite, Hot Water, Kitchen Shelf, Pre-Paid Meter, Sectionals, Parking Space",
+        "AGENT": "Home Trust Properties Agency",
+        "CONTACT": "+233550827422 and +233550899856",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/01.webp",
+          "sourceFilename": "60137400_OTYwLTEyODAtZDFhODU3MDE2NQ.webp",
+          "sha256": "7ab9dc4b69439a8036ae3abbe308011a6ba791f7e31d8141ce3a7b21944cba83"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/02.webp",
+          "sourceFilename": "60137402_MTI4MC05NjAtN2VjZjRlNjkxMQ.webp",
+          "sha256": "202bd0f44880b85ff8d580819f288024197c5db75c197969d38a7d331d4ddf48"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/03.webp",
+          "sourceFilename": "60137403_OTYwLTEyODAtM2M1YzBhYTdmYg.webp",
+          "sha256": "e1f068f0b262aefb4758e54db1c3c9f69bacfaf9d565353489818e9f087fc863"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/04.webp",
+          "sourceFilename": "60137404_OTYwLTEyODAtYWQ0MGRiN2MzYg.webp",
+          "sha256": "733634a796fd9fc20fc383cd402f3187ccb26a78d8638bf08326da5aad7665d8"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/05.webp",
+          "sourceFilename": "60137405_OTYwLTEyODAtY2RkNGM3YjljOA.webp",
+          "sha256": "e1cc8d215b77911b2469002740ed4f9ab008525b9985313c0d5e1ddcf4fc2ee1"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/06.webp",
+          "sourceFilename": "60137410_OTYwLTEyODAtZDZhZjA4MzJjNQ.webp",
+          "sha256": "69b846ff97b521de2af67353d8eafce040fd3333016c5daf86b8e7d96df44671"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/07.webp",
+          "sourceFilename": "60137412_OTYwLTEyODAtODZkYmU1MjJmYg.webp",
+          "sha256": "52db65ed32613dc319b3495e2acfe8f09fc7a9842651aadb440d50ae0471d73d"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-hometrust-iii/08.webp",
+          "sourceFilename": "60137413_OTYwLTEyODAtZDU2MGRjZWQxNA.webp",
+          "sha256": "c98f2ecfaea8bf0d4e9927ac18155ac16c27b0b3eb0511648102877948a6a23d"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "slug": "achimota-duplex-edwin",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 24,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Semi-Furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,400,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator",
+        "AGENT": "Engineer Edwin",
+        "CONTACT": "+233545761934 and +233577009069",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-duplex-edwin/01.webp",
+          "sourceFilename": "52914499_MTYwMC0xMjAwLTQ4OGYxNjkxNTQ.webp",
+          "sha256": "b0b9c5819e4f10223d56e69d5f407bc391a401eaab290ebeb70bf27e936d6b1b"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/02.webp",
+          "sourceFilename": "52914500_MTYwMC0xMjAwLTkxNTZjMmYyZjM.webp",
+          "sha256": "2484fde5e41731bb952775e1bacdade8f849c7dce8bc42083764f0e05ba67c40"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/03.webp",
+          "sourceFilename": "52914501_MTIwMC0xNjAwLTY0MWEyNjUyZWE.webp",
+          "sha256": "67da20e127e5816bfdbbeb21eda08295501f18c13c763913f2f89e4954d3fe0f"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/04.webp",
+          "sourceFilename": "52914502_MTYwMC0xMjAwLTg2NmExZDg4YzI.webp",
+          "sha256": "d4ffc145efb53f458d8aaac4d7ae3a1d6095b83929a08b3ace4ba27d0646a632"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/05.webp",
+          "sourceFilename": "52914503_MTYwMC0xMjAwLTU5NmFmODg1OTQ.webp",
+          "sha256": "c451ea8219e227886d47a22ef99767ae0eab320d728e667d9868eed567fdd939"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/06.webp",
+          "sourceFilename": "52914504_MTYwMC0xMjAwLWE2ZmUxYmQ5ZTE.webp",
+          "sha256": "2f3a0703438e65536982934f32394b38524aaf956b6799e368443c493795b0f0"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/07.webp",
+          "sourceFilename": "52914506_MTYwMC0xMjAwLTlkZGQ0NmQ4NDc.webp",
+          "sha256": "09e2c8a70d6bd7486e163541e59ab6f8cae4830013c148507559f58275cc59ab"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/08.webp",
+          "sourceFilename": "52914508_MTYwMC0xMjAwLTYyNTQxNjI3ZjQ.webp",
+          "sha256": "c3a590617f6845ac7baa148eb98f000704d528c409b21e4b7bbd95b71db09b9f"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/09.webp",
+          "sourceFilename": "52914510_MTYwMC0xMjAwLTc4ZTJlNjkyZmU.webp",
+          "sha256": "03fe1ec0d9ea761ab325798f6895e257ee263b2f946c68b27656b4f3f43caa87"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/10.webp",
+          "sourceFilename": "52914514_MTYwMC0xMjAwLTk3NmNmMGJiNWY.webp",
+          "sha256": "c216060a872c9db8dda23a8e0c44035ce5c087ecc30dc79c6fb6ec5f32632c70"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/11.webp",
+          "sourceFilename": "52914516_MTYwMC0xMjAwLTAyM2E2OTM1MDA.webp",
+          "sha256": "3ff77dee370ad9b56ac49807b6102e9e98e959c2b8d972de6699285757cd6b24"
+        },
+        {
+          "url": "/properties/achimota-duplex-edwin/12.webp",
+          "sourceFilename": "52914521_MTYwMC0xMjAwLTAwMTI3Y2I4M2I.webp",
+          "sha256": "665709d1c7e766de47bcd9588a41f30c4fd7a0f7e49fb64382786a27ff61e763"
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "slug": "achimota-tantra-hills-villa-walako",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 25,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Tantra Hills",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,400,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Fitted Kitchen, Tiled Floor, Dining Area, 24-hour Electricity, Pop Ceiling, Air Conditioning, Balcony, Borehole, CCTV, Chandelier, Dishwasher, En Suite Bathroom, Hot Water, Pre-Paid Meter",
+        "AGENT": "Walako Real Estate",
+        "CONTACT": "+233597831808",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/01.webp",
+          "sourceFilename": "61953651_NzIwLTEyODAtYjk1ZGM3Y2QwZA.webp",
+          "sha256": "c3cae0eff24aa13feb9fe4dc74143f2d50ba3347bf22ee4952ff42834cbffe33"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/02.webp",
+          "sourceFilename": "61953650_NzIwLTEyODAtOWEyZjJkYTEzNA.webp",
+          "sha256": "47b9761d167fddf88f102e867eed78f7645eab081948cf9a77f2b8385c380059"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/03.webp",
+          "sourceFilename": "61953652_NzIwLTEyODAtMDQ0MjgwMzU3Zg.webp",
+          "sha256": "ac1a71e290bca19ce9f9024d4581fa058b50c6f68a67f696fb16a6f1b73ebb2b"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/04.webp",
+          "sourceFilename": "61953654_NzIwLTEyODAtZmFlYWU2ODAxYw.webp",
+          "sha256": "3abaf656d0e5b37e23e9da5a79706a7d22d530c05c2fc07293950ee8cbb974b4"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/05.webp",
+          "sourceFilename": "61953655_NzIwLTEyODAtZWNmNjk1OTM2Yw.webp",
+          "sha256": "633d619cc5d1ded5952ad773b8e5f587206935cb945f4d6e4804a09ce60eaf87"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/06.webp",
+          "sourceFilename": "61953656_NzIwLTEyODAtNWEzOGI1Y2U0Yg.webp",
+          "sha256": "60fafa02bbb13b4edee68df77d6220f2036f73c54f2b6a6d250071c0e5991d5f"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/07.webp",
+          "sourceFilename": "61953657_NzIwLTEyODAtZmZkMDc0MzgxZg.webp",
+          "sha256": "dbd91f801935cba45b49ba53cb8012a0d8bc460098cb45ccf26808a66b318ce3"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/08.webp",
+          "sourceFilename": "61953658_MTA4MC04MTAtMGJhMmZlMGNmMA.webp",
+          "sha256": "6745e750303ae66a75d5b14a4206f85cf3257befbe03b2c8a8b1d3d7720c2df4"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/09.webp",
+          "sourceFilename": "61953659_NzIwLTEyODAtNzdmYWZjZjM2Zg.webp",
+          "sha256": "9da89c4e327c2b2295aafd33e1896d8bc44ea06efde1acaf6eb932bb401112c7"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/10.webp",
+          "sourceFilename": "61953660_NzIwLTEyODAtNDM4OWQ1M2RmNg.webp",
+          "sha256": "9731ca1342b9024fb4031620d507c0d444d81bbd2491ab7f56b4286d31e2c3c6"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-walako/11.webp",
+          "sourceFilename": "61953661_NzIwLTEyODAtNDFkNTA0ZGZkNA.webp",
+          "sha256": "ad38439607ed79bd8dbefcf9011e2ca9e4ba932057806702fd6bb5c255c7fcd9"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "slug": "achimota-tantra-hills-villa-eagleeye",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 26,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Tantra Hills",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "198 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,100,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Tiled Floor, TV, Wardrobe",
+        "AGENT": "Eagle Eye Properties",
+        "CONTACT": "+233503016162",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-villa-eagleeye/01.webp",
+          "sourceFilename": "38872387_MTA4MC0xMzUwLTIwNmQyYjRlYzc.webp",
+          "sha256": "b62adab756a93ab0862b529fe3d7967250d048cfe7781ccdbb7a4e302e03538a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-eagleeye/02.webp",
+          "sourceFilename": "38872383_ODEwLTEwODAtNjEwMzVhY2I3MQ.webp",
+          "sha256": "ba1246ad28944e048a9e484785b459b5d81d77b5e9739498b14669b971e6280c"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-eagleeye/03.webp",
+          "sourceFilename": "38872384_MTA4MC0xMzUwLTk4NGQwNjBlZmQ.webp",
+          "sha256": "1b6f9f29ebdf753d84729c4a1ba13b7ebceed2884e7bfbba2a0698515dd0dd8f"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-eagleeye/04.webp",
+          "sourceFilename": "38872385_MTA4MC0xMzUwLWI5MzFhNzEzZTM.webp",
+          "sha256": "92cb52031b8e66b49f5fdf830d314317822fef43849816bdecdbdc46da320961"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-eagleeye/05.webp",
+          "sourceFilename": "38872386_NzU2LTEwMDgtZTI2M2E0NTFiOA.webp",
+          "sha256": "64bfce16df126f00541a0bc2b8df1b33ff250a36ede8f5006890d59f5b9a082b"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-eagleeye/06.webp",
+          "sourceFilename": "38872388_NjQwLTgwMC02M2ZlMWEzNGIw.webp",
+          "sha256": "4c6e76314445f30e0002061fd5a6265f3bfa1d546585d3ccf6e7aa8a9ab7ba6b"
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "slug": "achimota-tantra-hills-bungalow-unitedhomes",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 27,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Tantra Hills",
+        "PROPERTY TYPE": "Bungalow",
+        "STOREY": "Single Storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Newly Built",
+        "SELF-CONTAINED": "Yes",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 1,870,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe, Dishwasher, En Suite, Dining Area",
+        "AGENT": "United Homes",
+        "CONTACT": "+233545640939",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/01.webp",
+          "sourceFilename": "59152280_ODc3LTExNzEtZDI1YWM4ZjI0OA.webp",
+          "sha256": "071d8dbd95f8c228c9415d4f84d64ba3da7dfa1f638167fd9d8a601da2a92d37"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/02.webp",
+          "sourceFilename": "59152281_ODcwLTExODYtOTEzYjZmYTNmOA.webp",
+          "sha256": "eeeeef3a96298882651c0779b90f257b6254b11713a2eba01bd7c9ac2b818395"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/03.webp",
+          "sourceFilename": "59152282_ODc1LTExODItODdhODMyMTE4NA.webp",
+          "sha256": "bef2f042ff3c0cf30623686e1c99715d9bb8a9e10098a4a408d5503ad17406bc"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/04.webp",
+          "sourceFilename": "59152283_ODU2LTExNDMtY2Q1Y2NmMjcxMg.webp",
+          "sha256": "5db8b31fe6bed527342c033a65014afa2fac8a3f2e50d30b788e8e3e67f99ee0"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/05.webp",
+          "sourceFilename": "59152284_ODU5LTExMTUtNzE1ZTEzOTBiOQ.webp",
+          "sha256": "1c92236353e57c3029dbb82e6cfb5be18620b4d60e5f1f5e490cf0c74bfc7909"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/06.webp",
+          "sourceFilename": "59152285_ODcyLTExODItNzk1NzU1ZDhhOA.webp",
+          "sha256": "c031e32e0ebde13f311d795935d1b42a7aeee78c86eb32a5a4426191fcbd5125"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/07.webp",
+          "sourceFilename": "59152287_ODgwLTExNzMtMDc5YTYyMWFmZA.webp",
+          "sha256": "c89040bd202aaad30cda8434ba07334467592330212c3c6a2febd0177531b5c9"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-bungalow-unitedhomes/08.webp",
+          "sourceFilename": "59152288_ODg1LTExODAtZDVjZmIwYzliMg.webp",
+          "sha256": "48f830e280e2132d50cf5390f976e942b8f1edafdb6ed9b9eba3731ef34babf9"
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "slug": "achimota-villa-unitedhomes",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 28,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 3,250,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen Cabinets, Hot Water, Tiled Floor, Wardrobe, 24-hour Electricity, Dishwasher, Kitchen Shelf, Dining Area, Pop Ceiling, Air Conditioning, Pre-Paid Meter, Balcony, En Suite",
+        "AGENT": "United Homes",
+        "CONTACT": "+233545640939",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-villa-unitedhomes/01.webp",
+          "sourceFilename": "25999926_MTAyNC03NjgtZDNiNDk1MWExNC0x.webp",
+          "sha256": "23a8d2606d52c66dd7f981aee2a7264cc27ae816c3c6f96d6b683532198123e4"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/02.webp",
+          "sourceFilename": "25999927_MTAyNC03NjgtM2YwN2ZhMmFiYi0x.webp",
+          "sha256": "c3626410c05119039297ad8d29e8cad3a169cb706d3e603843d6f6d6dba440ba"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/03.webp",
+          "sourceFilename": "25999928_MTAyNC03NjgtZDU4ZjUxNWMxNi0x.webp",
+          "sha256": "949cf7a758a88e1e4de8b82611a610081ebf41cffc9561d4653ed0e73b4fa185"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/04.webp",
+          "sourceFilename": "25999929_MTAyNC03NjgtNDhjNzIwOWE2My0x.webp",
+          "sha256": "c31ed89e04fdea14c45d55af3755b6ecff1a3708b639c50a86262072bcf592d0"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/05.webp",
+          "sourceFilename": "25999930_NzY4LTEwMjQtZGE3NGYxODYxMC0x.webp",
+          "sha256": "7982785e82b24fb0d6ef6dbf1368e75b9801a2fc4e65cdcdf538ec84fd6c1a9f"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/06.webp",
+          "sourceFilename": "25999931_MTAyNC03NjgtNTIzNDIzNzcxYi0x.webp",
+          "sha256": "18e783414749bd1e2f0875a23ac57feadc942625e5add92a725ac6c60a456e2f"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/07.webp",
+          "sourceFilename": "25999932_MTAyNC03NjgtODg0NzMwZTc3NS0x.webp",
+          "sha256": "73ce1004562b604363eb2b615f09cf967e8a42b816dc87789273d5e0b7012e5a"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/08.webp",
+          "sourceFilename": "25999933_NzY4LTEwMjQtMmNiNzUyNDI4My0x.webp",
+          "sha256": "e699223316fd55670846aea00376f665bb37a0aa3215c9a1b0f68d539999cfd0"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/09.webp",
+          "sourceFilename": "25999934_MTAyNC03NjgtNjYwZWQ4ZjBmNy0x.webp",
+          "sha256": "3501b9927a95cf91b7b6d32df1341bd474505bb647cfafa7fc4dc2779b92bada"
+        },
+        {
+          "url": "/properties/achimota-villa-unitedhomes/10.webp",
+          "sourceFilename": "25999935_NzY4LTEwMjQtNmRkMjMyZTM0Zi0x.webp",
+          "sha256": "838f26075b5c80b0cfa414c522e2f1681bc9408f9976af8717e258665e43f68c"
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "slug": "achimota-bungalow-hometrust",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 29,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota",
+        "PROPERTY TYPE": "Bungalow",
+        "STOREY": "Single Storey",
+        "PROPERTY SIZE": "200 sqm",
+        "CONDITION": "Old",
+        "SELF CONTAINED": "Yes",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "5",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,500,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen Cabinets, 24-hour Electricity, Dining Area, Balcony, Chandelier, Dishwasher, En Suite, Kitchen Shelf, Pre-Paid Meter",
+        "AGENT": "Home Trust Properties Agency",
+        "CONTACT": "+233550827422 and +233550899856",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "C",
+        "GREEN FEATURES": "Balcony, mature tree, lawn, and landscaping",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-bungalow-hometrust/01.webp",
+          "sourceFilename": "59031721_ODEwLTEwODAtNmJlNGY4Mzg4MS0x.webp",
+          "sha256": "bad55d608034514b2202bc3b74f8d623623afc4180483c804aa0ba5d7c4e6e18"
+        },
+        {
+          "url": "/properties/achimota-bungalow-hometrust/02.webp",
+          "sourceFilename": "59031722_ODEwLTEwODAtYTdkYTk3NGJjYy0x.webp",
+          "sha256": "dfa8e589a11df090837adef163e3ab5b8527bb139ce4b04d1d37dddd92fb4527"
+        },
+        {
+          "url": "/properties/achimota-bungalow-hometrust/03.webp",
+          "sourceFilename": "59031723_ODEwLTEwODAtYzFlNWU0Yjg0YS0x.webp",
+          "sha256": "d7335ae1e25b4ecda77733b68861ec95721ad2a77234a417394d9c4e466cef60"
+        },
+        {
+          "url": "/properties/achimota-bungalow-hometrust/04.webp",
+          "sourceFilename": "59031724_ODEwLTEwODAtNmVkZjE0M2QzZi0x.webp",
+          "sha256": "b65dfd8b392e2acca5d527f3eb219254f9ab341655d51dd8ac331fbcdbff1af8"
+        },
+        {
+          "url": "/properties/achimota-bungalow-hometrust/05.webp",
+          "sourceFilename": "59031725_ODEwLTEwODAtZTAyY2FkOGQzMS0x.webp",
+          "sha256": "3037c67d2270084b1dfa321fd7752b6c7034686fa0c56b3c5766c5e3fbfc8264"
+        },
+        {
+          "url": "/properties/achimota-bungalow-hometrust/06.webp",
+          "sourceFilename": "59031726_ODEwLTEwODAtYWI2ZGU5MTQxMS0x.webp",
+          "sha256": "2bb08f58e2ad5a946b5af8485a192885638d27c2d363e238a5208ff29e8f5b5a"
+        },
+        {
+          "url": "/properties/achimota-bungalow-hometrust/07.webp",
+          "sourceFilename": "59031727_ODEwLTEwODAtMWU3ZDA1N2ExMy0x.webp",
+          "sha256": "e7f54b1c431ec4bf60336fc94bec06b15a8e4459f6f20a733faf8fdabe10a8df"
+        },
+        {
+          "url": "/properties/achimota-bungalow-hometrust/08.webp",
+          "sourceFilename": "59031730_ODEwLTEwODAtM2YzNWIzM2Y0Yi0x.webp",
+          "sha256": "29d9f32c6a5727afe6ddc06d7adce377141a47f86035b4ec2f73ebd195fd39e7"
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "slug": "achimota-acp-duplex-kingscity",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 30,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, ACP",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "636 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-Furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,800,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Refrigerator, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Kings City Estate & Const",
+        "CONTACT": "+233243536135",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/01.webp",
+          "sourceFilename": "19948737_OTYwLTEyODAtMDM4YjVkNzcxYS0x.webp",
+          "sha256": "32f01ca8200c713385a64feaf79bfe2f9c428b25fa1d3f63d29000c78ed59aee"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/02.webp",
+          "sourceFilename": "19948739_MTI4MC05NjAtODM1MTNiMTBjNy0x.webp",
+          "sha256": "f1acedcbaacdde7164ff007bf93ca98632161ea7f1b3dccdad69452634d1bafe"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/03.webp",
+          "sourceFilename": "19948751_MTYwMC0xMDY2LWIyZTJiNjU0N2YtMQ.webp",
+          "sha256": "31f93add16b5bc6280a644585aecb8e1a6c5719e062df736cf2ee0f70c7875ff"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/04.webp",
+          "sourceFilename": "19948755_MTYwMC0xMjAwLTVjZDlkYzdlMTQtMQ.webp",
+          "sha256": "59e49534e4e0333e61db7bf2f55b5f34ae8c554c2371cd6faf962065853ccd84"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/05.webp",
+          "sourceFilename": "19948756_MTYwMC0xMzkzLTY0ODNiZDdiNzktMQ.webp",
+          "sha256": "1cda69cfdbada05525e4e13c936de65e763e697b509ee148f623851c4bfde4db"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/06.webp",
+          "sourceFilename": "19948757_MTYwMC0xMjAwLTZhNzIwYjRjZjYtMQ.webp",
+          "sha256": "53aa75c7dd9d795af4ee5054320c7bdc7d1f7eef946ad96bfbbb8714a6905bb9"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/07.webp",
+          "sourceFilename": "19948889_MTI4MC05NTgtODM2ZTAwOWQ1My0x.webp",
+          "sha256": "a9f00840cb26fa782156103edd217845e566a1ca719878ae342ad1d0f24d6a0f"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/08.webp",
+          "sourceFilename": "19948893_MTYwMC0xMjAwLWYxODAwZmZmYzQtMQ.webp",
+          "sha256": "e0c0e0e8c6404781ade6b99848e5be71fb59c008fdf6179d2e33d456de3f6d46"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/09.webp",
+          "sourceFilename": "19948940_MTYwMC0xMjQxLWFjZDZmZmM3YTctMQ.webp",
+          "sha256": "ff365212ef7e697f00c69d735b50ef33c74a84fe3a2133b49b6ba7f524c2f466"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/10.webp",
+          "sourceFilename": "19948941_MTYwMC0xMjAwLTFhNGQwZWM2YzMtMQ.webp",
+          "sha256": "bcc145219830863c561c0626b6ed7fd5f1911fa806e36bb5cd39501bd2b11c96"
+        },
+        {
+          "url": "/properties/achimota-acp-duplex-kingscity/11.webp",
+          "sourceFilename": "19948951_MTYwMC0xMjAwLTU4ODE2MzdkYTYtMQ.webp",
+          "sha256": "e67156894e7050339599e369a4939d1ff597062010757c6fc1263284ee0a65bc"
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "slug": "achimota-tantra-hills-mansion-kingscity",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 31,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Tantra Hills",
+        "PROPERTY TYPE": "Mansion",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "300 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-Furnished",
+        "BEDROOM": "5",
+        "BATHROOMS": "6",
+        "TOILET": "7",
+        "ASKING PRICE": "GH₵ 5,400,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Sectionals, Tiled Floor, Wardrobe, Wi-Fi",
+        "AGENT": "Kings City Estate & Const",
+        "CONTACT": "+233243536135",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/01.webp",
+          "sourceFilename": "38139451_OTYwLTEyODAtYTc1NWQ3MzFiZS0x.webp",
+          "sha256": "aed135414533c27bcd39a587cc5efa3c06cb1f72fe1797de00b72ba58f30cf08"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/02.webp",
+          "sourceFilename": "38139452_MTI4MC05NjAtYjU4NjViZjkzZC0x.webp",
+          "sha256": "c2fac2fcea543aa2e77d49eda894cc62535a519fc5feddd3e4fe876dd8208b0a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/03.webp",
+          "sourceFilename": "38139453_OTYwLTEyODAtYmNkN2ZkOTRlZi0x.webp",
+          "sha256": "764177df44603c6c397024d29e415357b518bd97fda80ecb97ab10c7606e327b"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/04.webp",
+          "sourceFilename": "38139454_OTYwLTEyODAtMjZlZDgzMjlmYi0x.webp",
+          "sha256": "36a2792291ad82d7ecb5cdfef3cc5b64bf5528dc53e9d934d9dc343b3a327cb4"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/05.webp",
+          "sourceFilename": "38139455_OTYwLTEyODAtZTEyNjY3OTY3YS0x.webp",
+          "sha256": "aa7ace79ebf22f1a51cbe9a310a9815997f2f00612d503f2409a22c78cdbe8f2"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/06.webp",
+          "sourceFilename": "38139457_OTYwLTEyODAtOWE0NjZjYzgzOS0x.webp",
+          "sha256": "e017a6559521a5652cd4e2481da0e1901c7d192e1d9a0058a8e32b64c5217824"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/07.webp",
+          "sourceFilename": "38139458_OTYwLTEyODAtN2M0MmIwOWZjYS0x.webp",
+          "sha256": "7d6032173cea928be364c94d577b33942e3433cee0375d48b43eff5c069a7d24"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/08.webp",
+          "sourceFilename": "38139486_MTUwMC0xMTI1LTljNjgyYWZmMTctMQ.webp",
+          "sha256": "7af9f56d865e528af133fa59f3fe697a2c340e6f986e39053ebd01afbd90895a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/09.webp",
+          "sourceFilename": "38139488_MTUwMC0xMTI1LTg1Y2Y4MGY4ODQtMQ.webp",
+          "sha256": "a617ba62f9ce6e1ff018a984850269f95a557d89e2c4474f457ca2e24e83e2f8"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/10.webp",
+          "sourceFilename": "38139489_MTUwMC0xMTI1LTRlYzM3ZmNmYmEtMQ.webp",
+          "sha256": "4eb87fb79825845f475acba916bb4c40c2deafae93330668ffd25a82bfc1176a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/11.webp",
+          "sourceFilename": "38139490_MTUwMC0xMTI1LTEwYTBmNzZhZmItMQ.webp",
+          "sha256": "a8c05b045714f744cc89aad1dc4837cef1f8b9b3e15d7fe7e7ac01ebffce16a3"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/12.webp",
+          "sourceFilename": "38139492_MTUwMC0xMTI1LTM2OTgwMjdlZjMtMQ.webp",
+          "sha256": "1c798e7f34ac352831da0c56f0d97fdc818d30ef33e3683bdb8a2daa1f57ed8e"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-mansion-kingscity/13.webp",
+          "sourceFilename": "38139515_MTUwMC0xMTI1LWFiYmUxNDM0N2ItMQ.webp",
+          "sha256": "f29d21d51368a74cc9d8ca4b5b4d25fb68c9b369169250bf549a4e239c7cf107"
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "slug": "achimota-tantra-hills-duplex-rokoson",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 32,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Tantra Hills",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "586 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-Furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,050,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Roko Son",
+        "CONTACT": "+233244740755",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/01.webp",
+          "sourceFilename": "31884924_OTAwLTkwMC1kZGUyMDFmYTE3.webp",
+          "sha256": "4d959460620b67484a5465ca7f9a979494cd9b0ad5a2ec8fa5b3b2497bb1dc20"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/02.webp",
+          "sourceFilename": "31884851_MTUwMC04NDMtZDlhZmQ5N2NiMA.webp",
+          "sha256": "08be2362e342bf509526a0cee3ca63e565f55c434bb0ef094475b4e17962061b"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/03.webp",
+          "sourceFilename": "31884925_MTE0My0xMTQzLThlNGY2M2RhZjU.webp",
+          "sha256": "226351dcc6972ee80109ef4ad0653945a92ce9f73c9eb56c01857ab5523c274a"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/04.webp",
+          "sourceFilename": "31884926_MTE0My0xMTQzLWFhZjVhZTU2NDU.webp",
+          "sha256": "6a7b967b47efbd32dc167d899796b179676516562eab316e04e6f48f3ec725af"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/05.webp",
+          "sourceFilename": "31884928_ODQ0LTg0NC02MDZhNzc4NjUy.webp",
+          "sha256": "c5479167a30d243f5da487a5419b269c4a0312cdacc6592ace426b934325f3b1"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/06.webp",
+          "sourceFilename": "31884929_OTAwLTkwMC04ODg4ZWY2MTBh.webp",
+          "sha256": "1d6d3ced72c19f9dabea9072ca069fc28ced74544a2064445229ac75e3a680b0"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/07.webp",
+          "sourceFilename": "31884930_ODk5LTg5OS0yYTAwZTM1Yjky.webp",
+          "sha256": "49411fb455357c6045ee964080b8a691097045d3761b60229fc5eddf267367a4"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/08.webp",
+          "sourceFilename": "31884931_MTA2NS0xMDY1LTNmNGIyZmM3YTE.webp",
+          "sha256": "7f72054b337ef1225d333624b3ae2c4113522e4674eb2876f0daba2939540043"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-duplex-rokoson/09.webp",
+          "sourceFilename": "31884851_MTUwMC04NDMtZDlhZmQ5N2NiMA (1).webp",
+          "sha256": "918d695c9e544d9075b12dc4339c75900e526d6204ea23dc68d178bda391eb0b"
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "slug": "achimota-kingsby-duplex-hometrust",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 33,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota, Kingsby",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "140 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,700,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Balcony, Chandelier, Dining Area, Pop Ceiling, Pre-Paid Meter, Tiled Floor",
+        "AGENT": "Home Trust Properties Agency",
+        "CONTACT": "+233550827422 and +233550899856",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/01.webp",
+          "sourceFilename": "59672989_NzIwLTEyODAtOTEyZDgzNTAyMg.webp",
+          "sha256": "447a8168164ab75359667f7cfac2146aaa1eb7f6c3769a673eea5b57e07bed54"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/02.webp",
+          "sourceFilename": "59672990_NzIwLTEyODAtZjZlN2Y2ZTg4MQ.webp",
+          "sha256": "a99b6949a423bbd9d2e210478f9328c2b6f8709edfca3f0ebc69ceca1de7ae1d"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/03.webp",
+          "sourceFilename": "59672992_NzIwLTEyODAtMDRiZjUzNDc3Mg.webp",
+          "sha256": "cd52dc02b8ca8435cce624f7f5fd9a8b39946cfd9bb8d1478f241bff841dce76"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/04.webp",
+          "sourceFilename": "59672993_NzIwLTEyODAtOTFjYTdmNjEwYw.webp",
+          "sha256": "f8adafa9cbb7d0abc1b578ab4c02470dcaae4e80cd3bab0704cb8526ff65da35"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/05.webp",
+          "sourceFilename": "59672994_NzIwLTEyODAtNWQ5OWNkOTVlMA.webp",
+          "sha256": "2d27f25765a9b511cb05f67150c20df68e6ef9bdef6d47b429249ed76b1967d5"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/06.webp",
+          "sourceFilename": "59672997_NzIwLTEyODAtZGZmMjlhM2NkYw.webp",
+          "sha256": "6b61a90263dbcd70fcb862da29888621e06c15076faaca0137e915b30cc707c3"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/07.webp",
+          "sourceFilename": "59673001_NzIwLTEyODAtNTdjNjFlYTkxMQ.webp",
+          "sha256": "9f65233626286c5843b61841b9f9b54f9ce2a262106364123208482c3e7fda4b"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/08.webp",
+          "sourceFilename": "59673004_NzIwLTEyODAtM2EwYjNmMTFkNg.webp",
+          "sha256": "5c50164c72b01b85a5b49c82d64c14e9ebb598e4d165cb582e6c69800d23fcdd"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/09.webp",
+          "sourceFilename": "59673008_NzIwLTEyODAtYmU5MjFjZGY5Yw.webp",
+          "sha256": "f15159b18c05d63a346407bd0d9f65ef0b4b1fadd4cee5dd33e31b1b499e3b3b"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/10.webp",
+          "sourceFilename": "59673009_NzIwLTEyODAtYTAzNTQwYzI3Yg.webp",
+          "sha256": "73ccd040c8b0a11f05da567cca42266c8225c25713e17282c258a178fbc5687f"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/11.webp",
+          "sourceFilename": "59673011_NzIwLTEyODAtMDRmNDM2ODE0MQ.webp",
+          "sha256": "68f3a3f0d4425acd66ab109fd15daf99cdbe7fd8a3b56b8f6b2663d466160ee3"
+        },
+        {
+          "url": "/properties/achimota-kingsby-duplex-hometrust/12.webp",
+          "sourceFilename": "59673014_NzIwLTEyODAtOWRkZTRjYTlmMw.webp",
+          "sha256": "53100de131f50aa93ab3230443980d8d4127387b224c17569ef3cd58e7df58a6"
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "slug": "achimota-golf-hills-duplex-haskaybright",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 34,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota Golf Hills",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "150 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Furnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,750,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Dining Area, Tiled Floor, Pop Ceiling, Pre-Paid Meter, Air Conditioning, Balcony, Chandelier, En Suite Bathroom, Fitted Kitchen, Gated Community, Microwave, Refrigerator, Wardrobe, TV",
+        "AGENT": "Haskay Bright",
+        "CONTACT": "+233246992346",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-golf-hills-duplex-haskaybright/01.webp",
+          "sourceFilename": "48801416_Nzk4LTEwODUtODY5MzM1NDFkNw.webp",
+          "sha256": "26b6e2735e70a5b2ee6de9770cd1b2e8594897fd7249237acabc390a222237c5"
+        },
+        {
+          "url": "/properties/achimota-golf-hills-duplex-haskaybright/02.webp",
+          "sourceFilename": "48801419_ODQ2LTExMTgtMGU2ZGQ0NmIxYQ.webp",
+          "sha256": "d0e51f42d49e709e18f350e05a5af14dab72f9f1c93f02ee7c2b1a0a5d9e3b43"
+        },
+        {
+          "url": "/properties/achimota-golf-hills-duplex-haskaybright/03.webp",
+          "sourceFilename": "48801420_Nzg3LTEwNzUtYWMzMzBkZWZkNw.webp",
+          "sha256": "a842bf6ae5805c05f8e9b4cb735d4862705a5428cfdc59cea7b04fef1edcce5e"
+        },
+        {
+          "url": "/properties/achimota-golf-hills-duplex-haskaybright/04.webp",
+          "sourceFilename": "48801421_ODcwLTExNTgtYzU4YTQ3MjlmMA.webp",
+          "sha256": "04b42dbbd4fec41c71dd07d215acc2fdf7d147c53eac84d35c712a1dbe6473de"
+        },
+        {
+          "url": "/properties/achimota-golf-hills-duplex-haskaybright/05.webp",
+          "sourceFilename": "48801422_ODAyLTEwNDUtMDk5NzNmMzY4Yw.webp",
+          "sha256": "5dea11db3fe2b1853a11a49754b00c993b0b3c5d09204871eab7d1287846ad2a"
+        },
+        {
+          "url": "/properties/achimota-golf-hills-duplex-haskaybright/06.webp",
+          "sourceFilename": "62630837_NzUwLTEwMDAtNjVhN2QxYmU2ZQ.webp",
+          "sha256": "01f103da32fc01a6fbd04732021ebb003bbfde31eab8596b95f755b2363a8e5b"
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "slug": "achimota-tantra-hills-villa-appiah",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 35,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota Tantra Hills",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵3,000,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen Cabinets, Pop Ceiling, En Suite, Kitchen Shelf, Pre-Paid Meter, Swimming Pool, Wardrobe, TV, Air Conditioning, 24-hour Electricity, Hot Water, Microwave, Balcony",
+        "AGENT": "Emmanuel Appiah",
+        "CONTACT": "+233552885458",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/01.webp",
+          "sourceFilename": "61371846_OTYwLTEyODAtZThjZTIxZWQ4ZA.webp",
+          "sha256": "14df7b1c5817945175c2747cfafe9a92592c7c42474128ffadaa842c036d74e3"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/02.webp",
+          "sourceFilename": "61371848_MTI4MC05NjAtYTM0M2JhNDNjMw.webp",
+          "sha256": "9d3c0e8c8aaf2e343e210a829a33d638cbfda71c0eb80e59c6064635dd8c22c2"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/03.webp",
+          "sourceFilename": "61371849_MTA4MC04MTAtYmI4MWU5NDcxZg.webp",
+          "sha256": "21497a38feef4b37253f03472bbeb8076e8a62e4cfab4222481e678381cadc66"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/04.webp",
+          "sourceFilename": "61371850_OTYwLTEyODAtMmQzZmUyYTkxMQ.webp",
+          "sha256": "0fb935e588eeea4f0a9e4e9574b03a4223171e388c1accb02061376203cf8ea4"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/05.webp",
+          "sourceFilename": "61371852_OTYwLTEyODAtM2E5N2U2ZGFkMA.webp",
+          "sha256": "820ebb2137db424de51909633193826cf61d08ccc6eef3706a5c89b44799f246"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/06.webp",
+          "sourceFilename": "61371853_OTYwLTEyODAtNjIzMzc4OTUwMg.webp",
+          "sha256": "a4b78dc7419db96b68f52e02f0e90b45cfcb19e5c8e00dc795cfb3e2655b7068"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/07.webp",
+          "sourceFilename": "61371854_MTA4MC04MTAtYmQ0MWFmZmE5ZA.webp",
+          "sha256": "bab07a1d7707e94481edd5a3e37704abb3699b65ae8c329bfdd61035587ab260"
+        },
+        {
+          "url": "/properties/achimota-tantra-hills-villa-appiah/08.webp",
+          "sourceFilename": "61371855_OTYwLTEyODAtMjUwMGNkMjZjMg.webp",
+          "sha256": "f2da4b840994bd2113daf4196aac473ea3221faa71d31f2f292f8e31e772d7fa"
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "slug": "achimota-mile7-townhouse-kingscity",
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/w.docx",
+      "sourceImageFolderNumber": 36,
+      "sizeBasis": "Not specified in source",
+      "fields": {
+        "PROPERTY ADDRESS": "Achimota Mile 7",
+        "PROPERTY TYPE": "Townhouse",
+        "STOREY": "Multi Storey",
+        "PROPERTY SIZE": "532 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-Furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,750,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Kings City Estate & Const",
+        "CONTACT": "+233243536135",
+        "DISTRICT": "Okaikwei North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "images": [
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/01.webp",
+          "sourceFilename": "50259286_MTIwNS0xNjAwLWNjNmEzM2RhZWYtMQ.webp",
+          "sha256": "62b02a90961e5828c92cc1e510eccc49dcb2f04d9be0a1b5491b28e92ade029f"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/02.webp",
+          "sourceFilename": "50259287_MTIwNS0xNjAwLTljZGRkYjJiNjUtMQ.webp",
+          "sha256": "2b986e55e253dd9c2eaf635e39079cad1e88b93ed1f45aa29b01066702589817"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/03.webp",
+          "sourceFilename": "50259289_MTIwMC0xNjAwLTA2MWU2NDQ0ODgtMQ.webp",
+          "sha256": "b186bff55731aab7a0047e63b9aaa83c3babbdc883576bc45e5f5151e7b6aec8"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/04.webp",
+          "sourceFilename": "50259290_MTIwMC0xNjAwLTUwNjYyZTU2NGItMQ.webp",
+          "sha256": "7c1fe858ef9de67cc7df33fcbcebc8758fb0723c2d61d310bf039b6476b0d3b5"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/05.webp",
+          "sourceFilename": "50259293_MTIwNS0xNjAwLTIxYzY5YWY4OTQtMQ.webp",
+          "sha256": "6d9431ec6153a906b2ca47768d9ccb76907f135cd3f899cfb9d301513b31b607"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/06.webp",
+          "sourceFilename": "50259294_MTIwMC0xNjAwLWM2NDFhMjJjNDAtMQ.webp",
+          "sha256": "d55a99ea53231ebb8f986cb8e46b6e39061e3a101ff42b1ac29b0c6b4cb52807"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/07.webp",
+          "sourceFilename": "50259295_MTIwMC0xNjAwLTJmMjlmMzA1ZDQtMQ.webp",
+          "sha256": "95369a23537e8c04c150feb7c9b2ac2a8e59089be49b4f7f1e5663f5c598b20e"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/08.webp",
+          "sourceFilename": "50259297_MTIwNS0xNjAwLWIxY2IzNTQzZjctMQ.webp",
+          "sha256": "62494ac2bcf490d171115cf389c84a1540952e5da9d7faa8e124c04f800a0ebd"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/09.webp",
+          "sourceFilename": "50259299_MTIwMC0xNjAwLTIwNTc5Y2NmZjItMQ.webp",
+          "sha256": "28344aee40ddafbca4d9e631694adf671fde48d8910e683c22b66413878f4b05"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/10.webp",
+          "sourceFilename": "50259300_MTIwMC0xNjAwLTllMjdkOTBmOTAtMQ.webp",
+          "sha256": "ce4eb6461ae73052efd6abadf2b55b42f131e3f317e3d9cf90a67a260014d37c"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/11.webp",
+          "sourceFilename": "50259301_MTIwNS0xNjAwLTI1N2IwNTZkNWMtMQ.webp",
+          "sha256": "318cae938b4581cdea3747c30666ce8494ddcfa94cc47b94ec3c6a2ab040d4b6"
+        },
+        {
+          "url": "/properties/achimota-mile7-townhouse-kingscity/12.webp",
+          "sourceFilename": "50259302_MTIwNS0xNjAwLTdiZDY2ZmI1ZWUtMQ.webp",
+          "sha256": "783dc0df1f533d2a79739f8eeead3f4ccff9b57a97f2371cca4437465e14910e"
+        }
+      ]
+    }
+  ]
+}
