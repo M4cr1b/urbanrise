@@ -26,7 +26,7 @@ import type { EcoRating, Property } from "@/lib/types";
 import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
 import { FilterChip } from "./FilterChip";
 
-const TYPES = ["All", "Apartment", "Mansion", "Townhouse", "Duplex", "Villa"];
+const TYPES = ["All", "Apartment", "Mansion", "Townhouse", "Duplex", "Villa", "Bungalow"];
 const STYLES = ["All", "Detached", "Semi-Detached"];
 const STOREYS = ["All", "Single Storey", "Multi Storey"];
 const TENURES = ["All", "Freehold", "Leasehold"];

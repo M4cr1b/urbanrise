@@ -3,9 +3,11 @@ import type { LocalityStats, NationalStats, Property, PropertyType, EcoRating } 
 /** Locality address variants that should be collapsed into a single normalized name. */
 export const LOCALITY_ALIASES: Record<string, string> = {
   "Adjiriganor": "Adjiringanor",
-  "Achimota Tranta Hills": "Achimota",
   "Achimota Tantra Hills": "Achimota",
+  "Achimota, Tantra Hills": "Achimota",
   "Achimota Mill 7": "Achimota",
+  "Achimota, ACP": "Achimota",
+  "Achimota Golf Hills": "Achimota",
   "Achimota, Kingsby": "Achimota",
 };
 
