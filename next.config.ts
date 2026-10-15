@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    // Keep root detection within this project when parent folders have lockfiles.
+    root: process.cwd(),
+  },
   images: {
     // Every image is now served from public/, so no remote host needs to be
     // allowed. Keeping this empty is the point: the optimiser can only reach
