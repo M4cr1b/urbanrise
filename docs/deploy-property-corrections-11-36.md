@@ -1,7 +1,15 @@
 # Deploy the corrections for properties 11–36
 
-The files are prepared and verified for manual deployment. The live website and
-database have not been changed. Run the commands from the Urbanrise project root.
+The application changes are available on GitHub's `Actual-view` branch for a
+manual pull request into `main`. The database correction was applied on
+15 October 2026 and independently verified; do not apply it again.
+
+[Create the pull request: main ← Actual-view](https://github.com/M4cr1b/urbanrise/compare/main...Actual-view?expand=1).
+
+The Vercel build for commit `3ea6ba8` failed. The collaborator with access to
+`m4cr1bs-projects/urbanrise` needs to inspect [the failed build](https://vercel.com/m4cr1bs-projects/urbanrise/83KqeK2wML2LQyzy3vXn5SAXNNK9)
+and resolve its build error before the application release is complete. The
+connected workstation account cannot access that project's build logs.
 
 ## Included corrections
 
@@ -20,49 +28,45 @@ database have not been changed. Run the commands from the Urbanrise project root
 | Documentation | Consolidate the source-document conflicts in the [corrected reference](property-reference-11-36.md), with exact source-to-image mappings in [the structured reference](../data/property-reference-11-36.json). Original Desktop Word files are preserved. |
 
 The application also deduplicates gallery URLs when mapping database rows, so
-repeated records cannot create duplicate slides while the migration is pending.
+repeated records cannot create duplicate slides if imported again.
 
-## Apply the database correction
+## Database correction: already applied
 
 Keep the existing `.env.local` database credentials on your workstation. The
 working session pooler discovered for this project is
 `aws-1-eu-west-3.pooler.supabase.com`. The commands below use the existing password
 without printing it or changing your environment file.
 
-**Use this targeted repair script. Do not run `npm run db:migrate` against this
-existing database.** Its migration ledger lists only migrations 0001–0003 even
-though later changes already exist. Running the entire directory would replay
+**Do not reapply the correction or run `npm run db:migrate` against this existing
+database.** Its migration ledger omits historical migrations whose changes
+already exist. Running the entire directory would replay
 historical migrations, including property-data deletion migrations.
 
-First run the preview. It executes the SQL, checks the results, tests a second
-execution for idempotency, tests duplicate rejection, and rolls the transaction
-back. It commits no changes.
+The targeted repair script applied only `0022_correct_properties_11_36.sql`,
+after saving a backup and checking the exact changes in a transaction. It did
+not replay historical migrations. The committed correction passed a separate
+read-back verification of every documented phone set, all 26 gallery orders and
+counts, all 257 image hashes, and unchanged unrelated records.
+
+To repeat the read-only verification, run from the project root:
 
 ```powershell
-node scripts/repair-properties-11-36.mjs preview --pooler-host=aws-1-eu-west-3.pooler.supabase.com
-```
-
-Then apply the verified migration:
-
-```powershell
-node scripts/repair-properties-11-36.mjs apply --pooler-host=aws-1-eu-west-3.pooler.supabase.com
 node scripts/repair-properties-11-36.mjs verify --pooler-host=aws-1-eu-west-3.pooler.supabase.com
 ```
 
-The apply command writes a local backup to
-`reports/property-audit-11-36/database-before-repair.json` before committing and
-records only `0022_correct_properties_11_36.sql` in the migration ledger. It does
-not replay historical migrations. The verify command checks every documented phone
-set, all 26 gallery orders and counts, all 257 image hashes, and unchanged
-unrelated records. An already applied migration is rejected; use `verify` instead.
+The backup is retained on the workstation at
+`reports/property-audit-11-36/database-before-repair.json`. The verification command
+uses that local backup. An already applied migration is rejected by the repair
+script; use `verify` instead.
 
 No credentials or backups need to be uploaded to Vercel. The audit reports and
 backups are excluded from Git.
 
 ## Build and deploy the application
 
-After the database correction, create a fresh production build and deploy the
-updated project through your usual Vercel workflow. A new build ensures that the
+Review and merge `Actual-view` into `main` through GitHub. The Vercel project owner
+can then deploy the updated branch through the existing project configuration.
+Use a fresh build so that the
 prerendered pages include the corrected tenure and contact data.
 
 ```powershell
@@ -73,9 +77,9 @@ The restored image must be included in the deployment:
 
 `public/properties/achimota-tantra-hills-duplex-rokoson/09.webp`
 
-The patch archive contains only the changed files, with their project-relative
-paths. Merge it into this existing project; it is not a complete standalone Next.js
-project. Keep the source documents and credentials on your workstation.
+The restored photograph is tracked on `Actual-view`; it does not require a
+separate upload when deploying that branch. Keep the source documents and
+credentials on your workstation.
 
 ## Verify the deployment
 
@@ -111,5 +115,6 @@ node scripts/verify-properties-11-36.mjs
   image URL through the new unique index.
 - All 256 pre-existing packaged image files retained their original hashes. The
   added photograph matches the Desktop source byte for byte.
-- Live data-field verification remains a post-deployment step because the
-  prepared database correction has not been committed to the live database.
+- The live database correction was committed and independently verified.
+- Live-site verification has not passed. It must be repeated after the project
+  owner resolves the failed Vercel build and releases the updated application.
