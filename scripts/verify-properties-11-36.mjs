@@ -5,6 +5,12 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const { properties } = JSON.parse(fs.readFileSync(path.join(root, 'data/property-reference-11-36.json'), 'utf8'));
+const covers = JSON.parse(fs.readFileSync(path.join(root, 'data/property-covers.json'), 'utf8'));
+// The reference retains the database order; the website promotes reviewed covers.
+const displayedImages = p => {
+  const urls = p.images.map(i => i.url);
+  return covers[p.slug] ? [covers[p.slug], ...urls.filter(url => url !== covers[p.slug])] : urls;
+};
 const siteArg = process.argv.find(a => a.startsWith('--site='));
 const imagesOnly = process.argv.includes('--images-only');
 const sha = data => createHash('sha256').update(data).digest('hex');
@@ -50,6 +56,10 @@ async function request(url) {
 }
 try {
   assert.equal(properties.length, 26);
+  for (const [slug, url] of Object.entries(covers)) {
+    const property = properties.find(p => p.slug === slug);
+    assert(property?.images.some(image => image.url === url), 'Reviewed cover is not in the documented gallery: ' + slug);
+  }
   for (const p of properties) {
     const files = fs.readdirSync(path.join(root, 'public/properties', p.slug)).filter(f => f.endsWith('.webp'));
     assert.equal(files.length, p.images.length, 'Unexpected local image count: property ' + p.number);
@@ -64,7 +74,7 @@ try {
       const live = listings.find(l => l.id === p.slug);
       check(Boolean(live), 'Property ' + p.number + ' is missing from search');
       if (!live) continue;
-      check(JSON.stringify(live.images) === JSON.stringify(p.images.map(i => i.url)), 'Property ' + p.number + ': gallery order, count or uniqueness differs');
+      check(JSON.stringify(live.images) === JSON.stringify(displayedImages(p)), 'Property ' + p.number + ': gallery order, count or uniqueness differs');
       if (imagesOnly) continue;
       const f = p.fields;
       for (const [source, key] of Object.entries({ 'PROPERTY ADDRESS': 'address', 'PROPERTY TYPE': 'type', STOREY: 'storey', 'PROPERTY SIZE': 'floorAreaSqm', CONDITION: 'condition', FURNISHING: 'furnishing', BEDROOM: 'bedrooms', BATHROOMS: 'bathrooms', TOILET: 'toilets', 'ASKING PRICE': 'askingPrice', 'PROPERTY STYLE': 'style', DISTRICT: 'district', 'ECO RATING': 'ecoRating', TENURE: 'tenure', 'REMAINING LEASE TERMS': 'remainingLeaseTerm', STATUS: 'status' })) {
@@ -85,7 +95,7 @@ try {
       const response = await request(origin + '/property/' + p.slug);
       const html = await response.text();
       const gallery = flightValue(html, 'images');
-      check(JSON.stringify(gallery) === JSON.stringify(p.images.map(i => i.url)), 'Property ' + p.number + ': detail gallery differs');
+      check(JSON.stringify(gallery) === JSON.stringify(displayedImages(p)), 'Property ' + p.number + ': detail gallery differs');
       if (!imagesOnly) for (const phone of p.fields.CONTACT.match(/\+?233\d{9}/g) ?? []) check(html.includes('tel:' + phone), 'Property ' + p.number + ': documented phone absent from detail page: ' + phone);
       result.detailPagesVerified++;
     });
@@ -96,7 +106,7 @@ try {
       result.livePhotographsVerified++;
     }, 4);
     await pool(properties, async p => {
-      const response = await request(origin + '/_next/image?' + new URLSearchParams({ url: p.images[0].url, w: '1080', q: '90' }));
+      const response = await request(origin + '/_next/image?' + new URLSearchParams({ url: displayedImages(p)[0], w: '1080', q: '90' }));
       check(response.headers.get('content-type')?.startsWith('image/'), 'Optimized thumbnail is not an image: property ' + p.number);
       await response.arrayBuffer();
       result.optimizedThumbnailsVerified++;

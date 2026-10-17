@@ -211,7 +211,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   };
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex min-h-full flex-col md:h-full">
       {/* --- Search and filter bar -------------------------------------------------------- */}
       <div className="shrink-0 border-b border-outline-variant bg-surface-container-lowest p-4">
         <div className="flex flex-col gap-3">
@@ -469,7 +469,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
       </div>
 
       {/* --- Results Grid -------------------------------------------------------- */}
-      <div className="min-h-0 flex-1 overflow-auto scrollbar-slim bg-surface-container">
+      <div className="flex-1 bg-surface-container md:min-h-0 md:overflow-auto scrollbar-slim">
         {results.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full p-8">
             <Heart className="size-12 mb-4 text-outline-variant opacity-50" aria-hidden />
@@ -478,7 +478,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-5 p-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-5 p-5 sm:grid-cols-2 xl:grid-cols-3">
             {[...results]
               .sort((a, b) => b.askingPrice - a.askingPrice)
               .map((p) => (
@@ -510,15 +510,15 @@ function PropertyResultCard({
       href={`/property/${p.id}`}
       className="group flex flex-col overflow-hidden rounded-lg border border-primary/10 bg-surface-container-lowest text-left transition-shadow hover:shadow-[var(--shadow-level-2)]"
     >
-      {/* Image container with badges - larger proportion */}
-      <div className="relative h-56 w-full flex-shrink-0 overflow-hidden bg-surface">
+      {/* Keep the whole exterior visible, including portrait photographs. */}
+      <div className="relative aspect-4/3 w-full flex-shrink-0 overflow-hidden bg-surface">
         <Image
           src={p.images[0]}
           alt={`${p.type} at ${p.address}`}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
           quality={90}
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          className="object-contain"
           priority={false}
         />
 

@@ -36,6 +36,7 @@ import {
 import type { PropertyFilters, ProfessionalFilters } from "./contract";
 import { FEATURED_PROPERTY_IDS } from "./properties";
 import { ACTIVE_REGIONS } from "@/lib/regions";
+import { orderPropertyImages } from "./property-images";
 
 /**
  * Supabase implementation of the data source.
@@ -106,7 +107,7 @@ function mapProperty(row: any): Property {
       secondaryPhone: agent?.secondary_phone ?? undefined,
     },
 
-    images: images.length > 0 ? images : ["/placeholder-property.svg"],
+    images: images.length > 0 ? orderPropertyImages(row.id, images) : ["/placeholder-property.svg"],
     summary: row.summary ?? "",
   };
 }
