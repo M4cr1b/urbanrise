@@ -510,7 +510,7 @@ function PropertyResultCard({
       href={`/property/${p.id}`}
       className="group flex flex-col overflow-hidden rounded-lg border border-primary/10 bg-surface-container-lowest text-left transition-shadow hover:shadow-[var(--shadow-level-2)]"
     >
-      {/* Keep the whole exterior visible, including portrait photographs. */}
+      {/* Fill the thumbnail edge to edge with the selected exterior. */}
       <div className="relative aspect-4/3 w-full flex-shrink-0 overflow-hidden bg-surface">
         <Image
           src={p.images[0]}
@@ -518,7 +518,7 @@ function PropertyResultCard({
           fill
           sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
           quality={90}
-          className="object-contain"
+          className="object-cover"
           priority={false}
         />
 

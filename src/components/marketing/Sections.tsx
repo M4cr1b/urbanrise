@@ -175,7 +175,7 @@ export function PropertyCard({
           priority={priority}
           quality={90}
           sizes="(min-width: 1280px) 574px, (min-width: 768px) 50vw, 100vw"
-          className="object-contain"
+          className="object-cover"
         />
         <EcoBadge rating={property.ecoRating} className="absolute left-4 top-4" />
         {property.images.length > 1 && (

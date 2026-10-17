@@ -18,7 +18,7 @@ Other covers already show suitable exteriors and retain their order. All origina
 
 `data/property-covers.json` records the selections. Both data sources promote an available selected cover to the first gallery position. This makes search, featured cards, suggestions and the initial detail view consistent without changing database records or renaming image files. Missing selections fall back to the existing gallery.
 
-Search cards use at most three columns; featured cards use at most two. Both show complete photographs with `object-contain`, a 4:3 image area, responsive image sizes and optimization quality 90. Actual detail remains limited by the supplied photographs' resolution. No photographs are enlarged or recompressed in the repository.
+Search cards use at most three columns; featured cards use at most two. Both fill the entire 4:3 thumbnail area with `object-cover`, responsive image sizes and optimization quality 90. Portrait and differently proportioned photographs are cropped to fill the card without blank sides. The selected exterior covers remain unchanged, and the detail gallery still shows complete photographs. Actual detail remains limited by the supplied photographs' resolution. No photographs are enlarged or recompressed in the repository.
 
 Below the tablet breakpoint, filters scroll with the results so they cannot permanently occupy most of the photo's viewing area. Desktop filters retain their fixed position above the scrolling results.
 
@@ -36,6 +36,8 @@ node scripts/verify-properties-11-36.mjs --site=http://localhost:3000
 
 The reference file continues to describe database gallery order. The verifier checks the website against that reference with the reviewed cover promoted first.
 
-Verified on 17 October 2026: production build (48 routes), all 26 audited detail pages and their documented fields, 257 original photograph hashes, and 26 optimized thumbnails. Browser checks at 1440px and 390px with a device pixel ratio of 2 confirmed all nine selected covers, complete-image visibility, responsive resolution, the initial detail cover and featured cards. The mobile property-type filter and reset also passed.
+Verified on 17 October 2026: production build (48 routes), all 26 audited detail pages and their documented fields, 257 original photograph hashes, and 26 optimized thumbnails. Browser checks at 1440px and 390px with a device pixel ratio of 2 confirmed all nine selected covers, responsive resolution, the initial detail cover and featured cards. The mobile property-type filter and reset also passed. Thumbnail fitting was subsequently adjusted to fill the card edge to edge at the owner's request.
+
+The fill adjustment passed desktop and mobile browser checks for those nine covers plus property 26 (the owner's screenshot), as well as featured cards. The selected exterior URLs and full-image fitting in the detail gallery were also confirmed.
 
 These selections take effect when the application changes are deployed from `Actual-view`. They require no database migration.
