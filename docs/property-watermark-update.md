@@ -1,5 +1,7 @@
 # Property photograph captions
 
+For subsequent listings, follow [the new-property photo workflow](adding-property-photos.md). It prepares transparent Urban rise captions, records the exterior cover and requires visual review before publication. `npm run build` checks registered photo and mask hashes and exterior selections before building.
+
 The property photographs now display `POSTED ON URBAN RISE` in transparent lettering. Only the embedded Jiji brand lettering was replaced; the existing `POSTED ON` lettering and agent names were retained.
 
 There are 354 photographs used by the current 36 listings. Of these, 353 have edited display copies. `cantonments-mansion-stardom/06.webp` has an agent watermark without the Jiji caption and remains unchanged. The two source photographs that are not used in any current listing were left alone.

@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-property-photo-policy.mjs",
     "build": "next build",
+    "photos:prepare": "node scripts/prepare-property-photos.mjs",
+    "photos:check": "node scripts/check-property-photo-policy.mjs",
+    "photos:test": "node --test scripts/tests/property-photo-workflow.test.mjs",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
