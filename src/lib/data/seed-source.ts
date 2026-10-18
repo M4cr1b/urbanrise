@@ -21,6 +21,7 @@ import {
   normalizeLocality,
 } from "./market";
 import { isActiveRegion } from "@/lib/regions";
+import { orderPropertyImages } from "./property-images";
 
 /**
  * Only records inside the covered region reach the interface.
@@ -29,7 +30,9 @@ import { isActiveRegion } from "@/lib/regions";
  * accidentally leak an out-of-scope record — and so widening coverage is a
  * change to `ACTIVE_REGIONS` alone.
  */
-const inScope = properties.filter((p) => isActiveRegion(p.region));
+const inScope = properties
+  .filter((p) => isActiveRegion(p.region))
+  .map((p) => ({ ...p, images: orderPropertyImages(p.id, p.images) }));
 const prosInScope = professionals.filter((p) => isActiveRegion(p.region));
 const materialsInScope = materials.filter((m) => isActiveRegion(m.region));
 

@@ -165,7 +165,7 @@ export function PropertyCard({
       href={`/property/${property.id}`}
       className="group overflow-hidden rounded-xl border border-primary/10 bg-surface-container-lowest transition-shadow hover:shadow-[var(--shadow-level-2)]"
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative aspect-4/3 overflow-hidden bg-surface">
         <Image
           src={property.images[0]}
           alt={`${property.type} at ${property.address}`}
@@ -174,8 +174,8 @@ export function PropertyCard({
           // first featured card up into the LCP slot.
           priority={priority}
           quality={90}
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(min-width: 1280px) 574px, (min-width: 768px) 50vw, 100vw"
+          className="object-cover"
         />
         <EcoBadge rating={property.ecoRating} className="absolute left-4 top-4" />
         {property.images.length > 1 && (
@@ -224,7 +224,7 @@ export function FeaturedHomes({ properties }: { properties: Property[] }) {
           View all <ArrowRight className="size-4" aria-hidden />
         </Link>
       </div>
-      <div className="grid gap-gutter md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-gutter md:grid-cols-2">
         {properties.map((p, i) => (
           <PropertyCard key={p.id} property={p} priority={i === 0} />
         ))}

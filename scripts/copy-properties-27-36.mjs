@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { copyFileSync, mkdirSync, readdirSync, existsSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { join } from 'node:path';
 
 // Map source folders → {slug, thumbnail_filename}
 // All files are re-ordered so the thumbnail lands at 01.webp, rest follow alphabetically.
@@ -20,8 +20,9 @@ const props = {
 const srcRoot = 'C:/Users/Admin/Desktop/Round two';
 const destRoot = 'C:/Users/Admin/Desktop/urbanrise/public/properties';
 
-// Property 32 has a duplicate file — exclude it
-const excludeFiles = {
+// This similarly named file is a different photograph (kitchen, not exterior).
+// Append it as 09.webp so the existing 01–08 URLs retain their original images.
+const appendLastFiles = {
   32: ['31884851_MTUwMC04NDMtZDlhZmQ5N2NiMA (1).webp'],
 };
 
@@ -36,13 +37,9 @@ for (const [num, { slug, thumbnail }] of Object.entries(props)) {
 
   mkdirSync(destDir, { recursive: true });
 
-  // Read all .webp files, exclude property 32's duplicate
+  // Include every source photograph, preserving the established URL mapping.
   let files = readdirSync(srcDir)
     .filter(f => f.endsWith('.webp'));
-
-  if (excludeFiles[num]) {
-    files = files.filter(f => !excludeFiles[num].includes(f));
-  }
 
   // Sort alphabetically
   files.sort();
@@ -51,6 +48,14 @@ for (const [num, { slug, thumbnail }] of Object.entries(props)) {
   if (files[0] !== thumbnail) {
     files = files.filter(f => f !== thumbnail);
     files.unshift(thumbnail);
+  }
+
+  for (const filename of appendLastFiles[num] ?? []) {
+    if (!files.includes(filename)) {
+      throw new Error(`Required source photograph not found: ${join(srcDir, filename)}`);
+    }
+    files = files.filter(f => f !== filename);
+    files.push(filename);
   }
 
   // Copy files, renumbered 01.webp, 02.webp, …
