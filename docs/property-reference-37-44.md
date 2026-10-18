@@ -1,6 +1,6 @@
 # Properties 37–44: retrieved data and photograph review
 
-Source: `C:/Users/Admin/Desktop/Round two/Urbanw.docx` and the matching numbered image folders. This is a source reference and proposed gallery plan; it does not add or publish website listings. Original documents and photographs remain intact.
+Source: `C:/Users/Admin/Desktop/Round two/Urbanw.docx` and the matching numbered image folders. The reviewed listings and 63 selected photographs are now imported into the application on `Actual-view`. Original documents and photographs remain intact. The live site receives them when this branch is merged and deployed.
 
 All eight entries contain 20 source fields. All 65 image files decoded successfully, representing 64 unique images. The proposed galleries contain 63 photos after removing one duplicate from property 38 and the unselected exterior from property 42. All source files are retained. Full filenames, hashes, dimensions, field paragraphs and decisions are in [the structured reference](../data/property-reference-37-44.json).
 
@@ -21,18 +21,45 @@ All eight entries contain 20 source fields. All 65 image files decoded successfu
 - **40:** use **Single Storey**, explicitly confirmed by the owner. The document originally says `Multi-storey`; both values and their authority are preserved in the reference.
 - **42:** the owner delegated selection of the best-fitting exterior. Source photo 4, the gable-front bungalow with white veranda rails, is the proposed cover. Source photo 3, the hip-roof view, is omitted from the proposed gallery but preserved in the source inventory. The provided views do not conclusively establish which exterior the interior photographs belong to.
 
-## Import considerations
+## Import decisions
 
-- **38 and 39:** preserve `Compound House` as the property type and `Detached` as the style. [Compound House support](compound-house-type.md) has now been added to the model, Type filter and database constraint; these listings have not yet been imported.
-- **38:** source photos 1 and 2 are byte-identical. Prefer the original filename without `(1)` in the future gallery; no source file is deleted.
-- **41:** `24-hour Electricity` and `Pre-Paid Meter` each occur twice in the source. Raw text is retained; display amenities can be deduplicated on import.
+- **38 and 39:** imported with `Compound House` as the property type and `Detached` as the style. [Compound House support](compound-house-type.md) covers the model, Type filter and database constraint.
+- **38:** source photos 1 and 2 are byte-identical. Only the original filename without `(1)` is used in the imported gallery; both Desktop files remain intact.
+- **41:** `24-hour Electricity` and `Pre-Paid Meter` each occur twice in the source. Raw text is retained; each display amenity appears once.
 - **37 and 38:** documented areas are respectively **5000 sqm** and **100 sqm**, retained as written. The document does not identify the size as plot area or floor area.
 
 ## Existing format understood
 
 The existing property structure includes address/district/region, type/style/storey, bedrooms/bathrooms/toilets, size, asking price, condition/furnishing, facilities, tenure and remaining lease term, status, eco rating/green features, documented agent contacts, summary and an ordered photo gallery. These eight source entries do not explicitly provide region, a marketing summary or self-contained status. Those fields have not been invented in this reference.
 
-A secondary phone remains absent when not documented. For imported photos, follow [the preparation workflow](adding-property-photos.md): selected exterior first, edge-to-edge 4:3 thumbnails, responsive sizing and quality 90, access to the full gallery, and transparent `POSTED ON URBAN RISE` lettering after precise editing and review. These retrieved source photos retain their existing lettering.
+A secondary phone remains absent when not documented. Imported photos follow [the preparation workflow](adding-property-photos.md): selected exterior first, edge-to-edge 4:3 thumbnails, responsive sizing and quality 90, access to the full gallery, and transparent `POSTED ON URBAN RISE` lettering after precise editing and review. Byte-identical original photos retain their existing lettering; the website uses registered, lossless Urban Rise copies. Every pixel outside the caption masks is preserved.
+
+## Application import and deployment
+
+The eight typed records are in [`properties-37-44.ts`](../src/lib/data/properties-37-44.ts), using the generated galleries in `data/property-photo-galleries/`. Both the Supabase and credential-free sources include them. With the existing database configured, search and market totals include **44** listings and the Compound House filter returns **2**.
+
+These eight listings ship with the application and photo assets. No new rows were inserted into the shared live database, which prevents the current deployed version from showing listings whose photographs have not yet deployed. A later Supabase record with the same ID takes precedence, including changed prices, status and coverage. No database migration or manual listing insertion is required to deploy this import.
+
+Display-only cleanup removes duplicated/trailing address commas, capitalizes SSNIT, normalizes storey hyphens and furnishing case, removes a trailing facilities period/comma and deduplicates property 41's repeated amenities. Source text remains unchanged below. Greater Accra is application locality metadata; the short summaries repeat only documented bedrooms, property type and locality. Self-contained status, coordinates, measured floor/plot classification, construction dates and numerical lease terms remain unspecified.
+
+Validation commands:
+
+```powershell
+node scripts/verify-properties-37-44.mjs
+node --test scripts/tests/imported-properties.test.mjs
+npm run photos:check
+node scripts/verify-property-watermarks.mjs
+npm run typecheck
+npm run build
+```
+
+After deployment, verify the actual served listings, all 63 image hashes, eight detail galleries, documented contact links and optimized exterior thumbnails:
+
+```powershell
+node scripts/verify-properties-37-44.mjs --site=https://urbanrise-sable.vercel.app
+```
+
+Source verification covers all **160 fields**, **10 exact phone numbers** and **63 photo associations**. The photo policy covers 44 properties and 416 branded variants; the independent pixel check reports zero changed pixels outside the lettering masks. Production build: 56 routes, including all 44 property detail pages. Desktop (1440px) and mobile (390px) browser checks passed for 44 results, both Compound House listings, eight edge-to-edge exterior covers, gallery navigation/full-screen access, search/reset and layout, with no browser errors. The production catalog comparison confirmed that all 36 existing listings retained their data and gallery order. Five import regression tests, TypeScript and targeted lint passed. The property 42 interior-association limitation above remains explicitly unresolved; source-folder association is not independent proof of a physical match.
 
 ## Documented contacts
 

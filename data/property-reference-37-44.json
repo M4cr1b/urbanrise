@@ -1,7 +1,7 @@
 {
   "scope": "Properties 37–44",
   "reviewDate": "2026-10-18",
-  "status": "Retrieved source reference with owner confirmations and proposed photo selections. No website assets or database records changed; not published.",
+  "status": "Imported into the Actual-view application with 63 reviewed photographs. Bundled listing data and assets become visible together on deployment; no new live database rows were inserted.",
   "sourceDocuments": [
     {
       "filename": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
@@ -43,7 +43,7 @@
     "existingFields": "address, district, region, type, style, storey, bedrooms, bathrooms, toilets, floorAreaSqm, askingPrice, status, tenure, remainingLeaseTerm, condition, furnishing, facilities, selfContained, ecoRating, greenFeatures, agent, images, summary",
     "optionalSecondaryPhone": "Only properties 43 and 44 document a secondary phone. No additional numbers are invented.",
     "sourceSize": "PROPERTY SIZE is transcribed without identifying it as a plot or measured floor area.",
-    "newType": "Compound House is now supported by the shared property model, search Type filter and database constraint (migration 0023). Properties 38 and 39 retain their documented Detached style; the listings themselves have not been imported.",
+    "newType": "Compound House is supported in the model, Type filter and database constraint. Imported properties 38 and 39 retain the documented Detached style.",
     "sourceOmissions": "Region, a marketing summary and self-contained status are not explicit source fields in these eight entries; no values for them are claimed to have been retrieved.",
     "display": "Reviewed exterior first; edge-to-edge 4:3 thumbnails with object-cover, responsive sizing and quality 90; full photographs in the detail gallery; transparent POSTED ON URBAN RISE captions after precise editing and review.",
     "sourcePunctuation": "Source addresses, spelling, storey punctuation, facilities punctuation and repeated facilities are retained as written after trimming leading/trailing whitespace."
@@ -330,7 +330,20 @@
         "59913977_MTYwMC0yMTM0LWI5YzIzMjI0ZmM.webp",
         "59913978_MTYwMC0yMTM0LWNlMDFlMTYwZjM.webp"
       ],
-      "proposedGalleryCount": 6
+      "proposedGalleryCount": 6,
+      "importedListing": {
+        "id": "adabraka-apartment-mickybella",
+        "galleryFile": "data/property-photo-galleries/adabraka-apartment-mickybella.json",
+        "exterior": "/properties/adabraka-apartment-mickybella/01.webp",
+        "images": [
+          "/properties/adabraka-apartment-mickybella/01.webp",
+          "/properties/adabraka-apartment-mickybella/02.webp",
+          "/properties/adabraka-apartment-mickybella/03.webp",
+          "/properties/adabraka-apartment-mickybella/04.webp",
+          "/properties/adabraka-apartment-mickybella/05.webp",
+          "/properties/adabraka-apartment-mickybella/06.webp"
+        ]
+      }
     },
     {
       "number": 38,
@@ -728,7 +741,25 @@
         "53496848_ODA5LTEwODAtNWNhYmI0ODk4Yw.webp",
         "53496850_ODA5LTEwODAtOGNmZjMwMDIyNg.webp"
       ],
-      "proposedGalleryCount": 11
+      "proposedGalleryCount": 11,
+      "importedListing": {
+        "id": "adabraka-compound-house-soundwave",
+        "galleryFile": "data/property-photo-galleries/adabraka-compound-house-soundwave.json",
+        "exterior": "/properties/adabraka-compound-house-soundwave/01.webp",
+        "images": [
+          "/properties/adabraka-compound-house-soundwave/01.webp",
+          "/properties/adabraka-compound-house-soundwave/02.webp",
+          "/properties/adabraka-compound-house-soundwave/03.webp",
+          "/properties/adabraka-compound-house-soundwave/04.webp",
+          "/properties/adabraka-compound-house-soundwave/05.webp",
+          "/properties/adabraka-compound-house-soundwave/06.webp",
+          "/properties/adabraka-compound-house-soundwave/07.webp",
+          "/properties/adabraka-compound-house-soundwave/08.webp",
+          "/properties/adabraka-compound-house-soundwave/09.webp",
+          "/properties/adabraka-compound-house-soundwave/10.webp",
+          "/properties/adabraka-compound-house-soundwave/11.webp"
+        ]
+      }
     },
     {
       "number": 39,
@@ -994,7 +1025,19 @@
         "62633972_OTYwLTEyODAtYjUyZDQ0Yjc5NQ.webp",
         "62633981_MTIwMC0xNjAwLWM5Y2RmYWM1Nzk.webp"
       ],
-      "proposedGalleryCount": 5
+      "proposedGalleryCount": 5,
+      "importedListing": {
+        "id": "adabraka-compound-house-ultimateheights",
+        "galleryFile": "data/property-photo-galleries/adabraka-compound-house-ultimateheights.json",
+        "exterior": "/properties/adabraka-compound-house-ultimateheights/01.webp",
+        "images": [
+          "/properties/adabraka-compound-house-ultimateheights/01.webp",
+          "/properties/adabraka-compound-house-ultimateheights/02.webp",
+          "/properties/adabraka-compound-house-ultimateheights/03.webp",
+          "/properties/adabraka-compound-house-ultimateheights/04.webp",
+          "/properties/adabraka-compound-house-ultimateheights/05.webp"
+        ]
+      }
     },
     {
       "number": 40,
@@ -1294,7 +1337,21 @@
         "62592868_MTA4Ni04NjgtOGU2YTU1ODQ2MQ.webp",
         "62592869_MTE1OC05MjYtMzg2NjE5MDgyNQ.webp"
       ],
-      "proposedGalleryCount": 7
+      "proposedGalleryCount": 7,
+      "importedListing": {
+        "id": "adenta-ashiyie-townhouse-legacy",
+        "galleryFile": "data/property-photo-galleries/adenta-ashiyie-townhouse-legacy.json",
+        "exterior": "/properties/adenta-ashiyie-townhouse-legacy/01.webp",
+        "images": [
+          "/properties/adenta-ashiyie-townhouse-legacy/01.webp",
+          "/properties/adenta-ashiyie-townhouse-legacy/02.webp",
+          "/properties/adenta-ashiyie-townhouse-legacy/03.webp",
+          "/properties/adenta-ashiyie-townhouse-legacy/04.webp",
+          "/properties/adenta-ashiyie-townhouse-legacy/05.webp",
+          "/properties/adenta-ashiyie-townhouse-legacy/06.webp",
+          "/properties/adenta-ashiyie-townhouse-legacy/07.webp"
+        ]
+      }
     },
     {
       "number": 41,
@@ -1611,7 +1668,22 @@
         "62069094_MTYwMC0xMjAwLTMwNDYxZTE5Y2M.webp",
         "62069095_MTYwMC0yMTM0LTZlNDQwZTMwZjQ.webp"
       ],
-      "proposedGalleryCount": 8
+      "proposedGalleryCount": 8,
+      "importedListing": {
+        "id": "adenta-villa-ernestdoyi",
+        "galleryFile": "data/property-photo-galleries/adenta-villa-ernestdoyi.json",
+        "exterior": "/properties/adenta-villa-ernestdoyi/01.webp",
+        "images": [
+          "/properties/adenta-villa-ernestdoyi/01.webp",
+          "/properties/adenta-villa-ernestdoyi/02.webp",
+          "/properties/adenta-villa-ernestdoyi/03.webp",
+          "/properties/adenta-villa-ernestdoyi/04.webp",
+          "/properties/adenta-villa-ernestdoyi/05.webp",
+          "/properties/adenta-villa-ernestdoyi/06.webp",
+          "/properties/adenta-villa-ernestdoyi/07.webp",
+          "/properties/adenta-villa-ernestdoyi/08.webp"
+        ]
+      }
     },
     {
       "number": 42,
@@ -1949,7 +2021,22 @@
         "58852210_MTYwMC05MDAtN2I0NTRmNTg1Yw.webp",
         "58852213_MTYwMC05MDAtZWJjNDAxNzQ2ZA.webp"
       ],
-      "proposedGalleryCount": 8
+      "proposedGalleryCount": 8,
+      "importedListing": {
+        "id": "adenta-amrahia-bungalow-dekscom",
+        "galleryFile": "data/property-photo-galleries/adenta-amrahia-bungalow-dekscom.json",
+        "exterior": "/properties/adenta-amrahia-bungalow-dekscom/01.webp",
+        "images": [
+          "/properties/adenta-amrahia-bungalow-dekscom/01.webp",
+          "/properties/adenta-amrahia-bungalow-dekscom/02.webp",
+          "/properties/adenta-amrahia-bungalow-dekscom/03.webp",
+          "/properties/adenta-amrahia-bungalow-dekscom/04.webp",
+          "/properties/adenta-amrahia-bungalow-dekscom/05.webp",
+          "/properties/adenta-amrahia-bungalow-dekscom/06.webp",
+          "/properties/adenta-amrahia-bungalow-dekscom/07.webp",
+          "/properties/adenta-amrahia-bungalow-dekscom/08.webp"
+        ]
+      }
     },
     {
       "number": 43,
@@ -2260,7 +2347,22 @@
         "60758462_MTIwMC0xNjAwLTI2ZDEwM2I5ZDc.webp",
         "60758465_MTIwMC0xNjAwLWVkNDgzMGVlNTU.webp"
       ],
-      "proposedGalleryCount": 8
+      "proposedGalleryCount": 8,
+      "importedListing": {
+        "id": "adenta-oyarifa-duplex-homehaven",
+        "galleryFile": "data/property-photo-galleries/adenta-oyarifa-duplex-homehaven.json",
+        "exterior": "/properties/adenta-oyarifa-duplex-homehaven/01.webp",
+        "images": [
+          "/properties/adenta-oyarifa-duplex-homehaven/01.webp",
+          "/properties/adenta-oyarifa-duplex-homehaven/02.webp",
+          "/properties/adenta-oyarifa-duplex-homehaven/03.webp",
+          "/properties/adenta-oyarifa-duplex-homehaven/04.webp",
+          "/properties/adenta-oyarifa-duplex-homehaven/05.webp",
+          "/properties/adenta-oyarifa-duplex-homehaven/06.webp",
+          "/properties/adenta-oyarifa-duplex-homehaven/07.webp",
+          "/properties/adenta-oyarifa-duplex-homehaven/08.webp"
+        ]
+      }
     },
     {
       "number": 44,
@@ -2605,7 +2707,24 @@
         "59443173_ODEwLTEwODAtOTMzYjFiN2U5NQ.webp",
         "59443178_ODEwLTEwODAtOTcyOWQ2YmQyYg.webp"
       ],
-      "proposedGalleryCount": 10
+      "proposedGalleryCount": 10,
+      "importedListing": {
+        "id": "adenta-ssnit-duplex-hometrust",
+        "galleryFile": "data/property-photo-galleries/adenta-ssnit-duplex-hometrust.json",
+        "exterior": "/properties/adenta-ssnit-duplex-hometrust/01.webp",
+        "images": [
+          "/properties/adenta-ssnit-duplex-hometrust/01.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/02.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/03.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/04.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/05.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/06.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/07.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/08.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/09.webp",
+          "/properties/adenta-ssnit-duplex-hometrust/10.webp"
+        ]
+      }
     }
   ],
   "fieldPolicy": "sourceFields preserve the document verbatim after outer whitespace trimming. fields preserve those values except explicit owner-confirmed corrections, recorded in decisions.",
@@ -2663,6 +2782,27 @@
     "databaseConstraintApplied": true,
     "appliedDate": "2026-10-18",
     "existingListingRowsUnchanged": 36,
-    "listings37to44Imported": false
+    "listings37to44Imported": true,
+    "importStorage": "Application bundle; not inserted into Supabase."
+  },
+  "applicationImport": {
+    "date": "2026-10-18",
+    "storage": "Typed application records included by both data sources; existing database records take precedence by ID.",
+    "module": "src/lib/data/properties-37-44.ts",
+    "properties": 8,
+    "photos": 63,
+    "documentedFieldsVerified": 160,
+    "documentedContactNumbersVerified": 10,
+    "existing36CatalogRecordsUnchanged": true,
+    "productionRoutes": 56,
+    "sourceFilesPreserved": true,
+    "normalizations": [
+      "Collapse duplicated and trailing address commas; capitalize SSNIT.",
+      "Normalize storey hyphens/case and Semi-Furnished case.",
+      "Remove facilities trailing punctuation; deduplicate exact repeated amenities for property 41."
+    ],
+    "sourceOmissions": "Greater Accra is application locality metadata. Summaries repeat only documented bedrooms, type and locality. Self-contained status, coordinates, dates, measured floor/plot basis and numeric lease terms remain unspecified.",
+    "photographs": "All 63 edited full-resolution previews reviewed and registered through photos:prepare. Lossless WebP; identical dimensions; original bytes retained; zero changed pixels outside caption masks.",
+    "property42Limit": "Selected gable-front exterior under the owner delegation. Interior association is retained from the source folder and is not independently proven by the supplied views."
   }
 }

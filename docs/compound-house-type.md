@@ -14,6 +14,6 @@ node scripts/enable-compound-house.mjs inspect --pooler-host=aws-1-eu-west-3.poo
 
 The runner also provides `preview` (transaction rolled back) and `apply` for this migration alone. It uses the existing local database credentials without printing or changing them. **Do not run the full `db:migrate` command against the existing database:** historical migrations include data resets and are not all represented in its ledger.
 
-The application filter becomes available on the hosted site when the updated `Actual-view` code is deployed. Compound House records will appear once their listings and reviewed photos have been imported.
+The application filter becomes available on the hosted site when the updated `Actual-view` code is deployed. Properties 38 and 39 are now included in the [37–44 application import](property-reference-37-44.md), with their reviewed photo galleries; the local catalog contains two Compound House listings.
 
 Validation: the production build generated 48 routes and TypeScript passed. Desktop (1440px) and mobile (390px) browser checks passed for the new option, its selected state, `?type=Compound%20House`, empty results before new records are imported, reset restoring the existing 36 listings, and horizontal layout. Targeted lint had no errors and retained one pre-existing unused `Eye` import warning. A separate database read-back confirmed the committed constraint and the unchanged listing count.
