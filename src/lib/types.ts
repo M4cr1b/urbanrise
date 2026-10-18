@@ -10,6 +10,7 @@
 export type PropertyType =
   | "House"
   | "Apartment"
+  | "Compound House"
   | "Townhouse"
   | "Duplex"
   | "Villa"

@@ -1,0 +1,2668 @@
+{
+  "scope": "Properties 37–44",
+  "reviewDate": "2026-10-18",
+  "status": "Retrieved source reference with owner confirmations and proposed photo selections. No website assets or database records changed; not published.",
+  "sourceDocuments": [
+    {
+      "filename": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "bytes": 47209,
+      "sha256": "2c6a36e69e27746987175675f52e9ab63b0672f595edade470277b0588d68c88",
+      "modifiedUtc": "2026-10-18T16:16:50.263519+00:00"
+    }
+  ],
+  "otherDocumentsChecked": [
+    {
+      "filename": "C:/Users/Admin/Desktop/URBAN RISE NEW PROPERTY DETAILS.docx",
+      "bytes": 53588,
+      "sha256": "c216a27d84d6344512c07f43bceb2dbfda92243d71cbb1093d7a8bd4ba485c1a",
+      "modifiedUtc": "2026-09-15T13:36:23.585769+00:00"
+    },
+    {
+      "filename": "C:/Users/Admin/Desktop/assets/URBAN RISE NEW PROPERTY DETAILS.docx",
+      "bytes": 32008,
+      "sha256": "018b8661cbe176054e2b90b68a2b09f3479b646618c3eebe613d233846459019",
+      "modifiedUtc": "2026-09-08T04:17:44.007710+00:00"
+    },
+    {
+      "filename": "C:/Users/Admin/Desktop/Done/PROPERTY DETAILS.docx",
+      "bytes": 35335,
+      "sha256": "760437a7a28e70dff56ace45140d441d53237de10833df1c6c3bc0315197c4a2",
+      "modifiedUtc": "2026-09-11T14:26:41.875192+00:00"
+    }
+  ],
+  "summary": {
+    "properties": 8,
+    "sourceImageFiles": 65,
+    "uniqueImageContents": 64,
+    "decodedImages": 65,
+    "documentedContactNumbers": 10,
+    "sourceFieldsPerProperty": 20,
+    "proposedGalleryImages": 63
+  },
+  "formatUnderstanding": {
+    "existingFields": "address, district, region, type, style, storey, bedrooms, bathrooms, toilets, floorAreaSqm, askingPrice, status, tenure, remainingLeaseTerm, condition, furnishing, facilities, selfContained, ecoRating, greenFeatures, agent, images, summary",
+    "optionalSecondaryPhone": "Only properties 43 and 44 document a secondary phone. No additional numbers are invented.",
+    "sourceSize": "PROPERTY SIZE is transcribed without identifying it as a plot or measured floor area.",
+    "newType": "Compound House is now supported by the shared property model, search Type filter and database constraint (migration 0023). Properties 38 and 39 retain their documented Detached style; the listings themselves have not been imported.",
+    "sourceOmissions": "Region, a marketing summary and self-contained status are not explicit source fields in these eight entries; no values for them are claimed to have been retrieved.",
+    "display": "Reviewed exterior first; edge-to-edge 4:3 thumbnails with object-cover, responsive sizing and quality 90; full photographs in the detail gallery; transparent POSTED ON URBAN RISE captions after precise editing and review.",
+    "sourcePunctuation": "Source addresses, spelling, storey punctuation, facilities punctuation and repeated facilities are retained as written after trimming leading/trailing whitespace."
+  },
+  "properties": [
+    {
+      "number": 37,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 763,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 37 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adabraka",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "5000 sqm",
+        "CONDITION": "Old",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "10",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 9,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Pre-Paid Meter, Balcony",
+        "AGENT": "MickyBella",
+        "CONTACT": "+233546014526",
+        "DISTRICT": "Korle-Klottey Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233546014526",
+        "secondary": null
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 764,
+          "text": "PROPERTY ADDRESS =Adabraka"
+        },
+        {
+          "paragraphIndex": 765,
+          "text": "PROPERTY TYPE = Apartment"
+        },
+        {
+          "paragraphIndex": 766,
+          "text": "STOREY = Multi-storey"
+        },
+        {
+          "paragraphIndex": 767,
+          "text": "PROPERTY SIZE = 5000 sqm"
+        },
+        {
+          "paragraphIndex": 768,
+          "text": "Condition = Old"
+        },
+        {
+          "paragraphIndex": 769,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 770,
+          "text": "BEDROOM = 10"
+        },
+        {
+          "paragraphIndex": 771,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 772,
+          "text": "TOILET = 4"
+        },
+        {
+          "paragraphIndex": 773,
+          "text": "ASKING PRICE = GH₵ 9,200,000"
+        },
+        {
+          "paragraphIndex": 774,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 775,
+          "text": "FACILITIES = 24-hour Electricity, Pre-Paid Meter, Balcony"
+        },
+        {
+          "paragraphIndex": 776,
+          "text": "AGENT = MickyBella "
+        },
+        {
+          "paragraphIndex": 777,
+          "text": "CONTACT= +233546014526"
+        },
+        {
+          "paragraphIndex": 778,
+          "text": "DISTRICT = Korle-Klottey Municipal District "
+        },
+        {
+          "paragraphIndex": 779,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 780,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 781,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 782,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 783,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 785,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 786,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 787,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 788,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 789,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 6,
+      "uniqueImageCount": 6,
+      "agentWatermarkObserved": "MickyBella",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "59913971_MTYwMC0xMjAwLWY1ZjJkM2YyZTc.webp",
+        "sourceIndex": 1,
+        "status": "reviewed-exterior-candidate; not applied"
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 37 IMAGES\\59913971_MTYwMC0xMjAwLWY1ZjJkM2YyZTc.webp",
+          "filename": "59913971_MTYwMC0xMjAwLWY1ZjJkM2YyZTc.webp",
+          "sha256": "b504a2bb5cba14488578fe7cbe4d8b2e65660b988496bf4248ce4e9fa796b262",
+          "bytes": 125342,
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "front exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 37 IMAGES\\59913974_MTYwMC0yMTM0LTIxNzc2NDcyMjE.webp",
+          "filename": "59913974_MTYwMC0yMTM0LTIxNzc2NDcyMjE.webp",
+          "sha256": "3162bc5f1128b511aa9fadcd5df0df86bdce70786217e4465c7616c45b414c7b",
+          "bytes": 316380,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "angled front exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 37 IMAGES\\59913975_MTYwMC0yMTM0LTM1OWExZjM4NGM.webp",
+          "filename": "59913975_MTYwMC0yMTM0LTM1OWExZjM4NGM.webp",
+          "sha256": "9329e6909363b7bb9c2008eaf89c5c77d3c986cefdfceb78db1165057f77ea92",
+          "bytes": 167744,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "stairwell",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 37 IMAGES\\59913976_MTYwMC0yMTM0LTk2ZjkxYzM1NGI.webp",
+          "filename": "59913976_MTYwMC0yMTM0LTk2ZjkxYzM1NGI.webp",
+          "sha256": "5b7e4226edc5043e86fd5f64a21dc6a373a3dabb5848206696d0d3cebda9c05e",
+          "bytes": 380954,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "side passage",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 37 IMAGES\\59913977_MTYwMC0yMTM0LWI5YzIzMjI0ZmM.webp",
+          "filename": "59913977_MTYwMC0yMTM0LWI5YzIzMjI0ZmM.webp",
+          "sha256": "07dd6a11c713e27c5f6d2bc3e71f5738424254639b5654901c1333e65bbfbfae",
+          "bytes": 280322,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "angled front exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 6,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 37 IMAGES\\59913978_MTYwMC0yMTM0LWNlMDFlMTYwZjM.webp",
+          "filename": "59913978_MTYwMC0yMTM0LWNlMDFlMTYwZjM.webp",
+          "sha256": "cb224d56afc17d26aee32ddc34a19b3ec4e057cdf18c07eba8de984598cc7dca",
+          "bytes": 400738,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "side passage",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [
+        {
+          "code": "documented-area-retained",
+          "status": "source-transcribed",
+          "detail": "The document states 5000 sqm. This is retained exactly, without inferring whether it is floor area or plot area."
+        }
+      ],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adabraka",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "5000 sqm",
+        "CONDITION": "Old",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "10",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 9,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Pre-Paid Meter, Balcony",
+        "AGENT": "MickyBella",
+        "CONTACT": "+233546014526",
+        "DISTRICT": "Korle-Klottey Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "59913971_MTYwMC0xMjAwLWY1ZjJkM2YyZTc.webp",
+        "59913974_MTYwMC0yMTM0LTIxNzc2NDcyMjE.webp",
+        "59913975_MTYwMC0yMTM0LTM1OWExZjM4NGM.webp",
+        "59913976_MTYwMC0yMTM0LTk2ZjkxYzM1NGI.webp",
+        "59913977_MTYwMC0yMTM0LWI5YzIzMjI0ZmM.webp",
+        "59913978_MTYwMC0yMTM0LWNlMDFlMTYwZjM.webp"
+      ],
+      "proposedGalleryCount": 6
+    },
+    {
+      "number": 38,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 792,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 38 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adabraka",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Old",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "10",
+        "BATHROOMS": "10",
+        "TOILET": "10",
+        "ASKING PRICE": "GH₵ 4,000,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity",
+        "AGENT": "Soundwave Logistics",
+        "CONTACT": "+233243536135",
+        "DISTRICT": "Korle-Klottey Municipal District",
+        "ECO RATING": "E",
+        "GREEN FEATURES": "Not specified",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233243536135",
+        "secondary": null
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 793,
+          "text": "PROPERTY ADDRESS =Adabraka"
+        },
+        {
+          "paragraphIndex": 794,
+          "text": "PROPERTY TYPE = Compound House"
+        },
+        {
+          "paragraphIndex": 795,
+          "text": "STOREY = Multi-storey"
+        },
+        {
+          "paragraphIndex": 796,
+          "text": "PROPERTY SIZE = 100 sqm"
+        },
+        {
+          "paragraphIndex": 797,
+          "text": "Condition = Old "
+        },
+        {
+          "paragraphIndex": 798,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 799,
+          "text": "BEDROOM = 10"
+        },
+        {
+          "paragraphIndex": 800,
+          "text": "BATHROOMS = 10"
+        },
+        {
+          "paragraphIndex": 801,
+          "text": "TOILET = 10"
+        },
+        {
+          "paragraphIndex": 802,
+          "text": "ASKING PRICE = GH₵ 4,000,000"
+        },
+        {
+          "paragraphIndex": 803,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 804,
+          "text": "FACILITIES = 24-hour Electricity "
+        },
+        {
+          "paragraphIndex": 805,
+          "text": "AGENT = Soundwave Logistics"
+        },
+        {
+          "paragraphIndex": 806,
+          "text": "CONTACT= +233243536135"
+        },
+        {
+          "paragraphIndex": 807,
+          "text": "DISTRICT = Korle-Klottey Municipal District "
+        },
+        {
+          "paragraphIndex": 808,
+          "text": "ECO RATING = E"
+        },
+        {
+          "paragraphIndex": 809,
+          "text": "GREEN FEATURES = Not specified "
+        },
+        {
+          "paragraphIndex": 810,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 811,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 812,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 814,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 815,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 816,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 817,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 818,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 12,
+      "uniqueImageCount": 11,
+      "agentWatermarkObserved": "Soundwave Logistics",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "53496840_ODA5LTEwODAtODQ2NzFkZDg4ZQ.webp",
+        "sourceIndex": 3,
+        "status": "reviewed-exterior-candidate; not applied"
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496839_ODA5LTEwODAtMTI5OWFmOGNlMw (1).webp",
+          "filename": "53496839_ODA5LTEwODAtMTI5OWFmOGNlMw (1).webp",
+          "sha256": "7d7b9c25f25de10ee11353a4d8222d123c99bd1db2fe47a3943ec65fb61ff5f5",
+          "bytes": 51738,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [
+            "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496839_ODA5LTEwODAtMTI5OWFmOGNlMw.webp"
+          ],
+          "visualRole": "courtyard (duplicate copy)",
+          "duplicateOf": "53496839_ODA5LTEwODAtMTI5OWFmOGNlMw.webp",
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": false
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496839_ODA5LTEwODAtMTI5OWFmOGNlMw.webp",
+          "filename": "53496839_ODA5LTEwODAtMTI5OWFmOGNlMw.webp",
+          "sha256": "7d7b9c25f25de10ee11353a4d8222d123c99bd1db2fe47a3943ec65fb61ff5f5",
+          "bytes": 51738,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [
+            "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496839_ODA5LTEwODAtMTI5OWFmOGNlMw (1).webp"
+          ],
+          "visualRole": "courtyard",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496840_ODA5LTEwODAtODQ2NzFkZDg4ZQ.webp",
+          "filename": "53496840_ODA5LTEwODAtODQ2NzFkZDg4ZQ.webp",
+          "sha256": "60611d8e56f56fab3a3f782b7a44c2ae101821df3046976f49995df8b5ab8d62",
+          "bytes": 69054,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "street-facing exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496841_ODA5LTEwODAtMWRiYzgxNWYyNg.webp",
+          "filename": "53496841_ODA5LTEwODAtMWRiYzgxNWYyNg.webp",
+          "sha256": "84b51df9b5db8e843e1fb4105e25ccecaf2a248f8f2123f12a055942e2cf061d",
+          "bytes": 31602,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "side exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496842_ODA5LTEwODAtZjMzODM0NzRkOQ.webp",
+          "filename": "53496842_ODA5LTEwODAtZjMzODM0NzRkOQ.webp",
+          "sha256": "b93b15f90d0f3d8996de3c86b82eae0973ce31e67ea6ccb97eda4c2bdea87b85",
+          "bytes": 59862,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "inner courtyard exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 6,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496843_ODA5LTEwODAtNWVlOWYwM2MwZQ.webp",
+          "filename": "53496843_ODA5LTEwODAtNWVlOWYwM2MwZQ.webp",
+          "sha256": "3cc1d583f84fa6732bc3f72dc307cb0451aaaae452e9f74e7628c98fea9396fa",
+          "bytes": 45956,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "side passage",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 7,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496844_ODA5LTEwODAtMzkwNGVjMTQzZg.webp",
+          "filename": "53496844_ODA5LTEwODAtMzkwNGVjMTQzZg.webp",
+          "sha256": "fdee96f4a89f2c4f5d956f844b21954cd18f1cac8bb7cf6885841927727f435f",
+          "bytes": 67288,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "inner courtyard exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 8,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496845_ODA5LTEwODAtYzIzMWUzZDFhMQ.webp",
+          "filename": "53496845_ODA5LTEwODAtYzIzMWUzZDFhMQ.webp",
+          "sha256": "49adca83b24255155013b34cd6b6f180942062e72d3833fe130deef6b03f153d",
+          "bytes": 61972,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "inner courtyard exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 9,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496846_ODA5LTEwODAtOTA2NzRjZjc0NQ.webp",
+          "filename": "53496846_ODA5LTEwODAtOTA2NzRjZjc0NQ.webp",
+          "sha256": "6cd047ce31017edf474104da62e8fcdac1b5874f79108be889596634de860972",
+          "bytes": 65390,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "courtyard",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 10,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496847_ODA5LTEwODAtYWZjMmY5YzYwMA.webp",
+          "filename": "53496847_ODA5LTEwODAtYWZjMmY5YzYwMA.webp",
+          "sha256": "249d955371bc9f239f8e63f6f06f06d02546ffef34713388695c9afc277364fe",
+          "bytes": 85210,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "inner courtyard exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 11,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496848_ODA5LTEwODAtNWNhYmI0ODk4Yw.webp",
+          "filename": "53496848_ODA5LTEwODAtNWNhYmI0ODk4Yw.webp",
+          "sha256": "580136a27ae095a6b1813d0135288a031b2af3ac6b0bedd53d5adfec7586b1da",
+          "bytes": 103622,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "service courtyard",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 12,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 38 IMAGES\\53496850_ODA5LTEwODAtOGNmZjMwMDIyNg.webp",
+          "filename": "53496850_ODA5LTEwODAtOGNmZjMwMDIyNg.webp",
+          "sha256": "453a547a0691cdee208618b30acbd6aaac5782fb12c2f7ce2a24984ae7845e7c",
+          "bytes": 58096,
+          "width": 809,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "upper floor and staircase",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [
+        {
+          "code": "compound-house-type-support",
+          "status": "resolved",
+          "detail": "Compound House is supported in the model, search Type filter and database constraint by migration 0023. Preserve PROPERTY STYLE = Detached. This support change does not import the listing."
+        },
+        {
+          "code": "exact-duplicate-image",
+          "status": "verified",
+          "detail": "Source images 1 and 2 are byte-identical. Retain both source files, but include only the original filename without (1) in a future gallery."
+        },
+        {
+          "code": "documented-area-retained",
+          "status": "source-transcribed",
+          "detail": "The document states 100 sqm. This is retained exactly, without inferring whether it is floor area or plot area."
+        }
+      ],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adabraka",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Old",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "10",
+        "BATHROOMS": "10",
+        "TOILET": "10",
+        "ASKING PRICE": "GH₵ 4,000,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity",
+        "AGENT": "Soundwave Logistics",
+        "CONTACT": "+233243536135",
+        "DISTRICT": "Korle-Klottey Municipal District",
+        "ECO RATING": "E",
+        "GREEN FEATURES": "Not specified",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "53496840_ODA5LTEwODAtODQ2NzFkZDg4ZQ.webp",
+        "53496839_ODA5LTEwODAtMTI5OWFmOGNlMw.webp",
+        "53496841_ODA5LTEwODAtMWRiYzgxNWYyNg.webp",
+        "53496842_ODA5LTEwODAtZjMzODM0NzRkOQ.webp",
+        "53496843_ODA5LTEwODAtNWVlOWYwM2MwZQ.webp",
+        "53496844_ODA5LTEwODAtMzkwNGVjMTQzZg.webp",
+        "53496845_ODA5LTEwODAtYzIzMWUzZDFhMQ.webp",
+        "53496846_ODA5LTEwODAtOTA2NzRjZjc0NQ.webp",
+        "53496847_ODA5LTEwODAtYWZjMmY5YzYwMA.webp",
+        "53496848_ODA5LTEwODAtNWNhYmI0ODk4Yw.webp",
+        "53496850_ODA5LTEwODAtOGNmZjMwMDIyNg.webp"
+      ],
+      "proposedGalleryCount": 11
+    },
+    {
+      "number": 39,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 821,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 39 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adabraka",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "1906 sqm",
+        "CONDITION": "Old",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "5",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 4,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity,",
+        "AGENT": "Ultimate Heights Consult",
+        "CONTACT": "+233505847322",
+        "DISTRICT": "Korle-Klottey Municipal District",
+        "ECO RATING": "E",
+        "GREEN FEATURES": "Not specified",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233505847322",
+        "secondary": null
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 822,
+          "text": "PROPERTY ADDRESS = Adabraka"
+        },
+        {
+          "paragraphIndex": 823,
+          "text": "PROPERTY TYPE = Compound House "
+        },
+        {
+          "paragraphIndex": 824,
+          "text": "STOREY = Multi-storey"
+        },
+        {
+          "paragraphIndex": 825,
+          "text": "PROPERTY SIZE = 1906 sqm"
+        },
+        {
+          "paragraphIndex": 826,
+          "text": "Condition = Old"
+        },
+        {
+          "paragraphIndex": 827,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 828,
+          "text": "BEDROOM = 5"
+        },
+        {
+          "paragraphIndex": 829,
+          "text": "BATHROOMS = 5"
+        },
+        {
+          "paragraphIndex": 830,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 831,
+          "text": "ASKING PRICE = GH₵ 4,200,000"
+        },
+        {
+          "paragraphIndex": 832,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 833,
+          "text": "FACILITIES = 24-hour Electricity,"
+        },
+        {
+          "paragraphIndex": 834,
+          "text": "AGENT = Ultimate Heights Consult"
+        },
+        {
+          "paragraphIndex": 835,
+          "text": "CONTACT= +233505847322"
+        },
+        {
+          "paragraphIndex": 836,
+          "text": "DISTRICT = Korle-Klottey Municipal District "
+        },
+        {
+          "paragraphIndex": 837,
+          "text": "ECO RATING = E"
+        },
+        {
+          "paragraphIndex": 838,
+          "text": "GREEN FEATURES = Not specified "
+        },
+        {
+          "paragraphIndex": 839,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 840,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 841,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 843,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 844,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 845,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 846,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 847,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 5,
+      "uniqueImageCount": 5,
+      "agentWatermarkObserved": "Ultimate Heights Consult",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "62633966_OTYwLTEyODAtZTJhNzMwZWVmZA.webp",
+        "sourceIndex": 1,
+        "status": "reviewed-exterior-candidate; not applied"
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 39 IMAGES\\62633966_OTYwLTEyODAtZTJhNzMwZWVmZA.webp",
+          "filename": "62633966_OTYwLTEyODAtZTJhNzMwZWVmZA.webp",
+          "sha256": "63b95cee1f372d4c00398c26ea70db7cb2b5802536e5d27e2789edb1a54bafe5",
+          "bytes": 251520,
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "street-facing exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 39 IMAGES\\62633967_OTYwLTEyODAtNTE4MjQ2MTdmNA.webp",
+          "filename": "62633967_OTYwLTEyODAtNTE4MjQ2MTdmNA.webp",
+          "sha256": "64caa074fbdd61c65132389326b8e415ff6de7b48727851400211117e7549fdb",
+          "bytes": 85768,
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "courtyard and side exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 39 IMAGES\\62633970_OTYwLTEyODAtMmIwMTk2YjllMA.webp",
+          "filename": "62633970_OTYwLTEyODAtMmIwMTk2YjllMA.webp",
+          "sha256": "7c9ef8e557602e2d827985080b7edeeca20c91286ee9fabff9be09cadd2b815e",
+          "bytes": 101992,
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "entrance exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 39 IMAGES\\62633972_OTYwLTEyODAtYjUyZDQ0Yjc5NQ.webp",
+          "filename": "62633972_OTYwLTEyODAtYjUyZDQ0Yjc5NQ.webp",
+          "sha256": "4e7fb58b47f4b743dca8e76a2a33c1abd9c7678a977f26bd56247767b1a89522",
+          "bytes": 69750,
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "side exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 39 IMAGES\\62633981_MTIwMC0xNjAwLWM5Y2RmYWM1Nzk.webp",
+          "filename": "62633981_MTIwMC0xNjAwLWM5Y2RmYWM1Nzk.webp",
+          "sha256": "e46976520dcf21789dd0a95d079793e5c469700bd9dadae3d8aa16a1555bd1f2",
+          "bytes": 193204,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "overgrown site/building; owner confirmed it belongs to property 39",
+          "duplicateOf": null,
+          "associationStatus": "confirmed-by-owner",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [
+        {
+          "code": "compound-house-type-support",
+          "status": "resolved",
+          "detail": "Compound House is supported in the model, search Type filter and database constraint by migration 0023. Preserve PROPERTY STYLE = Detached. This support change does not import the listing."
+        }
+      ],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adabraka",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "1906 sqm",
+        "CONDITION": "Old",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "5",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 4,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity,",
+        "AGENT": "Ultimate Heights Consult",
+        "CONTACT": "+233505847322",
+        "DISTRICT": "Korle-Klottey Municipal District",
+        "ECO RATING": "E",
+        "GREEN FEATURES": "Not specified",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "62633966_OTYwLTEyODAtZTJhNzMwZWVmZA.webp",
+        "62633967_OTYwLTEyODAtNTE4MjQ2MTdmNA.webp",
+        "62633970_OTYwLTEyODAtMmIwMTk2YjllMA.webp",
+        "62633972_OTYwLTEyODAtYjUyZDQ0Yjc5NQ.webp",
+        "62633981_MTIwMC0xNjAwLWM5Y2RmYWM1Nzk.webp"
+      ],
+      "proposedGalleryCount": 5
+    },
+    {
+      "number": 40,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 850,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 40 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta,, Ashiyie",
+        "PROPERTY TYPE": "Townhouse",
+        "STOREY": "Single Storey",
+        "PROPERTY SIZE": "250 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 1,500,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Chandelier, Dishwasher, En Suite Bathroom, Fitted Kitchen, Gated Community, Hot Water, Pop Ceiling, Pre-Paid Meter, Tiled Floor",
+        "AGENT": "Legacy Homes",
+        "CONTACT": "+233555863021",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233555863021",
+        "secondary": null
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 851,
+          "text": "PROPERTY ADDRESS =Adenta,, Ashiyie"
+        },
+        {
+          "paragraphIndex": 852,
+          "text": "PROPERTY TYPE = Townhouse"
+        },
+        {
+          "paragraphIndex": 853,
+          "text": "STOREY = Multi-storey"
+        },
+        {
+          "paragraphIndex": 854,
+          "text": "PROPERTY SIZE = 250 sqm"
+        },
+        {
+          "paragraphIndex": 855,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 856,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 857,
+          "text": "BEDROOM = 3"
+        },
+        {
+          "paragraphIndex": 858,
+          "text": "BATHROOMS = 3"
+        },
+        {
+          "paragraphIndex": 859,
+          "text": "TOILET = 3"
+        },
+        {
+          "paragraphIndex": 860,
+          "text": "ASKING PRICE = GH₵ 1,500,000"
+        },
+        {
+          "paragraphIndex": 861,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 862,
+          "text": "FACILITIES = 24-hour Electricity, Air Conditioning, Chandelier, Dishwasher, En Suite Bathroom, Fitted Kitchen, Gated Community, Hot Water, Pop Ceiling, Pre-Paid Meter, Tiled Floor"
+        },
+        {
+          "paragraphIndex": 863,
+          "text": "AGENT = Legacy Homes "
+        },
+        {
+          "paragraphIndex": 864,
+          "text": "CONTACT= +233555863021"
+        },
+        {
+          "paragraphIndex": 865,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 866,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 867,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 868,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 869,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 870,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 872,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 873,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 874,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 875,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 876,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 7,
+      "uniqueImageCount": 7,
+      "agentWatermarkObserved": "Legacy Homes",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "62592863_MTIyOC05ODMtYWRhNzI5MTdhNw.webp",
+        "sourceIndex": 1,
+        "status": "reviewed-exterior-candidate; not applied"
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 40 IMAGES\\62592863_MTIyOC05ODMtYWRhNzI5MTdhNw.webp",
+          "filename": "62592863_MTIyOC05ODMtYWRhNzI5MTdhNw.webp",
+          "sha256": "7a139c060754a0afe60a916950069880351a76ec3c4bb7202c56dbdd047563fc",
+          "bytes": 81706,
+          "width": 1228,
+          "height": 983,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "building exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 40 IMAGES\\62592864_MTE1OC05MjYtNjFiZWM4NGQ3OQ.webp",
+          "filename": "62592864_MTE1OC05MjYtNjFiZWM4NGQ3OQ.webp",
+          "sha256": "52754d848c1dda28a92004ddf969746e69df3d3d6fdc7c95d038809892d21c8f",
+          "bytes": 72008,
+          "width": 1158,
+          "height": 926,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "estate courtyard",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 40 IMAGES\\62592865_MTEyMS04OTctYjE0ZTkzNDQwNQ.webp",
+          "filename": "62592865_MTEyMS04OTctYjE0ZTkzNDQwNQ.webp",
+          "sha256": "a85970b9d04d43798b669a91a8d2b73fdd3c25b32c25c3ad502ff0be08749804",
+          "bytes": 42596,
+          "width": 1121,
+          "height": 897,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "kitchen",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 40 IMAGES\\62592866_MTAyNC04MTktYmQwYjU3YzJhMA.webp",
+          "filename": "62592866_MTAyNC04MTktYmQwYjU3YzJhMA.webp",
+          "sha256": "67202720c842c597289d51e8e60cdc86e65a64acf74b0adb0111fabcd622bdaa",
+          "bytes": 30102,
+          "width": 1024,
+          "height": 819,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "bathroom",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 40 IMAGES\\62592867_MTEyMS04OTctMGJhYTQwMTk1OQ.webp",
+          "filename": "62592867_MTEyMS04OTctMGJhYTQwMTk1OQ.webp",
+          "sha256": "44269bb1858e05411fe624650404262a3be2e137b7e85295b2314df5f0188c28",
+          "bytes": 33592,
+          "width": 1121,
+          "height": 897,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "living area",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 6,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 40 IMAGES\\62592868_MTA4Ni04NjgtOGU2YTU1ODQ2MQ.webp",
+          "filename": "62592868_MTA4Ni04NjgtOGU2YTU1ODQ2MQ.webp",
+          "sha256": "7b51e8a3bfe53e1ee98419df9d3dda757a81d06f2fcb22edca937a8640be160b",
+          "bytes": 28476,
+          "width": 1086,
+          "height": 868,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 7,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 40 IMAGES\\62592869_MTE1OC05MjYtMzg2NjE5MDgyNQ.webp",
+          "filename": "62592869_MTE1OC05MjYtMzg2NjE5MDgyNQ.webp",
+          "sha256": "78af0c27466c7e2a8648f284e856d6351b1b4e7396f1bcba613803004c14355c",
+          "bytes": 112192,
+          "width": 1158,
+          "height": 926,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "entrance gate",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [
+        {
+          "code": "storey-document-photo-conflict",
+          "status": "resolved-by-owner",
+          "detail": "The document says Multi-storey; the owner explicitly confirmed Single Storey. fields.STOREY uses the confirmed value; sourceFields.STOREY retains the document value."
+        }
+      ],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adenta,, Ashiyie",
+        "PROPERTY TYPE": "Townhouse",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "250 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 1,500,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Chandelier, Dishwasher, En Suite Bathroom, Fitted Kitchen, Gated Community, Hot Water, Pop Ceiling, Pre-Paid Meter, Tiled Floor",
+        "AGENT": "Legacy Homes",
+        "CONTACT": "+233555863021",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "62592863_MTIyOC05ODMtYWRhNzI5MTdhNw.webp",
+        "62592864_MTE1OC05MjYtNjFiZWM4NGQ3OQ.webp",
+        "62592865_MTEyMS04OTctYjE0ZTkzNDQwNQ.webp",
+        "62592866_MTAyNC04MTktYmQwYjU3YzJhMA.webp",
+        "62592867_MTEyMS04OTctMGJhYTQwMTk1OQ.webp",
+        "62592868_MTA4Ni04NjgtOGU2YTU1ODQ2MQ.webp",
+        "62592869_MTE1OC05MjYtMzg2NjE5MDgyNQ.webp"
+      ],
+      "proposedGalleryCount": 7
+    },
+    {
+      "number": 41,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 878,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 41 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta,",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "1222 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 21,100,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Tiled Floor, Dining Area, 24-hour Electricity, Pop Ceiling, Pre-Paid Meter, 24-hour Electricity, Air Conditioning, Balcony, Borehole, Children's Play Area, Dishwasher, En Suite Bathroom, Fitted Kitchen, Hot Water, Microwave, Pre-Paid Meter, Sectionals",
+        "AGENT": "Ernest Delvys Doyi",
+        "CONTACT": "+233540649229",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233540649229",
+        "secondary": null
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 879,
+          "text": "PROPERTY ADDRESS =Adenta,"
+        },
+        {
+          "paragraphIndex": 880,
+          "text": "PROPERTY TYPE = Villa"
+        },
+        {
+          "paragraphIndex": 881,
+          "text": "STOREY = Multi-storey"
+        },
+        {
+          "paragraphIndex": 882,
+          "text": "PROPERTY SIZE = 1222 sqm"
+        },
+        {
+          "paragraphIndex": 883,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 884,
+          "text": "Furnishing = Semi-furnished"
+        },
+        {
+          "paragraphIndex": 885,
+          "text": "BEDROOM = 4"
+        },
+        {
+          "paragraphIndex": 886,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 887,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 888,
+          "text": "ASKING PRICE = GH₵ 21,100,000"
+        },
+        {
+          "paragraphIndex": 889,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 890,
+          "text": "FACILITIES = Tiled Floor, Dining Area, 24-hour Electricity, Pop Ceiling, Pre-Paid Meter, 24-hour Electricity, Air Conditioning, Balcony, Borehole, Children's Play Area, Dishwasher, En Suite Bathroom, Fitted Kitchen, Hot Water, Microwave, Pre-Paid Meter, Sectionals"
+        },
+        {
+          "paragraphIndex": 891,
+          "text": "AGENT = Ernest Delvys Doyi"
+        },
+        {
+          "paragraphIndex": 892,
+          "text": "CONTACT= +233540649229"
+        },
+        {
+          "paragraphIndex": 893,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 894,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 895,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 896,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 897,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 898,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 900,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 901,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 902,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 903,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 904,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 8,
+      "uniqueImageCount": 8,
+      "agentWatermarkObserved": "Ernest Delvys Doyi",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "62514857_NzIwLTEyODAtMjY2N2Q5OWExNw.webp",
+        "sourceIndex": 8,
+        "status": "reviewed-exterior-candidate; not applied"
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62069083_MTYwMC0yMTM0LTIzZWE1YmMxODE.webp",
+          "filename": "62069083_MTYwMC0yMTM0LTIzZWE1YmMxODE.webp",
+          "sha256": "f71892e3e71bc338d422d5e46dc47d7ef916d823ebe4257f2f0b214f92c61283",
+          "bytes": 93574,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "shower",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62069084_MTYwMC0xMjAwLWNiNjAxNzVkMGQ.webp",
+          "filename": "62069084_MTYwMC0xMjAwLWNiNjAxNzVkMGQ.webp",
+          "sha256": "f0fb5542aa25b9cb10e6237e36180a158541e2365e674816a3aabc9be21d64dc",
+          "bytes": 67364,
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "living area",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62069086_MTYwMC0yMTM0LTNiZGM0MTBjNzQ.webp",
+          "filename": "62069086_MTYwMC0yMTM0LTNiZGM0MTBjNzQ.webp",
+          "sha256": "7749ce095b6a2266739e54bbc7d737806b028c6eb95f0470895b4168f6bbf5c5",
+          "bytes": 150192,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "bathroom",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62069087_MTYwMC0yMTM0LTBlMzAyNGJlYTc.webp",
+          "filename": "62069087_MTYwMC0yMTM0LTBlMzAyNGJlYTc.webp",
+          "sha256": "4b8ec78eb599bdaa0717177b35a4648bab7155d1f90da8ccfbffedd003a58fda",
+          "bytes": 180512,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62069092_MTYwMC0yMTM0LTViMzc0ODVlMWM.webp",
+          "filename": "62069092_MTYwMC0yMTM0LTViMzc0ODVlMWM.webp",
+          "sha256": "c40ec6be0a65948a8c0103df2843f10b35e38f28d2c254d7819c145017ec0c25",
+          "bytes": 71526,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "upper-floor landing",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 6,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62069094_MTYwMC0xMjAwLTMwNDYxZTE5Y2M.webp",
+          "filename": "62069094_MTYwMC0xMjAwLTMwNDYxZTE5Y2M.webp",
+          "sha256": "e1503f5b103554e2434e7f435992e1529ef54f0b96ec68edf80b205c37301fe7",
+          "bytes": 59918,
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "living area, another angle",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 7,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62069095_MTYwMC0yMTM0LTZlNDQwZTMwZjQ.webp",
+          "filename": "62069095_MTYwMC0yMTM0LTZlNDQwZTMwZjQ.webp",
+          "sha256": "5e110105ee4b16a3793f14203548319ee6afa8ab52cd1411ff8ef9784e4b4761",
+          "bytes": 107504,
+          "width": 1600,
+          "height": 2134,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "upper-floor landing, another angle",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 8,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\62514857_NzIwLTEyODAtMjY2N2Q5OWExNw.webp",
+          "filename": "62514857_NzIwLTEyODAtMjY2N2Q5OWExNw.webp",
+          "sha256": "6dc925009f01d64903e230196e47e834f915332b4b73edda16f08d03ac416f53",
+          "bytes": 80708,
+          "width": 720,
+          "height": 1280,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "front exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [
+        {
+          "code": "repeated-amenities",
+          "status": "verified",
+          "detail": "24-hour Electricity and Pre-Paid Meter each appear twice in the source facilities. Preserve the source text; deduplicate display amenities when importing."
+        }
+      ],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adenta,",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Multi-storey",
+        "PROPERTY SIZE": "1222 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 21,100,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Tiled Floor, Dining Area, 24-hour Electricity, Pop Ceiling, Pre-Paid Meter, 24-hour Electricity, Air Conditioning, Balcony, Borehole, Children's Play Area, Dishwasher, En Suite Bathroom, Fitted Kitchen, Hot Water, Microwave, Pre-Paid Meter, Sectionals",
+        "AGENT": "Ernest Delvys Doyi",
+        "CONTACT": "+233540649229",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "62514857_NzIwLTEyODAtMjY2N2Q5OWExNw.webp",
+        "62069083_MTYwMC0yMTM0LTIzZWE1YmMxODE.webp",
+        "62069084_MTYwMC0xMjAwLWNiNjAxNzVkMGQ.webp",
+        "62069086_MTYwMC0yMTM0LTNiZGM0MTBjNzQ.webp",
+        "62069087_MTYwMC0yMTM0LTBlMzAyNGJlYTc.webp",
+        "62069092_MTYwMC0yMTM0LTViMzc0ODVlMWM.webp",
+        "62069094_MTYwMC0xMjAwLTMwNDYxZTE5Y2M.webp",
+        "62069095_MTYwMC0yMTM0LTZlNDQwZTMwZjQ.webp"
+      ],
+      "proposedGalleryCount": 8
+    },
+    {
+      "number": 42,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 906,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 42 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta, Amrahia",
+        "PROPERTY TYPE": "Bungalow",
+        "STOREY": "Single-Storey",
+        "PROPERTY SIZE": "245 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 1,170,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Balcony, Dining Area, En Suite, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Dekscom Consult",
+        "CONTACT": "+233501935904",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233501935904",
+        "secondary": null
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 907,
+          "text": "PROPERTY ADDRESS =Adenta, Amrahia"
+        },
+        {
+          "paragraphIndex": 908,
+          "text": "PROPERTY TYPE = Bungalow"
+        },
+        {
+          "paragraphIndex": 909,
+          "text": "STOREY = Single-Storey"
+        },
+        {
+          "paragraphIndex": 910,
+          "text": "PROPERTY SIZE = 245 sqm"
+        },
+        {
+          "paragraphIndex": 911,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 912,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 913,
+          "text": "BEDROOM = 3"
+        },
+        {
+          "paragraphIndex": 914,
+          "text": "BATHROOMS = 3"
+        },
+        {
+          "paragraphIndex": 915,
+          "text": "TOILET = 4"
+        },
+        {
+          "paragraphIndex": 916,
+          "text": "ASKING PRICE = GH₵ 1,170,000"
+        },
+        {
+          "paragraphIndex": 917,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 918,
+          "text": "FACILITIES = Balcony, Dining Area, En Suite, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe"
+        },
+        {
+          "paragraphIndex": 919,
+          "text": "AGENT = Dekscom Consult "
+        },
+        {
+          "paragraphIndex": 920,
+          "text": "CONTACT= +233501935904"
+        },
+        {
+          "paragraphIndex": 921,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 922,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 923,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 924,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 925,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 926,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 928,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 929,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 930,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 931,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 932,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 9,
+      "uniqueImageCount": 9,
+      "agentWatermarkObserved": "Dekscom Consult",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "28746031_MTYwMC0xMjAwLWQ4YTQxMmU0Mzk.webp",
+        "sourceIndex": 4,
+        "status": "selected-under-owner-delegated-judgment; not applied",
+        "reason": "Clear front view of the single-storey bungalow with covered veranda and white rails. Room counts and physical correspondence to the interior photos are not established from this exterior."
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\14615513_MTA4MC03MTUtYjc5OTA2NTk0OA.webp",
+          "filename": "14615513_MTA4MC03MTUtYjc5OTA2NTk0OA.webp",
+          "sha256": "f19ac30a7e003eeb67d1b9f182ab2145e1b23d099fef6e0e600d49abf5dd7e42",
+          "bytes": 16324,
+          "width": 1080,
+          "height": 715,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "bathroom",
+          "duplicateOf": null,
+          "associationStatus": "interior-to-selected-exterior-not-conclusively-established",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\14615516_MTA4MC03MTUtMzY0MDQ1OTYwNA.webp",
+          "filename": "14615516_MTA4MC03MTUtMzY0MDQ1OTYwNA.webp",
+          "sha256": "16ef3682f228accc36b1f00e39f1a2cbfcc85c54d1d242cded3e3ae1ec9611f0",
+          "bytes": 16936,
+          "width": 1080,
+          "height": 715,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "bathroom, another angle",
+          "duplicateOf": null,
+          "associationStatus": "interior-to-selected-exterior-not-conclusively-established",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\14615517_MTA4MC03MTUtMDUwYjA5MDllNg.webp",
+          "filename": "14615517_MTA4MC03MTUtMDUwYjA5MDllNg.webp",
+          "sha256": "af6c04b7c1d6dde1c98255e26b850bc6372705d8425a290b2133d04450bafe74",
+          "bytes": 55114,
+          "width": 1080,
+          "height": 715,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "hip-roof exterior; omitted from proposed gallery",
+          "duplicateOf": null,
+          "associationStatus": "excluded-from-proposed-gallery; original retained",
+          "includeInProposedGallery": false
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\28746031_MTYwMC0xMjAwLWQ4YTQxMmU0Mzk.webp",
+          "filename": "28746031_MTYwMC0xMjAwLWQ4YTQxMmU0Mzk.webp",
+          "sha256": "9a61c92b8698293793502309c3f09aadb6b4b9a1d57402488cd832c4735a45b4",
+          "bytes": 193160,
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "gable-front exterior with white veranda rails; selected exterior",
+          "duplicateOf": null,
+          "associationStatus": "exterior-selected-under-owner-delegated-judgment",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\58852205_MTYwMC05MDAtNDFhZmJmMjA4Mg.webp",
+          "filename": "58852205_MTYwMC05MDAtNDFhZmJmMjA4Mg.webp",
+          "sha256": "5c4b94596e6b41477b8f2f681b964efca44f0b41305024f5779a591189bdefc0",
+          "bytes": 63152,
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "kitchen",
+          "duplicateOf": null,
+          "associationStatus": "interior-to-selected-exterior-not-conclusively-established",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 6,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\58852206_MTYwMC05MDAtMTUwNzg5YTA1Yg.webp",
+          "filename": "58852206_MTYwMC05MDAtMTUwNzg5YTA1Yg.webp",
+          "sha256": "b6d9cdb6b81923ebbaa512acdbf7c2d41c20318fe5b3884d08ea0b39a8e73bc4",
+          "bytes": 38696,
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "wardrobe/interior room",
+          "duplicateOf": null,
+          "associationStatus": "interior-to-selected-exterior-not-conclusively-established",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 7,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\58852207_MTYwMC05MDAtYTdmNjMxOTI2MQ.webp",
+          "filename": "58852207_MTYwMC05MDAtYTdmNjMxOTI2MQ.webp",
+          "sha256": "e1f6da8a1ac48dcde48c6528ee45e6f2fe0a389ef04a4efd7eadaf76d34f1624",
+          "bytes": 74620,
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "interior-to-selected-exterior-not-conclusively-established",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 8,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\58852210_MTYwMC05MDAtN2I0NTRmNTg1Yw.webp",
+          "filename": "58852210_MTYwMC05MDAtN2I0NTRmNTg1Yw.webp",
+          "sha256": "02b44bf75feb932f464279d69bfbc23df34a725a2d2a3d642d7851d42760aa79",
+          "bytes": 75858,
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "kitchen, another angle",
+          "duplicateOf": null,
+          "associationStatus": "interior-to-selected-exterior-not-conclusively-established",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 9,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 42 IMAGES\\58852213_MTYwMC05MDAtZWJjNDAxNzQ2ZA.webp",
+          "filename": "58852213_MTYwMC05MDAtZWJjNDAxNzQ2ZA.webp",
+          "sha256": "3f7f62fff56bb248abb6b891988b071739c3a2b3edf81bcb6cfe300bba5c412a",
+          "bytes": 85262,
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room, another angle",
+          "duplicateOf": null,
+          "associationStatus": "interior-to-selected-exterior-not-conclusively-established",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [
+        {
+          "code": "different-exterior-designs",
+          "status": "exterior-selected; interior-association-not-conclusive",
+          "imageIndices": [
+            3,
+            4
+          ],
+          "detail": "Under the owner's instruction to choose the best-fitting exterior, source photo 4 is selected and source photo 3 omitted from the proposed gallery. Both originals are retained. The interior-to-selected-exterior association remains unproven by the supplied views; do not describe it as independently verified."
+        }
+      ],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adenta, Amrahia",
+        "PROPERTY TYPE": "Bungalow",
+        "STOREY": "Single-Storey",
+        "PROPERTY SIZE": "245 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 1,170,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Balcony, Dining Area, En Suite, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Dekscom Consult",
+        "CONTACT": "+233501935904",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "28746031_MTYwMC0xMjAwLWQ4YTQxMmU0Mzk.webp",
+        "14615513_MTA4MC03MTUtYjc5OTA2NTk0OA.webp",
+        "14615516_MTA4MC03MTUtMzY0MDQ1OTYwNA.webp",
+        "58852205_MTYwMC05MDAtNDFhZmJmMjA4Mg.webp",
+        "58852206_MTYwMC05MDAtMTUwNzg5YTA1Yg.webp",
+        "58852207_MTYwMC05MDAtYTdmNjMxOTI2MQ.webp",
+        "58852210_MTYwMC05MDAtN2I0NTRmNTg1Yw.webp",
+        "58852213_MTYwMC05MDAtZWJjNDAxNzQ2ZA.webp"
+      ],
+      "proposedGalleryCount": 8
+    },
+    {
+      "number": 43,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 934,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 43 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta - Oyarifa",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "356 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 4,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Tiled Floor, Wardrobe",
+        "AGENT": "Home Haven Realty",
+        "CONTACT": "+233242151526 and +233539463955",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233242151526",
+        "secondary": "+233539463955"
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 935,
+          "text": "PROPERTY ADDRESS =Adenta - Oyarifa"
+        },
+        {
+          "paragraphIndex": 936,
+          "text": "PROPERTY TYPE = Duplex "
+        },
+        {
+          "paragraphIndex": 937,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 938,
+          "text": "PROPERTY SIZE = 356 sqm"
+        },
+        {
+          "paragraphIndex": 939,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 940,
+          "text": "Furnishing = Semi-furnished"
+        },
+        {
+          "paragraphIndex": 941,
+          "text": "BEDROOM = 4"
+        },
+        {
+          "paragraphIndex": 942,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 943,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 944,
+          "text": "ASKING PRICE = GH₵ 4,200,000"
+        },
+        {
+          "paragraphIndex": 945,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 946,
+          "text": "FACILITIES = 24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Tiled Floor, Wardrobe"
+        },
+        {
+          "paragraphIndex": 947,
+          "text": "AGENT = Home Haven Realty "
+        },
+        {
+          "paragraphIndex": 948,
+          "text": "CONTACT= +233242151526 and +233539463955"
+        },
+        {
+          "paragraphIndex": 949,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 950,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 951,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 952,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 953,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 954,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 956,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 957,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 958,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 959,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 960,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 8,
+      "uniqueImageCount": 8,
+      "agentWatermarkObserved": "Home Haven Realty",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "60758455_OTYwLTEyODAtOTRmOTY4NmM4ZA.webp",
+        "sourceIndex": 1,
+        "status": "reviewed-exterior-candidate; not applied"
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758455_OTYwLTEyODAtOTRmOTY4NmM4ZA.webp",
+          "filename": "60758455_OTYwLTEyODAtOTRmOTY4NmM4ZA.webp",
+          "sha256": "dfe5360cbbb2c2df2513ce225788d9072d83b184dcff5f9f7ef65c709e7c8e2a",
+          "bytes": 115040,
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "front exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758456_MTIwMC0xNjAwLWFjNjEzN2IxNzM.webp",
+          "filename": "60758456_MTIwMC0xNjAwLWFjNjEzN2IxNzM.webp",
+          "sha256": "97fadac7b18f6c12b94c4fe9472901ae5620e5d2a8fb23f05a481f04879e300c",
+          "bytes": 76634,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "kitchen",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758457_MTIwMC0xNjAwLTg4NzVkMTRkY2Q.webp",
+          "filename": "60758457_MTIwMC0xNjAwLTg4NzVkMTRkY2Q.webp",
+          "sha256": "8c7c401c11f7595c51c19102e05ea4a6fdbe1f40bf8bebf4e5cc7727434d4516",
+          "bytes": 82326,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "kitchen, another angle",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758459_MTIwMC0xNjAwLTU1YjFhZjMyYjI.webp",
+          "filename": "60758459_MTIwMC0xNjAwLTU1YjFhZjMyYjI.webp",
+          "sha256": "cae0f1a37198e6c7b46db9dfab462b93c88eb61f94c7b04c8ebe99100830532a",
+          "bytes": 80128,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "kitchen, another angle",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758460_MTIwMC0xNjAwLTBlMDgxN2UxY2Q.webp",
+          "filename": "60758460_MTIwMC0xNjAwLTBlMDgxN2UxY2Q.webp",
+          "sha256": "54aeac285bd1f16d27571891fbb08f081e9d037eccb336d492f1a9ec11fad64e",
+          "bytes": 42038,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "staircase",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 6,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758461_MTIwMC0xNjAwLTM0ODRmMTY0M2I.webp",
+          "filename": "60758461_MTIwMC0xNjAwLTM0ODRmMTY0M2I.webp",
+          "sha256": "fdc0ce46fa3ec9772cd29395182d7bd62e386f81c4f87e84d29291254192c3b2",
+          "bytes": 47040,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "living area",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 7,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758462_MTIwMC0xNjAwLTI2ZDEwM2I5ZDc.webp",
+          "filename": "60758462_MTIwMC0xNjAwLTI2ZDEwM2I5ZDc.webp",
+          "sha256": "244f77290bcbf8ec05baf78e0e5e1d7eee1617dab4617e63074796c79e0103e9",
+          "bytes": 66758,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "wardrobe/dressing area",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 8,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 43 IMAGES\\60758465_MTIwMC0xNjAwLWVkNDgzMGVlNTU.webp",
+          "filename": "60758465_MTIwMC0xNjAwLWVkNDgzMGVlNTU.webp",
+          "sha256": "ad28327ef58116b32e3d0b738319cf8d16225deb92318ac5e55194cfec3f7af9",
+          "bytes": 44478,
+          "width": 1200,
+          "height": 1600,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "bathroom",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adenta - Oyarifa",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "356 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 4,200,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Tiled Floor, Wardrobe",
+        "AGENT": "Home Haven Realty",
+        "CONTACT": "+233242151526 and +233539463955",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "60758455_OTYwLTEyODAtOTRmOTY4NmM4ZA.webp",
+        "60758456_MTIwMC0xNjAwLWFjNjEzN2IxNzM.webp",
+        "60758457_MTIwMC0xNjAwLTg4NzVkMTRkY2Q.webp",
+        "60758459_MTIwMC0xNjAwLTU1YjFhZjMyYjI.webp",
+        "60758460_MTIwMC0xNjAwLTBlMDgxN2UxY2Q.webp",
+        "60758461_MTIwMC0xNjAwLTM0ODRmMTY0M2I.webp",
+        "60758462_MTIwMC0xNjAwLTI2ZDEwM2I5ZDc.webp",
+        "60758465_MTIwMC0xNjAwLWVkNDgzMGVlNTU.webp"
+      ],
+      "proposedGalleryCount": 8
+    },
+    {
+      "number": 44,
+      "sourceDocument": "C:/Users/Admin/Desktop/Round two/Urbanw.docx",
+      "sourceHeadingParagraphIndex": 962,
+      "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 44 IMAGES",
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta - Ssnit",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "356 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 2,700,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor.",
+        "AGENT": "Home Trust Properties Agency",
+        "CONTACT": "+233550899856 and +233550827422",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "contacts": {
+        "primary": "+233550899856",
+        "secondary": "+233550827422"
+      },
+      "sizeBasis": "Not specified in source",
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 963,
+          "text": "PROPERTY ADDRESS =Adenta - Ssnit"
+        },
+        {
+          "paragraphIndex": 964,
+          "text": "PROPERTY TYPE = Duplex "
+        },
+        {
+          "paragraphIndex": 965,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 966,
+          "text": "PROPERTY SIZE = 356 sqm"
+        },
+        {
+          "paragraphIndex": 967,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 968,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 969,
+          "text": "BEDROOM = 4"
+        },
+        {
+          "paragraphIndex": 970,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 971,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 972,
+          "text": "ASKING PRICE = GH₵ 2,700,000 "
+        },
+        {
+          "paragraphIndex": 973,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 974,
+          "text": "FACILITIES = 24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor."
+        },
+        {
+          "paragraphIndex": 975,
+          "text": "AGENT = Home Trust Properties Agency "
+        },
+        {
+          "paragraphIndex": 976,
+          "text": "CONTACT= +233550899856 and +233550827422"
+        },
+        {
+          "paragraphIndex": 977,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 978,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 979,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 980,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 981,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 982,
+          "text": "STATUS = Available "
+        }
+      ],
+      "safetyParagraphs": [
+        {
+          "paragraphIndex": 984,
+          "text": "It's safer not to pay ahead for inspections. "
+        },
+        {
+          "paragraphIndex": 985,
+          "text": "Ask friends or somebody you trust to accompany you for the viewing"
+        },
+        {
+          "paragraphIndex": 986,
+          "text": "Look around the apartment to ensure it meets your expectations. "
+        },
+        {
+          "paragraphIndex": 987,
+          "text": "Don't pay beforehand if they won't let you move in immediately."
+        },
+        {
+          "paragraphIndex": 988,
+          "text": "Verify that the account details belong to the right property owner before initiating payments"
+        }
+      ],
+      "imageCount": 10,
+      "uniqueImageCount": 10,
+      "agentWatermarkObserved": "Home Trust Properties Agency",
+      "imageMatchBasis": "Folder number and visually observed agent watermark. This does not independently prove a street address or room counts. Specific unresolved associations are recorded per image.",
+      "legacyPlatformCaption": "Posted on Jiji is visible in supplied photos. No captions have been edited during retrieval.",
+      "proposedCover": {
+        "filename": "59443164_MTA4MC04MTAtZWU2MDk1YmNlMg.webp",
+        "sourceIndex": 1,
+        "status": "reviewed-exterior-candidate; not applied"
+      },
+      "images": [
+        {
+          "index": 1,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443164_MTA4MC04MTAtZWU2MDk1YmNlMg.webp",
+          "filename": "59443164_MTA4MC04MTAtZWU2MDk1YmNlMg.webp",
+          "sha256": "d867863c00f24508fb562fa38b9c44d3aa94f4b3451e96876fe52927719aa56e",
+          "bytes": 58084,
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "front exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 2,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443166_MTA4MC04MTAtMjJlMGM5MGQ0ZA.webp",
+          "filename": "59443166_MTA4MC04MTAtMjJlMGM5MGQ0ZA.webp",
+          "sha256": "35b85aaa402d36b7168398cc4e5bc45e0df892207d250c25f80ff5cfaf36cfbe",
+          "bytes": 78826,
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "side/front exterior",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 3,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443167_MTA4MC04MTAtYTE1YmFkMGUzMQ.webp",
+          "filename": "59443167_MTA4MC04MTAtYTE1YmFkMGUzMQ.webp",
+          "sha256": "4e107646890c1fb3a96a0377fffc31aadf0848aa5e9c3c1c8c402f1877c2b578",
+          "bytes": 137110,
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "pool and compound",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 4,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443168_ODEwLTEwODAtNGY4ZWYwZTQ4Zg.webp",
+          "filename": "59443168_ODEwLTEwODAtNGY4ZWYwZTQ4Zg.webp",
+          "sha256": "0b4805ed2b27915ef4a207135f0896904d97dead490fdd6d86353e6715bdb30f",
+          "bytes": 54450,
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 5,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443169_ODEwLTEwODAtZjkwNTY1MDFmZQ.webp",
+          "filename": "59443169_ODEwLTEwODAtZjkwNTY1MDFmZQ.webp",
+          "sha256": "c6feec0788f6b605853fc8f2f16339c47d293195de66b106cff5f4ebc058c924",
+          "bytes": 41940,
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 6,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443170_ODEwLTEwODAtOTAyMmE3Yzc3NA.webp",
+          "filename": "59443170_ODEwLTEwODAtOTAyMmE3Yzc3NA.webp",
+          "sha256": "f6536c7adcb0735c9a4666edff9a6969d3f665d6f4613ab30e28dd347493542b",
+          "bytes": 41286,
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 7,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443171_ODEwLTEwODAtMTY5YzM0MzhlYg.webp",
+          "filename": "59443171_ODEwLTEwODAtMTY5YzM0MzhlYg.webp",
+          "sha256": "c48e74caf57156e0d08713d3d59b5e39116f738d1c1f5d5a2c23928d913ae2b1",
+          "bytes": 47206,
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 8,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443172_MTA4MC04MTAtYWE1ODM4NzBiNA.webp",
+          "filename": "59443172_MTA4MC04MTAtYWE1ODM4NzBiNA.webp",
+          "sha256": "e717c97cc58ad4b2130da283b1a71a99e28bdf599ed963dbd12864291c406413",
+          "bytes": 47528,
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "staircase and light fitting",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 9,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443173_ODEwLTEwODAtOTMzYjFiN2U5NQ.webp",
+          "filename": "59443173_ODEwLTEwODAtOTMzYjFiN2U5NQ.webp",
+          "sha256": "75bf6f64179938ea1ab038ec6d4855277cd93799f69b3d17cb04c723ba714b14",
+          "bytes": 47906,
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        },
+        {
+          "index": 10,
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 44 IMAGES\\59443178_ODEwLTEwODAtOTcyOWQ2YmQyYg.webp",
+          "filename": "59443178_ODEwLTEwODAtOTcyOWQ2YmQyYg.webp",
+          "sha256": "b33e1b43021a4574fed4929679a05c0fabc7c0beda405494605ac462744e55ab",
+          "bytes": 56122,
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "mode": "RGB",
+          "identicalFiles": [],
+          "visualRole": "interior room",
+          "duplicateOf": null,
+          "associationStatus": "folder-and-agent-watermark-consistent",
+          "includeInProposedGallery": true
+        }
+      ],
+      "issues": [],
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Adenta - Ssnit",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "356 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 2,700,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor.",
+        "AGENT": "Home Trust Properties Agency",
+        "CONTACT": "+233550899856 and +233550827422",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "proposedImageOrder": [
+        "59443164_MTA4MC04MTAtZWU2MDk1YmNlMg.webp",
+        "59443166_MTA4MC04MTAtMjJlMGM5MGQ0ZA.webp",
+        "59443167_MTA4MC04MTAtYTE1YmFkMGUzMQ.webp",
+        "59443168_ODEwLTEwODAtNGY4ZWYwZTQ4Zg.webp",
+        "59443169_ODEwLTEwODAtZjkwNTY1MDFmZQ.webp",
+        "59443170_ODEwLTEwODAtOTAyMmE3Yzc3NA.webp",
+        "59443171_ODEwLTEwODAtMTY5YzM0MzhlYg.webp",
+        "59443172_MTA4MC04MTAtYWE1ODM4NzBiNA.webp",
+        "59443173_ODEwLTEwODAtOTMzYjFiN2U5NQ.webp",
+        "59443178_ODEwLTEwODAtOTcyOWQ2YmQyYg.webp"
+      ],
+      "proposedGalleryCount": 10
+    }
+  ],
+  "fieldPolicy": "sourceFields preserve the document verbatim after outer whitespace trimming. fields preserve those values except explicit owner-confirmed corrections, recorded in decisions.",
+  "decisions": [
+    {
+      "property": 39,
+      "field": "image association",
+      "value": "Retain source photo 5, 62633981_MTIwMC0xNjAwLWM5Y2RmYWM1Nzk.webp",
+      "authority": "Owner explicitly confirmed that it belongs to property 39 on 18 October 2026."
+    },
+    {
+      "property": 40,
+      "field": "STOREY",
+      "sourceValue": "Multi-storey",
+      "value": "Single Storey",
+      "authority": "Owner explicitly selected Single Storey on 18 October 2026."
+    },
+    {
+      "property": 42,
+      "field": "proposed exterior selection",
+      "value": "Select source photo 4 (gable-front bungalow with white veranda rails); omit source photo 3 (hip-roof exterior) from the proposed gallery, preserving both originals.",
+      "authority": "Owner delegated selection of the best-fitting exterior on 18 October 2026.",
+      "limit": "This selects a clear front view of a single-storey bungalow; the supplied photos do not conclusively establish the interior-to-exterior association or the documented room counts."
+    }
+  ],
+  "verification": {
+    "independentlyVerifiedSourceFields": 160,
+    "sourceDocumentsHashVerified": 4,
+    "sourceDocumentsUnchanged": true,
+    "ownerStoreyOverrideVerified": true,
+    "independentlyDecodedImages": 65,
+    "dimensionsMatch": true,
+    "formatsMatch": true,
+    "sourcePhotosHashVerified": 65,
+    "uniqueImageContents": 64,
+    "documentedContactsVerified": 10,
+    "proposedGalleryPhotos": 63,
+    "ownerDecisionsVerified": true,
+    "originalPhotosPreserved": true,
+    "websiteAssetsChanged": false,
+    "databaseChanged": false,
+    "listingsPublished": false,
+    "scope": "Source retrieval verification; the later database classification change is recorded separately in classificationSupport."
+  },
+  "classificationSupport": {
+    "type": "Compound House",
+    "sourcePropertyNumbers": [
+      38,
+      39
+    ],
+    "propertyStyleRetained": "Detached",
+    "supportedInModel": true,
+    "supportedInSearchFilter": true,
+    "migration": "0023_add_compound_house_type.sql",
+    "databaseConstraintApplied": true,
+    "appliedDate": "2026-10-18",
+    "existingListingRowsUnchanged": 36,
+    "listings37to44Imported": false
+  }
+}
