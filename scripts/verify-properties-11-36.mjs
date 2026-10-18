@@ -6,10 +6,15 @@ import assert from 'node:assert/strict';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const { properties } = JSON.parse(fs.readFileSync(path.join(root, 'data/property-reference-11-36.json'), 'utf8'));
 const covers = JSON.parse(fs.readFileSync(path.join(root, 'data/property-covers.json'), 'utf8'));
+const watermarks = JSON.parse(fs.readFileSync(path.join(root, 'data/property-watermarks.json'), 'utf8'));
+const displayedPhoto = image => watermarks.images[image.url]
+  ? { url: watermarks.images[image.url].url, sha256: watermarks.images[image.url].sha256 }
+  : image;
 // The reference retains the database order; the website promotes reviewed covers.
 const displayedImages = p => {
   const urls = p.images.map(i => i.url);
-  return covers[p.slug] ? [covers[p.slug], ...urls.filter(url => url !== covers[p.slug])] : urls;
+  const ordered = covers[p.slug] ? [covers[p.slug], ...urls.filter(url => url !== covers[p.slug])] : urls;
+  return ordered.map(url => watermarks.images[url]?.url ?? url);
 };
 const siteArg = process.argv.find(a => a.startsWith('--site='));
 const imagesOnly = process.argv.includes('--images-only');
@@ -63,7 +68,11 @@ try {
   for (const p of properties) {
     const files = fs.readdirSync(path.join(root, 'public/properties', p.slug)).filter(f => f.endsWith('.webp'));
     assert.equal(files.length, p.images.length, 'Unexpected local image count: property ' + p.number);
-    for (const image of p.images) assert.equal(sha(fs.readFileSync(path.join(root, 'public', image.url))), image.sha256, 'Wrong source photograph: ' + image.url);
+    for (const image of p.images) {
+      assert.equal(sha(fs.readFileSync(path.join(root, 'public', image.url))), image.sha256, 'Wrong source photograph: ' + image.url);
+      const displayed = displayedPhoto(image);
+      assert.equal(sha(fs.readFileSync(path.join(root, 'public', displayed.url))), displayed.sha256, 'Wrong displayed photograph: ' + displayed.url);
+    }
   }
   const result = { properties: 26, sourcePhotographs: properties.reduce((n, p) => n + p.images.length, 0), localPhotographsVerified: true, site: siteArg?.slice(7) ?? null, dataFieldsVerified: false, detailPagesVerified: 0, livePhotographsVerified: 0, optimizedThumbnailsVerified: 0 };
   if (siteArg) {
@@ -99,7 +108,7 @@ try {
       if (!imagesOnly) for (const phone of p.fields.CONTACT.match(/\+?233\d{9}/g) ?? []) check(html.includes('tel:' + phone), 'Property ' + p.number + ': documented phone absent from detail page: ' + phone);
       result.detailPagesVerified++;
     });
-    await pool(properties.flatMap(p => p.images), async image => {
+    await pool(properties.flatMap(p => p.images.map(displayedPhoto)), async image => {
       const response = await request(origin + image.url);
       check(response.headers.get('content-type')?.startsWith('image/'), 'Image content type missing: ' + image.url);
       check(sha(Buffer.from(await response.arrayBuffer())) === image.sha256, 'Deployed source photograph differs: ' + image.url);

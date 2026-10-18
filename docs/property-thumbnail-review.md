@@ -18,7 +18,7 @@ Other covers already show suitable exteriors and retain their order. All origina
 
 `data/property-covers.json` records the selections. Both data sources promote an available selected cover to the first gallery position. This makes search, featured cards, suggestions and the initial detail view consistent without changing database records or renaming image files. Missing selections fall back to the existing gallery.
 
-Search cards use at most three columns; featured cards use at most two. Both fill the entire 4:3 thumbnail area with `object-cover`, responsive image sizes and optimization quality 90. Portrait and differently proportioned photographs are cropped to fill the card without blank sides. The selected exterior covers remain unchanged, and the detail gallery still shows complete photographs. Actual detail remains limited by the supplied photographs' resolution. No photographs are enlarged or recompressed in the repository.
+Search cards use at most three columns; featured cards use at most two. Both fill the entire 4:3 thumbnail area with `object-cover`, responsive image sizes and optimization quality 90. Portrait and differently proportioned photographs are cropped to fill the card without blank sides. The selected exterior covers remain unchanged, and the detail gallery still shows complete photographs. Actual detail remains limited by the supplied photographs' resolution. Original photographs are preserved; separate lossless display copies carry the [updated transparent platform caption](property-watermark-update.md).
 
 Below the tablet breakpoint, filters scroll with the results so they cannot permanently occupy most of the photo's viewing area. Desktop filters retain their fixed position above the scrolling results.
 
