@@ -6,7 +6,9 @@ import * as live from "./supabase-source";
  * The data-access seam.
  *
  * One switch, read once: with Supabase credentials present the app talks to the
- * database; without them it runs on the seeded Ghanaian dataset. Both modules
+ * database; without them it runs on the seeded Ghanaian dataset. Reviewed
+ * listings 37–44 ship with their assets in both modes until stored in Supabase;
+ * database records take precedence once present. Both modules
  * satisfy the same contract, so every screen is written against one shape and
  * none of them know which source answered.
  *

@@ -149,12 +149,38 @@
     font-size: var(--text-body-md);
     line-height: var(--text-body-md--line-height);
     -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   /* Sora is reserved for figures — opt into tabular alignment wherever it is
      used so columns of cedi amounts line up in the comparables grid. */
   .font-data {
     font-variant-numeric: tabular-nums;
+  }
+}
+
+.mobile-sheet {
+  position: fixed;
+  inset: auto 0 0;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  max-height: calc(100dvh - max(1rem, env(safe-area-inset-top)));
+  padding: 0;
+  border: 0;
+  border-radius: 1.5rem 1.5rem 0 0;
+  color: var(--color-on-surface);
+  background: var(--color-surface-container-lowest);
+  box-shadow: 0 -8px 40px rgb(0 0 0 / 12%);
+}
+
+.mobile-sheet::backdrop { background: rgb(0 25 12 / 48%); }
+.sheet-footer { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+
+@media (max-width: 767px) {
+  input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+    font-size: 16px;
   }
 }
 

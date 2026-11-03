@@ -37,6 +37,14 @@ import type { PropertyFilters, ProfessionalFilters } from "./contract";
 import { FEATURED_PROPERTY_IDS } from "./properties";
 import { ACTIVE_REGIONS } from "@/lib/regions";
 import { orderPropertyImages } from "./property-images";
+import { isActiveRegion } from "@/lib/regions";
+import {
+  getImportedProperty,
+  importedPropertyIds,
+  matchesPropertyFilters,
+  mergeProperties,
+  unpublishedProperties,
+} from "./imported-properties";
 
 /**
  * Supabase implementation of the data source.
@@ -114,16 +122,24 @@ function mapProperty(row: any): Property {
 
 /* --- Properties --------------------------------------------------------- */
 
+async function getUnpublishedProperties(): Promise<Property[]> {
+  // Check all regions so moving a database listing out of coverage cannot
+  // resurrect the bundled version. No existing database rows are modified.
+  const { data, error } = await db().from("properties").select("id").in("id", importedPropertyIds);
+  if (error) throw new Error(`getUnpublishedProperties: ${error.message}`);
+  return unpublishedProperties((data ?? []).map((row: { id: string }) => row.id));
+}
+
 export async function getProperties(): Promise<Property[]> {
   const supabase = db();
-  const { data, error } = await supabase
+  const [{ data, error }, additions] = await Promise.all([supabase
     .from("properties")
     .select(PROPERTY_SELECT)
     .in("region", ACTIVE_REGIONS)
-    .order("asking_price", { ascending: false });
+    .order("asking_price", { ascending: false }), getUnpublishedProperties()]);
 
   if (error) throw new Error(`getProperties: ${error.message}`);
-  return (data ?? []).map(mapProperty);
+  return mergeProperties((data ?? []).map(mapProperty), additions);
 }
 
 export async function getPropertyById(id: string): Promise<Property | null> {
@@ -131,12 +147,12 @@ export async function getPropertyById(id: string): Promise<Property | null> {
   const { data, error } = await supabase
     .from("properties")
     .select(PROPERTY_SELECT)
-    .in("region", ACTIVE_REGIONS)
     .eq("id", id)
     .maybeSingle();
 
   if (error) throw new Error(`getPropertyById: ${error.message}`);
-  return data ? mapProperty(data) : null;
+  if (data) return isActiveRegion(data.region) ? mapProperty(data) : null;
+  return getImportedProperty(id);
 }
 
 export async function getFeaturedProperties(): Promise<Property[]> {
@@ -187,9 +203,11 @@ export async function searchProperties(
     );
   }
 
-  const { data, error } = await q.order("asking_price", { ascending: false });
+  const [{ data, error }, additions] = await Promise.all([
+    q.order("asking_price", { ascending: false }), getUnpublishedProperties(),
+  ]);
   if (error) throw new Error(`searchProperties: ${error.message}`);
-  return (data ?? []).map(mapProperty);
+  return mergeProperties((data ?? []).map(mapProperty), additions.filter((property) => matchesPropertyFilters(property, filters)));
 }
 
 /**
@@ -200,9 +218,11 @@ export async function searchProperties(
  */
 export async function getPropertyIds(): Promise<string[]> {
   const supabase = db();
-  const { data, error } = await supabase.from("properties").select("id").in("region", ACTIVE_REGIONS);
+  const [{ data, error }, additions] = await Promise.all([
+    supabase.from("properties").select("id").in("region", ACTIVE_REGIONS), getUnpublishedProperties(),
+  ]);
   if (error) throw new Error(`getPropertyIds: ${error.message}`);
-  return (data ?? []).map((r: { id: string }) => r.id);
+  return [...new Set([...(data ?? []).map((r: { id: string }) => r.id), ...additions.map((property) => property.id)])];
 }
 
 

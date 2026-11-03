@@ -14,7 +14,7 @@ import {
   Users,
 } from "lucide-react";
 import { EcoBadge } from "@/components/ui/Badges";
-import { formatCedi, formatCediCompact, formatSqm, formatPct } from "@/lib/format";
+import { formatCedi, formatCediCompact, formatSqm } from "@/lib/format";
 import type { Property, NationalStats } from "@/lib/types";
 
 /* ---------------------------------------------------------------------------
@@ -82,7 +82,7 @@ const PILLARS = [
  */
 export function PortalPanel() {
   return (
-    <section className="topo-bg flex h-full items-center overflow-hidden bg-surface">
+    <section className="topo-bg flex h-full items-center bg-surface md:overflow-hidden">
       <div className="mx-auto w-full max-w-container-max px-margin-mobile py-8 md:px-margin-desktop md:py-12">
         <p className="mb-2 text-label-caps text-secondary md:mb-3">
           One platform, the whole market
@@ -95,7 +95,7 @@ export function PortalPanel() {
           building resources — consolidated, verified and open.
         </p>
 
-        <div className="grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 min-[400px]:grid-cols-2 md:gap-4 lg:grid-cols-4">
           {PILLARS.map(({ icon: Icon, title, body, href }) => (
             <Link
               key={title}
@@ -109,7 +109,7 @@ export function PortalPanel() {
               <h3 className="mb-1.5 font-headline text-body-md font-semibold text-primary md:mb-2 md:text-headline-md">
                 {title}
               </h3>
-              <p className="font-data text-[11px] leading-snug text-on-surface-variant md:text-data-sm">
+              <p className="text-sm leading-relaxed text-on-surface-variant md:font-data md:text-data-sm">
                 {body}
               </p>
               <span className="mt-4 hidden items-center gap-1 text-label-caps text-secondary opacity-0 transition-opacity group-hover:opacity-100 md:inline-flex">
@@ -130,7 +130,7 @@ export function PortalPanel() {
 export function StatsBand({ stats }: { stats: NationalStats }) {
   return (
     <section className="border-y border-outline-variant/30 bg-surface-bright py-4">
-      <div className="mx-auto flex max-w-container-max flex-wrap items-center justify-between gap-4 px-margin-mobile font-data text-data-sm text-on-surface md:px-margin-desktop">
+      <div className="mx-auto flex max-w-container-max flex-wrap items-center justify-between gap-4 px-margin-mobile font-data text-data-sm text-on-surface md:px-margin-desktop [&>div]:flex-wrap">
         <div className="flex items-center gap-2">
           <Compass className="size-4 text-primary" aria-hidden />
           {stats.verifiedListings.toLocaleString("en-GH")} verified listings
@@ -213,7 +213,7 @@ export function PropertyCard({
 export function FeaturedHomes({ properties }: { properties: Property[] }) {
   return (
     <section className="mx-auto max-w-container-max px-margin-mobile py-section-gap md:px-margin-desktop">
-      <div className="mb-10 flex items-end justify-between">
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-3 md:mb-10">
         <h2 className="font-headline text-headline-lg text-primary">
           Featured homes
         </h2>
@@ -260,8 +260,8 @@ export function GreenHubTeaser() {
             <ArrowRight className="size-4" aria-hidden />
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="rounded-xl border border-primary/10 bg-surface-container-lowest p-6 shadow-[var(--shadow-level-2)]">
+        <div className="grid min-w-0 grid-cols-1 gap-4 min-[400px]:grid-cols-2">
+          <div className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-5 shadow-[var(--shadow-level-2)] md:p-6">
             <Compass className="mb-4 size-8 text-tertiary-container" aria-hidden />
             <h3 className="mb-2 font-headline text-headline-md text-primary">
               Architects
@@ -270,7 +270,7 @@ export function GreenHubTeaser() {
               Find EDGE-certified design professionals.
             </p>
           </div>
-          <div className="mt-8 rounded-xl border border-primary/10 bg-surface-container-lowest p-6 shadow-[var(--shadow-level-2)]">
+          <div className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-5 shadow-[var(--shadow-level-2)] min-[400px]:mt-8 md:p-6">
             <Sun className="mb-4 size-8 text-secondary" aria-hidden />
             <h3 className="mb-2 font-headline text-headline-md text-primary">
               Energy
@@ -344,7 +344,7 @@ export function SiteFooter() {
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    className="text-body-md text-on-surface-variant transition-colors hover:text-primary hover:underline hover:decoration-secondary"
+                    className="inline-flex min-h-11 items-center text-body-md text-on-surface-variant transition-colors hover:text-primary hover:underline hover:decoration-secondary"
                   >
                     {l.label}
                   </Link>

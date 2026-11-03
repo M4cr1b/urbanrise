@@ -23,9 +23,9 @@ import {
 
 const MODULES = [
   { href: "/search", label: "Search", icon: Search },
-  { href: "/comparables", label: "Comparables", icon: Columns3 },
+  { href: "/comparables", label: "Comparables", mobileLabel: "Compare", icon: Columns3 },
   { href: "/market", label: "Market", icon: LineChart },
-  { href: "/professionals", label: "Professionals", icon: Users },
+  { href: "/professionals", label: "Professionals", mobileLabel: "Experts", icon: Users },
   { href: "/green-hub", label: "Green Hub", icon: Leaf },
 ];
 
@@ -38,7 +38,7 @@ const UTILITIES = [
 /** Shared by both layouts so "which module am I in" cannot drift between them. */
 function useIsActive() {
   const pathname = usePathname();
-  return (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+  return (href: string) => pathname === href || pathname.startsWith(`${href}/`) || (href === "/search" && pathname.startsWith("/property/"));
 }
 
 /**
@@ -57,15 +57,16 @@ export function ModuleTabBar() {
   return (
     <nav
       aria-label="Modules"
-      className="border-t border-white/10 bg-primary pb-[env(safe-area-inset-bottom)]"
+      className="border-t border-white/10 bg-primary pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]"
     >
-      <ul className="flex">
-        {MODULES.map(({ href, label, icon: Icon }) => {
+      <ul className="grid grid-cols-5">
+        {MODULES.map(({ href, label, mobileLabel, icon: Icon }) => {
           const active = isActive(href);
           return (
-            <li key={label} className="flex-1">
+            <li key={label} className="min-w-0">
               <Link
                 href={href}
+                aria-label={label}
                 aria-current={active ? "page" : undefined}
                 className={`flex min-h-[56px] flex-col items-center justify-center gap-1 px-1 py-2 text-center transition-colors ${
                   active
@@ -75,7 +76,7 @@ export function ModuleTabBar() {
               >
                 <Icon className="size-5 shrink-0" aria-hidden />
                 <span className="text-[10px] font-semibold leading-none tracking-tight">
-                  {label}
+                  {mobileLabel ?? label}
                 </span>
                 {/* An underline rather than a filled block: at this size a
                     filled active state swamps the four inactive tabs. */}

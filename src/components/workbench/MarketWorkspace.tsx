@@ -14,7 +14,6 @@ import Link from "next/link";
 import { formatCediCompact } from "@/lib/format";
 import type { LocalityStats } from "@/lib/types";
 import { PRIMARY_REGION } from "@/lib/regions";
-import { EcoBadge } from "@/components/ui/Badges";
 
 /* ---------------------------------------------------------------------------
    Market intelligence, for people who do not value property for a living.
@@ -70,9 +69,9 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
   }, [markets]);
 
   return (
-    <div className="p-5 md:p-8">
+    <div className="min-w-0 p-4 md:p-8">
       <header className="mb-6">
-        <h1 className="font-headline text-headline-lg text-primary">
+        <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
           What homes cost in {PRIMARY_REGION}
         </h1>
         <p className="mt-1 max-w-2xl text-body-md text-on-surface-variant">
@@ -82,7 +81,7 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
       </header>
 
       {summary && (
-        <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-6 grid min-w-0 grid-cols-2 gap-3 sm:mb-8 sm:gap-4 lg:grid-cols-4">
           <HeadlineTile
             icon={Home}
             figure={formatCediCompact(summary.typical)}
@@ -112,7 +111,7 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
 
       {/* Controls kept to two: find a place, and change the ordering. */}
       <div className="mb-5 flex flex-wrap items-end gap-3">
-        <label className="min-w-0 flex-1 sm:max-w-xs">
+        <label className="min-w-0 basis-full sm:max-w-xs sm:flex-1 sm:basis-auto">
           <span className="sr-only">Search neighbourhoods</span>
           <span className="relative block">
             <Search
@@ -128,7 +127,12 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
           </span>
         </label>
 
-        <div className="flex flex-wrap gap-2">
+        <label className="w-full text-sm text-on-surface-variant sm:hidden">Sort neighbourhoods
+          <select value={sort} onChange={event => setSort(event.target.value as SortKey)} className="mt-1 min-h-11 w-full rounded-md border border-outline-variant bg-surface-container-lowest px-3 py-2">
+            <option value="price-asc">Cheapest first</option><option value="price-desc">Most expensive</option><option value="listings">Most listings</option>
+          </select>
+        </label>
+        <div className="hidden flex-wrap gap-2 sm:flex">
           {(
             [
               ["price-asc", "Cheapest first"],
@@ -161,7 +165,7 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
 
       {rows.length === 0 && (
         <p className="rounded-xl border border-dashed border-outline-variant bg-surface-container-lowest p-10 text-center text-body-md text-on-surface-variant">
-          No neighbourhood matches "{q}".
+          No neighbourhood matches &quot;{q}&quot;.
         </p>
       )}
 
@@ -187,13 +191,13 @@ function HeadlineTile({
   plain: string;
 }) {
   return (
-    <div className="rounded-xl border border-primary/10 bg-surface-container-lowest p-5">
-      <Icon className="mb-3 size-6 text-secondary" aria-hidden />
-      <p className="font-data text-headline-md text-primary">{figure}</p>
-      <p className="mt-0.5 font-data text-data-sm font-semibold text-on-surface">
+    <div className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-3.5 sm:p-5">
+      <Icon className="mb-3 size-5 text-secondary sm:size-6" aria-hidden />
+      <p className="wrap-anywhere font-headline text-xl font-semibold text-primary sm:font-data sm:text-headline-md">{figure}</p>
+      <p className="mt-1 text-xs font-semibold text-on-surface sm:font-data sm:text-data-sm">
         {label}
       </p>
-      <p className="mt-1.5 text-[13px] leading-snug text-on-surface-variant">
+      <p className="mt-1.5 text-xs leading-relaxed text-on-surface-variant sm:text-[13px]">
         {plain}
       </p>
     </div>
@@ -204,9 +208,9 @@ function LocalityCard({ market: m }: { market: LocalityStats }) {
   const band = bandOf(m.medianPrice);
 
   return (
-    <li className="rounded-xl border border-primary/10 bg-surface-container-lowest p-5">
+    <li className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-4 sm:p-5">
       <div className="mb-3 flex items-start justify-between gap-2">
-        <h2 className="font-headline text-headline-md text-primary">
+        <h2 className="min-w-0 wrap-anywhere font-headline text-headline-md text-primary">
           {m.locality}
         </h2>
         <span className={`shrink-0 rounded-full px-3 py-1 text-label-caps ${band.tone}`}>
@@ -264,10 +268,10 @@ function LocalityCard({ market: m }: { market: LocalityStats }) {
 
       <Link
         href={`/search?q=${encodeURIComponent(m.locality)}`}
-        className="mt-4 inline-flex items-center gap-1.5 font-data text-data-sm text-secondary hover:underline"
+        className="mt-4 inline-flex min-h-11 items-center gap-1.5 font-data text-data-sm text-secondary hover:underline"
       >
         See {m.listings} home{m.listings === 1 ? "" : "s"} in {m.locality}
-        <ArrowRight className="size-4" aria-hidden />
+        <ArrowRight className="size-4 shrink-0" aria-hidden />
       </Link>
     </li>
   );

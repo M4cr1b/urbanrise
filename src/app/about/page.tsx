@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       <TopNav />
-      <main className="flex-1">
+      <main className="flex-1 pt-[calc(5rem+env(safe-area-inset-top))]">
         {/* Hero section */}
         <div className="border-b border-outline-variant bg-surface-container-lowest px-4 py-12 md:px-8 md:py-20">
           <div className="mx-auto max-w-2xl">
@@ -53,7 +53,7 @@ export default function AboutPage() {
               Current Coverage
             </h2>
             <p className="text-body-md text-on-surface-variant">
-              UrbanRise currently covers Greater Accra, Ghana's largest and most
+              UrbanRise currently covers Greater Accra, Ghana&apos;s largest and most
               dynamic property market. Every listing and every comparable evidence
               property on this platform has been verified by a GhIS-registered
               surveyor.

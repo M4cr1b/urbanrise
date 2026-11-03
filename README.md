@@ -157,6 +157,10 @@ slug of the natural key for CSV imports), so re-runs update rather than
 duplicate. Loose source values are normalised on the way in — `"Sold STC"` →
 `Sold`, `"99 year lease"` → `Leasehold 99yr`, `"₵1,750,000"` → `1750000`.
 
+## New property photographs
+
+Use [the photo preparation workflow](docs/adding-property-photos.md) for every new listing. It creates transparent Urban rise captions, preserves originals and records a reviewed exterior cover. `npm run photos:prepare -- path/to/plan.json` generates previews; applying requires review. `npm run build` checks the registered property photos before building.
+
 ## Testing
 
 ```bash

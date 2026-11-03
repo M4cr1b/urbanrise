@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Avoid restoring stale task metadata that can panic the dev server.
+    turbopackFileSystemCacheForDev: false,
+  },
   turbopack: {
     // Keep root detection within this project when parent folders have lockfiles.
     root: process.cwd(),

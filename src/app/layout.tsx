@@ -1,28 +1,28 @@
-import type { Metadata } from "next";
-import { Hanken_Grotesk, Inter, Sora } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 
 // Headlines — heavy weights, modern proportions, architectural feel.
-const hanken = Hanken_Grotesk({
+const hanken = localFont({
+  src: "./fonts/hanken-grotesk-latin.woff2",
   variable: "--font-hanken",
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "600 800",
   display: "swap",
 });
 
 // Body — neutral and highly legible for dense sustainability reporting.
-const inter = Inter({
+const inter = localFont({
+  src: "./fonts/inter-latin.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "400 700",
   display: "swap",
 });
 
 // Numerals and technical labels only — geometric, emphasises precision.
-const sora = Sora({
+const sora = localFont({
+  src: "./fonts/sora-latin.woff2",
   variable: "--font-sora",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: "400 600",
   display: "swap",
 });
 
@@ -33,6 +33,14 @@ export const metadata: Metadata = {
   },
   description:
     "Ghana's integrated residential property information and market intelligence platform. Verified listings, comparable evidence for valuation, estate professionals and a green building materials hub.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  interactiveWidget: "resizes-content",
+  themeColor: "#003b1b",
 };
 
 export default function RootLayout({

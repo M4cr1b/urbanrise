@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   RotateCcw,
@@ -13,7 +13,7 @@ import {
   FileText,
   Leaf as LeafIcon,
   Heart,
-  Eye,
+  SlidersHorizontal,
   BedDouble,
   Bath,
   Ruler,
@@ -25,13 +25,14 @@ import { formatCedi, formatSqm, pricePerSqm } from "@/lib/format";
 import type { EcoRating, Property } from "@/lib/types";
 import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
 import { FilterChip } from "./FilterChip";
+import { MobileSheet } from "@/components/ui/MobileSheet";
 
-const TYPES = ["All", "Apartment", "Mansion", "Townhouse", "Duplex", "Villa", "Bungalow"];
+const TYPES = ["All", "Apartment", "Compound House", "Mansion", "Townhouse", "Duplex", "Villa", "Bungalow"];
 const STYLES = ["All", "Detached", "Semi-Detached"];
 const STOREYS = ["All", "Single Storey", "Multi Storey"];
 const TENURES = ["All", "Freehold", "Leasehold"];
 const STATUSES = ["All", "Available", "Under Offer", "Sold"];
-const ECO = ["All", "A", "B", "C", "D"];
+const ECO = ["All", "A", "B", "C", "D", "E", "F", "G"];
 
 interface Filters {
   q: string;
@@ -166,6 +167,8 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   const [f, setF] = useState<Filters>(() => buildFiltersFromParams(searchParams));
   const [showAll, setShowAll] = useState(false);
   const [openChip, setOpenChip] = useState<string | null>(null);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const mobileFiltersButtonRef = useRef<HTMLButtonElement>(null);
 
   const set = <K extends keyof Filters>(key: K, v: Filters[K]) =>
     setF((prev) => ({ ...prev, [key]: v }));
@@ -174,7 +177,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
 
   const results = useMemo(() => {
     if (showAll) {
-      return properties.sort((a, b) => b.askingPrice - a.askingPrice);
+      return [...properties].sort((a, b) => b.askingPrice - a.askingPrice);
     }
 
     const ecoCeiling = f.eco === "All" ? null : ECO_ORDER.indexOf(f.eco as EcoRating);
@@ -211,13 +214,30 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   };
 
   return (
-    <div className="flex min-h-full flex-col md:h-full">
+    <div className="flex min-h-full min-w-0 flex-col md:h-full">
+      <MobileSheet open={mobileFiltersOpen} onClose={() => setMobileFiltersOpen(false)} title="Property filters" returnFocusRef={mobileFiltersButtonRef}
+        footer={<div className="flex items-center gap-3">
+          <button type="button" onClick={() => { setF(EMPTY); setShowAll(false); }} className="min-h-12 rounded-md border border-outline-variant px-4 text-sm font-semibold text-primary">Reset filters</button>
+          <button type="button" onClick={() => setMobileFiltersOpen(false)} className="min-h-12 min-w-0 flex-1 rounded-md bg-primary px-4 text-sm font-semibold text-on-primary">Show {results.length} {results.length === 1 ? "property" : "properties"}</button>
+        </div>}>
+        <div className="space-y-6">
+          {([
+            { key: "type", label: "Property type", icon: Home, options: TYPES },
+            { key: "style", label: "Property style", icon: Layers, options: STYLES },
+            { key: "storey", label: "Storey", icon: Building2, options: STOREYS },
+            { key: "tenure", label: "Tenure", icon: FileText, options: TENURES },
+            { key: "eco", label: "Eco rating", icon: LeafIcon, options: ECO },
+            { key: "status", label: "Status", icon: Heart, options: STATUSES },
+          ] as const).map(group => <FilterGroup key={group.key} label={group.label} icon={group.icon} options={group.options} value={f[group.key]} onChange={value => { set(group.key, value); setShowAll(false); }} />)}
+          <RangeFilters filters={f} onChange={(key, value) => { set(key, value); setShowAll(false); }} />
+        </div>
+      </MobileSheet>
       {/* --- Search and filter bar -------------------------------------------------------- */}
       <div className="shrink-0 border-b border-outline-variant bg-surface-container-lowest p-4">
         <div className="flex flex-col gap-3">
           {/* Search row */}
           <div className="flex flex-wrap items-center gap-2">
-            <div className="relative flex-1 min-w-64">
+            <div className="relative min-w-0 basis-full md:flex-1 md:basis-0">
               <PropertySearchField
                 properties={properties}
                 value={f.q}
@@ -228,17 +248,23 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 icon={<Search className="size-4" aria-hidden />}
                 onViewAll={(q) => {
                   set("q", q);
-                  setShowAll(true);
+                  setShowAll(!q.trim());
                 }}
+                onSubmit={(q) => { set("q", q); setShowAll(false); }}
               />
             </div>
+            <button ref={mobileFiltersButtonRef} type="button" onClick={() => { setOpenChip(null); setMobileFiltersOpen(true); }}
+              className="flex min-h-11 items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-semibold text-on-primary md:hidden">
+              <SlidersHorizontal className="size-4" aria-hidden /> Filters
+              {activeFilterCount > 0 && <span className="rounded-full bg-white/20 px-1.5 text-xs">{activeFilterCount}</span>}
+            </button>
             <button
               type="button"
               onClick={() => {
                 setShowAll(!showAll);
                 if (!showAll) setF(EMPTY);
               }}
-              className={`flex items-center gap-2 rounded-md border px-3 py-2 font-data text-data-sm transition-colors whitespace-nowrap ${
+              className={`flex min-h-11 items-center gap-1.5 rounded-md border px-2.5 py-2 text-sm transition-colors whitespace-nowrap md:gap-2 md:px-3 md:font-data md:text-data-sm ${
                 showAll
                   ? "border-primary bg-primary/10 text-primary hover:bg-primary/20"
                   : "border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary"
@@ -254,12 +280,12 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 setShowAll(false);
                 setOpenChip(null);
               }}
-              className="flex items-center gap-2 rounded-md border border-outline-variant px-3 py-2 font-data text-data-sm text-on-surface-variant hover:border-primary/50 hover:text-primary transition-colors whitespace-nowrap"
+              className="ml-auto flex min-h-11 items-center gap-1.5 rounded-md border border-outline-variant px-2.5 py-2 text-sm text-on-surface-variant hover:border-primary/50 hover:text-primary transition-colors whitespace-nowrap md:ml-0 md:gap-2 md:px-3 md:font-data md:text-data-sm"
             >
               <RotateCcw className="size-4" aria-hidden />
               Reset
               {activeFilterCount > 0 && (
-                <span className="ml-1 inline-flex items-center justify-center w-5 h-5 rounded-full bg-primary/20 text-primary text-data-xs font-semibold">
+                <span className="ml-1 hidden size-5 items-center justify-center rounded-full bg-primary/20 text-primary text-data-xs font-semibold md:inline-flex">
                   {activeFilterCount}
                 </span>
               )}
@@ -267,7 +293,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
           </div>
 
           {/* Filter chip bar */}
-          <div className="flex flex-wrap items-center gap-2 rounded-lg border border-outline-variant bg-surface-container-lowest p-3">
+          <div className="hidden flex-wrap items-center gap-2 rounded-lg border border-outline-variant bg-surface-container-lowest p-3 md:flex">
             <FilterChip
               label="Type"
               icon={Home}
@@ -446,8 +472,8 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
 
           {/* Quick browse */}
           {!showAll && (
-            <div className="flex flex-wrap gap-2">
-              <span className="inline-block font-data text-data-sm text-on-surface-variant">
+            <div aria-label="Quick browse locations" className="flex min-w-0 gap-2 overflow-x-auto overscroll-x-contain pb-1 md:flex-wrap">
+              <span className="hidden font-data text-data-sm text-on-surface-variant md:inline-block">
                 Quick browse:
               </span>
               {addresses.slice(0, 6).map((address) => (
@@ -458,13 +484,14 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                     set("q", address);
                     setShowAll(false);
                   }}
-                  className="rounded-full border border-secondary/50 bg-secondary/10 px-3 py-1 font-data text-data-sm text-secondary hover:bg-secondary/20 transition-colors"
+                  className="min-h-11 shrink-0 rounded-full border border-secondary/50 bg-secondary/10 px-3 py-1 font-data text-data-sm text-secondary hover:bg-secondary/20 transition-colors"
                 >
                   {address}
                 </button>
               ))}
             </div>
           )}
+          <p aria-live="polite" className="text-sm text-on-surface-variant md:hidden"><strong className="text-on-surface">{results.length}</strong> {results.length === 1 ? "property" : "properties"} {showAll ? "in system" : "found"}</p>
         </div>
       </div>
 
@@ -478,7 +505,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-5 p-5 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid min-w-0 grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:gap-5 md:p-5 xl:grid-cols-3">
             {[...results]
               .sort((a, b) => b.askingPrice - a.askingPrice)
               .map((p) => (
@@ -494,6 +521,18 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
 
     </div>
   );
+}
+
+function RangeFilters({ filters, onChange }: { filters: Filters; onChange: (key: "minBeds" | "maxBeds" | "minPrice" | "maxPrice", value: string) => void }) {
+  return <fieldset className="grid min-w-0 grid-cols-2 gap-3">
+    <legend className="mb-3 text-sm font-semibold text-primary">Bedrooms &amp; price</legend>
+    {([
+      ["minBeds", "Minimum bedrooms", "Any"], ["maxBeds", "Maximum bedrooms", "Any"],
+      ["minPrice", "Minimum price (GHS)", "0"], ["maxPrice", "Maximum price (GHS)", "Any"],
+    ] as const).map(([key, label, placeholder]) => <label key={key} className="min-w-0 text-xs text-on-surface-variant">{label}
+      <input type="number" inputMode="numeric" min="0" value={filters[key]} onChange={event => onChange(key, event.target.value)} placeholder={placeholder} className="mt-1 min-h-11 w-full min-w-0 rounded-md border border-outline-variant bg-surface px-3 py-2 text-on-surface" />
+    </label>)}
+  </fieldset>;
 }
 
 function PropertyResultCard({
