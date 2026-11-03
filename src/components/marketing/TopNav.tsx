@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Leaf, Menu, ArrowUpRight } from "lucide-react";
 import { useRef, useState } from "react";
 import { MobileSheet } from "@/components/ui/MobileSheet";
+import { ThemeSelect } from "@/components/ui/ThemeSelect";
 
 const LINKS = [
   { href: "/search", label: "Buy", shortLabel: "Buy" },
@@ -30,7 +31,7 @@ export function TopNav() {
     <header
       className="fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] backdrop-blur-md transition-colors"
       style={{
-        backgroundColor: "var(--ur-nav-bg, color-mix(in srgb, #f8faf4 80%, transparent))",
+        backgroundColor: "var(--ur-nav-bg, color-mix(in srgb, var(--color-surface) 80%, transparent))",
         color: "var(--ur-nav-ink, var(--color-primary))",
       }}
     >
@@ -57,6 +58,7 @@ export function TopNav() {
         </ul>
 
         <div className="flex shrink-0 items-center gap-3">
+          <ThemeSelect />
           <Link
             href="/comparables"
             className="hidden text-sm opacity-70 transition-opacity hover:opacity-100 2xl:block"

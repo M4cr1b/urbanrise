@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 
 // Headlines — heavy weights, modern proportions, architectural feel.
 const hanken = localFont({
@@ -51,9 +53,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${hanken.variable} ${inter.variable} ${sora.variable} antialiased`}
     >
-      <body className="min-h-screen">{children}</body>
+      <head>
+        <script id="urbanrise-theme" dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
+      <body className="min-h-screen"><ThemeProvider>{children}</ThemeProvider></body>
     </html>
   );
 }

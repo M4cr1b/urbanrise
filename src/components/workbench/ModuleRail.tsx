@@ -57,7 +57,7 @@ export function ModuleTabBar() {
   return (
     <nav
       aria-label="Modules"
-      className="border-t border-white/10 bg-primary pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]"
+      className="border-t border-white/10 bg-chrome pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]"
     >
       <ul className="grid grid-cols-5">
         {MODULES.map(({ href, label, mobileLabel, icon: Icon }) => {
@@ -99,7 +99,7 @@ export function ModuleRail() {
   return (
     <nav
       aria-label="Modules"
-      className="flex w-[84px] shrink-0 flex-col justify-between border-r border-white/10 bg-primary py-2"
+      className="flex w-[84px] shrink-0 flex-col justify-between border-r border-white/10 bg-chrome py-2"
     >
       <ul className="flex flex-col">
         {MODULES.map(({ href, label, icon: Icon }) => {
