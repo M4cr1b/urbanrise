@@ -39,14 +39,15 @@ export function SearchCard({ properties }: { properties: Property[] }) {
   }
 
   return (
-    <div className="topo-bg rounded-xl border border-primary/10 bg-surface-container-lowest p-6 shadow-[var(--shadow-level-2)] md:p-8">
-      <div className="mb-6 flex gap-8 border-b border-outline-variant/30">
+    <div className="topo-bg min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-4 shadow-[var(--shadow-level-2)] sm:p-6 md:p-8">
+      <div className="mb-6 grid grid-cols-[auto_auto_minmax(0,1fr)] gap-4 border-b border-outline-variant/30 sm:flex sm:gap-8">
         {TABS.map((t) => (
           <button
             key={t}
             type="button"
             onClick={() => setTab(t)}
-            className={`-mb-px border-b-2 pb-4 font-headline text-headline-md transition-colors ${
+            aria-pressed={tab === t}
+            className={`-mb-px min-h-11 border-b-2 pb-3 text-left font-headline text-base font-semibold transition-colors sm:pb-4 sm:text-headline-md ${
               tab === t
                 ? "border-primary font-bold text-primary"
                 : "border-transparent text-on-surface-variant hover:text-primary"
@@ -92,10 +93,12 @@ export function SearchCard({ properties }: { properties: Property[] }) {
             <option value="All">All Types</option>
             <option>House</option>
             <option>Apartment</option>
+            <option>Compound House</option>
             <option>Townhouse</option>
             <option>Duplex</option>
             <option>Villa</option>
             <option>Mansion</option>
+            <option>Bungalow</option>
           </select>
         </label>
 
@@ -103,12 +106,12 @@ export function SearchCard({ properties }: { properties: Property[] }) {
           <span className="text-label-caps text-on-surface-variant">
             Beds &amp; Price (₵)
           </span>
-          <div className="flex gap-2">
+          <div className="grid min-w-0 grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-2">
             <select
               value={beds}
               onChange={(e) => setBeds(e.target.value)}
               aria-label="Minimum bedrooms"
-              className="w-2/5 appearance-none rounded-md border border-outline-variant bg-surface px-3 py-3 text-on-surface outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
+              className="w-full min-w-0 appearance-none rounded-md border border-outline-variant bg-surface px-3 py-3 text-on-surface outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
             >
               <option value="">Beds</option>
               <option value="1">1+</option>
@@ -120,7 +123,7 @@ export function SearchCard({ properties }: { properties: Property[] }) {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               aria-label="Maximum price"
-              className="w-2/3 appearance-none rounded-md border border-outline-variant bg-surface px-3 py-3 text-on-surface outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
+              className="w-full min-w-0 appearance-none rounded-md border border-outline-variant bg-surface px-3 py-3 text-on-surface outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
             >
               <option value="">Any Price</option>
               <option value="1000000">Under ₵1M</option>

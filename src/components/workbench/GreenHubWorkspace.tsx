@@ -102,9 +102,9 @@ export function GreenHubWorkspace({ materials }: { materials: GreenMaterial[] })
   );
 
   return (
-    <div className="p-5 md:p-8">
+    <div className="min-w-0 p-4 md:p-8">
       <header className="mb-6">
-        <h1 className="font-headline text-headline-lg text-primary">
+        <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
           Green Building Materials
         </h1>
         <p className="mt-1 max-w-2xl text-body-md text-on-surface-variant">
@@ -116,7 +116,7 @@ export function GreenHubWorkspace({ materials }: { materials: GreenMaterial[] })
 
       {/* Category chips carry a one-line explanation, so the taxonomy does not
           assume construction vocabulary. */}
-      <div className="mb-5 flex flex-wrap gap-2">
+      <div aria-label="Material categories" className="mb-5 flex min-w-0 gap-2 overflow-x-auto overscroll-x-contain pb-1 md:flex-wrap [&>button]:shrink-0">
         <button
           type="button"
           onClick={() => setCategory("All")}
@@ -272,7 +272,7 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
             </p>
           )}
 
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 font-data text-data-sm">
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 font-data text-data-sm [&>a]:min-h-11">
             {supplier?.phone && (
               <a
                 href={`tel:${supplier.phone.replace(/\s/g, "")}`}

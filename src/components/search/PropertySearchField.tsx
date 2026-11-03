@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import type { Property } from "@/lib/types";
 import { EcoBadge } from "@/components/ui/Badges";
 import { formatCedi } from "@/lib/format";
@@ -85,10 +85,11 @@ export function PropertySearchField({
 
   const filtered = getFilteredProperties(value);
   const hasResults = filtered.length > 0;
+  const resultCount = value.trim() ? properties.filter(property => `${property.address} ${property.district} ${property.region}`.toLowerCase().includes(value.toLowerCase())).length : properties.length;
 
   // Close on click outside
   useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
+    function handleClickOutside(e: PointerEvent) {
       if (
         wrapperRef.current &&
         !wrapperRef.current.contains(e.target as Node)
@@ -98,9 +99,9 @@ export function PropertySearchField({
     }
 
     if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("pointerdown", handleClickOutside);
       return () =>
-        document.removeEventListener("mousedown", handleClickOutside);
+        document.removeEventListener("pointerdown", handleClickOutside);
     }
   }, [isOpen]);
 
@@ -129,22 +130,15 @@ export function PropertySearchField({
 
       case "Enter":
         e.preventDefault();
-        if (onSubmit) {
-          onSubmit(value);
-        }
-        if (highlightedIndex === null || highlightedIndex === filtered.length) {
-          // Footer row
-          if (onViewAll) {
-            onViewAll(value);
-          } else {
-            // Let the Link handle it (will navigate via href)
-          }
-        } else if (highlightedIndex < filtered.length) {
+        if (highlightedIndex !== null && highlightedIndex < filtered.length) {
           // Property row — navigate to detail page
           const prop = filtered[highlightedIndex];
           window.location.href = `/property/${prop.id}`;
-        }
+        } else if (onSubmit) onSubmit(value);
+        else if (onViewAll) onViewAll(value);
+        else window.location.href = viewAllHref(value);
         setIsOpen(false);
+        inputRef.current?.blur();
         break;
 
       case "Escape":
@@ -157,7 +151,7 @@ export function PropertySearchField({
   return (
     <div
       ref={wrapperRef}
-      className={`relative ${wrapperClassName}`}
+      className={`relative min-w-0 ${wrapperClassName}`}
       role="presentation"
     >
       {/* Input wrapper for layout with icon */}
@@ -172,10 +166,12 @@ export function PropertySearchField({
           ref={inputRef}
           type="text"
           value={value}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => { onChange(e.target.value); setHighlightedIndex(null); setIsOpen(true); }}
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
+          aria-label="Search by address or district"
+          enterKeyHint="search"
           className={inputClassName}
           role="combobox"
           aria-expanded={isOpen}
@@ -192,6 +188,7 @@ export function PropertySearchField({
               : undefined
           }
         />
+        {value && <button type="button" aria-label="Clear property search" onClick={() => { onChange(""); setHighlightedIndex(null); inputRef.current?.focus(); }} className="absolute right-0 top-1/2 flex size-11 -translate-y-1/2 items-center justify-center text-on-surface-variant"><X className="size-4" aria-hidden /></button>}
       </div>
 
       {/* Dropdown panel */}
@@ -199,7 +196,7 @@ export function PropertySearchField({
         <div
           role="listbox"
           id={listId}
-          className="absolute left-0 right-0 top-full z-50 mt-2 max-h-[70vh] overflow-auto rounded-xl border border-primary/10 bg-surface-container-lowest shadow-[var(--shadow-level-2)]"
+          className="absolute left-0 right-0 top-full z-50 mt-2 max-h-[min(24rem,50dvh)] overflow-y-auto overscroll-contain rounded-xl border border-primary/10 bg-surface-container-lowest shadow-[var(--shadow-level-2)]"
           onMouseDown={(e) => e.preventDefault()} // Preserve focus through click
         >
           {/* Results or featured section */}
@@ -234,7 +231,7 @@ export function PropertySearchField({
               </div>
               <div className="px-4 py-3">
                 <p className="text-body-sm text-on-surface-variant">
-                  No properties match "{value}". Try widening the search.
+                  No properties match &quot;{value}&quot;. Try widening the search.
                 </p>
               </div>
             </>
@@ -244,7 +241,7 @@ export function PropertySearchField({
           <FooterRow
             query={value}
             allCount={properties.length}
-            resultCount={filtered.length}
+            resultCount={resultCount}
             isHighlighted={highlightedIndex === filtered.length}
             listId={listId}
             onViewAll={onViewAll}
@@ -274,12 +271,12 @@ function ResultRow({
       role="option"
       id={`${listId}-${p.id}`}
       aria-selected={isHighlighted}
-      className={`flex items-center gap-3 border-b border-outline-variant/20 px-3 py-2.5 transition-colors ${
+      className={`grid grid-cols-[3rem_minmax(0,1fr)] items-center gap-x-3 gap-y-1 border-b border-outline-variant/20 px-3 py-3 transition-colors sm:flex ${
         isHighlighted ? "bg-primary/5" : "hover:bg-primary/5"
       }`}
     >
       {/* Thumbnail */}
-      <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-md">
+      <div className="relative row-span-2 size-12 shrink-0 overflow-hidden rounded-md sm:size-14">
         <Image
           src={p.images[0]}
           alt={`${p.type} at ${p.address}`}
@@ -301,7 +298,7 @@ function ResultRow({
       </div>
 
       {/* Right side: badges + price */}
-      <div className="flex shrink-0 items-center gap-2">
+      <div className="col-start-2 flex min-w-0 flex-wrap items-center gap-2 sm:shrink-0 sm:flex-nowrap">
         {/* Eco badge (compact, no padding/shadow) */}
         <EcoBadge rating={p.ecoRating} className="text-data-xs px-2 py-0.5" />
 

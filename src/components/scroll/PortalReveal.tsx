@@ -163,24 +163,28 @@ export function PortalReveal({ image, hero, children }: Props) {
     [narrow],
   );
 
-  useScrollScrub(runwayRef, render, { disabled: !motion });
+  useScrollScrub(runwayRef, render, { disabled: !motion || narrow });
 
   // Leave the nav as the rest of the site expects it.
   useEffect(() => {
+    if (narrow || !motion) {
+      document.documentElement.style.removeProperty("--ur-nav-ink");
+      document.documentElement.style.removeProperty("--ur-nav-bg");
+    }
     return () => {
       const root = document.documentElement;
       root.style.removeProperty("--ur-nav-ink");
       root.style.removeProperty("--ur-nav-bg");
     };
-  }, []);
+  }, [narrow, motion]);
 
   /* --- Static layout: the server render, and the permanent one for anyone
          who asked for reduced motion. No runway, no scrub, no clipping. --- */
-  if (!motion) {
+  if (!motion || narrow) {
     return (
       <>
-        <section className="relative min-h-[80vh] overflow-hidden pt-24">
-          <div className="mx-auto grid max-w-container-max items-center gap-gutter px-margin-mobile py-section-gap md:grid-cols-12 md:px-margin-desktop">
+        <section className="relative overflow-hidden pt-[calc(4rem+env(safe-area-inset-top))] md:min-h-[80vh] md:pt-24">
+          <div className="mx-auto grid max-w-container-max items-center gap-6 px-margin-mobile py-8 md:grid-cols-12 md:px-margin-desktop md:py-section-gap">
             <div className="md:col-span-7">{hero}</div>
             <div className="relative aspect-4/3 overflow-hidden rounded-xl md:col-span-5">
               <Image

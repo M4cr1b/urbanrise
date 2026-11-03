@@ -63,12 +63,11 @@ export default async function LandingPage() {
             </HeroCopy>
           }
         >
+          <div className="px-margin-mobile py-6 md:hidden">
+            <SearchCard properties={properties} />
+          </div>
           <PortalPanel />
         </PortalReveal>
-
-        <div className="px-margin-mobile py-10 md:hidden">
-          <SearchCard properties={properties} />
-        </div>
 
         <StatsBand stats={stats} />
         <FeaturedHomes properties={featured} />

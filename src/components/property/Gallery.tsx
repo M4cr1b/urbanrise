@@ -28,28 +28,30 @@ export function Gallery({
   const stripRef = useRef<HTMLDivElement | null>(null);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const expandButtonRef = useRef<HTMLButtonElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const swipeRef = useRef<{ x: number; y: number } | null>(null);
 
   const count = images.length;
   const go = useCallback(
     (next: number) => {
       const i = ((next % count) + count) % count;
-      slideRefs.current[i]?.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
-      });
+      const slide = slideRefs.current[i];
+      if (slide) scrollerRef.current?.scrollTo({ left: slide.offsetLeft, behavior: expanded ? "instant" : "smooth" });
+      if (expanded) setIndex(i);
       // index itself is set by the IntersectionObserver below, once the
       // scroll actually lands — that keeps it correct whether it was driven
       // by this call, a thumbnail click, or the visitor free-scrolling.
     },
-    [count],
+    [count, expanded],
   );
 
   // Tracks which slide is on screen as the strip is scrolled — by click,
   // keyboard, or a free touch/trackpad scroll with no click at all.
   useEffect(() => {
     const root = scrollerRef.current;
-    if (!root) return;
+    if (!root || expanded) return;
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
@@ -63,14 +65,14 @@ export function Gallery({
     );
     slideRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
-  }, [images]);
+  }, [images, expanded]);
 
   // Arrow keys work on the gallery; Escape leaves the full-screen view.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") go(index + 1);
-      else if (e.key === "ArrowLeft") go(index - 1);
-      else if (e.key === "Escape" && expanded) setExpanded(false);
+      if (!expanded && !sectionRef.current?.contains(document.activeElement)) return;
+      if (e.key === "ArrowRight") { e.preventDefault(); go(index + 1); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); go(index - 1); }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -78,25 +80,34 @@ export function Gallery({
 
   // Keep the active thumbnail in view when navigating by arrow or swipe.
   useEffect(() => {
-    stripRef.current
-      ?.querySelector<HTMLElement>(`[data-i="${index}"]`)
-      ?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+    const strip = stripRef.current;
+    const thumbnail = strip?.querySelector<HTMLElement>(`[data-i="${index}"]`);
+    if (strip && thumbnail) strip.scrollTo({ left: thumbnail.offsetLeft - strip.clientWidth / 2 + thumbnail.offsetWidth / 2, behavior: "smooth" });
   }, [index]);
 
   // Body scroll would otherwise continue behind the full-screen overlay.
   useEffect(() => {
     if (!expanded) return;
+    const dialog = dialogRef.current;
+    const trigger = expandButtonRef.current;
     const prev = document.body.style.overflow;
+    const main = document.getElementById("workbench-main");
+    const mainOverflow = main?.style.overflow;
     document.body.style.overflow = "hidden";
+    if (main) main.style.overflow = "hidden";
+    dialog?.showModal();
     return () => {
+      dialog?.close();
       document.body.style.overflow = prev;
+      if (main) main.style.overflow = mainOverflow ?? "";
+      trigger?.focus({ preventScroll: true });
     };
   }, [expanded]);
 
   if (count === 0) return null;
 
   return (
-    <section aria-label={`${count} photographs`} className="mb-6">
+    <section ref={sectionRef} aria-label={`${count} photographs`} className="mb-4 min-w-0 sm:mb-6">
       <div className="relative">
         {/* The primary way to browse: a native, scroll-snapped strip, so
             every photograph is visible whole (object-contain, not cover) and
@@ -105,7 +116,7 @@ export function Gallery({
             way to see an uncropped photo. */}
         <div
           ref={scrollerRef}
-          className="scrollbar-slim flex max-h-[65vh] snap-x snap-mandatory overflow-x-auto rounded-xl bg-surface-container"
+          className="scrollbar-slim relative flex max-h-[65dvh] snap-x snap-mandatory overflow-x-auto overscroll-x-contain rounded-xl bg-surface-container"
         >
           {images.map((src, i) => (
             <div
@@ -137,9 +148,10 @@ export function Gallery({
         )}
 
         <button
+          ref={expandButtonRef}
           type="button"
           onClick={() => setExpanded(true)}
-          className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 font-data text-[12px] text-white backdrop-blur-sm transition-colors hover:bg-black/75"
+          className="absolute right-3 top-3 flex min-h-11 items-center gap-1.5 rounded-full bg-black/55 px-3 py-1.5 font-data text-[12px] text-white backdrop-blur-sm transition-colors hover:bg-black/75"
         >
           <Expand className="size-3.5" aria-hidden />
           View full size
@@ -154,7 +166,7 @@ export function Gallery({
       {count > 1 && (
         <div
           ref={stripRef}
-          className="scrollbar-slim mt-3 flex gap-2 overflow-x-auto pb-1"
+          className="scrollbar-slim relative mt-3 flex gap-2 overflow-x-auto overscroll-x-contain pb-1"
         >
           {images.map((src, i) => (
             <button
@@ -184,18 +196,18 @@ export function Gallery({
       )}
 
       {expanded && (
-        <div
-          role="dialog"
+        <dialog
+          ref={dialogRef}
           aria-modal="true"
           aria-label={`${alt} — photograph ${index + 1} of ${count}`}
-          className="fixed inset-0 z-[100] flex flex-col bg-black/95"
-          onClick={() => setExpanded(false)}
+          className="fixed inset-0 m-0 flex h-dvh w-full max-h-none max-w-none flex-col border-0 bg-black/95 p-0 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] text-white backdrop:bg-black/95"
+          onCancel={(event) => { event.preventDefault(); setExpanded(false); }}
         >
           <div className="flex justify-end p-4">
             <button
               type="button"
               onClick={() => setExpanded(false)}
-              className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 font-data text-data-sm text-white hover:bg-white/20"
+              className="flex min-h-11 items-center gap-2 rounded-full bg-white/10 px-4 py-2 font-data text-data-sm text-white hover:bg-white/20"
             >
               <X className="size-4" aria-hidden />
               Close
@@ -203,8 +215,17 @@ export function Gallery({
           </div>
 
           <div
-            className="relative flex-1"
+            className="relative min-h-0 flex-1 [touch-action:pan-y_pinch-zoom]"
             onClick={(e) => e.stopPropagation()}
+            onTouchStart={(event) => { swipeRef.current = event.touches.length === 1 ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null; }}
+            onTouchEnd={(event) => {
+              const start = swipeRef.current;
+              swipeRef.current = null;
+              if (!start || event.touches.length || !event.changedTouches[0]) return;
+              const dx = event.changedTouches[0].clientX - start.x;
+              const dy = event.changedTouches[0].clientY - start.y;
+              if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(index + (dx < 0 ? 1 : -1));
+            }}
           >
             <Image
               src={images[index]}
@@ -227,7 +248,7 @@ export function Gallery({
           <p className="p-4 text-center font-data text-data-sm text-white/80">
             {index + 1} / {count}
           </p>
-        </div>
+        </dialog>
       )}
     </section>
   );

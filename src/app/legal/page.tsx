@@ -10,7 +10,7 @@ export default function LegalPage() {
   return (
     <>
       <TopNav />
-      <main className="flex-1">
+      <main className="flex-1 pt-[calc(5rem+env(safe-area-inset-top))]">
         {/* Hero section */}
         <div className="border-b border-outline-variant bg-surface-container-lowest px-4 py-12 md:px-8 md:py-20">
           <div className="mx-auto max-w-2xl">
@@ -91,7 +91,7 @@ export default function LegalPage() {
               Title Status
             </h2>
             <p className="mb-3">
-              Title status information reflects the property's registration status at
+              Title status information reflects the property&apos;s registration status at
               the time of verification:
             </p>
             <ul className="list-inside list-disc space-y-2 mb-3">
@@ -125,7 +125,7 @@ export default function LegalPage() {
             <p>
               Eco ratings are assessments of whole-property sustainability and climate
               resilience, performed by GhIS-registered surveyors at inspection. Ratings
-              reflect the property's condition at that time and may change with
+              reflect the property&apos;s condition at that time and may change with
               maintenance, renovation, or damage. Ratings are informational only and
               do not constitute environmental certification or guarantee of energy
               performance.

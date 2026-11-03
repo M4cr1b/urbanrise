@@ -1,0 +1,35 @@
+[
+  {
+    "family": "Hanken Grotesk",
+    "file": "hanken-grotesk-latin.woff2",
+    "weight": "600 800",
+    "subset": "latin",
+    "cssUrl": "https://fonts.googleapis.com/css2?family=Hanken+Grotesk%3Awght%40600..800&display=swap",
+    "fontUrl": "https://fonts.gstatic.com/s/hankengrotesk/v12/ieVn2YZDLWuGJpnzaiwFXS9tYtpd59A.woff2",
+    "licenseUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/hankengrotesk/OFL.txt",
+    "sha256": "e9201eddf1d41d0b62253295d869ce3cf65768f7102b797f02c7f8c876b4a9d5",
+    "bytes": 34704
+  },
+  {
+    "family": "Inter",
+    "file": "inter-latin.woff2",
+    "weight": "400 700",
+    "subset": "latin",
+    "cssUrl": "https://fonts.googleapis.com/css2?family=Inter%3Aopsz%2Cwght%4014..32%2C400..700&display=swap",
+    "fontUrl": "https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwY.woff2",
+    "licenseUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+    "sha256": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+    "bytes": 72920
+  },
+  {
+    "family": "Sora",
+    "file": "sora-latin.woff2",
+    "weight": "400 600",
+    "subset": "latin",
+    "cssUrl": "https://fonts.googleapis.com/css2?family=Sora%3Awght%40400..600&display=swap",
+    "fontUrl": "https://fonts.gstatic.com/s/sora/v17/xMQ9uFFYT72X5wkB_18qmnndmSdSnh2BAfO5mnuyOo1lfiQwV6-x.woff2",
+    "licenseUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/sora/OFL.txt",
+    "sha256": "811e11966d29f3a01fcb19b087b61ac067d380665a55aebb7fcdf2cda95e4a93",
+    "bytes": 25284
+  }
+]

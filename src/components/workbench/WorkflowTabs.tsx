@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { Leaf } from "lucide-react";
 import { useShortlist } from "./shortlist-store";
 
@@ -31,9 +32,16 @@ export function WorkflowTabs() {
 
   const inWorkflow = pathname.startsWith("/comparables");
   const current = (params.get("stage") ?? "comparables") as StageId;
+  const tabsRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const tabs = tabsRef.current;
+    const active = tabs?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (tabs && active) tabs.scrollLeft = Math.max(0, active.offsetLeft - tabs.clientWidth / 2 + active.offsetWidth / 2);
+  }, [current]);
 
   return (
-    <div className="flex items-center gap-1 overflow-x-auto scrollbar-slim">
+    <nav ref={tabsRef} aria-label="Valuation workflow" className={`relative min-w-0 basis-full items-center gap-1 overflow-x-auto overscroll-x-contain scrollbar-slim md:flex md:flex-1 md:basis-auto ${inWorkflow ? "flex" : "hidden"}`}>
       {STAGES.map((stage) => {
         const active = inWorkflow && current === stage.id;
         const href =
@@ -61,7 +69,7 @@ export function WorkflowTabs() {
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }
 
@@ -69,10 +77,19 @@ export function WorkbenchBrand() {
   return (
     <Link
       href="/"
-      className="flex shrink-0 items-center gap-2 pr-4 font-headline text-headline-md font-bold text-inverse-on-surface"
+      className="flex min-h-14 shrink-0 items-center gap-2 font-headline text-xl font-bold text-inverse-on-surface md:pr-4 md:text-headline-md"
     >
       <Leaf className="size-5" aria-hidden />
       UrbanRise
     </Link>
   );
+}
+
+export function MobileModuleTitle() {
+  const pathname = usePathname();
+  const title = pathname.startsWith("/property/") ? "Property details" : ({
+    "/search": "Property search", "/comparables": "Valuation", "/market": "Market insights",
+    "/professionals": "Professionals", "/green-hub": "Green building",
+  } as Record<string, string>)[pathname];
+  return <span className="ml-auto min-w-0 text-right text-xs font-medium text-primary-fixed-dim md:hidden">{title}</span>;
 }

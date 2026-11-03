@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TopNav } from "@/components/marketing/TopNav";
 import { SiteFooter } from "@/components/marketing/Sections";
-import { HelpCircle, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Help & FAQ",
@@ -12,7 +11,7 @@ export default function HelpPage() {
   return (
     <>
       <TopNav />
-      <main className="flex-1">
+      <main className="flex-1 pt-[calc(5rem+env(safe-area-inset-top))]">
         {/* Hero section */}
         <div className="border-b border-outline-variant bg-surface-container-lowest px-4 py-12 md:px-8 md:py-20">
           <div className="mx-auto max-w-2xl">
@@ -51,7 +50,7 @@ export default function HelpPage() {
                 <p>
                   When you click the search bar, featured properties appear before
                   you type. These are our professionally photographed and verified
-                  listings. Continue typing to narrow the results to what you're
+                  listings. Continue typing to narrow the results to what you&apos;re
                   looking for.
                 </p>
               </div>
@@ -60,8 +59,8 @@ export default function HelpPage() {
                   How do I view all properties?
                 </h3>
                 <p>
-                  Click "View all" in the search dropdown to see the full list with
-                  all filters applied. You can also use the "View All" toggle on
+                  Click &quot;View all&quot; in the search dropdown to see the full list with
+                  all filters applied. You can also use the &quot;View All&quot; toggle on
                   the search results page to remove all filters and see every
                   property on the platform.
                 </p>
@@ -188,7 +187,7 @@ export default function HelpPage() {
             <div className="space-y-4 text-body-sm text-on-surface-variant">
               <div>
                 <h3 className="mb-2 font-semibold text-on-surface">
-                  What does "Verified" mean?
+                  What does &quot;Verified&quot; mean?
                 </h3>
                 <p>
                   A verified property has been physically inspected and assessed by
