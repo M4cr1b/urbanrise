@@ -9,11 +9,13 @@ const load = localTsLoader(root);
 const imports = load(path.join(root, 'src/lib/data/imported-properties.ts'));
 const seed = load(path.join(root, 'src/lib/data/seed-source.ts'));
 const { properties37To44 } = load(path.join(root, 'src/lib/data/properties-37-44.ts'));
+const { properties45To51 } = load(path.join(root, 'src/lib/data/properties-45-51.ts'));
+const allBundled = [...properties37To44, ...properties45To51];
 
-test('all eight bundled listings have the registered exterior and branded gallery', () => {
+test('all bundled listings have the registered exterior and branded gallery', () => {
   const additions = imports.unpublishedProperties([]);
-  assert.equal(additions.length, 8);
-  assert.equal(additions.reduce((sum, p) => sum + p.images.length, 0), 63);
+  assert.equal(additions.length, allBundled.length);
+  assert.equal(additions.reduce((sum, p) => sum + p.images.length, 0), allBundled.reduce((sum, p) => sum + p.images.length, 0));
   for (const p of additions) {
     assert.equal(p.images[0], `/property-photos/${p.id}/01-urbanrise.webp`);
     assert(p.images.every(url => url.startsWith(`/property-photos/${p.id}/`)));
@@ -25,9 +27,9 @@ test('database changes replace bundled values without duplicate or stale filter 
   const updated = { ...original, askingPrice: 100000, status: 'Sold' };
   const additions = imports.unpublishedProperties([updated.id]);
   const merged = imports.mergeProperties([updated], additions);
-  assert.equal(merged.length, 8);
+  assert.equal(merged.length, allBundled.length);
   assert.equal(merged.find(p => p.id === updated.id).askingPrice, 100000);
-  assert.equal(merged.filter(p => imports.matchesPropertyFilters(p, { status: 'Available' })).length, 7);
+  assert.equal(merged.filter(p => imports.matchesPropertyFilters(p, { status: 'Available' })).length, allBundled.length - 1);
   assert.equal(additions.filter(p => p.id === original.id).length, 0);
 });
 
@@ -42,15 +44,15 @@ test('compound-house, beds, price, eco and locality searches keep exact matches'
   const matches = f => additions.filter(p => imports.matchesPropertyFilters(p, f)).map(p => p.id);
   assert.deepEqual(matches({ type: 'Compound House' }), [properties37To44[1].id, properties37To44[2].id]);
   assert.deepEqual(matches({ query: 'aMrAhIa', minBeds: 3, maxBeds: 3, minPrice: 1170000, maxPrice: 1170000, minEcoRating: 'D', tenure: 'Leasehold', status: 'Available' }), [properties37To44[5].id]);
-  assert.equal(matches({ minEcoRating: 'C' }).length, 0);
+  assert.deepEqual(matches({ minEcoRating: 'C' }), properties45To51.filter(p => ['A', 'B', 'C'].includes(p.ecoRating)).map(p => p.id));
   assert.equal(matches({ status: 'Sold' }).length, 0);
   assert.equal(matches({ query: 'Adabraka' }).length, 3);
-  assert.equal(matches({ query: 'Adenta' }).length, 5);
+  assert.equal(matches({ query: 'Adenta' }).length, 5 + properties45To51.length);
 });
 
 test('credential-free source includes the same import, details and two compound houses', async () => {
   const properties = await seed.getProperties();
-  for (const p of properties37To44) {
+  for (const p of allBundled) {
     assert((await seed.getPropertyIds()).includes(p.id));
     assert.deepEqual(await seed.getPropertyById(p.id), imports.getImportedProperty(p.id));
   }

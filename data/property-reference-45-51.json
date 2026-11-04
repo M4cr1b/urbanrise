@@ -1,0 +1,2052 @@
+{
+  "scope": "Properties 45–51",
+  "reviewDate": "2026-11-04",
+  "status": "7 verified listings included; 0 withheld pending clarification. Photographs ship with listing data; no database writes.",
+  "sourceDocuments": [
+    {
+      "filename": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "bytes": 60084,
+      "sha256": "0d80fd196be92a3192fd19cee491e847313b8fdc3afa663e77035feff69fb546"
+    },
+    {
+      "filename": "C:\\Users\\Admin\\Desktop\\Round two\\Urbanw.docx",
+      "bytes": 54564,
+      "sha256": "d6e91d405fc6fad043288a69f40bbee035deb2c87646462703741ed63cffae15"
+    }
+  ],
+  "sourceSelection": "Database.docx is the newer document and matches image-folder agent names for properties 47–50. Older conflicting values are preserved below.",
+  "properties": [
+    {
+      "number": 45,
+      "sourceHeadingParagraphIndex": 990,
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "356 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 3,770,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Wardrobe, Tiled Floor, Pre-Paid Meter, Pop Ceiling, Microwave, Kitchen Cabinets, Hot Water, En Suite",
+        "AGENT": "Dollar Dream Estate",
+        "CONTACT": "+233595369794",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 991,
+          "text": "PROPERTY ADDRESS =Adenta"
+        },
+        {
+          "paragraphIndex": 992,
+          "text": "PROPERTY TYPE = Duplex "
+        },
+        {
+          "paragraphIndex": 993,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 994,
+          "text": "PROPERTY SIZE = 356 sqm"
+        },
+        {
+          "paragraphIndex": 995,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 996,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 997,
+          "text": "BEDROOM = 4"
+        },
+        {
+          "paragraphIndex": 998,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 999,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 1000,
+          "text": "ASKING PRICE = GH₵ 3,770,000"
+        },
+        {
+          "paragraphIndex": 1001,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 1002,
+          "text": "FACILITIES = 24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Wardrobe, Tiled Floor, Pre-Paid Meter, Pop Ceiling, Microwave, Kitchen Cabinets, Hot Water, En Suite"
+        },
+        {
+          "paragraphIndex": 1004,
+          "text": "AGENT = Dollar Dream Estate  "
+        },
+        {
+          "paragraphIndex": 1005,
+          "text": "CONTACT= +233595369794"
+        },
+        {
+          "paragraphIndex": 1006,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 1007,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 1008,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 1009,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 1010,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 1011,
+          "text": "STATUS = Available "
+        }
+      ],
+      "id": "adenta-duplex-dollardream",
+      "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "images": [
+        {
+          "number": 45,
+          "filename": "54318378_ODEwLTEwODAtZDE2NWZiZTg1NQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318378_ODEwLTEwODAtZDE2NWZiZTg1NQ.webp",
+          "sha256": "8bee40298faa87b0b8be5d3ffaf61ffe6167a8ebcbd4f16185a00bd80a67bf56",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "number": 45,
+          "filename": "54318379_ODEwLTEwODAtZDhkYjFmYjFiZQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318379_ODEwLTEwODAtZDhkYjFmYjFiZQ.webp",
+          "sha256": "291dec17d7c6a5190d33fbc7ff2895bce93482f8d2109c4527d3da18b4882146",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "number": 45,
+          "filename": "54318380_ODEwLTEwODAtYjhlNTAwMDNlZg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318380_ODEwLTEwODAtYjhlNTAwMDNlZg.webp",
+          "sha256": "d11158b479f43fad3da3084f49bf3fd7ce4f828a06431a35df2b7a7cdc4889e2",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "number": 45,
+          "filename": "54318381_ODEwLTEwODAtMmE4NjMyYWZhNw.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318381_ODEwLTEwODAtMmE4NjMyYWZhNw.webp",
+          "sha256": "f159460b9a8a135293277a7c5504e2e1c0332ccceec375b61abdb57662dc44c3",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "number": 45,
+          "filename": "54318382_ODEwLTEwODAtMGI5ZTZiMTQ3OA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318382_ODEwLTEwODAtMGI5ZTZiMTQ3OA.webp",
+          "sha256": "df1512e98eea816206ca2e1a55fbc0167809a95ea58ab017139959dd3001c8da",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "number": 45,
+          "filename": "54318384_ODEwLTEwODAtYWZiZGI0Mjc0Nw.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318384_ODEwLTEwODAtYWZiZGI0Mjc0Nw.webp",
+          "sha256": "1c9a45a01ca2502219425e9b6a7299d08d14624a731707bcf137de7e38125348",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "number": 45,
+          "filename": "54318385_ODEwLTEwODAtOThjNTljMWM4Nw.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318385_ODEwLTEwODAtOThjNTljMWM4Nw.webp",
+          "sha256": "1d2bbc2d32ccaa6b2e494bb6242150fbf567577731cb1e219d1258574b722852",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "number": 45,
+          "filename": "54318387_MTQ0MC0xOTIwLTg4M2ZiMzdjOTQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318387_MTQ0MC0xOTIwLTg4M2ZiMzdjOTQ.webp",
+          "sha256": "3044a56bad4f254c1771aca7f8a4aa10508bab72da4723a0660677a48189aeef",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "number": 45,
+          "filename": "54318388_MTQ0MC0xOTIwLWQwZGNjYzdhZjQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318388_MTQ0MC0xOTIwLWQwZGNjYzdhZjQ.webp",
+          "sha256": "8c5dbb6e67b526c3dce3e7749aefc97fd10be15f323b95faa79eb0563569e16e",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "number": 45,
+          "filename": "54318389_MTQ0MC0xOTIwLTQ2NmYxNTA5NmI.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318389_MTQ0MC0xOTIwLTQ2NmYxNTA5NmI.webp",
+          "sha256": "c4ae831f10c00f1514eeb974dea1034e12864344527d3c4fbe19a8b330a24588",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "number": 45,
+          "filename": "54318390_MTQ0MC0xOTIwLWNlMmFjMDlhMTQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318390_MTQ0MC0xOTIwLWNlMmFjMDlhMTQ.webp",
+          "sha256": "4d9c25c322c47c08b03f64281cdb8c6c3089c998e40e35a2306383239f1a06f2",
+          "width": 1440,
+          "height": 1920
+        },
+        {
+          "number": 45,
+          "filename": "54318392_MTQ0MC0xOTIwLWE1ZjNmMDg3Mjk.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES\\54318392_MTQ0MC0xOTIwLWE1ZjNmMDg3Mjk.webp",
+          "sha256": "dd7f6f2fd9f97597b76079b3f1ae048d644dd3e6514a0cdada886474f95dc808",
+          "width": 1440,
+          "height": 1920
+        }
+      ],
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 45 IMAGES",
+      "contacts": {
+        "primary": "+233595369794",
+        "secondary": null
+      },
+      "proposedCover": {
+        "filename": "54318389_MTQ0MC0xOTIwLTQ2NmYxNTA5NmI.webp",
+        "reason": "Visually reviewed front exterior"
+      },
+      "proposedImageOrder": [
+        "54318389_MTQ0MC0xOTIwLTQ2NmYxNTA5NmI.webp",
+        "54318378_ODEwLTEwODAtZDE2NWZiZTg1NQ.webp",
+        "54318379_ODEwLTEwODAtZDhkYjFmYjFiZQ.webp",
+        "54318380_ODEwLTEwODAtYjhlNTAwMDNlZg.webp",
+        "54318381_ODEwLTEwODAtMmE4NjMyYWZhNw.webp",
+        "54318382_ODEwLTEwODAtMGI5ZTZiMTQ3OA.webp",
+        "54318384_ODEwLTEwODAtYWZiZGI0Mjc0Nw.webp",
+        "54318385_ODEwLTEwODAtOThjNTljMWM4Nw.webp",
+        "54318387_MTQ0MC0xOTIwLTg4M2ZiMzdjOTQ.webp",
+        "54318388_MTQ0MC0xOTIwLWQwZGNjYzdhZjQ.webp",
+        "54318390_MTQ0MC0xOTIwLWNlMmFjMDlhMTQ.webp",
+        "54318392_MTQ0MC0xOTIwLWE1ZjNmMDg3Mjk.webp"
+      ],
+      "olderDocumentDifferences": {},
+      "sizeBasis": "Not specified in source",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "multi--Storey",
+          "to": "Multi Storey",
+          "reason": "Normalize obvious spelling and punctuation."
+        }
+      ],
+      "normalizedFacilities": [
+        "24-hour Electricity",
+        "Air Conditioning",
+        "Balcony",
+        "Chandelier",
+        "Dining Area",
+        "Wardrobe",
+        "Tiled Floor",
+        "Pre-Paid Meter",
+        "Pop Ceiling",
+        "Microwave",
+        "Kitchen Cabinets",
+        "Hot Water",
+        "En Suite"
+      ],
+      "importStatus": "Included in the application"
+    },
+    {
+      "number": 46,
+      "sourceHeadingParagraphIndex": 1019,
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta Amrahia",
+        "PROPERTY TYPE": "Bungalow",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "850sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 1,600,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Balcony, Dining Area, Hot Water, Kitchen Cabinets, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "Justice",
+        "CONTACT": "+233550899856 and +233550827422",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 1020,
+          "text": "PROPERTY ADDRESS = Adenta Amrahia"
+        },
+        {
+          "paragraphIndex": 1021,
+          "text": "PROPERTY TYPE = Bungalow"
+        },
+        {
+          "paragraphIndex": 1022,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 1023,
+          "text": "PROPERTY SIZE = 850sqm"
+        },
+        {
+          "paragraphIndex": 1024,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 1025,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 1026,
+          "text": "BEDROOM = 3"
+        },
+        {
+          "paragraphIndex": 1027,
+          "text": "BATHROOMS = 3"
+        },
+        {
+          "paragraphIndex": 1028,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 1029,
+          "text": "ASKING PRICE = GH₵ 1,600,000"
+        },
+        {
+          "paragraphIndex": 1030,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 1031,
+          "text": "FACILITIES = Air Conditioning, Balcony, Dining Area, Hot Water, Kitchen Cabinets, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe"
+        },
+        {
+          "paragraphIndex": 1032,
+          "text": "AGENT = Justice "
+        },
+        {
+          "paragraphIndex": 1033,
+          "text": "CONTACT= +233550899856 and +233550827422"
+        },
+        {
+          "paragraphIndex": 1034,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 1035,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 1036,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 1037,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 1038,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 1039,
+          "text": "STATUS = Available "
+        }
+      ],
+      "id": "adenta-amrahia-bungalow-justice",
+      "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "images": [
+        {
+          "number": 46,
+          "filename": "59318723_MTI4MC05NjAtNjEyZTc1NTU2Ng.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318723_MTI4MC05NjAtNjEyZTc1NTU2Ng.webp",
+          "sha256": "110f9e8d6a30a933f11dd3ea2d9e3a6809d0a7ed7cafde59b95a627a85b60c92",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "number": 46,
+          "filename": "59318726_MTYwMC0xMjAwLThlMGNjOWNmNzI.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318726_MTYwMC0xMjAwLThlMGNjOWNmNzI.webp",
+          "sha256": "b80c690fa6f64ad9312bf12fdf455a45bff60ed91a05c9ffea9d0342a8b4dd12",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "number": 46,
+          "filename": "59318727_MTIwMC0xNjAwLTFmZDBjMDdiZjE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318727_MTIwMC0xNjAwLTFmZDBjMDdiZjE.webp",
+          "sha256": "2a402ca39f8d6bcdf14ac73f07b96844c09ba060a9bccfb26e8419958f71793d",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 46,
+          "filename": "59318728_OTYwLTEyODAtMjA1M2VhYWE3NQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318728_OTYwLTEyODAtMjA1M2VhYWE3NQ.webp",
+          "sha256": "14b36cada631c849dd48cfd2e64bb7ca04266548dc91ee26e36fc6f48fb49ba4",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "number": 46,
+          "filename": "59318729_MTIwMC0xNjAwLTFmZjkzOGE3ZTk.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318729_MTIwMC0xNjAwLTFmZjkzOGE3ZTk.webp",
+          "sha256": "897acf259183fc1e0042360a40766814053c4f1a59f93870c4b1dfe95cce4b2b",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 46,
+          "filename": "59318730_MTYwMC0xMjAwLWZmM2I5NWFlZTM.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318730_MTYwMC0xMjAwLWZmM2I5NWFlZTM.webp",
+          "sha256": "fcc9e289fdb7bd6654e80d676af25e197a1da1e3bf7c70200a2b994e7de79798",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "number": 46,
+          "filename": "59318731_OTYwLTEyODAtYTA1ZmFmYTgzOQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318731_OTYwLTEyODAtYTA1ZmFmYTgzOQ.webp",
+          "sha256": "59d2786eb1716fff1b3fb99d1d1bbc9f33ef17d06d0f25705421175894a790fd",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "number": 46,
+          "filename": "59318732_MTI4MC05NjAtZDA2NzVkMWU0Yw.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318732_MTI4MC05NjAtZDA2NzVkMWU0Yw.webp",
+          "sha256": "d2b15e95205a4c00a8475cb6d873d599428a322e5679a913b9de81c4e4daf3c1",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "number": 46,
+          "filename": "59318733_MTI4MC05NjAtZjZkMGYwMWVlOA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES\\59318733_MTI4MC05NjAtZjZkMGYwMWVlOA.webp",
+          "sha256": "2c648df5c1f71768dcf4295e3b4d3b7f183a6e8e072c6619462a518ed18bd063",
+          "width": 1280,
+          "height": 960
+        }
+      ],
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 46 IMAGES",
+      "contacts": {
+        "primary": "+233508724944",
+        "secondary": null
+      },
+      "proposedCover": {
+        "filename": "59318726_MTYwMC0xMjAwLThlMGNjOWNmNzI.webp",
+        "reason": "Visually reviewed front exterior"
+      },
+      "proposedImageOrder": [
+        "59318726_MTYwMC0xMjAwLThlMGNjOWNmNzI.webp",
+        "59318723_MTI4MC05NjAtNjEyZTc1NTU2Ng.webp",
+        "59318727_MTIwMC0xNjAwLTFmZDBjMDdiZjE.webp",
+        "59318728_OTYwLTEyODAtMjA1M2VhYWE3NQ.webp",
+        "59318729_MTIwMC0xNjAwLTFmZjkzOGE3ZTk.webp",
+        "59318730_MTYwMC0xMjAwLWZmM2I5NWFlZTM.webp",
+        "59318731_OTYwLTEyODAtYTA1ZmFmYTgzOQ.webp",
+        "59318732_MTI4MC05NjAtZDA2NzVkMWU0Yw.webp",
+        "59318733_MTI4MC05NjAtZjZkMGYwMWVlOA.webp"
+      ],
+      "olderDocumentDifferences": {},
+      "sizeBasis": "Not specified in source",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "multi--Storey",
+          "to": "Single Storey",
+          "reason": "Owner confirmed Single Storey."
+        }
+      ],
+      "normalizedFacilities": [
+        "Air Conditioning",
+        "Balcony",
+        "Dining Area",
+        "Hot Water",
+        "Kitchen Cabinets",
+        "Microwave",
+        "Pop Ceiling",
+        "Pre-Paid Meter",
+        "Tiled Floor",
+        "Wardrobe"
+      ],
+      "importStatus": "Included in the application",
+      "confirmedFields": {
+        "STOREY": {
+          "value": "Single Storey",
+          "source": "Owner confirmation in conversation",
+          "date": "2026-11-04",
+          "ownerProvidedValue": "Single Storey"
+        },
+        "CONTACT": {
+          "value": "+233508724944",
+          "source": "Owner confirmation in conversation",
+          "date": "2026-11-04",
+          "ownerProvidedValue": "0508724944"
+        }
+      }
+    },
+    {
+      "number": 47,
+      "sourceHeadingParagraphIndex": 1046,
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta, Pantang Hospital",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "100sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,080,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe, En Suite Hot Water, Dishwasher",
+        "AGENT": "United Homes",
+        "CONTACT": "+233545640939",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 1047,
+          "text": "PROPERTY ADDRESS =Adenta, Pantang Hospital"
+        },
+        {
+          "paragraphIndex": 1048,
+          "text": "PROPERTY TYPE = Villa "
+        },
+        {
+          "paragraphIndex": 1049,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 1050,
+          "text": "PROPERTY SIZE = 100sqm"
+        },
+        {
+          "paragraphIndex": 1051,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 1052,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 1053,
+          "text": "BEDROOM = 4"
+        },
+        {
+          "paragraphIndex": 1054,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 1055,
+          "text": "TOILET = 4"
+        },
+        {
+          "paragraphIndex": 1056,
+          "text": "ASKING PRICE = GH₵ 2,080,000"
+        },
+        {
+          "paragraphIndex": 1057,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 1058,
+          "text": "FACILITIES = 24-hour Electricity, Air Conditioning, Balcony, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe, En Suite Hot Water, Dishwasher"
+        },
+        {
+          "paragraphIndex": 1059,
+          "text": "AGENT = United Homes  "
+        },
+        {
+          "paragraphIndex": 1060,
+          "text": "CONTACT= +233545640939"
+        },
+        {
+          "paragraphIndex": 1061,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 1062,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 1063,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 1064,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 1065,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 1066,
+          "text": "STATUS = Available "
+        }
+      ],
+      "id": "adenta-pantang-villa-unitedhomes",
+      "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "images": [
+        {
+          "number": 47,
+          "filename": "40147407_ODE5LTEwMjQtNmQyZDFlNGQ2OS0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147407_ODE5LTEwMjQtNmQyZDFlNGQ2OS0x.webp",
+          "sha256": "b0bccf8e27c447bcf6a300462cab14540e128e47fc92493ecfc9fd88018bd8fd",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147408_ODE5LTEwMjQtZTljMTAzZmViNS0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147408_ODE5LTEwMjQtZTljMTAzZmViNS0x.webp",
+          "sha256": "9fdca4ec3f7ddea1da2d74eee47b6258c0958d17e6eecea43ddf58f14599def6",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147409_ODE5LTEwMjQtZmExZGJhNjY2YS0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147409_ODE5LTEwMjQtZmExZGJhNjY2YS0x.webp",
+          "sha256": "d3a3f25e7d37d9b3e7616ea032d265725f774d3f1d59d3fda8639a9e944e0046",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147410_ODE5LTEwMjQtZTNiMWI0YTE1MS0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147410_ODE5LTEwMjQtZTNiMWI0YTE1MS0x.webp",
+          "sha256": "ba9062f038fe36f3ae4c9cefcc7924b1fe69940404cb0469af23ebc6a36c4d1d",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147411_ODE5LTEwMjQtYTdjN2RkYjMwNC0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147411_ODE5LTEwMjQtYTdjN2RkYjMwNC0x.webp",
+          "sha256": "d3c0cba580fffc36c5f51b9f129d20fd8c08cda0baba7afb7dc4e1fa7cd51a94",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147412_ODE5LTEwMjQtMjA5NmQ1YTI0Ni0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147412_ODE5LTEwMjQtMjA5NmQ1YTI0Ni0x.webp",
+          "sha256": "5834275b40f0763445b6e3687608878020a645e8eccd543d6387e4f7f830f150",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147413_ODE5LTEwMjQtNjM0MWFkMTJhNi0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147413_ODE5LTEwMjQtNjM0MWFkMTJhNi0x.webp",
+          "sha256": "696daac7feba312832fd619ed582cdbc55321fabf96eaf03d0d0beb4789e2181",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147414_ODE5LTEwMjQtZjdjODdiZjlkZS0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147414_ODE5LTEwMjQtZjdjODdiZjlkZS0x.webp",
+          "sha256": "2d6fe58a4eef52c7dd740f547da1820b6006e13408bcd77822f79cda976d9ef7",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147415_ODE5LTEwMjQtM2FlYjk4MWIzNS0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147415_ODE5LTEwMjQtM2FlYjk4MWIzNS0x.webp",
+          "sha256": "c01e663e2c25ca0662dea23ad92cd47c456082bab333d92233c24cfd8ada0c6d",
+          "width": 819,
+          "height": 1024
+        },
+        {
+          "number": 47,
+          "filename": "40147416_ODE5LTEwMjQtZWQxYzRkZTg0ZS0x.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES\\40147416_ODE5LTEwMjQtZWQxYzRkZTg0ZS0x.webp",
+          "sha256": "8257c391227f537bfe9dba7da594031f831c28402309924984ba3875d6611504",
+          "width": 819,
+          "height": 1024
+        }
+      ],
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 47 IMAGES",
+      "contacts": {
+        "primary": "+233545640939",
+        "secondary": null
+      },
+      "proposedCover": {
+        "filename": "40147407_ODE5LTEwMjQtNmQyZDFlNGQ2OS0x.webp",
+        "reason": "Visually reviewed front exterior"
+      },
+      "proposedImageOrder": [
+        "40147407_ODE5LTEwMjQtNmQyZDFlNGQ2OS0x.webp",
+        "40147408_ODE5LTEwMjQtZTljMTAzZmViNS0x.webp",
+        "40147409_ODE5LTEwMjQtZmExZGJhNjY2YS0x.webp",
+        "40147410_ODE5LTEwMjQtZTNiMWI0YTE1MS0x.webp",
+        "40147411_ODE5LTEwMjQtYTdjN2RkYjMwNC0x.webp",
+        "40147412_ODE5LTEwMjQtMjA5NmQ1YTI0Ni0x.webp",
+        "40147413_ODE5LTEwMjQtNjM0MWFkMTJhNi0x.webp",
+        "40147414_ODE5LTEwMjQtZjdjODdiZjlkZS0x.webp",
+        "40147415_ODE5LTEwMjQtM2FlYjk4MWIzNS0x.webp",
+        "40147416_ODE5LTEwMjQtZWQxYzRkZTg0ZS0x.webp"
+      ],
+      "olderDocumentDifferences": {
+        "PROPERTY ADDRESS": {
+          "Database.docx": "Adenta, Pantang Hospital",
+          "Urbanw.docx": "Adenta Aviation"
+        },
+        "PROPERTY SIZE": {
+          "Database.docx": "100sqm",
+          "Urbanw.docx": "315sqm"
+        },
+        "ASKING PRICE": {
+          "Database.docx": "GH₵ 2,080,000",
+          "Urbanw.docx": "GH₵ 4,300,000"
+        },
+        "FACILITIES": {
+          "Database.docx": "24-hour Electricity, Air Conditioning, Balcony, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe, En Suite Hot Water, Dishwasher",
+          "Urbanw.docx": "Tiled Floor, Dining Area, Pop Ceiling, Pre-Paid Meter, 24-hour Electricity, Air Conditioning, Balcony, Fitted Kitchen, Garden, Gated Community, Gym, Hot Water, Microwave, Refrigerator, Smoke Detection, Swimming Pool, TV, Wardrobe"
+        },
+        "AGENT": {
+          "Database.docx": "United Homes",
+          "Urbanw.docx": "Justice"
+        },
+        "CONTACT": {
+          "Database.docx": "+233545640939",
+          "Urbanw.docx": "+233503016162 and +233558049665"
+        }
+      },
+      "sizeBasis": "Not specified in source",
+      "normalizations": [
+        {
+          "field": "FACILITIES",
+          "from": "En Suite Hot Water",
+          "to": "En Suite, Hot Water",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "STOREY",
+          "from": "multi--Storey",
+          "to": "Multi Storey",
+          "reason": "Normalize obvious spelling and punctuation."
+        }
+      ],
+      "normalizedFacilities": [
+        "24-hour Electricity",
+        "Air Conditioning",
+        "Balcony",
+        "Kitchen Cabinets",
+        "Kitchen Shelf",
+        "Pop Ceiling",
+        "Pre-Paid Meter",
+        "Tiled Floor",
+        "Wardrobe",
+        "En Suite",
+        "Hot Water",
+        "Dishwasher"
+      ],
+      "importStatus": "Included in the application"
+    },
+    {
+      "number": 48,
+      "sourceHeadingParagraphIndex": 1074,
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta, Amanfro",
+        "PROPERTY TYPE": "Duplex",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "150 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi- Furnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "4",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 1,300,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe",
+        "AGENT": "Alorex Eng Properties",
+        "CONTACT": "+233246861716 and +233202940682",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 1075,
+          "text": "PROPERTY ADDRESS =Adenta, Amanfro"
+        },
+        {
+          "paragraphIndex": 1076,
+          "text": "PROPERTY TYPE = Duplex "
+        },
+        {
+          "paragraphIndex": 1077,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 1078,
+          "text": "PROPERTY SIZE = 150 sqm"
+        },
+        {
+          "paragraphIndex": 1079,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 1080,
+          "text": "Furnishing = Semi- Furnished"
+        },
+        {
+          "paragraphIndex": 1081,
+          "text": "BEDROOM = 3"
+        },
+        {
+          "paragraphIndex": 1082,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 1083,
+          "text": "TOILET = 4"
+        },
+        {
+          "paragraphIndex": 1084,
+          "text": "ASKING PRICE = GH₵ 1,300,000"
+        },
+        {
+          "paragraphIndex": 1085,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 1086,
+          "text": "FACILITIES = 24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe"
+        },
+        {
+          "paragraphIndex": 1087,
+          "text": "AGENT = Alorex Eng Properties "
+        },
+        {
+          "paragraphIndex": 1088,
+          "text": "CONTACT= +233246861716 and +233202940682"
+        },
+        {
+          "paragraphIndex": 1089,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 1090,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 1091,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 1092,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 1093,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 1094,
+          "text": "STATUS = Available "
+        }
+      ],
+      "id": "adenta-amanfro-duplex-alorex",
+      "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "images": [
+        {
+          "number": 48,
+          "filename": "57720585_MTIwMC0xNjAwLWZjMTM3ODljNjc.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720585_MTIwMC0xNjAwLWZjMTM3ODljNjc.webp",
+          "sha256": "dd5e1d6cda10376a9784b205743ca41de862d166a2cffbc3cb81f201ec44fcb6",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720586_MTIwMC0xNjAwLTE2NmMwNzk2NWQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720586_MTIwMC0xNjAwLTE2NmMwNzk2NWQ.webp",
+          "sha256": "65b8ae4d34c45ac1bb801d677b687bcfb5f0069e5b8bb99f60ce0e7456939e20",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720588_MTIwMC0xNjAwLTcxZTIzMGYzMzg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720588_MTIwMC0xNjAwLTcxZTIzMGYzMzg.webp",
+          "sha256": "5f0746600f657c46527e61a508ab5ee22f98644d7e0e363326cd1ee2b3483398",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720589_MTIwMC0xNjAwLWFkMjc0MTYyYjE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720589_MTIwMC0xNjAwLWFkMjc0MTYyYjE.webp",
+          "sha256": "452620acd40df8c9772ecddbfc93b17b62369aed00c160add588ad5be5cf9715",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720590_MTIwMC0xNjAwLTcyMDExNDllZDQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720590_MTIwMC0xNjAwLTcyMDExNDllZDQ.webp",
+          "sha256": "9e17a13d1ed4a020524dfb356b464815e1eb0c36dde0071cbcb1d2562d92b2eb",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720592_MTIwMC0xNjAwLWI2OGFmYzI5NmY.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720592_MTIwMC0xNjAwLWI2OGFmYzI5NmY.webp",
+          "sha256": "a7c631a40cda66fac77e572c694546311d466a065c0c080eaa42c0750becdefd",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720593_MTIwMC0xNjAwLWQ0ZGE2Yjc0MTk.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720593_MTIwMC0xNjAwLWQ0ZGE2Yjc0MTk.webp",
+          "sha256": "1dee4e57db06ec91d5a63283f88754dfbf09e730ecda4f83cd877606b398d29e",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720594_MTIwMC0xNjAwLWU3NjI2NDYwMTM.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720594_MTIwMC0xNjAwLWU3NjI2NDYwMTM.webp",
+          "sha256": "68dbd794fbe1591437e5b988ecb9cf94b2e1668713412cce37ac2ccf1fa3a5e4",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720595_MTIwMC0xNjAwLTNjYTE2NWQ3NjM.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720595_MTIwMC0xNjAwLTNjYTE2NWQ3NjM.webp",
+          "sha256": "f841be73bebd65ce9581253037614f969ab0802108c4947b015656ced78ea0ac",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720596_MTIwMC0xNjAwLWE1ZWE1Y2E2MWQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720596_MTIwMC0xNjAwLWE1ZWE1Y2E2MWQ.webp",
+          "sha256": "63d9dbe2aac90ba2ed35348575f18b954829c17526611cfc2dfcfb0e78e07abf",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720597_MTIwMC0xNjAwLWUyMWM4OTlmMTY.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720597_MTIwMC0xNjAwLWUyMWM4OTlmMTY.webp",
+          "sha256": "ff8448cf2af6ed582f9d11c77d3a8e60019440a1edabfaed1e711e13bf3356f0",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720598_MTIwMC0xNjAwLWMzMTIwZGUxYzM.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720598_MTIwMC0xNjAwLWMzMTIwZGUxYzM.webp",
+          "sha256": "bc49a942246045f93e989135aac60a5c1eb1bce572b251356cb33f302c6be848",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720599_MTIwMC0xNjAwLWUwMWI5OGRiYjY.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720599_MTIwMC0xNjAwLWUwMWI5OGRiYjY.webp",
+          "sha256": "d26c58bab89b33718d5c8207211817627305b527b393e3eb894d64de02aafeee",
+          "width": 1200,
+          "height": 1600
+        },
+        {
+          "number": 48,
+          "filename": "57720600_MTIwMC0xNjAwLWM2M2RhNTU2OTk.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES\\57720600_MTIwMC0xNjAwLWM2M2RhNTU2OTk.webp",
+          "sha256": "1450bb0375d45b66eae134ef44c6a657ef1baf0f758002fbf21a550be35b65a7",
+          "width": 1200,
+          "height": 1600
+        }
+      ],
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 48 IMAGES",
+      "contacts": {
+        "primary": "+233246861716",
+        "secondary": "+233202940682"
+      },
+      "proposedCover": {
+        "filename": "57720585_MTIwMC0xNjAwLWZjMTM3ODljNjc.webp",
+        "reason": "Visually reviewed front exterior"
+      },
+      "proposedImageOrder": [
+        "57720585_MTIwMC0xNjAwLWZjMTM3ODljNjc.webp",
+        "57720586_MTIwMC0xNjAwLTE2NmMwNzk2NWQ.webp",
+        "57720588_MTIwMC0xNjAwLTcxZTIzMGYzMzg.webp",
+        "57720589_MTIwMC0xNjAwLWFkMjc0MTYyYjE.webp",
+        "57720590_MTIwMC0xNjAwLTcyMDExNDllZDQ.webp",
+        "57720592_MTIwMC0xNjAwLWI2OGFmYzI5NmY.webp",
+        "57720593_MTIwMC0xNjAwLWQ0ZGE2Yjc0MTk.webp",
+        "57720594_MTIwMC0xNjAwLWU3NjI2NDYwMTM.webp",
+        "57720595_MTIwMC0xNjAwLTNjYTE2NWQ3NjM.webp",
+        "57720596_MTIwMC0xNjAwLWE1ZWE1Y2E2MWQ.webp",
+        "57720597_MTIwMC0xNjAwLWUyMWM4OTlmMTY.webp",
+        "57720598_MTIwMC0xNjAwLWMzMTIwZGUxYzM.webp",
+        "57720599_MTIwMC0xNjAwLWUwMWI5OGRiYjY.webp",
+        "57720600_MTIwMC0xNjAwLWM2M2RhNTU2OTk.webp"
+      ],
+      "olderDocumentDifferences": {
+        "PROPERTY ADDRESS": {
+          "Database.docx": "Adenta, Amanfro",
+          "Urbanw.docx": "Adenta Aviation"
+        },
+        "PROPERTY TYPE": {
+          "Database.docx": "Duplex",
+          "Urbanw.docx": "Bungalow"
+        },
+        "PROPERTY SIZE": {
+          "Database.docx": "150 sqm",
+          "Urbanw.docx": "850sqm"
+        },
+        "FURNISHING": {
+          "Database.docx": "Semi- Furnished",
+          "Urbanw.docx": "Unfurnished"
+        },
+        "BATHROOMS": {
+          "Database.docx": "4",
+          "Urbanw.docx": "3"
+        },
+        "TOILET": {
+          "Database.docx": "4",
+          "Urbanw.docx": "5"
+        },
+        "ASKING PRICE": {
+          "Database.docx": "GH₵ 1,300,000",
+          "Urbanw.docx": "GH₵ 1,600,000"
+        },
+        "FACILITIES": {
+          "Database.docx": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area, Dishwasher, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Sectionals, Tiled Floor, Wardrobe",
+          "Urbanw.docx": "Air Conditioning, Balcony, Dining Area, Hot Water, Kitchen Cabinets, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe"
+        },
+        "AGENT": {
+          "Database.docx": "Alorex Eng Properties",
+          "Urbanw.docx": "Justice"
+        },
+        "CONTACT": {
+          "Database.docx": "+233246861716 and +233202940682",
+          "Urbanw.docx": "+233550899856 and +233550827422"
+        }
+      },
+      "sizeBasis": "Not specified in source",
+      "normalizations": [
+        {
+          "field": "FURNISHING",
+          "from": "Semi- Furnished",
+          "to": "Semi-Furnished",
+          "reason": "Normalize capitalization and hyphen spacing."
+        },
+        {
+          "field": "STOREY",
+          "from": "multi--Storey",
+          "to": "Multi Storey",
+          "reason": "Normalize obvious spelling and punctuation."
+        }
+      ],
+      "normalizedFacilities": [
+        "24-hour Electricity",
+        "Air Conditioning",
+        "Balcony",
+        "Chandelier",
+        "Dining Area",
+        "Dishwasher",
+        "En Suite",
+        "Hot Water",
+        "Kitchen Cabinets",
+        "Kitchen Shelf",
+        "Pop Ceiling",
+        "Pre-Paid Meter",
+        "Sectionals",
+        "Tiled Floor",
+        "Wardrobe"
+      ],
+      "importStatus": "Included in the application"
+    },
+    {
+      "number": 49,
+      "sourceHeadingParagraphIndex": 1102,
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta-Lakeside Estate",
+        "PROPERTY TYPE": "Bungalow",
+        "STOREY": "Single i--Storey",
+        "PROPERTY SIZE": "150sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-furnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 1,800,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area En Suite Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Sectionals, Wardrobe, Wi-Fi",
+        "AGENT": "Charclem Ventures",
+        "CONTACT": "+233591558402",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 1103,
+          "text": "PROPERTY ADDRESS = Adenta-Lakeside Estate"
+        },
+        {
+          "paragraphIndex": 1104,
+          "text": "PROPERTY TYPE = Bungalow"
+        },
+        {
+          "paragraphIndex": 1105,
+          "text": "STOREY = Single i--Storey"
+        },
+        {
+          "paragraphIndex": 1106,
+          "text": "PROPERTY SIZE = 150sqm"
+        },
+        {
+          "paragraphIndex": 1107,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 1108,
+          "text": "Furnishing = Semi-furnished"
+        },
+        {
+          "paragraphIndex": 1109,
+          "text": "BEDROOM = 3"
+        },
+        {
+          "paragraphIndex": 1110,
+          "text": "BATHROOMS = 3"
+        },
+        {
+          "paragraphIndex": 1111,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 1112,
+          "text": "ASKING PRICE = GH₵ 1,800,000"
+        },
+        {
+          "paragraphIndex": 1113,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 1114,
+          "text": "FACILITIES = 24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area En Suite Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Sectionals, Wardrobe, Wi-Fi"
+        },
+        {
+          "paragraphIndex": 1115,
+          "text": "AGENT = Charclem Ventures"
+        },
+        {
+          "paragraphIndex": 1116,
+          "text": "CONTACT= +233591558402"
+        },
+        {
+          "paragraphIndex": 1117,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 1118,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 1119,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 1120,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 1121,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 1122,
+          "text": "STATUS = Available "
+        }
+      ],
+      "id": "adenta-lakeside-bungalow-charclem",
+      "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "images": [
+        {
+          "number": 49,
+          "filename": "59237499_MTA4MC0xNDQwLTY0MzYyNDFmMTc.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237499_MTA4MC0xNDQwLTY0MzYyNDFmMTc.webp",
+          "sha256": "5a6b5088d4b696629ea83111893d2058f460fb4d781668c4687fe911ffbd8b86",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237500_MTA4MC0xNDQwLTU3ODM3NDk5YTU.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237500_MTA4MC0xNDQwLTU3ODM3NDk5YTU.webp",
+          "sha256": "8cd134ff54e2b98c20303e0622387725d47cc8aaa9dc80d663310aefb69f90a4",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237501_MTA4MC0xNDQwLTFmOTk5NWE1MTU.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237501_MTA4MC0xNDQwLTFmOTk5NWE1MTU.webp",
+          "sha256": "9b54a33c3124b76144f863b35608d749df8c5d86ae4a655ebb64657fc4145a02",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237502_MTA4MC0xNDQwLWUxZmFiMTk3MTc.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237502_MTA4MC0xNDQwLWUxZmFiMTk3MTc.webp",
+          "sha256": "3f70ca756506016d2afc51f2e33d1ac908a2c7c15108e546e264d2be012315d1",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237503_MTA4MC0xNDQwLTJiYWMxNjVkMzc.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237503_MTA4MC0xNDQwLTJiYWMxNjVkMzc.webp",
+          "sha256": "a844c6d307a1bd9f493a057e0a2551ca2a688c7372c96cbb78859c635be076b3",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237504_MTA4MC0xNDQwLTQ0NTQ0NzA5MjY.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237504_MTA4MC0xNDQwLTQ0NTQ0NzA5MjY.webp",
+          "sha256": "cbfc6c9b7b60b9481ab87e4432e5c2bdbcc8422899a874fefbd455e5eaee525a",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237505_MTA4MC0xNDQwLTM0NjFjZGQyNTY.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237505_MTA4MC0xNDQwLTM0NjFjZGQyNTY.webp",
+          "sha256": "f6633f512bef5a2cb313e5b469f9c6b1b35f5cf3be1de619a99f09ab80f642ce",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237506_MTA4MC0xNDQwLTRmMDMyOGM2Nzg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237506_MTA4MC0xNDQwLTRmMDMyOGM2Nzg.webp",
+          "sha256": "82e018d4fe12afab10381610a76a01ba72b94d499de6c62d379cc211208bfb21",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237507_MTA4MC0xNDQwLTc3MWY5YzYzMWE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237507_MTA4MC0xNDQwLTc3MWY5YzYzMWE.webp",
+          "sha256": "e53f630f041d3359f172415d48c9e1186b4c4c96f454866456f24c4362170a40",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237508_MTA4MC0xNDQwLTcwZDllMmNlYTk.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237508_MTA4MC0xNDQwLTcwZDllMmNlYTk.webp",
+          "sha256": "f08bf012e008690354628e6950d1e3a4edb9104cdfa1681882db454f1f0d9a50",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "number": 49,
+          "filename": "59237510_MTA4MC0xNDQwLTljM2UzYjlmOGI.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES\\59237510_MTA4MC0xNDQwLTljM2UzYjlmOGI.webp",
+          "sha256": "0842d82dc5527f5bfd36bf29b5d03213360fc4179fafd915d203b314c07fd1c1",
+          "width": 1080,
+          "height": 1440
+        }
+      ],
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 49 IMAGES",
+      "contacts": {
+        "primary": "+233591558402",
+        "secondary": null
+      },
+      "proposedCover": {
+        "filename": "59237499_MTA4MC0xNDQwLTY0MzYyNDFmMTc.webp",
+        "reason": "Visually reviewed front exterior"
+      },
+      "proposedImageOrder": [
+        "59237499_MTA4MC0xNDQwLTY0MzYyNDFmMTc.webp",
+        "59237500_MTA4MC0xNDQwLTU3ODM3NDk5YTU.webp",
+        "59237501_MTA4MC0xNDQwLTFmOTk5NWE1MTU.webp",
+        "59237502_MTA4MC0xNDQwLWUxZmFiMTk3MTc.webp",
+        "59237503_MTA4MC0xNDQwLTJiYWMxNjVkMzc.webp",
+        "59237504_MTA4MC0xNDQwLTQ0NTQ0NzA5MjY.webp",
+        "59237505_MTA4MC0xNDQwLTM0NjFjZGQyNTY.webp",
+        "59237506_MTA4MC0xNDQwLTRmMDMyOGM2Nzg.webp",
+        "59237507_MTA4MC0xNDQwLTc3MWY5YzYzMWE.webp",
+        "59237508_MTA4MC0xNDQwLTcwZDllMmNlYTk.webp",
+        "59237510_MTA4MC0xNDQwLTljM2UzYjlmOGI.webp"
+      ],
+      "olderDocumentDifferences": {
+        "PROPERTY ADDRESS": {
+          "Database.docx": "Adenta-Lakeside Estate",
+          "Urbanw.docx": "Adenta Amrahia"
+        },
+        "STOREY": {
+          "Database.docx": "Single i--Storey",
+          "Urbanw.docx": "multi--Storey"
+        },
+        "PROPERTY SIZE": {
+          "Database.docx": "150sqm",
+          "Urbanw.docx": "850sqm"
+        },
+        "FURNISHING": {
+          "Database.docx": "Semi-furnished",
+          "Urbanw.docx": "Unfurnished"
+        },
+        "ASKING PRICE": {
+          "Database.docx": "GH₵ 1,800,000",
+          "Urbanw.docx": "GH₵ 1,600,000"
+        },
+        "FACILITIES": {
+          "Database.docx": "24-hour Electricity, Air Conditioning, Balcony, Chandelier, Dining Area En Suite Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Sectionals, Wardrobe, Wi-Fi",
+          "Urbanw.docx": "Air Conditioning, Balcony, Dining Area, Hot Water, Kitchen Cabinets, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe"
+        },
+        "AGENT": {
+          "Database.docx": "Charclem Ventures",
+          "Urbanw.docx": "Justice"
+        },
+        "CONTACT": {
+          "Database.docx": "+233591558402",
+          "Urbanw.docx": "+233550899856 and +233550827422"
+        }
+      },
+      "sizeBasis": "Not specified in source",
+      "normalizations": [
+        {
+          "field": "FACILITIES",
+          "from": "Dining Area En Suite Hot Water",
+          "to": "Dining Area, En Suite, Hot Water",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FURNISHING",
+          "from": "Semi-furnished",
+          "to": "Semi-Furnished",
+          "reason": "Normalize capitalization and hyphen spacing."
+        },
+        {
+          "field": "STOREY",
+          "from": "Single i--Storey",
+          "to": "Single Storey",
+          "reason": "Normalize obvious spelling and punctuation."
+        }
+      ],
+      "normalizedFacilities": [
+        "24-hour Electricity",
+        "Air Conditioning",
+        "Balcony",
+        "Chandelier",
+        "Dining Area",
+        "En Suite",
+        "Hot Water",
+        "Kitchen Cabinets",
+        "Kitchen Shelf",
+        "Microwave",
+        "Pop Ceiling",
+        "Pre-Paid Meter",
+        "Tiled Floor",
+        "Sectionals",
+        "Wardrobe",
+        "Wi-Fi"
+      ],
+      "importStatus": "Included in the application"
+    },
+    {
+      "number": 50,
+      "sourceHeadingParagraphIndex": 1129,
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "3500sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Semi-furnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 4,320,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen Cabinets, Tiled Floor, Wardrobe, Swimming Pool Sectionals, Refrigerator, Pre-Paid Meter, Microwave, Hot Water Gym, Gated Community, Garden, En Suite Chandelier, Balcony Air Conditioning, 24-hour Electricity Pop Ceiling, 24-hour Electricity Dining Area",
+        "AGENT": "Dollar Dream Estates",
+        "CONTACT": "+233595369794",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 1130,
+          "text": "PROPERTY ADDRESS = Adenta "
+        },
+        {
+          "paragraphIndex": 1131,
+          "text": "PROPERTY TYPE = Villa"
+        },
+        {
+          "paragraphIndex": 1132,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 1133,
+          "text": "PROPERTY SIZE = 3500sqm"
+        },
+        {
+          "paragraphIndex": 1134,
+          "text": "Condition = Newly Built "
+        },
+        {
+          "paragraphIndex": 1135,
+          "text": "Furnishing = Semi-furnished"
+        },
+        {
+          "paragraphIndex": 1136,
+          "text": "BEDROOM = 4"
+        },
+        {
+          "paragraphIndex": 1137,
+          "text": "BATHROOMS = 4"
+        },
+        {
+          "paragraphIndex": 1138,
+          "text": "TOILET = 5"
+        },
+        {
+          "paragraphIndex": 1139,
+          "text": "ASKING PRICE = GH₵ 4,320,000"
+        },
+        {
+          "paragraphIndex": 1140,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 1141,
+          "text": "FACILITIES = Kitchen Cabinets, Tiled Floor, Wardrobe, Swimming Pool Sectionals, Refrigerator, Pre-Paid Meter, Microwave, Hot Water Gym, Gated Community, Garden, En Suite Chandelier, Balcony Air Conditioning, 24-hour Electricity Pop Ceiling, 24-hour Electricity Dining Area"
+        },
+        {
+          "paragraphIndex": 1142,
+          "text": " AGENT = Dollar Dream Estates "
+        },
+        {
+          "paragraphIndex": 1143,
+          "text": "CONTACT= +233595369794"
+        },
+        {
+          "paragraphIndex": 1144,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 1145,
+          "text": "ECO RATING = D"
+        },
+        {
+          "paragraphIndex": 1146,
+          "text": "GREEN FEATURES = Balcony"
+        },
+        {
+          "paragraphIndex": 1147,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 1148,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 1149,
+          "text": "STATUS = Available "
+        }
+      ],
+      "id": "adenta-villa-dollardream",
+      "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "images": [
+        {
+          "number": 50,
+          "filename": "61652300_MTYwMC0yMTM0LWZmODAxMWJmNmE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652300_MTYwMC0yMTM0LWZmODAxMWJmNmE.webp",
+          "sha256": "78855349e14aa2c063b758988ef5041eddcdeeaa1928ad2c1ae4fd452c1cd7f2",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652302_MTYwMC0yMTM0LTUxZDgyZTE5ZjE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652302_MTYwMC0yMTM0LTUxZDgyZTE5ZjE.webp",
+          "sha256": "0295ed2349878cc29429a13b9d9290a400b89ccd4c7ab7369c67b15af878c656",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652303_MTYwMC0yMTM0LTg1ZGVjYjQzZjU.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652303_MTYwMC0yMTM0LTg1ZGVjYjQzZjU.webp",
+          "sha256": "eff22f18d805b979db131fa083c3605aa00b4153bfba18acd7691921bb864472",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652304_MTYwMC0yMTM0LTM2Yjc2MTVlZWE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652304_MTYwMC0yMTM0LTM2Yjc2MTVlZWE.webp",
+          "sha256": "a2bc3d5a8feddbfb76b5d45459a684f33f2c54d2b395cb26eafafa7dfb8a15de",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652305_MTYwMC0yMTM0LWYyYjczOTk2Yzc.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652305_MTYwMC0yMTM0LWYyYjczOTk2Yzc.webp",
+          "sha256": "046f29dcbe8385f2926759d1fc8ff28962a9f7e24dd2922b799d5bead155e256",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652306_MTYwMC0yMTM0LTc1NjAzYTNkMTE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652306_MTYwMC0yMTM0LTc1NjAzYTNkMTE.webp",
+          "sha256": "71090f1002ae462b8b647a130af0de703d439de052ef75ea1dcfe4a97b9b1819",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652308_MTYwMC0yMTM0LTE0MTc1YWZkODc.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652308_MTYwMC0yMTM0LTE0MTc1YWZkODc.webp",
+          "sha256": "5fcb7d14417928ee1a4539e26a51e38f27803a81a31b7bf88c3320d023e7e063",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652309_MTYwMC0yMTM0LTEwMzA3M2JjZDg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652309_MTYwMC0yMTM0LTEwMzA3M2JjZDg.webp",
+          "sha256": "eb37915b1b91ec67d61e4bb4052e14faedb23ea0ba490fc897431ba01c50597a",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652311_MTYwMC0yMTM0LTgwMDEyNjc3MGE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652311_MTYwMC0yMTM0LTgwMDEyNjc3MGE.webp",
+          "sha256": "586fefd910357975d13807c05317c8aed89b002f9ab0e247b3800f99214db852",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652312_MTYwMC0yMTM0LWJkNTJhNmZkNTA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652312_MTYwMC0yMTM0LWJkNTJhNmZkNTA.webp",
+          "sha256": "beae35d2ff31e41524f9e7fb123e4ed55d53da5ff9aff656ae7806857f308c08",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652313_MTYwMC0yMTM0LWNkY2RjNGY3NjQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652313_MTYwMC0yMTM0LWNkY2RjNGY3NjQ.webp",
+          "sha256": "c5c5e850aa0a2e91ea93a29fa98116fcbfb71d0616d2bfadf2cacf5778e18ada",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652314_MTYwMC0yMTM0LTZiNmRlOWIwNTQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652314_MTYwMC0yMTM0LTZiNmRlOWIwNTQ.webp",
+          "sha256": "c4b47363aa96ad00f33c37ad3f64dbb7c47da82495d26ac96fbda9a9213181ae",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652316_MTYwMC0yMTM0LTE3ZjgxOWY2OGM.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652316_MTYwMC0yMTM0LTE3ZjgxOWY2OGM.webp",
+          "sha256": "629aaf07f3dfc6e17ae85b29e524e4ea0e78f4fb7798b3de725686bf5d44f6f2",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652317_MTYwMC0yMTM0LTEzZjJkMGU5YWQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652317_MTYwMC0yMTM0LTEzZjJkMGU5YWQ.webp",
+          "sha256": "ffb527f14e31e413a282a341afa8a391e12e27c7f0ec035be138da4153b03cf8",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652318_MTYwMC0yMTM0LTA4MzkyMTQ2YzU.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652318_MTYwMC0yMTM0LTA4MzkyMTQ2YzU.webp",
+          "sha256": "2071f6af0dc114ee7fb0884d770d102b41e2354adbcf625f38fd4f605ee80f93",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652319_MTYwMC0yMTM0LWNmYWM4ODUwZjQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652319_MTYwMC0yMTM0LWNmYWM4ODUwZjQ.webp",
+          "sha256": "37e06a5aa76ec6be653a8d9f3139dab8d0c46001b4f2d8689ee2924113def001",
+          "width": 1600,
+          "height": 2134
+        },
+        {
+          "number": 50,
+          "filename": "61652321_MTYwMC0yMTM0LTNiN2VmNDBkMGY.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES\\61652321_MTYwMC0yMTM0LTNiN2VmNDBkMGY.webp",
+          "sha256": "7a4a62957dfb53c6e24b6554355458a1b00d58dac3d1f949cffd3ef0f5b504eb",
+          "width": 1600,
+          "height": 2134
+        }
+      ],
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 50 IMAGES",
+      "contacts": {
+        "primary": "+233595369794",
+        "secondary": null
+      },
+      "proposedCover": {
+        "filename": "61652306_MTYwMC0yMTM0LTc1NjAzYTNkMTE.webp",
+        "reason": "Visually reviewed front exterior"
+      },
+      "proposedImageOrder": [
+        "61652306_MTYwMC0yMTM0LTc1NjAzYTNkMTE.webp",
+        "61652300_MTYwMC0yMTM0LWZmODAxMWJmNmE.webp",
+        "61652302_MTYwMC0yMTM0LTUxZDgyZTE5ZjE.webp",
+        "61652303_MTYwMC0yMTM0LTg1ZGVjYjQzZjU.webp",
+        "61652304_MTYwMC0yMTM0LTM2Yjc2MTVlZWE.webp",
+        "61652305_MTYwMC0yMTM0LWYyYjczOTk2Yzc.webp",
+        "61652308_MTYwMC0yMTM0LTE0MTc1YWZkODc.webp",
+        "61652309_MTYwMC0yMTM0LTEwMzA3M2JjZDg.webp",
+        "61652311_MTYwMC0yMTM0LTgwMDEyNjc3MGE.webp",
+        "61652312_MTYwMC0yMTM0LWJkNTJhNmZkNTA.webp",
+        "61652313_MTYwMC0yMTM0LWNkY2RjNGY3NjQ.webp",
+        "61652314_MTYwMC0yMTM0LTZiNmRlOWIwNTQ.webp",
+        "61652316_MTYwMC0yMTM0LTE3ZjgxOWY2OGM.webp",
+        "61652317_MTYwMC0yMTM0LTEzZjJkMGU5YWQ.webp",
+        "61652318_MTYwMC0yMTM0LTA4MzkyMTQ2YzU.webp",
+        "61652319_MTYwMC0yMTM0LWNmYWM4ODUwZjQ.webp",
+        "61652321_MTYwMC0yMTM0LTNiN2VmNDBkMGY.webp"
+      ],
+      "olderDocumentDifferences": {
+        "PROPERTY ADDRESS": {
+          "Database.docx": "Adenta",
+          "Urbanw.docx": "Adenta Amrahia"
+        },
+        "PROPERTY TYPE": {
+          "Database.docx": "Villa",
+          "Urbanw.docx": "Bungalow"
+        },
+        "PROPERTY SIZE": {
+          "Database.docx": "3500sqm",
+          "Urbanw.docx": "850sqm"
+        },
+        "FURNISHING": {
+          "Database.docx": "Semi-furnished",
+          "Urbanw.docx": "Unfurnished"
+        },
+        "BEDROOM": {
+          "Database.docx": "4",
+          "Urbanw.docx": "3"
+        },
+        "BATHROOMS": {
+          "Database.docx": "4",
+          "Urbanw.docx": "3"
+        },
+        "ASKING PRICE": {
+          "Database.docx": "GH₵ 4,320,000",
+          "Urbanw.docx": "GH₵ 1,600,000"
+        },
+        "FACILITIES": {
+          "Database.docx": "Kitchen Cabinets, Tiled Floor, Wardrobe, Swimming Pool Sectionals, Refrigerator, Pre-Paid Meter, Microwave, Hot Water Gym, Gated Community, Garden, En Suite Chandelier, Balcony Air Conditioning, 24-hour Electricity Pop Ceiling, 24-hour Electricity Dining Area",
+          "Urbanw.docx": "Air Conditioning, Balcony, Dining Area, Hot Water, Kitchen Cabinets, Microwave, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe"
+        },
+        "AGENT": {
+          "Database.docx": "Dollar Dream Estates",
+          "Urbanw.docx": "Justice"
+        },
+        "CONTACT": {
+          "Database.docx": "+233595369794",
+          "Urbanw.docx": "+233550899856 and +233550827422"
+        }
+      },
+      "sizeBasis": "Not specified in source",
+      "normalizations": [
+        {
+          "field": "FACILITIES",
+          "from": "Swimming Pool Sectionals",
+          "to": "Swimming Pool, Sectionals",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "from": "Hot Water Gym",
+          "to": "Hot Water, Gym",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "from": "En Suite Chandelier",
+          "to": "En Suite, Chandelier",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "from": "Balcony Air Conditioning",
+          "to": "Balcony, Air Conditioning",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "from": "24-hour Electricity Pop Ceiling",
+          "to": "24-hour Electricity, Pop Ceiling",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "from": "24-hour Electricity Dining Area",
+          "to": "24-hour Electricity, Dining Area",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "reason": "Remove repeated identical amenities."
+        },
+        {
+          "field": "FURNISHING",
+          "from": "Semi-furnished",
+          "to": "Semi-Furnished",
+          "reason": "Normalize capitalization and hyphen spacing."
+        },
+        {
+          "field": "STOREY",
+          "from": "multi--Storey",
+          "to": "Multi Storey",
+          "reason": "Normalize obvious spelling and punctuation."
+        }
+      ],
+      "normalizedFacilities": [
+        "Kitchen Cabinets",
+        "Tiled Floor",
+        "Wardrobe",
+        "Swimming Pool",
+        "Sectionals",
+        "Refrigerator",
+        "Pre-Paid Meter",
+        "Microwave",
+        "Hot Water",
+        "Gym",
+        "Gated Community",
+        "Garden",
+        "En Suite",
+        "Chandelier",
+        "Balcony",
+        "Air Conditioning",
+        "24-hour Electricity",
+        "Pop Ceiling",
+        "Dining Area"
+      ],
+      "importStatus": "Included in the application"
+    },
+    {
+      "number": 51,
+      "sourceHeadingParagraphIndex": 1156,
+      "fields": {
+        "PROPERTY ADDRESS": "Adenta, SDA",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "multi--Storey",
+        "PROPERTY SIZE": "100sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "10",
+        "BATHROOMS": "10",
+        "TOILET": "10",
+        "ASKING PRICE": "GH₵ 4,00,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Dining Area, Tiled Floor, 24-hour Electricity, POP Ceiling, Pre-Paid Meter, 24-hour Electricity, Air Conditioning, Balcony, Borehole, CCTV Children's Play Area Dishwasher, En Suite Bathroom, Fitted Kitchen, Garden, Gated Community, Hot Water, Pre-Paid Meter Wardrobe",
+        "AGENT": "United Homes",
+        "CONTACT": "+233545640939",
+        "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+        "ECO RATING": "C",
+        "GREEN FEATURES": "Balcony, Garden",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceFieldParagraphs": [
+        {
+          "paragraphIndex": 1157,
+          "text": "PROPERTY ADDRESS = Adenta, SDA "
+        },
+        {
+          "paragraphIndex": 1158,
+          "text": "PROPERTY TYPE = Apartment "
+        },
+        {
+          "paragraphIndex": 1159,
+          "text": "STOREY = multi--Storey"
+        },
+        {
+          "paragraphIndex": 1160,
+          "text": "PROPERTY SIZE = 100sqm"
+        },
+        {
+          "paragraphIndex": 1161,
+          "text": "Condition = Fairly Used "
+        },
+        {
+          "paragraphIndex": 1162,
+          "text": "Furnishing = Unfurnished"
+        },
+        {
+          "paragraphIndex": 1163,
+          "text": "BEDROOM = 10"
+        },
+        {
+          "paragraphIndex": 1164,
+          "text": "BATHROOMS = 10"
+        },
+        {
+          "paragraphIndex": 1165,
+          "text": "TOILET = 10"
+        },
+        {
+          "paragraphIndex": 1166,
+          "text": "ASKING PRICE = GH₵ 4,00,000"
+        },
+        {
+          "paragraphIndex": 1167,
+          "text": "PROPERTY STYLE = Detached "
+        },
+        {
+          "paragraphIndex": 1168,
+          "text": "FACILITIES = Dining Area, Tiled Floor, 24-hour Electricity, POP Ceiling, Pre-Paid Meter, 24-hour Electricity, Air Conditioning, Balcony, Borehole, CCTV Children's Play Area Dishwasher, En Suite Bathroom, Fitted Kitchen, Garden, Gated Community, Hot Water, Pre-Paid Meter Wardrobe"
+        },
+        {
+          "paragraphIndex": 1169,
+          "text": " AGENT = United Homes "
+        },
+        {
+          "paragraphIndex": 1170,
+          "text": "CONTACT= +233545640939"
+        },
+        {
+          "paragraphIndex": 1171,
+          "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+        },
+        {
+          "paragraphIndex": 1172,
+          "text": "ECO RATING = C"
+        },
+        {
+          "paragraphIndex": 1173,
+          "text": "GREEN FEATURES = Balcony, Garden "
+        },
+        {
+          "paragraphIndex": 1174,
+          "text": "TENURE = Leasehold "
+        },
+        {
+          "paragraphIndex": 1175,
+          "text": "Remaining Lease Terms = Not specified "
+        },
+        {
+          "paragraphIndex": 1176,
+          "text": "STATUS = Available "
+        }
+      ],
+      "id": "adenta-sda-apartment-unitedhomes",
+      "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+      "images": [
+        {
+          "number": 51,
+          "filename": "62147122_ODI3LTU4MS00N2I3ZjU0Nzlh.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 51MAGES\\62147122_ODI3LTU4MS00N2I3ZjU0Nzlh.webp",
+          "sha256": "3fd403eddac33f9ceb48187dcc6b07d90bafc8aa748d67eeaeb09f114ea4febd",
+          "width": 827,
+          "height": 581
+        },
+        {
+          "number": 51,
+          "filename": "62147123_NTI4LTY1NC02MzU0MDVlNTdm.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 51MAGES\\62147123_NTI4LTY1NC02MzU0MDVlNTdm.webp",
+          "sha256": "d39d58e8139d0cac8361f000e4caefea6c9906edad3ed6366463c2de21cb1c49",
+          "width": 528,
+          "height": 654
+        },
+        {
+          "number": 51,
+          "filename": "62147124_ODcwLTU4MS04Mjc0NGU3MTVm.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 51MAGES\\62147124_ODcwLTU4MS04Mjc0NGU3MTVm.webp",
+          "sha256": "1d8bf227fd14464b55df916c0d4d93a98a66cbce388d9f823e4096e94abe00f6",
+          "width": 870,
+          "height": 581
+        },
+        {
+          "number": 51,
+          "filename": "62147125_ODY0LTU4MS0wY2EzOTcxYzU2.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 51MAGES\\62147125_ODY0LTU4MS0wY2EzOTcxYzU2.webp",
+          "sha256": "c81b8feb51b3ce3aa20ed31d0d913a76afd0b3ff7000e7b0a77e8a743556d483",
+          "width": 864,
+          "height": 581
+        },
+        {
+          "number": 51,
+          "filename": "62147126_OTY5LTcyNS0yYzVlZjY5YjRh.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 51MAGES\\62147126_OTY5LTcyNS0yYzVlZjY5YjRh.webp",
+          "sha256": "9f8abd8d5131076e3abcf2a5bd5e8654abeb4729d5d1ec79873a6c1a831aa5d8",
+          "width": 969,
+          "height": 725
+        }
+      ],
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 51MAGES",
+      "contacts": {
+        "primary": "+233545640939",
+        "secondary": null
+      },
+      "proposedCover": {
+        "filename": "62147122_ODI3LTU4MS00N2I3ZjU0Nzlh.webp",
+        "reason": "Visually reviewed front exterior"
+      },
+      "proposedImageOrder": [
+        "62147122_ODI3LTU4MS00N2I3ZjU0Nzlh.webp",
+        "62147123_NTI4LTY1NC02MzU0MDVlNTdm.webp",
+        "62147124_ODcwLTU4MS04Mjc0NGU3MTVm.webp",
+        "62147125_ODY0LTU4MS0wY2EzOTcxYzU2.webp",
+        "62147126_OTY5LTcyNS0yYzVlZjY5YjRh.webp"
+      ],
+      "olderDocumentDifferences": {},
+      "sizeBasis": "Not specified in source",
+      "normalizations": [
+        {
+          "field": "FACILITIES",
+          "from": "CCTV Children's Play Area Dishwasher",
+          "to": "CCTV, Children's Play Area, Dishwasher",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "from": "Pre-Paid Meter Wardrobe",
+          "to": "Pre-Paid Meter, Wardrobe",
+          "reason": "Restore missing amenity separators; no amenity added."
+        },
+        {
+          "field": "FACILITIES",
+          "reason": "Remove repeated identical amenities."
+        },
+        {
+          "field": "STOREY",
+          "from": "multi--Storey",
+          "to": "Multi Storey",
+          "reason": "Normalize obvious spelling and punctuation."
+        }
+      ],
+      "normalizedFacilities": [
+        "Dining Area",
+        "Tiled Floor",
+        "24-hour Electricity",
+        "Pop Ceiling",
+        "Pre-Paid Meter",
+        "Air Conditioning",
+        "Balcony",
+        "Borehole",
+        "CCTV",
+        "Children's Play Area",
+        "Dishwasher",
+        "En Suite Bathroom",
+        "Fitted Kitchen",
+        "Garden",
+        "Gated Community",
+        "Hot Water",
+        "Wardrobe"
+      ],
+      "importStatus": "Included in the application",
+      "confirmedFields": {
+        "ASKING PRICE": {
+          "value": "GH₵ 4,000,000",
+          "source": "Owner confirmation in conversation",
+          "date": "2026-11-04",
+          "ownerProvidedValue": "4000000"
+        }
+      }
+    }
+  ],
+  "pendingClarifications": [],
+  "summary": {
+    "properties": 7,
+    "sourceFields": 140,
+    "sourceImages": 78,
+    "uniqueImages": 78,
+    "selectedImages": 78,
+    "exteriorCovers": 7,
+    "sourceContactNumbers": 9,
+    "importedProperties": 7,
+    "confirmedContactNumbers": 8,
+    "ownerConfirmedFields": 3
+  },
+  "independentExtraction": {
+    "readers": [
+      "Python ElementTree",
+      "PowerShell .NET XmlDocument"
+    ],
+    "matchingNonemptyParagraphs": 189
+  },
+  "photographReview": {
+    "reviewedPhotos": 78,
+    "retainedOriginalDimensions": true,
+    "preciseLocalReplacement": true,
+    "existingAgentWatermarksPreserved": true,
+    "changedPixelsOutsideCaptionMasks": 0,
+    "workflow": "photos:prepare preview; individual visual review; apply --reviewed"
+  }
+}

@@ -1,5 +1,6 @@
 import type { Property } from "@/lib/types";
 import { properties37To44 } from "./properties-37-44";
+import { properties45To51 } from "./properties-45-51";
 
 /**
  * Seeded listings for Greater Accra.
@@ -11,6 +12,7 @@ import { properties37To44 } from "./properties-37-44";
 
 export const properties: Property[] = [
   ...properties37To44,
+  ...properties45To51,
   {
     id: "cantonments-villa-charclem",
     address: "Cantonments",
