@@ -32,14 +32,6 @@ const ease = (t: number) =>
  */
 const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
 
-const INK_DARK: [number, number, number] = [0, 59, 27]; // primary
-const INK_LIGHT: [number, number, number] = [239, 242, 235]; // inverse-on-surface
-
-function mixInk(t: number): string {
-  const [r, g, b] = INK_DARK.map((c, i) => Math.round(lerp(c, INK_LIGHT[i], t)));
-  return `rgb(${r} ${g} ${b})`;
-}
-
 interface Props {
   image: { src: string; alt: string };
   /** The hero copy and search card — fades out as the image takes over. */
@@ -154,10 +146,10 @@ export function PortalReveal({ image, hero, children }: Props) {
 
       // --- Nav has to stay legible across a dark full-bleed image ----------
       const root = document.documentElement;
-      root.style.setProperty("--ur-nav-ink", mixInk(dark));
+      root.style.setProperty("--ur-nav-ink", `color-mix(in srgb, var(--color-primary), #eff2eb ${dark * 100}%)`);
       root.style.setProperty(
         "--ur-nav-bg",
-        `rgb(248 250 244 / ${(1 - dark) * 0.8})`,
+        `color-mix(in srgb, var(--color-surface) ${(1 - dark) * 80}%, transparent)`,
       );
     },
     [narrow],

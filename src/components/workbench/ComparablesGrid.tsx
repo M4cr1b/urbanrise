@@ -238,7 +238,7 @@ export function ComparablesGrid({
 
       <div className="grid w-max" style={{ gridTemplateColumns: columns }}>
         {/* ---- Address band (sticks to the top while attributes scroll) --- */}
-        <div className="sticky left-0 top-0 z-30 flex h-16 flex-col justify-center border-r border-white/10 bg-primary px-3 text-inverse-on-surface">
+        <div className="sticky left-0 top-0 z-30 flex h-16 flex-col justify-center border-r border-white/10 bg-chrome px-3 text-inverse-on-surface">
           <span className="text-[11px] uppercase tracking-wide text-primary-fixed-dim">
             Subject property
           </span>

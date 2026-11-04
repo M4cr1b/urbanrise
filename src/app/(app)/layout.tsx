@@ -7,6 +7,7 @@ import {
 } from "@/components/workbench/WorkflowTabs";
 import { ShortlistProvider } from "@/components/workbench/shortlist-store";
 import { ShortlistAnnouncer } from "@/components/workbench/ShortlistAnnouncer";
+import { ThemeSelect } from "@/components/ui/ThemeSelect";
 
 /**
  * The workbench shell.
@@ -39,9 +40,10 @@ export default function WorkbenchLayout({
 
       {/* dvh, not vh: mobile browsers' collapsing URL bar makes vh overflow. */}
       <div className="flex h-dvh flex-col overflow-hidden bg-surface-container-low">
-        <header className="topo-bg-invert flex shrink-0 flex-wrap items-center gap-x-2 border-b border-white/10 bg-primary px-4 pt-[env(safe-area-inset-top)] md:flex-nowrap md:px-3">
+        <header className="topo-bg-invert flex shrink-0 flex-wrap items-center gap-x-2 border-b border-white/10 bg-chrome px-4 pt-[env(safe-area-inset-top)] md:flex-nowrap md:px-3">
           <WorkbenchBrand />
           <MobileModuleTitle />
+          <div className="ml-auto py-1 text-inverse-on-surface md:order-last"><ThemeSelect /></div>
           {/* useSearchParams needs a Suspense boundary during prerender */}
           <Suspense fallback={<div className="h-12" />}>
             <WorkflowTabs />

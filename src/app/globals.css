@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 /* ============================================================================
    UrbanRise Ghana — Sustainability Edition
    Design tokens ported from `Urban Rise Design system/DESIGN.md`.
@@ -19,6 +21,7 @@
   --color-surface-variant: #e1e3dd;
   --color-surface-tint: #2e6a41;
   --color-background: #f8faf4;
+  --color-chrome: #003b1b;
 
   --color-on-surface: #191c19;
   --color-on-surface-variant: #404941;
@@ -135,6 +138,67 @@
 
   /* --- Elevation: tonal layers, never floating drop shadows ------------- */
   --shadow-level-2: 0 10px 30px rgba(20, 83, 45, 0.05);
+  --color-chart-green: #006e24;
+  --color-chart-teal: #2a9d8f;
+  --color-chart-ochre: #a05a00;
+  --color-chart-violet: #6b5bd2;
+  --color-chart-sequential-1: #c8e6cd;
+  --color-chart-sequential-2: #96d5a3;
+  --color-chart-sequential-3: #5cb271;
+  --color-chart-sequential-4: #2e8b4a;
+  --color-chart-sequential-5: #006e24;
+}
+
+/* Keep brand chrome evergreen while content surfaces follow the appearance. */
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-surface: #101812;
+  --color-background: #101812;
+  --color-surface-dim: #0b120d;
+  --color-surface-bright: #303c32;
+  --color-surface-container-lowest: #131e16;
+  --color-surface-container-low: #18231b;
+  --color-surface-container: #1e2b21;
+  --color-surface-container-high: #27352b;
+  --color-surface-container-highest: #324136;
+  --color-surface-variant: #324136;
+  --color-surface-tint: #96d5a3;
+  --color-on-surface: #e3eae0;
+  --color-on-surface-variant: #bccabb;
+  --color-on-background: #e3eae0;
+  --color-outline: #8b9b8c;
+  --color-outline-variant: #455748;
+  --color-primary: #96d5a3;
+  --color-on-primary: #003919;
+  --color-primary-container: #14532d;
+  --color-on-primary-container: #b1f2be;
+  --color-inverse-primary: #2e6a41;
+  --color-secondary: #78dc7e;
+  --color-on-secondary: #00390f;
+  --color-secondary-container: #005319;
+  --color-on-secondary-container: #93f998;
+  --color-tertiary: #6fd8c8;
+  --color-on-tertiary: #003731;
+  --color-tertiary-container: #00524a;
+  --color-on-tertiary-container: #8cf5e4;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-chart-green: #78dc7e;
+  --color-chart-teal: #6fd8c8;
+  --color-chart-ochre: #edb66c;
+  --color-chart-violet: #bdb0ff;
+  --color-chart-sequential-1: #466b50;
+  --color-chart-sequential-2: #598a65;
+  --color-chart-sequential-3: #70a97d;
+  --color-chart-sequential-4: #96d5a3;
+  --color-chart-sequential-5: #b1f2be;
+  --shadow-level-2: 0 10px 30px rgb(0 0 0 / 20%);
 }
 
 /* ============================================================================

@@ -226,9 +226,9 @@ export default async function PropertyPage({ params }: { params: Params }) {
               {property.agent.phone && (
                 <a
                   href={`tel:${property.agent.phone.replace(/\s/g, "")}`}
-                  className="block rounded-lg bg-gradient-to-r from-primary/80 to-primary/60 hover:from-primary hover:to-primary/80 text-white p-4 transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
+                  className="block rounded-lg bg-gradient-to-r from-primary/80 to-primary/60 hover:from-primary hover:to-primary/80 text-on-primary p-4 transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
                 >
-                  <p className="text-data-xs text-white/80 uppercase tracking-wide font-semibold mb-2">Primary Phone</p>
+                  <p className="text-data-xs text-on-primary/80 uppercase tracking-wide font-semibold mb-2">Primary Phone</p>
                   <div className="flex items-center gap-2">
                     <Phone className="size-5" aria-hidden />
                     <span className="text-body-md font-semibold">{property.agent.phone}</span>
@@ -239,9 +239,9 @@ export default async function PropertyPage({ params }: { params: Params }) {
               {property.agent.secondaryPhone && (
                 <a
                   href={`tel:${property.agent.secondaryPhone.replace(/\s/g, "")}`}
-                  className="block rounded-lg bg-secondary/60 hover:bg-secondary text-white p-4 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/30"
+                  className="block rounded-lg bg-secondary/60 hover:bg-secondary text-on-secondary p-4 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/30"
                 >
-                  <p className="text-data-xs text-white/80 uppercase tracking-wide font-semibold mb-2">Alternative Phone</p>
+                  <p className="text-data-xs text-on-secondary/80 uppercase tracking-wide font-semibold mb-2">Alternative Phone</p>
                   <div className="flex items-center gap-2">
                     <Phone className="size-5" aria-hidden />
                     <span className="text-body-md font-semibold">{property.agent.secondaryPhone}</span>

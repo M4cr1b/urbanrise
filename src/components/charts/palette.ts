@@ -13,21 +13,21 @@
  * "Other" rather than repeating a hue.
  */
 export const CATEGORICAL = [
-  "#006e24", // leaf green
-  "#2a9d8f", // teal-aqua
-  "#a05a00", // ochre
-  "#6b5bd2", // violet
+  "var(--color-chart-green)", // leaf green
+  "var(--color-chart-teal)", // teal-aqua
+  "var(--color-chart-ochre)", // ochre
+  "var(--color-chart-violet)", // violet
 ] as const;
 
 export const MAX_SERIES = CATEGORICAL.length;
 
-/** Single hue for magnitude — light to dark, one hue, never a rainbow. */
+/** Single hue for magnitude, increasing contrast against the active surface. */
 export const SEQUENTIAL = [
-  "#c8e6cd",
-  "#96d5a3",
-  "#5cb271",
-  "#2e8b4a",
-  "#006e24",
+  "var(--color-chart-sequential-1)",
+  "var(--color-chart-sequential-2)",
+  "var(--color-chart-sequential-3)",
+  "var(--color-chart-sequential-4)",
+  "var(--color-chart-sequential-5)",
 ] as const;
 
 /**
@@ -35,18 +35,18 @@ export const SEQUENTIAL = [
  * growth, Soft Clay for decline, with a neutral — never a hue — at zero.
  */
 export const DIVERGING = {
-  positive: "#006e24",
-  negative: "#ba1a1a",
-  neutral: "#c0c9be",
+  positive: "var(--color-secondary)",
+  negative: "var(--color-error)",
+  neutral: "var(--color-outline-variant)",
 } as const;
 
 /** Recessive chrome so the data reads first. */
 export const CHART_INK = {
-  grid: "#e1e3dd",
-  axis: "#c0c9be",
-  label: "#404941",
-  muted: "#717970",
-  surface: "#ffffff",
+  grid: "var(--color-surface-container-highest)",
+  axis: "var(--color-outline-variant)",
+  label: "var(--color-on-surface-variant)",
+  muted: "var(--color-outline)",
+  surface: "var(--color-surface-container-lowest)",
 } as const;
 
 export function sequentialStep(t: number): string {
