@@ -2,7 +2,7 @@
   "version": 1,
   "caption": "POSTED ON URBAN RISE",
   "method": "Local masked editing; no generative photo changes",
-  "editedPhotographs": 494,
+  "editedPhotographs": 500,
   "images": {
     "/properties/achimota-acp-duplex-kingscity/01.webp": {
       "url": "/property-photos/achimota-acp-duplex-kingscity/01-urbanrise.webp",
@@ -13558,6 +13558,102 @@
       "maskPixels": 3586,
       "changedOutsideMask": 0,
       "fontSize": 35,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/01.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/01.png",
+      "sourceSha256": "3c6dc766c8cd99cf450882b286eb6f489583465b0185cc4507f746c1e02f0a46",
+      "sha256": "90ef5a516ae280347f2dbb1fbc96b687eed25abb7d66846c5665377aa4fc3c53",
+      "maskSha256": "9fea3e43f1177984cd55c4498c48979736a74ad4d5d063730dd6a8c2b211ff41",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 4846,
+      "maskPixels": 4943,
+      "changedOutsideMask": 0,
+      "fontSize": 42,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/02.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/02.png",
+      "sourceSha256": "491cea573117db0551732d9427d5835eed71f5fcd5cd776233b0f00db1300bc5",
+      "sha256": "f3c03cd727a5bd57a817b55296c437e9436070d8710e7dd9275c6c2215029a16",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 5000,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/03.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/03.png",
+      "sourceSha256": "47f4e4960d7c233bff9cb65428eaedb9cf0e5a5711cbf610bd0454479e5cc187",
+      "sha256": "fa852bf21d7eb2f9d5d54e408e85f7af8edfb8e65b4466eeda64509f755591e1",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 5015,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/04.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/04.png",
+      "sourceSha256": "4dfddd1ebada44af25b9cbc0f2d4971815ea1d1dc9aa6975e026a42c4e59c3d6",
+      "sha256": "6a26a2998cf0504230ff111860168c49e44d58bde564e23d1b3169dcc7712dc9",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 4992,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/05.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/05.png",
+      "sourceSha256": "2606005154e0cab392cf6e8cc9d47dcfb61490bc2d32c877bbc03869b73bcec6",
+      "sha256": "2e69dcd01ebaa585248c12d2610b6bb8b4d9a547fea97e910e06eb7fa5386134",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 4883,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/06.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/06.png",
+      "sourceSha256": "bf6f0453944ae597cf22dfea05840a20dfea40c9b08ca7a2284194342bec1725",
+      "sha256": "d1e92ca884e13b566aab86bd7b0ce74fd1b70e0be14b4fd1f378ffd6858b2cd3",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 5015,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
       "brand": {
         "method": "reviewed-platform-replacement"
       }

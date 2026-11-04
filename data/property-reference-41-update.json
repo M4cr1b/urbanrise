@@ -1,0 +1,236 @@
+{
+  "number": 41,
+  "reviewDate": "2026-11-04",
+  "sourceDocument": "C:\\Users\\Admin\\Desktop\\Round two\\Database.docx",
+  "sourceDocumentSha256": "0d80fd196be92a3192fd19cee491e847313b8fdc3afa663e77035feff69fb546",
+  "sourceHeadingParagraphIndex": 878,
+  "sourceImageFolder": "C:/Users/Admin/Desktop/Round two/PROPERTY 41 IMAGES",
+  "fields": {
+    "PROPERTY ADDRESS": "Adenta, SSNIT",
+    "PROPERTY TYPE": "Villa",
+    "STOREY": "Multi-storey",
+    "PROPERTY SIZE": "97 sqm",
+    "CONDITION": "Newly Built",
+    "FURNISHING": "Unfurnished",
+    "BEDROOM": "5",
+    "BATHROOMS": "5",
+    "TOILET": "6",
+    "ASKING PRICE": "GH₵ 2,690,000",
+    "PROPERTY STYLE": "Detached",
+    "FACILITIES": "Air Conditioning, Balcony, Chandelier, Dining Area, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Tiled Floor, Wardrobe",
+    "AGENT": "Mainstay Property Management",
+    "CONTACT": "+233592023296",
+    "DISTRICT": "La-Nkwantanang-Madina Municipal District",
+    "ECO RATING": "D",
+    "GREEN FEATURES": "Balcony",
+    "TENURE": "Leasehold",
+    "REMAINING LEASE TERMS": "Not specified",
+    "STATUS": "Available"
+  },
+  "contacts": {
+    "primary": "+233592023296",
+    "secondary": null
+  },
+  "sizeBasis": "Not specified in source",
+  "sourceFieldParagraphs": [
+    {
+      "paragraphIndex": 879,
+      "text": "PROPERTY ADDRESS =Adenta, SSNIT"
+    },
+    {
+      "paragraphIndex": 880,
+      "text": "PROPERTY TYPE = Villa"
+    },
+    {
+      "paragraphIndex": 881,
+      "text": "STOREY = Multi-storey"
+    },
+    {
+      "paragraphIndex": 882,
+      "text": "PROPERTY SIZE = 97 sqm"
+    },
+    {
+      "paragraphIndex": 883,
+      "text": "Condition = Newly Built "
+    },
+    {
+      "paragraphIndex": 884,
+      "text": "Furnishing = Unfurnished"
+    },
+    {
+      "paragraphIndex": 885,
+      "text": "BEDROOM = 5"
+    },
+    {
+      "paragraphIndex": 886,
+      "text": "BATHROOMS = 5"
+    },
+    {
+      "paragraphIndex": 887,
+      "text": "TOILET = 6"
+    },
+    {
+      "paragraphIndex": 888,
+      "text": "ASKING PRICE = GH₵ 2,690,000"
+    },
+    {
+      "paragraphIndex": 889,
+      "text": "PROPERTY STYLE = Detached "
+    },
+    {
+      "paragraphIndex": 890,
+      "text": "FACILITIES = Air Conditioning, Balcony, Chandelier, Dining Area, En Suite, Hot Water, Kitchen Cabinets, Kitchen Shelf, Microwave, Pop Ceiling, Pre-Paid Meter, Refrigerator, Tiled Floor, Wardrobe "
+    },
+    {
+      "paragraphIndex": 891,
+      "text": "AGENT = Mainstay Property Management"
+    },
+    {
+      "paragraphIndex": 892,
+      "text": "CONTACT= +233592023296"
+    },
+    {
+      "paragraphIndex": 893,
+      "text": "DISTRICT = La-Nkwantanang-Madina Municipal District"
+    },
+    {
+      "paragraphIndex": 894,
+      "text": "ECO RATING = D"
+    },
+    {
+      "paragraphIndex": 895,
+      "text": "GREEN FEATURES = Balcony"
+    },
+    {
+      "paragraphIndex": 896,
+      "text": "TENURE = Leasehold "
+    },
+    {
+      "paragraphIndex": 897,
+      "text": "Remaining Lease Terms = Not specified "
+    },
+    {
+      "paragraphIndex": 898,
+      "text": "STATUS = Available "
+    }
+  ],
+  "safetyParagraphs": [
+    {
+      "paragraphIndex": 900,
+      "text": "It's safer not to pay ahead for inspections. "
+    },
+    {
+      "paragraphIndex": 901,
+      "text": "Ask friends or somebody you trust to accompany you for the viewing"
+    },
+    {
+      "paragraphIndex": 902,
+      "text": "Look around the apartment to ensure it meets your expectations. "
+    },
+    {
+      "paragraphIndex": 903,
+      "text": "Don't pay beforehand if they won't let you move in immediately."
+    },
+    {
+      "paragraphIndex": 904,
+      "text": "Verify that the account details belong to the right property owner before initiating payments"
+    }
+  ],
+  "imageCount": 6,
+  "uniqueImageCount": 6,
+  "agentWatermarkObserved": "MAINSTAY PROPERTY",
+  "imageMatchBasis": "Numbered source folder, matching Mainstay watermark and visually consistent building/interior finishes. Photos alone do not verify room counts or area.",
+  "legacyPlatformCaption": "Jiji lettering replaced through individually reviewed local masked editing; agent watermarks preserved.",
+  "proposedCover": {
+    "filename": "57781775_OTU5LTEyODAtNzczNjA0YjMzMw.webp",
+    "sourceIndex": 2,
+    "status": "reviewed-and-applied-front-exterior"
+  },
+  "images": [
+    {
+      "filename": "57781774_OTU5LTEyODAtZDkzZmUzNjljMw.webp",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\57781774_OTU5LTEyODAtZDkzZmUzNjljMw.webp",
+      "sha256": "491cea573117db0551732d9427d5835eed71f5fcd5cd776233b0f00db1300bc5",
+      "width": 959,
+      "height": 1280,
+      "index": 1,
+      "visualRole": "living room and staircase",
+      "includeInProposedGallery": true
+    },
+    {
+      "filename": "57781775_OTU5LTEyODAtNzczNjA0YjMzMw.webp",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\57781775_OTU5LTEyODAtNzczNjA0YjMzMw.webp",
+      "sha256": "3c6dc766c8cd99cf450882b286eb6f489583465b0185cc4507f746c1e02f0a46",
+      "width": 959,
+      "height": 1280,
+      "index": 2,
+      "visualRole": "front exterior",
+      "includeInProposedGallery": true
+    },
+    {
+      "filename": "57781778_OTU5LTEyODAtYjAwOTI5MDYwNQ.webp",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\57781778_OTU5LTEyODAtYjAwOTI5MDYwNQ.webp",
+      "sha256": "47f4e4960d7c233bff9cb65428eaedb9cf0e5a5711cbf610bd0454479e5cc187",
+      "width": 959,
+      "height": 1280,
+      "index": 3,
+      "visualRole": "interior room",
+      "includeInProposedGallery": true
+    },
+    {
+      "filename": "57781779_OTU5LTEyODAtZGEwMGI0MDA1Yw.webp",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\57781779_OTU5LTEyODAtZGEwMGI0MDA1Yw.webp",
+      "sha256": "4dfddd1ebada44af25b9cbc0f2d4971815ea1d1dc9aa6975e026a42c4e59c3d6",
+      "width": 959,
+      "height": 1280,
+      "index": 4,
+      "visualRole": "living room, reverse view",
+      "includeInProposedGallery": true
+    },
+    {
+      "filename": "57781782_OTU5LTEyODAtODdkM2U3ZTI4Nw.webp",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\57781782_OTU5LTEyODAtODdkM2U3ZTI4Nw.webp",
+      "sha256": "2606005154e0cab392cf6e8cc9d47dcfb61490bc2d32c877bbc03869b73bcec6",
+      "width": 959,
+      "height": 1280,
+      "index": 5,
+      "visualRole": "interior room",
+      "includeInProposedGallery": true
+    },
+    {
+      "filename": "57781783_OTU5LTEyODAtZDU0MzljMDRjZg.webp",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Round two\\PROPERTY 41 IMAGES\\57781783_OTU5LTEyODAtZDU0MzljMDRjZg.webp",
+      "sha256": "bf6f0453944ae597cf22dfea05840a20dfea40c9b08ca7a2284194342bec1725",
+      "width": 959,
+      "height": 1280,
+      "index": 6,
+      "visualRole": "hallway",
+      "includeInProposedGallery": true
+    }
+  ],
+  "proposedImageOrder": [
+    "57781775_OTU5LTEyODAtNzczNjA0YjMzMw.webp",
+    "57781774_OTU5LTEyODAtZDkzZmUzNjljMw.webp",
+    "57781778_OTU5LTEyODAtYjAwOTI5MDYwNQ.webp",
+    "57781779_OTU5LTEyODAtZGEwMGI0MDA1Yw.webp",
+    "57781782_OTU5LTEyODAtODdkM2U3ZTI4Nw.webp",
+    "57781783_OTU5LTEyODAtZDU0MzljMDRjZg.webp"
+  ],
+  "proposedGalleryCount": 6,
+  "previousListingId": "adenta-villa-ernestdoyi",
+  "importedListing": {
+    "id": "adenta-ssnit-villa-mainstay",
+    "galleryFile": "data/property-photo-galleries/adenta-ssnit-villa-mainstay.json",
+    "exterior": "/properties/adenta-ssnit-villa-mainstay/01.webp",
+    "images": [
+      "/properties/adenta-ssnit-villa-mainstay/01.webp",
+      "/properties/adenta-ssnit-villa-mainstay/02.webp",
+      "/properties/adenta-ssnit-villa-mainstay/03.webp",
+      "/properties/adenta-ssnit-villa-mainstay/04.webp",
+      "/properties/adenta-ssnit-villa-mainstay/05.webp",
+      "/properties/adenta-ssnit-villa-mainstay/06.webp"
+    ]
+  },
+  "independentExtraction": "Python ElementTree and .NET XmlDocument agree on every property-41 paragraph, including all 20 fields.",
+  "sourceSelection": "Owner requested complete replacement with the revised Database.docx entry. Older Urbanw.docx still describes the superseded Ernest Doyi listing."
+}

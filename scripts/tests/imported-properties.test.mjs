@@ -59,3 +59,18 @@ test('credential-free source includes the same import, details and two compound 
   assert.equal((await seed.searchProperties({ type: 'Compound House' })).length, 2);
   assert.equal(new Set(properties.map(p => p.id)).size, properties.length);
 });
+
+test('property 41 replacement retires the old listing in both bundled sources', async () => {
+  const oldId = 'adenta-villa-ernestdoyi';
+  const replacementId = 'adenta-ssnit-villa-mainstay';
+  assert.equal(imports.getImportedProperty(oldId), null);
+  assert.equal(await seed.getPropertyById(oldId), null);
+  assert(!(await seed.getPropertyIds()).includes(oldId));
+  assert.equal(imports.unpublishedProperties([]).filter(p => p.id === replacementId).length, 1);
+  const replacement = imports.getImportedProperty(replacementId);
+  assert.equal(replacement.agent.name, 'Mainstay Property Management');
+  assert.equal(replacement.agent.phone, '+233592023296');
+  assert.equal(replacement.agent.secondaryPhone, undefined);
+  assert.equal(replacement.askingPrice, 2690000);
+  assert.equal(replacement.images.length, 6);
+});

@@ -8,6 +8,7 @@ import { localTsLoader } from './lib/load-local-ts.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 const reference = read('data/property-reference-37-44.json');
+const property41Update = read('data/property-reference-41-update.json');
 const covers = read('data/property-covers.json');
 const watermarks = read('data/property-watermarks.json');
 const load = localTsLoader(root);
@@ -26,7 +27,8 @@ const numericFields = ['PROPERTY SIZE', 'BEDROOM', 'BATHROOMS', 'TOILET', 'ASKIN
 let photos = 0, phones = 0;
 assert.equal(listings.length, 8);
 assert.equal(new Set(listings.map(p => p.id)).size, 8);
-for (const [index, source] of reference.properties.entries()) {
+for (const [index, recordedSource] of reference.properties.entries()) {
+  const source = recordedSource.number === 41 ? property41Update : recordedSource;
   const property = listings[index], label = 'Property ' + source.number, fields = source.fields;
   assert.equal(source.number, index + 37);
   assert.equal(Object.keys(fields).length, 20, label);
@@ -66,7 +68,7 @@ for (const [index, source] of reference.properties.entries()) {
 }
 assert.equal(listings.filter(p => p.type === 'Compound House').length, 2);
 assert.equal(listings[3].storey, 'Single Storey');
-assert.equal(photos, 63); assert.equal(phones, 10);
+assert.equal(photos, 61); assert.equal(phones, 10);
 const result = { properties: 8, documentedFields: 160, exactContactNumbers: phones, associatedPhotos: photos, exteriorCovers: 8, compoundHouses: 2, originalDimensionsPreserved: true };
 
 function flightValue(html, key) {
@@ -121,6 +123,6 @@ if (site) {
       assert.equal(actual, image.sha256, 'Served photograph differs: ' + image.url);
     }
   }));
-  Object.assign(result, { site: origin, catalogListings: catalog.length, detailPagesVerified: 8, optimizedExteriorThumbnailsVerified: 8, servedPhotographHashesVerified: 63 });
+  Object.assign(result, { site: origin, catalogListings: catalog.length, detailPagesVerified: 8, optimizedExteriorThumbnailsVerified: 8, servedPhotographHashesVerified: photos });
 }
 console.log(JSON.stringify(result, null, 2));

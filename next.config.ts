@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  redirects() {
+    return [{
+      source: "/property/adenta-villa-ernestdoyi",
+      destination: "/property/adenta-ssnit-villa-mainstay",
+      permanent: true,
+    }];
+  },
   experimental: {
     // Avoid restoring stale task metadata that can panic the dev server.
     turbopackFileSystemCacheForDev: false,
