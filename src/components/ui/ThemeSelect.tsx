@@ -24,7 +24,7 @@ export function ThemeSelect() {
     const trigger = triggerRef.current;
     if (!panel || !trigger) return;
     const rect = trigger.getBoundingClientRect();
-    const width = Math.min(364, window.innerWidth - 24);
+    const width = Math.min(332, window.innerWidth - 24);
     panel.style.width = `${width}px`;
     panel.style.left = `${Math.max(12, Math.min(rect.right - width, window.innerWidth - width - 12))}px`;
     panel.style.top = `${Math.max(12, Math.min(rect.bottom + 12, window.innerHeight - panel.offsetHeight - 12))}px`;
