@@ -6,7 +6,7 @@ Source: `C:\Users\Admin\Desktop\Adom Data\Document.docx` and its numbered image 
 | --- | --- | --- | --- | ---: | ---: | --- |
 | 1 | DKI Properties — Kwashieman compound house | 15 / 14 / 10 | 200 sqm | 4,500,000 | 7 | D |
 | 2 | Dollar dream Estate — Kwashieman-Lapaz compound house | 18 / 20 / 10 | 450 sqm | 10,700,000 | 2 | D |
-| 3 | Emmanuel Appiah — Kwashieman villa | 8 / 6 / 7 | 200 sqm | 3,800,000 | 4 | C |
+| 3 | Emmanuel Appiah — Kwashieman villa | 8 / 6 / 7 | 200 sqm | 3,800,000 | 4 | D |
 | 4 | Prudential Properties Agency — Kwashieman-Hong Kong apartment | 4 / 3 / 4 | 5000 sqm | 2,300,000 | 6 | D |
 | 5 | Edmark Agency — Labone apartment | 1 / 1 / 2 | 300 sqm | 1,530,000 | 6 | D |
 | 6 | B. Realty Ghana — Labone compound house | 4 / 5 / 5 | 100 sqm | 10,290,000 | 9 | D |
@@ -14,7 +14,7 @@ Source: `C:\Users\Admin\Desktop\Adom Data\Document.docx` and its numbered image 
 | 8 | United Homes — Labone apartment | 2 / 3 / 3 | 1000 sqm | 2,250,000 | 7 | D |
 | 10 | Tetteh — Labone-AU Village compound house | 4 / 4 / 5 | 2332 sqm | 15,940,000 | 5 | D |
 
-All 200 original fields and the complete inventory, including held property 9, remain in [the structured reference](../data/property-reference-adom.json). Two independent XML readers agreed on every source field. Original eco ratings were blank. The owner supplied C for property 3 and D for the other eight imported listings. The owner also changed property 3 from Bungalow to Villa and added private garden, mature trees and landscaped compound to its documented Balcony feature. Original source values and the confirming replies are retained separately.
+All 200 original fields and the complete inventory, including held property 9, remain in [the structured reference](../data/property-reference-adom.json). Two independent XML readers agreed on every source field. Original eco ratings were blank. The owner's latest instruction, “D for all,” sets all nine imported listings to D, superseding the earlier C rating for property 3. The owner also changed property 3 from Bungalow to Villa and added private garden, mature trees and landscaped compound to its documented Balcony feature. Original source values and the confirming replies are retained separately.
 
 All 10 active contact numbers are copied from the document and normalized from Ghanaian local format to `+233`. Only property 6 documents a secondary contact. Names, addresses, districts, prices and numeric sizes follow the source. Size has no specified plot/floor measurement basis; the established numeric field is retained without an added measurement claim. Source two/three-storey values map to the existing Multi Storey option, with the exact source wording preserved. Compound house casing, condition punctuation and missing amenity commas are normalized; each cleanup is recorded. No self-contained status, coordinates, construction dates or numeric lease terms were invented.
 

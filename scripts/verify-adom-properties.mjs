@@ -40,7 +40,7 @@ for(const source of reference.properties){
  assert.deepEqual(property.facilities,source.normalizedFacilities);
  assert.deepEqual(property.greenFeatures.map(feature=>feature.label),f['GREEN FEATURES'].split(',').map(s=>s.trim()));
  for(const key of ['selfContained','coords','yearBuilt','listedDate','leaseYearsRemaining'])assert(!Object.hasOwn(property,key),'Undocumented '+key);
- assert.equal(property.ecoRating,source.number===3?'C':'D','Owner-confirmed eco rating');
+ assert.equal(property.ecoRating,'D','Owner-confirmed eco rating');
  const gallery=read('data/property-photo-galleries/'+source.id+'.json');
  assert.deepEqual(property.images,gallery.images);assert.equal(covers[source.id],gallery.exterior);assert.equal(gallery.images[0],gallery.exterior);
  assert.equal(gallery.images.length,source.selectedImageCount);

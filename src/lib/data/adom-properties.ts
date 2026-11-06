@@ -119,7 +119,7 @@ export const adomProperties: Property[] = [
     "status": "Available",
     "tenure": "Leasehold",
     "remainingLeaseTerm": "Not specified",
-    "ecoRating": "C",
+    "ecoRating": "D",
     "condition": "Newly Built",
     "furnishing": "Unfurnished",
     "facilities": [

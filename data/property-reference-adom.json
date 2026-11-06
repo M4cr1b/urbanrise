@@ -476,7 +476,7 @@
         "AGENT": "Emmanuel Appiah",
         "CONTACT": "0552885458",
         "DISTRICT": "Ablekuma North Municipal District",
-        "ECO RATING": "C",
+        "ECO RATING": "D",
         "GREEN FEATURES": "Balcony, Private garden, Mature trees, Landscaped compound",
         "TENURE": "Leasehold",
         "REMAINING LEASE TERMS": "Not specified",
@@ -551,10 +551,14 @@
       "pendingIssues": [],
       "confirmedFields": {
         "ECO RATING": {
-          "value": "C",
-          "ownerReply": "take the rating to c",
+          "value": "D",
+          "ownerReply": "D for all",
           "date": "2026-11-06",
-          "authority": "Owner confirmation in conversation"
+          "authority": "Owner confirmation in conversation",
+          "supersedes": {
+            "value": "C",
+            "ownerReply": "take the rating to c"
+          }
         },
         "PROPERTY TYPE": {
           "value": "Villa",
