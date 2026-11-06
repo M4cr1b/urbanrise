@@ -14,6 +14,8 @@ import Link from "next/link";
 import { formatCediCompact } from "@/lib/format";
 import type { LocalityStats } from "@/lib/types";
 import { PRIMARY_REGION } from "@/lib/regions";
+import { CollectionPanel, CollectionSearch, CollectionReset } from "./CollectionPanel";
+import styles from "./CollectionPanel.module.css";
 
 /* ---------------------------------------------------------------------------
    Market intelligence, for people who do not value property for a living.
@@ -69,19 +71,27 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
   }, [markets]);
 
   return (
-    <div className="min-w-0 p-4 md:p-8">
-      <header className="workspace-heading mb-6">
-        <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
-          What homes cost in {PRIMARY_REGION}
-        </h1>
-        <p className="mt-1 max-w-2xl text-body-md text-on-surface-variant">
-          A plain look at prices across each neighbourhood — what you would
-          typically pay, and how much they vary.
-        </p>
-      </header>
+    <div className={styles.workspace}>
+      <CollectionPanel eyebrow="THE MARKET OBSERVATORY" title={<>What homes cost in <em>{PRIMARY_REGION}</em></>} description="A clearer view of neighbourhood prices, the range of homes available, and where your budget could take you." count={rows.length} countLabel="neighbourhoods">
+        <div className={styles.controls}>
+          <CollectionSearch label="Search neighbourhoods" placeholder="Find a neighbourhood…" value={q} onChange={setQ} />
+          <CollectionReset onClick={() => { setQ(""); setSort("price-asc"); }} />
+        </div>
+        <label className={styles.mobileSelect + " " + styles.sortSelect}>Sort neighbourhoods
+          <select value={sort} onChange={event => setSort(event.target.value as SortKey)}>
+            <option value="price-asc">Cheapest first</option><option value="price-desc">Most expensive</option><option value="listings">Most listings</option>
+          </select>
+        </label>
+        <div className={styles.filterRow + " " + styles.desktopSort}>
+          <span className={styles.filterLabel}>Explore by</span>
+          {([["price-asc", "Cheapest first"], ["price-desc", "Most expensive"], ["listings", "Most listings"]] as const).map(([key, label]) => (
+            <button key={key} type="button" onClick={() => setSort(key)} aria-pressed={sort === key} className={styles.chip}>{label}</button>
+          ))}
+        </div>
+      </CollectionPanel>
 
       {summary && (
-        <div className="mb-6 grid min-w-0 grid-cols-2 gap-3 sm:mb-8 sm:gap-4 lg:grid-cols-4">
+        <div className={styles.stats}>
           <HeadlineTile
             icon={Home}
             figure={formatCediCompact(summary.typical)}
@@ -109,67 +119,19 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
         </div>
       )}
 
-      {/* Controls kept to two: find a place, and change the ordering. */}
-      <div className="mb-5 flex flex-wrap items-end gap-3">
-        <label className="min-w-0 basis-full sm:max-w-xs sm:flex-1 sm:basis-auto">
-          <span className="sr-only">Search neighbourhoods</span>
-          <span className="relative block">
-            <Search
-              className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-outline"
-              aria-hidden
-            />
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Find a neighbourhood…"
-              className="w-full rounded-md border border-outline-variant bg-surface-container-lowest py-2.5 pl-10 pr-4 text-body-md outline-none focus:border-tertiary-container"
-            />
-          </span>
-        </label>
-
-        <label className="w-full text-sm text-on-surface-variant sm:hidden">Sort neighbourhoods
-          <select value={sort} onChange={event => setSort(event.target.value as SortKey)} className="mt-1 min-h-11 w-full rounded-md border border-outline-variant bg-surface-container-lowest px-3 py-2">
-            <option value="price-asc">Cheapest first</option><option value="price-desc">Most expensive</option><option value="listings">Most listings</option>
-          </select>
-        </label>
-        <div className="hidden flex-wrap gap-2 sm:flex">
-          {(
-            [
-              ["price-asc", "Cheapest first"],
-              ["price-desc", "Most expensive"],
-              ["listings", "Most listings"],
-            ] as const
-          ).map(([key, label]) => (
-            <button
-              key={key}
-              type="button"
-              onClick={() => setSort(key)}
-              aria-pressed={sort === key}
-              className={`rounded-full border px-4 py-2 font-data text-data-sm transition-colors ${
-                sort === key
-                  ? "border-primary bg-primary text-on-primary"
-                  : "border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-primary"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <ul className={"grid " + styles.grid}>
         {rows.map((m) => (
           <LocalityCard key={m.locality} market={m} />
         ))}
       </ul>
 
       {rows.length === 0 && (
-        <p className="rounded-xl border border-dashed border-outline-variant bg-surface-container-lowest p-10 text-center text-body-md text-on-surface-variant">
+        <p className={styles.empty}>
           No neighbourhood matches &quot;{q}&quot;.
         </p>
       )}
 
-      <p className="mt-8 flex max-w-3xl items-start gap-2 rounded-md bg-surface-container-low p-4 font-data text-data-sm text-on-surface-variant">
+      <p className={styles.note}>
         <Info className="mt-0.5 size-4 shrink-0" aria-hidden />
         Figures are calculated from live UrbanRise listings. Areas with few homes
         show a wider price range and a smaller sample — treat those figures as
@@ -191,7 +153,7 @@ function HeadlineTile({
   plain: string;
 }) {
   return (
-    <div className="surface-panel min-w-0 p-3.5 sm:p-5">
+    <div className={styles.stat}>
       <Icon className="mb-3 size-5 text-secondary sm:size-6" aria-hidden />
       <p className="wrap-anywhere font-headline text-xl font-semibold text-primary sm:font-data sm:text-headline-md">{figure}</p>
       <p className="mt-1 text-xs font-semibold text-on-surface sm:font-data sm:text-data-sm">
@@ -208,7 +170,7 @@ function LocalityCard({ market: m }: { market: LocalityStats }) {
   const band = bandOf(m.medianPrice);
 
   return (
-    <li className="surface-card min-w-0 p-4 sm:p-5">
+    <li className={styles.itemCard + " " + styles.marketCard}>
       <div className="mb-3 flex items-start justify-between gap-2">
         <h2 className="min-w-0 wrap-anywhere font-headline text-headline-md text-primary">
           {m.locality}

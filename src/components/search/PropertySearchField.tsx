@@ -1,13 +1,15 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useId, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BedDouble, Home, MapPin, Search, X } from "lucide-react";
 import type { Property } from "@/lib/types";
 import { EcoBadge } from "@/components/ui/Badges";
 import { formatCedi } from "@/lib/format";
 import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
+import styles from "./PropertySearchField.module.css";
 
 interface PropertySearchFieldProps {
   properties: Property[];
@@ -50,9 +52,11 @@ export function PropertySearchField({
   const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState({ top: 0, left: 0, width: 440, maxHeight: 520 });
   const listId = `property-search-list-${useId()}`;
 
-  // Filter logic: exact same haystack as SearchWorkspace.tsx:161-164
+  // Use the same address, district and region matching as the results page.
   const getFilteredProperties = (query: string): Property[] => {
     if (!query.trim()) {
       // Empty state: resolve featured IDs, backfill with price-desc order
@@ -92,7 +96,8 @@ export function PropertySearchField({
     function handleClickOutside(e: PointerEvent) {
       if (
         wrapperRef.current &&
-        !wrapperRef.current.contains(e.target as Node)
+        !wrapperRef.current.contains(e.target as Node) &&
+        !dropdownRef.current?.contains(e.target as Node)
       ) {
         setIsOpen(false);
       }
@@ -105,8 +110,64 @@ export function PropertySearchField({
     }
   }, [isOpen]);
 
+  useLayoutEffect(() => {
+    if (!isOpen) return;
+    const place = () => {
+      const anchor = inputRef.current?.getBoundingClientRect();
+      const dropdown = dropdownRef.current;
+      if (!anchor || !dropdown) return;
+      const viewport = window.visualViewport;
+      const viewportTop = viewport?.offsetTop ?? 0;
+      const viewportBottom = viewportTop + (viewport?.height ?? window.innerHeight);
+      const below = viewportBottom - anchor.bottom - 22;
+      const above = anchor.top - viewportTop - 22;
+      const openBelow = below >= 200 || below >= above;
+      const maxHeight = Math.max(80, Math.min(520, openBelow ? below : above));
+      const width = Math.min(640, Math.max(anchor.width, 440), window.innerWidth - 24);
+      const next = {
+        top: Math.max(viewportTop + 8, openBelow ? anchor.bottom + 10 : anchor.top - Math.min(dropdown.offsetHeight, maxHeight) - 10),
+        left: Math.max(12, Math.min(anchor.left, window.innerWidth - width - 12)),
+        width, maxHeight,
+      };
+      setPosition(previous => Object.keys(next).every(key => previous[key as keyof typeof next] === next[key as keyof typeof next]) ? previous : next);
+    };
+    place();
+    const observer = new ResizeObserver(place);
+    if (dropdownRef.current) observer.observe(dropdownRef.current);
+    window.addEventListener("resize", place);
+    window.addEventListener("scroll", place, true);
+    window.visualViewport?.addEventListener("resize", place);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", place);
+      window.removeEventListener("scroll", place, true);
+      window.visualViewport?.removeEventListener("resize", place);
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen || highlightedIndex === null) return;
+    const id = highlightedIndex < filtered.length ? filtered[highlightedIndex].id : "footer";
+    document.getElementById(`${listId}-${id}`)?.scrollIntoView({ block: "nearest" });
+  }, [isOpen, highlightedIndex, filtered.length, listId]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const closeOnFocusOutside = (event: FocusEvent) => {
+      if (!wrapperRef.current?.contains(event.target as Node) && !dropdownRef.current?.contains(event.target as Node)) setIsOpen(false);
+    };
+    document.addEventListener("focusin", closeOnFocusOutside);
+    return () => document.removeEventListener("focusin", closeOnFocusOutside);
+  }, [isOpen]);
+
   // Keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!isOpen && (e.key === "ArrowDown" || e.key === "ArrowUp")) {
+      e.preventDefault();
+      setIsOpen(true);
+      setHighlightedIndex(e.key === "ArrowDown" ? 0 : Math.max(0, filtered.length - 1));
+      return;
+    }
     if (!isOpen && e.key !== "Enter") {
       return;
     }
@@ -134,7 +195,8 @@ export function PropertySearchField({
           // Property row — navigate to detail page
           const prop = filtered[highlightedIndex];
           window.location.href = `/property/${prop.id}`;
-        } else if (onSubmit) onSubmit(value);
+        } else if (highlightedIndex === filtered.length && onViewAll) onViewAll(value);
+        else if (onSubmit) onSubmit(value);
         else if (onViewAll) onViewAll(value);
         else window.location.href = viewAllHref(value);
         setIsOpen(false);
@@ -168,6 +230,7 @@ export function PropertySearchField({
           value={value}
           onChange={(e) => { onChange(e.target.value); setHighlightedIndex(null); setIsOpen(true); }}
           onFocus={() => setIsOpen(true)}
+          onClick={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
           aria-label="Search by address or district"
@@ -192,51 +255,38 @@ export function PropertySearchField({
       </div>
 
       {/* Dropdown panel */}
-      {isOpen && (
+      {isOpen && createPortal(
         <div
+          ref={dropdownRef}
           role="listbox"
+          aria-label="Property suggestions"
           id={listId}
-          className="absolute left-0 right-0 top-full z-50 mt-2 max-h-[min(24rem,50dvh)] overflow-y-auto overscroll-contain rounded-xl border border-primary/10 bg-surface-container-lowest shadow-[var(--shadow-level-2)]"
+          className={styles.dropdown}
+          style={position}
           onMouseDown={(e) => e.preventDefault()} // Preserve focus through click
         >
-          {/* Results or featured section */}
+          <div className={styles.heading}>
+            <span className={styles.headingIcon} aria-hidden="true"><Home size={18} /></span>
+            <div className={styles.headingCopy}><p>THE URBANRISE COLLECTION</p><h2>{value.trim() ? `Matches for “${value}”` : "Featured properties"}</h2></div>
+            <span className={styles.matchCount}>{value.trim() ? resultCount : filtered.length}<span>{value.trim() ? (resultCount === 1 ? " match" : " matches") : (filtered.length === 1 ? " pick" : " picks")}</span></span>
+          </div>
+          <div className={styles.rows} role="presentation">
           {hasResults ? (
             <>
-              {/* Section header */}
-              <div className="sticky top-0 border-b border-outline-variant/30 bg-surface-container-lowest px-4 py-2">
-                <span className="text-data-xs text-on-surface-variant font-semibold uppercase tracking-wide">
-                  {value.trim()
-                    ? `Matches for "${value}"`
-                    : "Featured properties"}
-                </span>
-              </div>
-
-              {/* Property rows */}
               {filtered.map((p, i) => (
                 <ResultRow
                   key={p.id}
                   property={p}
                   isHighlighted={highlightedIndex === i}
                   listId={listId}
+                  onSelect={() => setIsOpen(false)}
                 />
               ))}
             </>
           ) : (
-            /* No matches state */
-            <>
-              <div className="sticky top-0 border-b border-outline-variant/30 bg-surface-container-lowest px-4 py-2">
-                <span className="text-data-xs text-on-surface-variant font-semibold uppercase tracking-wide">
-                  No matches
-                </span>
-              </div>
-              <div className="px-4 py-3">
-                <p className="text-body-sm text-on-surface-variant">
-                  No properties match &quot;{value}&quot;. Try widening the search.
-                </p>
-              </div>
-            </>
+            <div className={styles.empty}><Search size={22} aria-hidden="true" /><strong>A little further afield?</strong><p>No properties match &quot;{value}&quot;. Try another neighbourhood or a broader search.</p></div>
           )}
-
+          </div>
           {/* Footer row — always present */}
           <FooterRow
             query={value}
@@ -244,11 +294,13 @@ export function PropertySearchField({
             resultCount={resultCount}
             isHighlighted={highlightedIndex === filtered.length}
             listId={listId}
-            onViewAll={onViewAll}
+            onViewAll={onViewAll ? query => { onViewAll(query); setIsOpen(false); inputRef.current?.blur(); } : undefined}
             viewAllHref={viewAllHref}
+            onSelect={() => setIsOpen(false)}
           />
+          <div className={styles.keyboardHint} aria-hidden="true"><span><kbd>↑</kbd><kbd>↓</kbd> to explore</span><span><kbd>↵</kbd> to select</span><span><kbd>esc</kbd> to close</span></div>
         </div>
-      )}
+      , document.body)}
     </div>
   );
 }
@@ -260,10 +312,12 @@ function ResultRow({
   property: p,
   isHighlighted,
   listId,
+  onSelect,
 }: {
   property: Property;
   isHighlighted: boolean;
   listId: string;
+  onSelect: () => void;
 }) {
   return (
     <Link
@@ -271,42 +325,40 @@ function ResultRow({
       role="option"
       id={`${listId}-${p.id}`}
       aria-selected={isHighlighted}
-      className={`grid grid-cols-[3rem_minmax(0,1fr)] items-center gap-x-3 gap-y-1 border-b border-outline-variant/20 px-3 py-3 transition-colors sm:flex ${
-        isHighlighted ? "bg-primary/5" : "hover:bg-primary/5"
-      }`}
+      className={styles.result}
+      onClick={onSelect}
     >
       {/* Thumbnail */}
-      <div className="relative row-span-2 size-12 shrink-0 overflow-hidden rounded-md sm:size-14">
+      <div className={styles.thumbnail}>
         <Image
           src={p.images[0]}
           alt={`${p.type} at ${p.address}`}
           fill
           quality={90}
-          sizes="56px"
+          sizes="(max-width: 520px) 64px, 80px"
           className="object-cover"
         />
       </div>
 
       {/* Content */}
-      <div className="min-w-0 flex-1">
-        <div className="text-body-md font-medium text-on-surface truncate">
+      <div className={`min-w-0 ${styles.resultCopy}`}>
+        <div className={styles.address}>
           {p.address}
         </div>
-        <div className="text-data-sm text-on-surface-variant">
-          {p.district}
+        <div className={styles.district}>
+          <MapPin size={11} aria-hidden="true" />{p.district}
         </div>
+        <div className={styles.metadata}><span>{p.type}</span><span><BedDouble size={12} aria-hidden="true" />{p.bedrooms} beds</span></div>
       </div>
 
       {/* Right side: badges + price */}
-      <div className="col-start-2 flex min-w-0 flex-wrap items-center gap-2 sm:shrink-0 sm:flex-nowrap">
-        {/* Eco badge (compact, no padding/shadow) */}
-        <EcoBadge rating={p.ecoRating} className="text-data-xs px-2 py-0.5" />
-
-        {/* Price */}
-        <div className="text-right font-data text-data-sm font-semibold text-primary whitespace-nowrap">
+      <div className={styles.resultAside}>
+        <div className={styles.price}>
           {formatCedi(p.askingPrice)}
         </div>
+        <EcoBadge rating={p.ecoRating} className={styles.eco} />
       </div>
+      <ArrowUpRight size={16} className={styles.resultArrow} aria-hidden="true" />
     </Link>
   );
 }
@@ -322,6 +374,7 @@ function FooterRow({
   listId,
   onViewAll,
   viewAllHref,
+  onSelect,
 }: {
   query: string;
   allCount: number;
@@ -330,31 +383,21 @@ function FooterRow({
   listId: string;
   onViewAll?: (q: string) => void;
   viewAllHref: (q: string) => string;
+  onSelect: () => void;
 }) {
   const label = query.trim()
     ? `View all ${resultCount} matches for "${query}"`
     : `View all ${allCount} properties`;
 
-  const element = (
-    <div
-      role="option"
-      id={`${listId}-footer`}
-      aria-selected={isHighlighted}
-      className={`flex items-center justify-between border-t border-outline-variant/30 px-4 py-3 transition-colors ${
-        isHighlighted ? "bg-primary/5" : "hover:bg-primary/5"
-      }`}
-    >
-      <span className="text-data-sm font-semibold text-primary">{label}</span>
-      <ChevronDown className="size-4 text-primary opacity-50" aria-hidden />
-    </div>
-  );
+  const element = <><span>{label}</span><ArrowRight size={17} aria-hidden="true" /></>;
 
   if (onViewAll) {
     return (
       <button
         type="button"
         onClick={() => onViewAll(query)}
-        className="w-full text-left"
+        role="option" id={`${listId}-footer`} aria-selected={isHighlighted}
+        className={styles.footer}
       >
         {element}
       </button>
@@ -362,7 +405,7 @@ function FooterRow({
   }
 
   return (
-    <Link href={viewAllHref(query)} className="block">
+    <Link href={viewAllHref(query)} role="option" id={`${listId}-footer`} aria-selected={isHighlighted} className={styles.footer} onClick={onSelect}>
       {element}
     </Link>
   );

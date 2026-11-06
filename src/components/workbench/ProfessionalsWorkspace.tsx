@@ -3,9 +3,11 @@
 import Image from "next/image";
 
 import { useMemo, useState } from "react";
-import { Mail, Phone, Search, ShieldCheck } from "lucide-react";
+import { Mail, Phone, ShieldCheck } from "lucide-react";
 import type { Discipline, Professional } from "@/lib/types";
 import { PRIMARY_REGION } from "@/lib/regions";
+import { CollectionPanel, CollectionSearch, CollectionReset } from "./CollectionPanel";
+import styles from "./CollectionPanel.module.css";
 
 /**
  * The directory of estate professionals.
@@ -54,78 +56,40 @@ export function ProfessionalsWorkspace({
   );
 
   return (
-    <div className="min-w-0 p-4 md:p-8">
-      <header className="workspace-heading mb-6">
-        <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
-          Find a Professional
-        </h1>
-        <p className="mt-1 text-body-md text-on-surface-variant">
-          Verified surveyors, valuers, lawyers, architects and engineers in{" "}
-          {PRIMARY_REGION}.
-        </p>
-      </header>
-
-      <div className="surface-panel mb-6 space-y-3 p-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="relative min-w-0 basis-full md:flex-1 md:basis-auto">
-            <Search
-              className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-outline"
-              aria-hidden
-            />
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Search by name, firm or specialism…"
-              aria-label="Search professionals"
-              enterKeyHint="search"
-              className="w-full rounded-md border border-outline-variant bg-surface py-2.5 pl-10 pr-4 text-body-md outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
-            />
-          </div>
-          <label className="flex min-h-11 cursor-pointer items-center gap-2 font-data text-data-sm text-on-surface-variant">
-            <input
-              type="checkbox"
-              checked={verifiedOnly}
-              onChange={(e) => setVerifiedOnly(e.target.checked)}
-              className="size-4 accent-[#006e24]"
-            />
-            Registered only
+    <div className={styles.workspace}>
+      <CollectionPanel eyebrow="THE URBANRISE NETWORK" title={<>Find a <em>Professional</em></>} description={<>Connect with surveyors, valuers, lawyers, architects and engineers in {PRIMARY_REGION}.</>} count={results.length} countLabel="professionals">
+        <div className={styles.controls}>
+          <CollectionSearch label="Search professionals" placeholder="Name, firm or specialism…" value={q} onChange={setQ} />
+          <label className={styles.verified}>
+            <input type="checkbox" checked={verifiedOnly} onChange={event => setVerifiedOnly(event.target.checked)} />
+            <ShieldCheck className="size-4" aria-hidden />Registered only
           </label>
+          <CollectionReset onClick={() => { setQ(""); setDiscipline("All"); setVerifiedOnly(false); }} />
         </div>
-
-        <label className="block text-sm font-medium text-on-surface-variant md:hidden">Discipline
-          <select aria-label="Professional discipline" value={discipline} onChange={event => setDiscipline(event.target.value as Discipline | "All")} className="mt-2 min-h-12 w-full min-w-0 rounded-md border border-outline-variant bg-surface px-3 py-2 text-on-surface">
+        <label className={styles.mobileSelect}>Discipline
+          <select aria-label="Professional discipline" value={discipline} onChange={event => setDiscipline(event.target.value as Discipline | "All")}>
             {DISCIPLINES.map(option => <option key={option} value={option}>{option === "All" ? "All disciplines" : option}</option>)}
           </select>
         </label>
-        <div className="hidden md:block"><FilterRow
-          label="Discipline"
-          options={DISCIPLINES}
-          value={discipline}
-          onChange={(v) => setDiscipline(v as Discipline | "All")}
-        /></div>
-      </div>
-
-      <p className="mb-3 font-data text-data-sm text-on-surface-variant">
-        <strong className="text-on-surface">{results.length}</strong>{" "}
-        {results.length === 1 ? "professional" : "professionals"}
-      </p>
+        <div className="hidden md:block"><FilterRow label="Discipline" options={DISCIPLINES} value={discipline} onChange={value => setDiscipline(value as Discipline | "All")} /></div>
+      </CollectionPanel>
 
       {results.length === 0 ? (
-        <p className="rounded-md border border-outline-variant/60 bg-surface-container-lowest p-8 text-center text-body-md text-on-surface-variant">
+        <p className={styles.empty}>
           No professionals match these filters.
         </p>
       ) : (
-        <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <ul className={"grid " + styles.grid}>
           {results.map((p) => (
             <li
               key={p.id}
-              className="surface-card overflow-hidden"
+              className={styles.itemCard + " " + styles.professionalCard}
             >
               {/* Photograph first: engaging a valuer or lawyer is a personal
                   decision, and a wall of names tells you nothing about who you
                   would be dealing with. */}
-              <div className="flex min-w-0 gap-3 p-4 sm:gap-4 sm:p-5">
-                <div className="relative size-14 shrink-0 overflow-hidden rounded-full bg-surface-container ring-1 ring-outline-variant/40 sm:size-24">
+              <div className={styles.professionalTop}>
+                <div className={styles.portrait}>
                   {p.photoUrl && !brokenPhotos.has(p.id) ? (
                     <Image
                       src={p.photoUrl}
@@ -153,7 +117,7 @@ export function ProfessionalsWorkspace({
                 </div>
 
                 <div className="min-w-0 flex-1">
-                  <div className="flex min-w-0 flex-col items-start gap-2 sm:flex-row sm:justify-between">
+                  <div className="flex min-w-0 flex-col items-start">
                     <div className="min-w-0">
                       <h2 className="wrap-anywhere font-headline text-xl font-semibold text-primary sm:text-headline-md">
                         {p.name}
@@ -164,7 +128,7 @@ export function ProfessionalsWorkspace({
                     </div>
                     {p.verified && (
                       <span
-                        className="registration-badge flex shrink-0 items-center gap-1 rounded-full bg-secondary-container px-2.5 py-1 text-[11px] font-semibold text-on-secondary-container"
+                        className={"registration-badge " + styles.registration}
                         title="Registration confirmed with the professional body"
                       >
                         <ShieldCheck className="size-3.5" aria-hidden />
@@ -182,20 +146,19 @@ export function ProfessionalsWorkspace({
                 </div>
               </div>
 
-              <div className="px-5 pb-5">
+              <div className={styles.professionalBody}>
 
-              <ul className="mt-3 flex flex-wrap gap-1.5">
+              <ul className={styles.specialisms}>
                 {p.specialisms.map((s) => (
                   <li
                     key={s}
-                    className="rounded-full border border-outline-variant/60 bg-surface-container-low px-2.5 py-0.5 font-data text-[11px] text-on-surface-variant"
                   >
                     {s}
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 border-t border-outline-variant/40 pt-3 font-data text-data-sm [&>a]:min-h-11">
+              <div className={styles.contactLinks}>
                 <a
                   href={`tel:${p.phone.replace(/\s/g, "")}`}
                   className="flex items-center gap-1.5 text-primary hover:underline"
@@ -232,8 +195,8 @@ function FilterRow({
   onChange: (v: string) => void;
 }) {
   return (
-    <div className="grid grid-cols-[90px_1fr] items-start gap-3">
-      <span className="pt-1.5 font-data text-data-sm text-on-surface-variant">
+    <div className={styles.filterRow}>
+      <span className={styles.filterLabel}>
         {label}
       </span>
       <div className="flex flex-wrap gap-1.5">
@@ -243,11 +206,7 @@ function FilterRow({
             type="button"
             onClick={() => onChange(opt)}
             aria-pressed={value === opt}
-            className={`rounded-sm border px-3 py-1.5 font-data text-data-sm transition-colors ${
-              value === opt
-                ? "border-primary bg-primary text-on-primary"
-                : "border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-primary/50 hover:text-primary"
-            }`}
+            className={styles.chip}
           >
             {opt}
           </button>

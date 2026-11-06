@@ -18,6 +18,10 @@ import {
   Bath,
   Ruler,
   Building2,
+  MapPin,
+  ArrowUpRight,
+  LayoutGrid,
+  X,
 } from "lucide-react";
 import { PropertySearchField } from "@/components/search/PropertySearchField";
 import { EcoBadge } from "@/components/ui/Badges";
@@ -26,6 +30,7 @@ import type { EcoRating, Property } from "@/lib/types";
 import { FEATURED_PROPERTY_IDS } from "@/lib/data/properties";
 import { FilterChip } from "./FilterChip";
 import { MobileSheet } from "@/components/ui/MobileSheet";
+import styles from "./SearchWorkspace.module.css";
 
 const TYPES = ["All", "Apartment", "Compound House", "Mansion", "Townhouse", "Duplex", "Villa", "Bungalow"];
 const STYLES = ["All", "Detached", "Semi-Detached"];
@@ -111,7 +116,7 @@ function FilterGroup({
   onChange: (v: string) => void;
 }) {
   return (
-    <div>
+    <div className={styles.filterGroup}>
       <div className="mb-2 flex items-center gap-2">
         <Icon className="size-3.5 text-primary" aria-hidden />
         <h3 className="font-data text-data-xs font-semibold text-on-surface uppercase tracking-wide">
@@ -125,7 +130,7 @@ function FilterGroup({
             type="button"
             onClick={() => onChange(opt)}
             aria-pressed={value === opt}
-            className={`rounded-sm border px-2 py-1 font-data text-data-xs transition-colors ${
+            className={`${styles.filterOption} rounded-sm border px-2 py-1 font-data text-data-xs transition-colors ${
               value === opt
                 ? "border-primary bg-primary text-on-primary"
                 : "border-outline-variant bg-surface text-on-surface-variant hover:border-primary/50 hover:text-primary"
@@ -170,8 +175,10 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const mobileFiltersButtonRef = useRef<HTMLButtonElement>(null);
 
-  const set = <K extends keyof Filters>(key: K, v: Filters[K]) =>
+  const set = <K extends keyof Filters>(key: K, v: Filters[K]) => {
+    setShowAll(false);
     setF((prev) => ({ ...prev, [key]: v }));
+  };
 
   const addresses = getUniqueAddresses(properties);
 
@@ -205,6 +212,14 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   }, [properties, f, showAll]);
 
   const activeFilterCount = countActiveFilters(f);
+  const filterLabels: Record<keyof Filters, string> = {
+    q: "Location", type: "Type", style: "Style", storey: "Storey", tenure: "Tenure",
+    status: "Status", eco: "Eco rating", minBeds: "Min. beds", maxBeds: "Max. beds",
+    minPrice: "Min. price", maxPrice: "Max. price",
+  };
+  const appliedFilters = (Object.keys(f) as (keyof Filters)[])
+    .filter(key => f[key] !== EMPTY[key])
+    .map(key => ({ key, label: filterLabels[key], value: key === "minPrice" || key === "maxPrice" ? formatCedi(Number(f[key])) : f[key] }));
 
   const getTenureDisplayValue = () => {
     if (f.tenure === "All") return "All";
@@ -214,7 +229,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
   };
 
   return (
-    <div className="flex min-h-full min-w-0 flex-col md:h-full">
+    <div className={`${styles.workspace} flex min-h-full min-w-0 flex-col md:h-full`}>
       <MobileSheet open={mobileFiltersOpen} onClose={() => setMobileFiltersOpen(false)} title="Property filters" returnFocusRef={mobileFiltersButtonRef}
         footer={<div className="flex items-center gap-3">
           <button type="button" onClick={() => { setF(EMPTY); setShowAll(false); }} className="min-h-12 rounded-md border border-outline-variant px-4 text-sm font-semibold text-primary">Reset filters</button>
@@ -233,28 +248,40 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
         </div>
       </MobileSheet>
       {/* --- Search and filter bar -------------------------------------------------------- */}
-      <div className="search-toolbar shrink-0 border-b border-outline-variant bg-surface-container-lowest p-4">
-        <div className="flex flex-col gap-3">
+      <section aria-label="Find a property" className={`search-toolbar ${styles.toolbar}`}>
+        <div className={styles.card}>
+          <div className={styles.headingRow}>
+            <div>
+              <p className={styles.eyebrow}><span aria-hidden="true" /> THE URBANRISE COLLECTION</p>
+              <h1 className={styles.title}>Find a place to call <span>yours.</span></h1>
+            </div>
+            <div className={styles.resultCount} role="status" aria-live="polite" aria-atomic="true">
+              <span className={styles.countNumber}>{results.length}</span>
+              <span>{results.length === 1 ? "property" : "properties"}<small>{showAll ? "in the collection" : activeFilterCount ? "matching your search" : "ready to explore"}</small></span>
+            </div>
+          </div>
           {/* Search row */}
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="relative min-w-0 basis-full md:flex-1 md:basis-0">
+          <div className={styles.searchRow}>
+            <form className={styles.searchShell} onSubmit={event => { event.preventDefault(); setShowAll(false); setOpenChip(null); }}>
               <PropertySearchField
                 properties={properties}
                 value={f.q}
                 onChange={(v) => set("q", v)}
                 placeholder="Search by address or district…"
-                inputClassName="w-full rounded-md border border-outline-variant bg-surface py-2 pl-10 pr-10 text-body-md outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
-                wrapperClassName="w-full"
-                icon={<Search className="size-4" aria-hidden />}
+                inputClassName={styles.searchInput}
+                wrapperClassName={styles.searchField}
+                icon={<span className={styles.locationIcon}><MapPin className="size-4" aria-hidden /></span>}
                 onViewAll={(q) => {
                   set("q", q);
                   setShowAll(!q.trim());
                 }}
                 onSubmit={(q) => { set("q", q); setShowAll(false); }}
               />
-            </div>
+              <button type="submit" className={styles.searchSubmit} aria-label="Search properties"><Search className="size-4" aria-hidden /><span>Search</span></button>
+            </form>
+            <div className={styles.actions}>
             <button ref={mobileFiltersButtonRef} type="button" onClick={() => { setOpenChip(null); setMobileFiltersOpen(true); }}
-              className="flex min-h-11 items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-semibold text-on-primary md:hidden">
+              className={styles.mobileFilters}>
               <SlidersHorizontal className="size-4" aria-hidden /> Filters
               {activeFilterCount > 0 && <span className="rounded-full bg-white/20 px-1.5 text-xs">{activeFilterCount}</span>}
             </button>
@@ -264,13 +291,10 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 setShowAll(!showAll);
                 if (!showAll) setF(EMPTY);
               }}
-              className={`flex min-h-11 items-center gap-1.5 rounded-md border px-2.5 py-2 text-sm transition-colors whitespace-nowrap md:gap-2 md:px-3 md:font-data md:text-data-sm ${
-                showAll
-                  ? "border-primary bg-primary/10 text-primary hover:bg-primary/20"
-                  : "border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary"
-              }`}
+              className={styles.viewAll}
+              aria-pressed={showAll}
             >
-              <Heart className="size-4" aria-hidden />
+              <LayoutGrid className="size-4" aria-hidden />
               {showAll ? "Filtered" : "View All"}
             </button>
             <button
@@ -280,7 +304,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 setShowAll(false);
                 setOpenChip(null);
               }}
-              className="ml-auto flex min-h-11 items-center gap-1.5 rounded-md border border-outline-variant px-2.5 py-2 text-sm text-on-surface-variant hover:border-primary/50 hover:text-primary transition-colors whitespace-nowrap md:ml-0 md:gap-2 md:px-3 md:font-data md:text-data-sm"
+              className={styles.reset}
             >
               <RotateCcw className="size-4" aria-hidden />
               Reset
@@ -290,10 +314,12 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                 </span>
               )}
             </button>
+            </div>
           </div>
 
           {/* Filter chip bar */}
-          <div className="search-filter-bar hidden flex-wrap items-center gap-2 border p-3 md:flex">
+          <div className={`search-filter-bar ${styles.filterBar}`}>
+            <span className={styles.refineLabel}><SlidersHorizontal className="size-3.5" aria-hidden />Refine</span>
             <FilterChip
               label="Type"
               icon={Home}
@@ -411,71 +437,27 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
             <FilterChip
               label="Beds & price"
               icon={Home}
-              value=""
+              value={f.minBeds || f.maxBeds || f.minPrice || f.maxPrice ? "Custom" : ""}
               isOpen={openChip === "beds"}
               onToggle={() => setOpenChip(openChip === "beds" ? null : "beds")}
             >
-              <div className="space-y-3">
-                <div>
-                  <label className="text-data-xs text-on-surface-variant">Beds from</label>
-                  <input
-                    type="number"
-                    min="0"
-                    value={f.minBeds}
-                    onChange={(e) => set("minBeds", e.target.value)}
-                    placeholder="e.g. 2"
-                    className="mt-1 w-full rounded-sm border border-outline-variant bg-surface px-2 py-1.5 text-data-sm outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
-                  />
-                </div>
-                <div>
-                  <label className="text-data-xs text-on-surface-variant">to</label>
-                  <input
-                    type="number"
-                    min="0"
-                    value={f.maxBeds}
-                    onChange={(e) => set("maxBeds", e.target.value)}
-                    placeholder="e.g. 5"
-                    className="mt-1 w-full rounded-sm border border-outline-variant bg-surface px-2 py-1.5 text-data-sm outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
-                  />
-                </div>
-                <div>
-                  <label className="text-data-xs text-on-surface-variant">₵ from</label>
-                  <input
-                    type="number"
-                    min="0"
-                    value={f.minPrice}
-                    onChange={(e) => set("minPrice", e.target.value)}
-                    placeholder="0"
-                    className="mt-1 w-full rounded-sm border border-outline-variant bg-surface px-2 py-1.5 text-data-sm outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
-                  />
-                </div>
-                <div>
-                  <label className="text-data-xs text-on-surface-variant">to</label>
-                  <input
-                    type="number"
-                    min="0"
-                    value={f.maxPrice}
-                    onChange={(e) => set("maxPrice", e.target.value)}
-                    placeholder="Any"
-                    className="mt-1 w-full rounded-sm border border-outline-variant bg-surface px-2 py-1.5 text-data-sm outline-none focus:border-tertiary-container focus:ring-2 focus:ring-tertiary-container"
-                  />
-                </div>
-              </div>
+              <RangeFilters filters={f} onChange={(key, value) => set(key, value)} />
             </FilterChip>
 
-            <span className="ml-auto text-data-sm text-on-surface-variant">
-              <strong className="text-on-surface">{results.length}</strong>{" "}
-              {results.length === 1 ? "property" : "properties"}{" "}
-              {showAll ? "in system" : "found"}
-            </span>
           </div>
+
+          {appliedFilters.length > 0 && !showAll && <div className={styles.appliedFilters} role="group" aria-label="Applied filters">
+            <span className={styles.appliedLabel}>Your selection</span>
+            {appliedFilters.map(filter => <button key={filter.key} type="button" onClick={() => set(filter.key, EMPTY[filter.key])} aria-label={`Remove ${filter.label} filter: ${filter.value}`} className={styles.appliedFilter}>
+              <span>{filter.label}: <strong>{filter.value}</strong></span><X className="size-3" aria-hidden />
+            </button>)}
+          </div>}
 
           {/* Quick browse */}
           {!showAll && (
-            <div aria-label="Quick browse locations" className="quick-locations flex min-w-0 gap-2 overflow-x-auto overscroll-x-contain pb-1 md:flex-wrap">
-              <span className="hidden font-data text-data-sm text-on-surface-variant md:inline-block">
-                Quick browse:
-              </span>
+            <div className={styles.discoverRow}>
+              <span className={styles.discoverLabel}><MapPin className="size-3.5" aria-hidden />Explore a neighbourhood</span>
+            <div aria-label="Quick browse locations" className={`quick-locations ${styles.locations}`}>
               {addresses.slice(0, 6).map((address) => (
                 <button
                   key={address}
@@ -484,19 +466,20 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
                     set("q", address);
                     setShowAll(false);
                   }}
-                  className="min-h-11 shrink-0 rounded-full border border-secondary/50 bg-secondary/10 px-3 py-1 font-data text-data-sm text-secondary hover:bg-secondary/20 transition-colors"
+                  className={styles.location}
+                  aria-pressed={f.q === address}
                 >
-                  {address}
+                  {address}<ArrowUpRight className="size-3" aria-hidden />
                 </button>
               ))}
             </div>
+            </div>
           )}
-          <p aria-live="polite" className="text-sm text-on-surface-variant md:hidden"><strong className="text-on-surface">{results.length}</strong> {results.length === 1 ? "property" : "properties"} {showAll ? "in system" : "found"}</p>
         </div>
-      </div>
+      </section>
 
       {/* --- Results Grid -------------------------------------------------------- */}
-      <div className="search-results flex-1 md:min-h-0 md:overflow-auto scrollbar-slim">
+      <div className={`${styles.results} search-results flex-1 md:min-h-0 md:overflow-auto scrollbar-slim`}>
         {results.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full p-8">
             <Heart className="size-12 mb-4 text-outline-variant opacity-50" aria-hidden />

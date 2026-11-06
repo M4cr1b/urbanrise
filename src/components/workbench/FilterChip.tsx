@@ -1,12 +1,14 @@
 "use client";
 
 import { useRef, useEffect, useLayoutEffect, useState, useId } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
+import styles from "./SearchWorkspace.module.css";
 
 interface FilterChipProps {
   label: string;
   icon: React.ComponentType<{ className?: string }>;
   value: string;
+  isActive?: boolean;
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
@@ -16,6 +18,7 @@ export function FilterChip({
   label,
   icon: Icon,
   value,
+  isActive = Boolean(value && value !== "All"),
   isOpen,
   onToggle,
   children,
@@ -66,16 +69,14 @@ export function FilterChip({
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
+        aria-label={label}
         aria-controls={isOpen ? panelId : undefined}
-        className={`filter-trigger flex items-center gap-2 border px-3 py-2 transition-all ${
-          isOpen
-            ? "border-primary bg-primary/10 text-primary"
-            : "border-outline-variant bg-surface text-on-surface-variant hover:border-primary/50 hover:text-primary"
-        }`}
+        className={`filter-trigger ${styles.filterTrigger}`}
+        data-active={isActive}
       >
         <Icon className="size-4" aria-hidden />
         <span>{label}</span>
-        {value && value !== "All" && <span className="text-on-surface-variant">{value}</span>}
+        {value && value !== "All" && <span className={styles.filterValue}>{value}</span>}
         <ChevronDown
           className={`size-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
           aria-hidden
@@ -85,9 +86,10 @@ export function FilterChip({
       {isOpen && (
         <div
           ref={panelRef} id={panelId} role="group" aria-label={`${label} filters`}
-          className="filter-panel fixed z-50 max-h-[calc(100dvh-24px)] w-[min(300px,calc(100vw-24px))] overflow-y-auto overscroll-contain border border-outline-variant bg-surface-container-lowest p-4"
+          className={`filter-panel fixed z-50 max-h-[calc(100dvh-24px)] w-[min(300px,calc(100vw-24px))] overflow-y-auto overscroll-contain ${styles.filterPanel}`}
           style={position}
         >
+          <div className={styles.filterPanelHeading}><span>REFINE YOUR SEARCH</span><button type="button" aria-label={`Close ${label} filters`} onClick={() => { onToggle(); wrapperRef.current?.querySelector("button")?.focus(); }}><X className="size-4" aria-hidden /></button></div>
           {children}
         </div>
       )}
