@@ -10,7 +10,8 @@ const imports = load(path.join(root, 'src/lib/data/imported-properties.ts'));
 const seed = load(path.join(root, 'src/lib/data/seed-source.ts'));
 const { properties37To44 } = load(path.join(root, 'src/lib/data/properties-37-44.ts'));
 const { properties45To51 } = load(path.join(root, 'src/lib/data/properties-45-51.ts'));
-const allBundled = [...properties37To44, ...properties45To51];
+const { adomProperties } = load(path.join(root, 'src/lib/data/adom-properties.ts'));
+const allBundled = [...properties37To44, ...properties45To51, ...adomProperties];
 
 test('all bundled listings have the registered exterior and branded gallery', () => {
   const additions = imports.unpublishedProperties([]);
@@ -42,21 +43,21 @@ test('a published record outside active coverage cannot reappear from the bundle
 test('compound-house, beds, price, eco and locality searches keep exact matches', () => {
   const additions = imports.unpublishedProperties([]);
   const matches = f => additions.filter(p => imports.matchesPropertyFilters(p, f)).map(p => p.id);
-  assert.deepEqual(matches({ type: 'Compound House' }), [properties37To44[1].id, properties37To44[2].id]);
+  assert.deepEqual(matches({ type: 'Compound House' }), [properties37To44[1].id, properties37To44[2].id, ...adomProperties.filter(p => p.type === 'Compound House').map(p => p.id)]);
   assert.deepEqual(matches({ query: 'aMrAhIa', minBeds: 3, maxBeds: 3, minPrice: 1170000, maxPrice: 1170000, minEcoRating: 'D', tenure: 'Leasehold', status: 'Available' }), [properties37To44[5].id]);
-  assert.deepEqual(matches({ minEcoRating: 'C' }), properties45To51.filter(p => ['A', 'B', 'C'].includes(p.ecoRating)).map(p => p.id));
+  assert.deepEqual(matches({ minEcoRating: 'C' }), [...properties45To51, ...adomProperties].filter(p => ['A', 'B', 'C'].includes(p.ecoRating)).map(p => p.id));
   assert.equal(matches({ status: 'Sold' }).length, 0);
   assert.equal(matches({ query: 'Adabraka' }).length, 3);
   assert.equal(matches({ query: 'Adenta' }).length, 5 + properties45To51.length);
 });
 
-test('credential-free source includes the same import, details and two compound houses', async () => {
+test('credential-free source includes the same imported details and compound houses', async () => {
   const properties = await seed.getProperties();
   for (const p of allBundled) {
     assert((await seed.getPropertyIds()).includes(p.id));
     assert.deepEqual(await seed.getPropertyById(p.id), imports.getImportedProperty(p.id));
   }
-  assert.equal((await seed.searchProperties({ type: 'Compound House' })).length, 2);
+  assert.equal((await seed.searchProperties({ type: 'Compound House' })).length, 2 + adomProperties.filter(p => p.type === 'Compound House').length);
   assert.equal(new Set(properties.map(p => p.id)).size, properties.length);
 });
 
@@ -73,4 +74,13 @@ test('property 41 replacement retires the old listing in both bundled sources', 
   assert.equal(replacement.agent.secondaryPhone, undefined);
   assert.equal(replacement.askingPrice, 2690000);
   assert.equal(replacement.images.length, 6);
+});
+
+test('held Adom property 9 is absent from both bundled data sources', async () => {
+  const heldId = 'labone-apartment-frimpsglobal';
+  assert.equal(imports.getImportedProperty(heldId), null);
+  assert.equal(await seed.getPropertyById(heldId), null);
+  assert(!(await seed.getPropertyIds()).includes(heldId));
+  assert.equal(adomProperties.length, 9);
+  assert.equal(adomProperties.reduce((sum, p) => sum + p.images.length, 0), 54);
 });

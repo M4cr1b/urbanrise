@@ -3,10 +3,11 @@ import type { PropertyFilters } from "./contract";
 import { isActiveRegion } from "@/lib/regions";
 import { properties37To44 } from "./properties-37-44";
 import { properties45To51 } from "./properties-45-51";
+import { adomProperties } from "./adom-properties";
 import { orderPropertyImages } from "./property-images";
 
 /** Ship these reviewed listings with their assets until they are stored in Supabase. */
-const imported = [...properties37To44, ...properties45To51]
+const imported = [...properties37To44, ...properties45To51, ...adomProperties]
   .filter((property) => isActiveRegion(property.region))
   .map((property) => ({
     ...property,

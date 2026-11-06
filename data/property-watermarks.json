@@ -2,7 +2,7 @@
   "version": 1,
   "caption": "POSTED ON URBAN RISE",
   "method": "Local masked editing; no generative photo changes",
-  "editedPhotographs": 500,
+  "editedPhotographs": 554,
   "images": {
     "/properties/achimota-acp-duplex-kingscity/01.webp": {
       "url": "/property-photos/achimota-acp-duplex-kingscity/01-urbanrise.webp",
@@ -13654,6 +13654,870 @@
       "maskPixels": 5030,
       "changedOutsideMask": 0,
       "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/01.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/01.png",
+      "sourceSha256": "38284756ea7d73cb2f6db5d1ffd091ae9289185c6ed2824961fd985b8d38744a",
+      "sha256": "46afbbc19d221c8830f8fe0ca9312bafeb5378351718ebc87e2214a44adfa6b8",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8403,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/02.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/02.png",
+      "sourceSha256": "00aeebd35f753051da399b636a8703ce170a6abe161dac354fc3e21921d311b8",
+      "sha256": "a191317d31eca5082cbe7ca42e5db5939917c53f64cfa03cf4112c9c51facdfd",
+      "maskSha256": "d5d284938cb959fb941373c4da835750bb3c0e1b64fe6e63f95e8408ed2757c4",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8372,
+      "maskPixels": 8415,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/03.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/03.png",
+      "sourceSha256": "c0b9a16a8e3f784fe4505c9f92aa2fa56ee9b79763ff6693757b22e0a55fee13",
+      "sha256": "d44cbf7dc9610b0a208d693f80d7c2206ae9626ebd059097794e3a07d6a77024",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8380,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/04.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/04.png",
+      "sourceSha256": "8d756867af1c752b29f92287b88429e55a230e4725e9c9c9a9ab9f937529da3c",
+      "sha256": "2165500027869764bee1d2a25bdff0620ba9e0189b46188ff91b32668dc7077b",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8354,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/05.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/05.png",
+      "sourceSha256": "41c0cf93dd5782cf7abde610cb649a015f19f485801fdc6aab36b6567d99007d",
+      "sha256": "b1cdf6ad123812961dda69439f0b026803dd004b8c39eacf36600e74fc19ce42",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8393,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/06.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/06.png",
+      "sourceSha256": "0ba0cfab525046e72741ff183e978f477f551269a63009d500d017b3e0929178",
+      "sha256": "59d81558c58f80598099633e73e76f9983f6bb99c59105c05a10508298d09ea7",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8359,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/07.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/07.png",
+      "sourceSha256": "86ed6b3c1b5d6a4ca3ee5b57465cda4b335728e3301d0bc8455b781a380d0e26",
+      "sha256": "ddcb90905c63b49d0535e4f9eda589cebda835ac384ba3961c36ff605ced2795",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8412,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-lapaz-compound-house-dollardream/01.webp": {
+      "url": "/property-photos/kwashieman-lapaz-compound-house-dollardream/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-lapaz-compound-house-dollardream/01.png",
+      "sourceSha256": "1b9fb21c9db256915f35b2b2b6a53140cb29f550cde0cdee95512233d9303f34",
+      "sha256": "38a9c855ebf69966a009157da4712f08c5a4281dc6851dfc6cc746b489dbc9a6",
+      "maskSha256": "6ab6fe97eb25ef206dfd11c825f6aaab16043927a0025c6a7e2c159bde99bbd0",
+      "width": 1125,
+      "height": 1500,
+      "changedPixels": 4898,
+      "maskPixels": 4935,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-lapaz-compound-house-dollardream/02.webp": {
+      "url": "/property-photos/kwashieman-lapaz-compound-house-dollardream/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-lapaz-compound-house-dollardream/02.png",
+      "sourceSha256": "f9a6356f964386fffd938c113424a9244fb4c96eb6d24efd015479a419b7a191",
+      "sha256": "585c1d63f1cd4a88fd4160e7237c6046b5aa9720665879bd89ef9ab97ea1edcf",
+      "maskSha256": "6ab6fe97eb25ef206dfd11c825f6aaab16043927a0025c6a7e2c159bde99bbd0",
+      "width": 1125,
+      "height": 1500,
+      "changedPixels": 4914,
+      "maskPixels": 4935,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/01.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/01.png",
+      "sourceSha256": "f1446ad14fb6e44611e69e359b3483aa4301f0c140e173b3245a1279a60cd5ce",
+      "sha256": "8d68719aa5370aa85daadd3150aead3ba6f7337a4f70285260756c28424d0e28",
+      "maskSha256": "311187bf146f6e5e0966ff609968b7da0c2904f77f2143c05340609ba8037613",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5335,
+      "maskPixels": 5338,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/02.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/02.png",
+      "sourceSha256": "3157af7c3804ed9ff59a5478934c238ad72dd8c46f126e2b3fab0a71cedc47c0",
+      "sha256": "9091ba08f268e4c721f70ea99a433d0e9a611bfe0479caeb2b0c9df1c368c790",
+      "maskSha256": "99860146a03e3a43812561f92030253cdfa7b14a636d558c6bc0d1fd95ebc540",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5608,
+      "maskPixels": 5641,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/03.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/03.png",
+      "sourceSha256": "37a04eef2cd6d60ef738d99cfeb44a37570d8884848138e8469bc7b8ee113961",
+      "sha256": "f28c39ae55801e90edf9317bbb7eb48e4883b5800d4e495d29b7a4a943931250",
+      "maskSha256": "32596b0ce18947782f6d371572f4ed15aaac096517ec76ac0a05efb31a97ac5b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 4717,
+      "maskPixels": 4726,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/04.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/04.png",
+      "sourceSha256": "cb42e90e3d21cf21dc71e746a119ab6e9da7b973966df4a22a6c8330d7db539e",
+      "sha256": "81e3e4b503fc24e3e6daa2b9c1dda1689c770c16aec105e1a0647997d2ff7c3d",
+      "maskSha256": "ef6684edfc2981ed5c5ecbd3cdb5ff4f0165e2e6fad98a40aa90d73d65ba05f0",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 5639,
+      "maskPixels": 5641,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/01.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/01.png",
+      "sourceSha256": "c00ce70edeaf72c17dad75f3c5590f5a308f22dea472f1b0fb6acc075d0a25dd",
+      "sha256": "d1eb5f59657603a8e9b9ab854d03675529f023e452f8abbee8942b6a67efa69c",
+      "maskSha256": "be6850fe9200da30606287bef4e536bfbd6418e72441ef745eb8c26a629642cf",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12215,
+      "maskPixels": 12293,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/02.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/02.png",
+      "sourceSha256": "46728018244fb10df87c179499d4672e52f6cf3d6ec09fef3579351cbc7b0631",
+      "sha256": "94b91a997efcbda90088a63fb8db30b1a80a57596818aabd6fd18e484c2006cb",
+      "maskSha256": "83fd83af9a30df1e203ad83f369dea90970658abb0d2daaa46c53932ca368939",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12209,
+      "maskPixels": 12231,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/03.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/03.png",
+      "sourceSha256": "6ceb9057daf0d04870a8b92bf418cf59cbe5cf86ccda99d7c042783252bbdb17",
+      "sha256": "64e4b3231e561603f6feb35db634499430dead3902d319c49df8ed0e9fa37b45",
+      "maskSha256": "be6850fe9200da30606287bef4e536bfbd6418e72441ef745eb8c26a629642cf",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12175,
+      "maskPixels": 12293,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/04.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/04.png",
+      "sourceSha256": "2c1d8c072553f6a5c0d2a78f8d8b4af8fd87e68135a788b510df7eba1d97c28b",
+      "sha256": "064741f8a62c8e13e047f5dd60ae07d7856899e02d8ef15cd7c969074cb92ce5",
+      "maskSha256": "83fd83af9a30df1e203ad83f369dea90970658abb0d2daaa46c53932ca368939",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12180,
+      "maskPixels": 12231,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/05.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/05.png",
+      "sourceSha256": "2cf889601f773cdc86308b19d97dc6c6fdc6e34cb92825d2a4bb89cfdc0bfc1e",
+      "sha256": "bc4b68bf6d6a51a6ae3d59824a458434ad11b0efa4a3934cc9f6e03a68583268",
+      "maskSha256": "83fd83af9a30df1e203ad83f369dea90970658abb0d2daaa46c53932ca368939",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12155,
+      "maskPixels": 12231,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/06.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/06.png",
+      "sourceSha256": "49cbef94c0df53b171500e15d6bb031089bbc04eed695ef45abac7aa43d6cf38",
+      "sha256": "a6d05ec62b1219e9c686fe7f0a0f2933d2c3ad75a01aaf4bd02494a988ba8b19",
+      "maskSha256": "be6850fe9200da30606287bef4e536bfbd6418e72441ef745eb8c26a629642cf",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12232,
+      "maskPixels": 12293,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/01.webp": {
+      "url": "/property-photos/labone-apartment-edmark/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/01.png",
+      "sourceSha256": "f8deafda523a792508a136a91c2bca4904a1916df4ee0785ac4453e17d3ddf88",
+      "sha256": "3701a08c92f806dd3fcdc087f46653d95a6c4ac03877b11e9787d0080b3f8a62",
+      "maskSha256": "1d76e4c108f930a23df0089321325e843816a2cb421b8827002d719271bbff2a",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5638,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/02.webp": {
+      "url": "/property-photos/labone-apartment-edmark/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/02.png",
+      "sourceSha256": "ac0a9e4687cb4acc72566b8b9735bfd77c26ccdef0f7b0c6e19f5588df43e68d",
+      "sha256": "260fd6f00b7ed030b9104859f5b87f82b49606592c2a95dddba44edabb8e0098",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5632,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/03.webp": {
+      "url": "/property-photos/labone-apartment-edmark/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/03.png",
+      "sourceSha256": "bcb9091ad6074e43d360854df1f362cf4a5a6300a298a1a77a7a0185c50a8ee3",
+      "sha256": "6a12b33bd5b137e04dadf0cf888bf1af3f0810b3a9fb999f2281c5bdb63ace19",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5592,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/04.webp": {
+      "url": "/property-photos/labone-apartment-edmark/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/04.png",
+      "sourceSha256": "1eacfeb7f7ea6c66dfd1d17a8e069ab8f9666e03ef6fe22731928fd7fbf48207",
+      "sha256": "5ab18223754e0bbcbbbcda138069e6649c98ad3cd9077bb1737038033071e10e",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5601,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/05.webp": {
+      "url": "/property-photos/labone-apartment-edmark/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/05.png",
+      "sourceSha256": "9684bd4a48fb02359554321e580f52821935e05ccfd1a5f18ef044166e87155e",
+      "sha256": "e466545f3442a9f4ed6c4eba7f0dfad0f83db71c0ac76724cf5fb3a71f585a6b",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5625,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/06.webp": {
+      "url": "/property-photos/labone-apartment-edmark/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/06.png",
+      "sourceSha256": "82c8c85126ed81890cd369a7405b78dc7fc3bd7c709403d75a81899234e657c4",
+      "sha256": "4b92d499380c7ee1807994e07bde616b0a2ff9a64b51aa9b48eefa29040a8110",
+      "maskSha256": "1d76e4c108f930a23df0089321325e843816a2cb421b8827002d719271bbff2a",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5577,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/01.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/01.png",
+      "sourceSha256": "c4dc35d19e0ba20da1be3638f8a43cf7077cc78e1652baa14c193d762fa368c8",
+      "sha256": "3c3c3475913490ff659744b3c4ff4cc96281307cae665196c875099797f23a3c",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5625,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/02.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/02.png",
+      "sourceSha256": "6659877c4529a3a42f7e4ea7a5112b5d633dbe4509231ebc1fdb8cdae441604e",
+      "sha256": "dcbe94108dd0a15faebab0d392b37eee8f81a54be4f4761c07430ed1fae93465",
+      "maskSha256": "d55c862a41fea52118cbbaf73afd5320b44c26cc69cd87829df8324ee8a379a9",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6520,
+      "maskPixels": 6574,
+      "changedOutsideMask": 0,
+      "fontSize": 53,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/03.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/03.png",
+      "sourceSha256": "4daabb85eda263b039e04aa2afcd7ae36015530bc6a91f64a912f5bc783d4be7",
+      "sha256": "edc499f9c480f54ba826dc5707765b4b9b9cbddcf18609fff4e9d2990be647ac",
+      "maskSha256": "d55c862a41fea52118cbbaf73afd5320b44c26cc69cd87829df8324ee8a379a9",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6497,
+      "maskPixels": 6574,
+      "changedOutsideMask": 0,
+      "fontSize": 53,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/04.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/04.png",
+      "sourceSha256": "91f2b9bea0f60a8cb7053a11468f2d2283fcf6eddbde25b3fa4ba6be80d5420b",
+      "sha256": "e425e31be8857da50d625bff1d28381ad689f88578f992c1b7057a931ce71b6a",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5596,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/05.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/05.png",
+      "sourceSha256": "b8370c62e22acab3d874c5c62891f095b025cca61d97fe4d54c20bf8fabd3b56",
+      "sha256": "6b6843574535b2989f61616e36adbcccd73773ffbab46c2168d39cb0dea40e27",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6481,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/06.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/06.png",
+      "sourceSha256": "006778bbc521c2812e9dd27aec8dd1ade1aeb7e36d38c7088dbb7bfebdc5e080",
+      "sha256": "f8234aecd27e4fa81a635b87b2603cb06634a539c7166f9a17f98b1177f27095",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6514,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/07.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/07.png",
+      "sourceSha256": "ed7baaf41abe33d77dba99129d95d2826d1b2034a58ae7d2c1827b370353c361",
+      "sha256": "48d9419633b2b757ac340965dea6fad2c27be9bf65dbc5b792441978d0aecd33",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6514,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/08.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/08.png",
+      "sourceSha256": "6e8a9b56d3b3fe265a9026f816fc8590620aafdf2b1cc5745f5fed01497014c8",
+      "sha256": "d2a10e687d4c949c3383fc816f2ecc4b8297a0fada31faf35ff3f286d31f3a98",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6483,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/09.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/09.png",
+      "sourceSha256": "89832b58840317459db3f354eb4f269e8b6a7abe4148942f774a005a7cf2f5a5",
+      "sha256": "1d9848a08ce82aac01357586995ff7eadc0f7b4dec5063b9cb37a5bb7a1fa467",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5599,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/01.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/01.png",
+      "sourceSha256": "49c392253611cabdc710decf079453d5db5857e39b401d12c1850b0a810edca3",
+      "sha256": "3e373721548733f671e20b202400a58ae6baa143a32b6369594b79b09253190c",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8366,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/02.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/02.png",
+      "sourceSha256": "adbb1e791cf03fa8617e5ff2a34dfe5aeb51d9a6a2c4b6c047c7466bf8efb273",
+      "sha256": "01b74f8fa4b0ca9dad0aa65556c98665a7e665ad7dd52b21081d8c75623daaa3",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8395,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/03.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/03.png",
+      "sourceSha256": "cbb9c53d947e0513928be25158c0d026f7754dca63d97080920a35ee3cb11209",
+      "sha256": "0c1fde5387ac432c82f3e4d28061e0556d67299a694895167842e22a13f6dbd5",
+      "maskSha256": "84ea7be5b51a88b27f72e5e96ecd9e5839f1d6f99dc8eadc13968a0edec04abd",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8406,
+      "maskPixels": 8415,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/04.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/04.png",
+      "sourceSha256": "aa4da868dfc2bf12668fa33ddae89ae5e92c28a77e776fb087c19a33db8cd0be",
+      "sha256": "fc04626444d7650d8a8bf9403a91b7150cb56444bb79659989ef1d83f4c8fb11",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8402,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/05.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/05.png",
+      "sourceSha256": "466c5f07876780c664035d8c71a18d4c120812512e43ce0e178737af24c95013",
+      "sha256": "5ee336ea9041d321fcacdea39e44ae6d74a88dfe81693c950726a4631b7fd815",
+      "maskSha256": "e933418e6dc5ce7b1343c82704594ba14ad8c9bd0029401ee8cbfd8af348512b",
+      "width": 1080,
+      "height": 810,
+      "changedPixels": 6095,
+      "maskPixels": 6110,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/06.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/06.png",
+      "sourceSha256": "c75db4b5e246406756b4536a1756db25bdbadf738a28ad5d785ce12acbc13fc4",
+      "sha256": "0c64f18c77f20931bbbdd3ec616a4e02430655eebee347b122d03b5b1797f14c",
+      "maskSha256": "c61dc8339014a9306b9dc3f28f2f85b4d7e40a62b2959c1d6caf81f02f842be1",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 10936,
+      "maskPixels": 10956,
+      "changedOutsideMask": 0,
+      "fontSize": 68,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/07.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/07.png",
+      "sourceSha256": "567bc3a1af87460a909213079d6db36ebb34ad4aa7c73303db6b3b077d2a28b7",
+      "sha256": "bccf6317d9467b1316cb335f67386b2d35fb5422b10e8bf38597025e0b54c40e",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8409,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/08.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/08.png",
+      "sourceSha256": "59e0c64944e17e9298d5e737d25a6e26a5e79558d15d695b2b8aa748c0a0e675",
+      "sha256": "5e774e918b842e6bf339352c9f0e0bc69e518d3fd6c4645027e2f79c4bc35d99",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8410,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/01.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/01.png",
+      "sourceSha256": "bcf85226dbab39278d396c97153fa29150dec9e0cb541fb4f5d38f64627b6fb6",
+      "sha256": "d7d9e0ab0a43517e5b644bfe8927206bc9281c08a95495ffa9673c8baea0d0b2",
+      "maskSha256": "9044137e67247495bb31bed7315d351b0a6c506d6cf1e6daaf2cb84fe0e4b463",
+      "width": 768,
+      "height": 690,
+      "changedPixels": 3228,
+      "maskPixels": 3241,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/02.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/02.png",
+      "sourceSha256": "f2b7aa84845b7e8ad849396c9bca2985c2644eb92dbf539c9e4e7c637a123c00",
+      "sha256": "a8f68a39af105f79ff72a3b6ccb351fc7900c5df6741d5a1ef7533e0861844e1",
+      "maskSha256": "f0ee543db095209694c680b7588ee70a5ba6170832ddc40d8d3c63d2e07ae2c6",
+      "width": 768,
+      "height": 705,
+      "changedPixels": 3297,
+      "maskPixels": 3302,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/03.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/03.png",
+      "sourceSha256": "06f80bb930490d9435b2ff1e8c11e43b32a44248ab2a42f97e25d6dbc09fb2ae",
+      "sha256": "6c8692350bdaef5044c6b2cdf8483331a67167c5eda0d723b0c0ab5bbb46c3cb",
+      "maskSha256": "bc224e552c19f16f9da548304965cf79654824aef89d8492f1be242816d50aae",
+      "width": 750,
+      "height": 733,
+      "changedPixels": 3225,
+      "maskPixels": 3241,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/04.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/04.png",
+      "sourceSha256": "6556b1ab7d55462e1a550ba14ec1a9032da30f7e51e2642ecce4dfc68bb37e05",
+      "sha256": "b166d53e7afb9e88e5135bb52dc44033bcff1c84f866231017d9d437b6f4fa40",
+      "maskSha256": "7064b21bde8c2881535a8d3b9dd8ef58050ad2ea686306dcd98da076fda18e60",
+      "width": 750,
+      "height": 681,
+      "changedPixels": 3079,
+      "maskPixels": 3101,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/05.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/05.png",
+      "sourceSha256": "4d7c1d54ddced0c734853ae6f01b63f2bf74b1902e09415fad37bae527113ed0",
+      "sha256": "f172358ff36637e9e476a6d59fda9bb20986a13732b09fedb85fcaf565ea0f67",
+      "maskSha256": "3f3824f137a7bbe72cb7917e500eb0fc3d713ad155b97818f75743186a2a811a",
+      "width": 768,
+      "height": 729,
+      "changedPixels": 3296,
+      "maskPixels": 3302,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/06.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/06.png",
+      "sourceSha256": "328e3c42e5f089f898a4125eea4a01324c1527b9078abfee15f948d650853647",
+      "sha256": "f1020b9e66fb9225e32b72b1192f0c41d9ff14f3e99ad0dad23be6111d6762af",
+      "maskSha256": "1730d3516e07d5f23b8959acaadd953ed59f8be40f2ca79206cf19612c297d45",
+      "width": 768,
+      "height": 721,
+      "changedPixels": 2376,
+      "maskPixels": 2378,
+      "changedOutsideMask": 0,
+      "fontSize": 27,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/07.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/07.png",
+      "sourceSha256": "946fb5b98bf743395308f5b43b87e2d25994a0213a505c28b5f66645c4777a3b",
+      "sha256": "df9548e1893e416924d8bd820fde4d06e23f639e7aff79416cc1c977a2eee035",
+      "maskSha256": "e8d7719d5f0a45d66f8987759d74c5a2fd6eff4e477ede973c3cc0c549c67a0b",
+      "width": 750,
+      "height": 788,
+      "changedPixels": 3967,
+      "maskPixels": 3970,
+      "changedOutsideMask": 0,
+      "fontSize": 38,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/01.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/01.png",
+      "sourceSha256": "4ee0bde8ce4caf375078925f18a0adf7d076f579ac251da5f4d5fde335139412",
+      "sha256": "b602c1d67623953c28d0ce9cc2a15697c30533aca2770209d77b76e8268dd24d",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6699,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/02.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/02.png",
+      "sourceSha256": "a83ef333c46c3bf23ded85b32ac32a9e7c245a64dcbed7dcd66ca23a58377d5d",
+      "sha256": "eb30d49c1fb5a519847b82297b1a2889894a1125a411c4c0f60e02f702e8e752",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6684,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/03.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/03.png",
+      "sourceSha256": "8f2e4d1174d8c6c270255d47ace99db42fa9edbc0053a81fcd67cfba402f5999",
+      "sha256": "9f9c83557831dc76697c0acf35d75ca9279872b602db1c153cd08ebf158df0d7",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6679,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/04.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/04.png",
+      "sourceSha256": "e7347b74efe3cf76e3014dc020d02767855b2b3a8dcf3fd3373ed5ea8136c042",
+      "sha256": "96b7f8374188fd905e5adc0fb2b8bb1f5a2a52aeb67407dec8a6dc962f6223be",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6690,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/05.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/05.png",
+      "sourceSha256": "47e32cd68dd4045f39eed2162112dfd1211161566bb7935fe1e02f48233693c4",
+      "sha256": "d2217e3360f538563a1fb6107a3e92b1f123ce2d9e701b277707c39da621f296",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6408,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
       "brand": {
         "method": "reviewed-platform-replacement"
       }
