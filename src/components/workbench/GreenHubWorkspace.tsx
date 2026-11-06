@@ -14,13 +14,14 @@ import {
   MessageCircle,
   Paintbrush,
   Phone,
-  Search,
   Sun,
   Thermometer,
 } from "lucide-react";
 import { EmptyState } from "@/components/ui/States";
 import type { GreenMaterial, MaterialCategory } from "@/lib/types";
 import { PRIMARY_REGION } from "@/lib/regions";
+import { CollectionPanel, CollectionSearch, CollectionReset } from "./CollectionPanel";
+import styles from "./CollectionPanel.module.css";
 
 /* ---------------------------------------------------------------------------
    Green Building Materials Hub.
@@ -102,77 +103,23 @@ export function GreenHubWorkspace({ materials }: { materials: GreenMaterial[] })
   );
 
   return (
-    <div className="min-w-0 p-4 md:p-8">
-      <header className="workspace-heading mb-6">
-        <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
-          Green Building Materials
-        </h1>
-        <p className="mt-1 max-w-2xl text-body-md text-on-surface-variant">
-          Sustainable materials available in {PRIMARY_REGION}, with the supplier
-          and where to find them. Better for the environment, and usually
-          cheaper to run.
-        </p>
-      </header>
-
-      {/* Category chips carry a one-line explanation, so the taxonomy does not
-          assume construction vocabulary. */}
-      <div aria-label="Material categories" className="mb-5 flex min-w-0 gap-2 overflow-x-auto overscroll-x-contain pb-1 md:flex-wrap [&>button]:shrink-0">
-        <button
-          type="button"
-          onClick={() => setCategory("All")}
-          aria-pressed={category === "All"}
-          className={`rounded-full border px-4 py-2 font-data text-data-sm transition-colors ${
-            category === "All"
-              ? "border-primary bg-primary text-on-primary"
-              : "border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-primary"
-          }`}
-        >
-          Everything
-        </button>
-        {CATEGORIES.map((c) => {
-          const { icon: Icon, blurb } = CATEGORY_META[c];
-          const active = category === c;
-          return (
-            <button
-              key={c}
-              type="button"
-              onClick={() => setCategory(c)}
-              aria-pressed={active}
-              title={blurb}
-              className={`flex items-center gap-2 rounded-full border px-4 py-2 font-data text-data-sm transition-colors ${
-                active
-                  ? "border-primary bg-primary text-on-primary"
-                  : "border-outline-variant bg-surface-container-lowest text-on-surface-variant hover:border-primary"
-              }`}
-            >
-              <Icon className="size-4" aria-hidden />
-              {c}
-            </button>
-          );
-        })}
-      </div>
-
-      <label className="mb-6 block max-w-md">
-        <span className="sr-only">Search materials</span>
-        <span className="relative block">
-          <Search
-            className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-outline"
-            aria-hidden
-          />
-          <input
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-            placeholder="Search materials or suppliers…"
-            className="w-full rounded-md border border-outline-variant bg-surface-container-lowest py-2.5 pl-10 pr-4 text-body-md outline-none focus:border-tertiary-container"
-          />
-        </span>
-      </label>
-
-      <p className="mb-4 font-data text-data-sm text-on-surface-variant" aria-live="polite">
-        <strong className="text-on-surface">{results.length}</strong>{" "}
-        {results.length === 1 ? "material" : "materials"}
-        {category !== "All" && ` in ${category}`}
-      </p>
+    <div className={styles.workspace}>
+      <CollectionPanel eyebrow="THE GREEN BUILDING COLLECTION" title={<>Green Building <em>Materials</em></>} description={<>Explore sustainable materials and find their suppliers in {PRIMARY_REGION}. Thoughtful choices for the spaces you build.</>} count={results.length} countLabel="materials">
+        <div className={styles.controls}>
+          <CollectionSearch label="Search materials" placeholder="Materials, suppliers or ideas…" value={q} onChange={setQ} />
+          <CollectionReset onClick={() => { setQ(""); setCategory("All"); }} />
+        </div>
+        <div aria-label="Material categories" className={styles.filterRow}>
+          <span className={styles.filterLabel}>Explore</span>
+          <button type="button" onClick={() => setCategory("All")} aria-pressed={category === "All"} className={styles.chip}><Leaf className="size-3.5" aria-hidden />Everything</button>
+          {CATEGORIES.map(c => {
+            const { icon: Icon, blurb } = CATEGORY_META[c];
+            return <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} title={blurb} className={styles.chip}>
+              <Icon className="size-3.5" aria-hidden />{c}
+            </button>;
+          })}
+        </div>
+      </CollectionPanel>
 
       {results.length === 0 ? (
         <EmptyState
@@ -182,7 +129,7 @@ export function GreenHubWorkspace({ materials }: { materials: GreenMaterial[] })
           action={{ href: "/green-hub", label: "Show all materials" }}
         />
       ) : (
-        <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <ul className={"grid " + styles.grid}>
           {results.map((m) => (
             <MaterialCard key={m.id} material={m} />
           ))}
@@ -198,7 +145,7 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
   const supplier = m.supplierDetail;
 
   return (
-    <li className="surface-card flex flex-col overflow-hidden">
+    <li className={styles.itemCard + " flex flex-col"}>
       <div className="relative aspect-4/3 bg-surface-container">
         {m.imageUrl ? (
           <Image
@@ -220,7 +167,7 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
         </span>
       </div>
 
-      <div className="flex flex-1 flex-col p-5">
+      <div className={styles.materialBody}>
         <span className="mb-2 flex items-center gap-1.5 font-data text-[11px] uppercase tracking-wide text-on-surface-variant">
           <CategoryIcon className="size-3.5" aria-hidden />
           {m.category}
@@ -229,10 +176,10 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
         <h2 className="mb-2 font-headline text-headline-md text-primary">
           {m.name}
         </h2>
-        <p className="mb-4 text-body-md text-on-surface-variant">{m.summary}</p>
+        <p className={styles.materialSummary}>{m.summary}</p>
 
         {/* Benefit in words first, figures underneath for anyone who wants them. */}
-        <div className="mb-4 rounded-md bg-secondary-container/40 p-3">
+        <div className={styles.benefit}>
           <p className="flex items-start gap-2 font-data text-data-sm text-on-secondary-container">
             <Leaf className="mt-0.5 size-4 shrink-0" aria-hidden />
             {benefit.plain}
@@ -251,7 +198,7 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
         </p>
 
         {/* Where to buy it — pushed to the bottom so every card ends here. */}
-        <div className="mt-auto border-t border-outline-variant/40 pt-4">
+        <div className={styles.supplier}>
           <p className="mb-2 flex items-center gap-1.5 font-data text-[11px] uppercase tracking-wide text-on-surface-variant">
             <Hammer className="size-3.5" aria-hidden />
             Where to buy
@@ -272,7 +219,7 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
             </p>
           )}
 
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 font-data text-data-sm [&>a]:min-h-11">
+          <div className={styles.contactLinks}>
             {supplier?.phone && (
               <a
                 href={`tel:${supplier.phone.replace(/\s/g, "")}`}
