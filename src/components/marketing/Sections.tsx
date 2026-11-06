@@ -24,14 +24,17 @@ import type { Property, NationalStats } from "@/lib/types";
 export function HeroCopy({ children }: { children?: React.ReactNode }) {
   return (
     <div>
-      <h1 className="mb-4 font-headline text-headline-lg text-primary md:mb-6 md:text-headline-xl">
-        Live well. Build green. Buy smart.
+      <p className="section-kicker">Find your place in Ghana</p>
+      <h1 className="hero-title mb-4 font-headline text-primary md:mb-5">
+        <span className="hero-phrase">Live well.</span>{" "}
+        <span className="hero-phrase hero-accent">Build green.</span>{" "}
+        <span className="hero-phrase">Buy smart.</span>
       </h1>
-      <p className="mb-5 max-w-2xl text-body-md text-on-surface-variant md:mb-8 md:text-body-lg">
+      <p className="hero-description mb-5 text-on-surface-variant md:mb-6">
         Discover Ghana&apos;s most trusted, verified, and eco-rated homes.
         Sustainable living starts with better data.
       </p>
-      <div className="mb-6 flex items-center gap-2 font-data text-data-sm text-on-surface-variant md:mb-8">
+      <div className="hero-trust mb-6 flex items-center gap-2 text-on-surface-variant">
         <ShieldCheck className="size-4 shrink-0 text-secondary" aria-hidden />
         Every listing verified by GhIS-registered surveyors.
       </div>
@@ -84,10 +87,10 @@ export function PortalPanel() {
   return (
     <section className="topo-bg flex h-full items-center bg-surface md:overflow-hidden">
       <div className="mx-auto w-full max-w-container-max px-margin-mobile py-8 md:px-margin-desktop md:py-12">
-        <p className="mb-2 text-label-caps text-secondary md:mb-3">
+        <p className="section-kicker">
           One platform, the whole market
         </p>
-        <h2 className="mb-3 max-w-3xl font-headline text-headline-lg text-primary md:mb-4 md:text-headline-xl">
+        <h2 className="section-title mb-3 max-w-3xl font-headline text-headline-lg text-primary md:mb-4 md:text-headline-xl">
           Ghana&apos;s property information, finally in one place.
         </h2>
         <p className="mb-6 max-w-2xl text-body-md text-on-surface-variant md:mb-10 md:text-body-lg">
@@ -100,16 +103,16 @@ export function PortalPanel() {
             <Link
               key={title}
               href={href}
-              className="group rounded-xl border border-primary/10 bg-surface-container-lowest p-4 transition-shadow hover:shadow-[var(--shadow-level-2)] md:p-6"
+              className="surface-card group p-4 md:p-6"
             >
               <Icon
-                className="mb-2 size-6 text-secondary md:mb-4 md:size-7"
+                className="pillar-icon mb-2 size-5 text-secondary md:mb-4 md:size-6"
                 aria-hidden
               />
               <h3 className="mb-1.5 font-headline text-body-md font-semibold text-primary md:mb-2 md:text-headline-md">
                 {title}
               </h3>
-              <p className="text-sm leading-relaxed text-on-surface-variant md:font-data md:text-data-sm">
+              <p className="text-sm leading-relaxed text-on-surface-variant">
                 {body}
               </p>
               <span className="mt-4 hidden items-center gap-1 text-label-caps text-secondary opacity-0 transition-opacity group-hover:opacity-100 md:inline-flex">
@@ -129,7 +132,7 @@ export function PortalPanel() {
 
 export function StatsBand({ stats }: { stats: NationalStats }) {
   return (
-    <section className="border-y border-outline-variant/30 bg-surface-bright py-4">
+    <section className="stats-band border-y border-outline-variant/30 bg-surface-bright">
       <div className="mx-auto flex max-w-container-max flex-wrap items-center justify-between gap-4 px-margin-mobile font-data text-data-sm text-on-surface md:px-margin-desktop [&>div]:flex-wrap">
         <div className="flex items-center gap-2">
           <Compass className="size-4 text-primary" aria-hidden />
@@ -163,7 +166,7 @@ export function PropertyCard({
   return (
     <Link
       href={`/property/${property.id}`}
-      className="group overflow-hidden rounded-xl border border-primary/10 bg-surface-container-lowest transition-shadow hover:shadow-[var(--shadow-level-2)]"
+      className="surface-card group overflow-hidden"
     >
       <div className="relative aspect-4/3 overflow-hidden bg-surface">
         <Image
@@ -185,12 +188,12 @@ export function PropertyCard({
           </span>
         )}
       </div>
-      <div className="relative p-6">
+      <div className="property-card-body relative">
         <div className="topo-bg pointer-events-none absolute bottom-0 right-0 size-24 opacity-30" />
-        <div className="mb-1 font-data text-data-lg text-primary">
+        <div className="property-card-price mb-2 text-primary">
           {formatCedi(property.askingPrice)}
         </div>
-        <div className="mb-4 text-body-md text-on-surface">
+        <div className="property-card-address mb-4 text-on-surface">
           {property.bedrooms}-Bed {property.style}, {property.address}
         </div>
         <div className="flex items-center gap-4 border-t border-outline-variant/30 pt-4 font-data text-data-sm text-on-surface-variant">
@@ -213,13 +216,16 @@ export function PropertyCard({
 export function FeaturedHomes({ properties }: { properties: Property[] }) {
   return (
     <section className="mx-auto max-w-container-max px-margin-mobile py-section-gap md:px-margin-desktop">
-      <div className="mb-6 flex flex-wrap items-end justify-between gap-3 md:mb-10">
-        <h2 className="font-headline text-headline-lg text-primary">
-          Featured homes
-        </h2>
+      <div className="section-heading mb-6 flex flex-wrap justify-between gap-3 md:mb-10">
+        <div>
+          <p className="section-kicker">Places with possibility</p>
+          <h2 className="section-title font-headline text-headline-lg text-primary">
+            Featured homes
+          </h2>
+        </div>
         <Link
           href="/search"
-          className="flex items-center gap-1 font-data text-data-sm text-secondary hover:underline"
+          className="section-link flex items-center text-secondary hover:underline"
         >
           View all <ArrowRight className="size-4" aria-hidden />
         </Link>
@@ -243,7 +249,8 @@ export function GreenHubTeaser() {
       <div className="topo-bg absolute inset-0 opacity-40" />
       <div className="relative mx-auto grid max-w-container-max items-center gap-gutter px-margin-mobile md:grid-cols-2 md:px-margin-desktop">
         <div>
-          <h2 className="mb-4 font-headline text-headline-lg text-primary">
+          <p className="section-kicker">A lighter footprint</p>
+          <h2 className="section-title mb-4 font-headline text-headline-lg text-primary">
             Green Building Hub
           </h2>
           <p className="mb-8 text-body-lg text-on-surface-variant">
@@ -254,14 +261,14 @@ export function GreenHubTeaser() {
           </p>
           <Link
             href="/green-hub"
-            className="btn-leaf flex w-fit items-center gap-2 rounded-md border border-primary px-6 py-3 text-body-md text-primary hover:bg-primary/5"
+            className="action-secondary flex min-h-12 w-fit items-center gap-2 border border-primary/40 px-6 py-3 text-primary hover:bg-primary/5"
           >
             Explore the Green Hub
             <ArrowRight className="size-4" aria-hidden />
           </Link>
         </div>
         <div className="grid min-w-0 grid-cols-1 gap-4 min-[400px]:grid-cols-2">
-          <div className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-5 shadow-[var(--shadow-level-2)] md:p-6">
+          <div className="surface-panel min-w-0 p-5 md:p-6">
             <Compass className="mb-4 size-8 text-tertiary-container" aria-hidden />
             <h3 className="mb-2 font-headline text-headline-md text-primary">
               Architects
@@ -270,7 +277,7 @@ export function GreenHubTeaser() {
               Find EDGE-certified design professionals.
             </p>
           </div>
-          <div className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-5 shadow-[var(--shadow-level-2)] min-[400px]:mt-8 md:p-6">
+          <div className="surface-panel min-w-0 p-5 min-[400px]:mt-8 md:p-6">
             <Sun className="mb-4 size-8 text-secondary" aria-hidden />
             <h3 className="mb-2 font-headline text-headline-md text-primary">
               Energy
@@ -317,10 +324,10 @@ const FOOTER_COLUMNS = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-outline-variant/30 bg-surface-container-low">
+    <footer className="site-footer border-t border-outline-variant/30 bg-surface-container-low">
       <div className="mx-auto grid max-w-container-max grid-cols-6 gap-gutter px-margin-mobile py-section-gap md:px-margin-desktop">
         <div className="col-span-6 flex flex-col gap-4 md:col-span-2">
-          <div className="flex items-center gap-2 font-headline text-headline-md font-bold text-primary">
+          <div className="brand-wordmark flex items-center gap-2 font-headline text-headline-md text-primary">
             <Leaf className="size-6" aria-hidden />
             UrbanRise
           </div>

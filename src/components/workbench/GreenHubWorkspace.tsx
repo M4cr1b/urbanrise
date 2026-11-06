@@ -103,7 +103,7 @@ export function GreenHubWorkspace({ materials }: { materials: GreenMaterial[] })
 
   return (
     <div className="min-w-0 p-4 md:p-8">
-      <header className="mb-6">
+      <header className="workspace-heading mb-6">
         <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
           Green Building Materials
         </h1>
@@ -198,7 +198,7 @@ function MaterialCard({ material: m }: { material: GreenMaterial }) {
   const supplier = m.supplierDetail;
 
   return (
-    <li className="flex flex-col overflow-hidden rounded-xl border border-primary/10 bg-surface-container-lowest">
+    <li className="surface-card flex flex-col overflow-hidden">
       <div className="relative aspect-4/3 bg-surface-container">
         {m.imageUrl ? (
           <Image

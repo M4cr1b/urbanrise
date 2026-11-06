@@ -175,10 +175,10 @@ export function PortalReveal({ image, hero, children }: Props) {
   if (!motion || narrow) {
     return (
       <>
-        <section className="relative overflow-hidden pt-[calc(4rem+env(safe-area-inset-top))] md:min-h-[80vh] md:pt-24">
+        <section className="hero-stage relative overflow-hidden pt-[calc(4rem+env(safe-area-inset-top))] md:min-h-[80vh] md:pt-24">
           <div className="mx-auto grid max-w-container-max items-center gap-6 px-margin-mobile py-8 md:grid-cols-12 md:px-margin-desktop md:py-section-gap">
             <div className="md:col-span-7">{hero}</div>
-            <div className="relative aspect-4/3 overflow-hidden rounded-xl md:col-span-5">
+            <div className="hero-image relative aspect-4/3 overflow-hidden rounded-3xl md:col-span-5">
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -202,7 +202,7 @@ export function PortalReveal({ image, hero, children }: Props) {
         className={narrow ? "relative h-[200vh]" : "relative h-[320vh]"}
         aria-label="Introduction"
       >
-        <div className="sticky top-0 h-screen overflow-hidden bg-surface">
+        <div className="hero-stage sticky top-0 h-screen overflow-hidden bg-surface">
           {/* Hero copy — present on load, hands over to the image */}
           <div
             ref={heroRef}

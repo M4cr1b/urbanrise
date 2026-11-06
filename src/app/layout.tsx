@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "./interface.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { THEME_INIT_SCRIPT } from "@/lib/theme";
 

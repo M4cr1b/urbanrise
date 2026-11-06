@@ -29,7 +29,7 @@ export function TopNav() {
   return (
     <>
     <header
-      className="fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] backdrop-blur-md transition-colors"
+      className="marketing-header fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)] backdrop-blur-md transition-colors"
       style={{
         backgroundColor: "var(--ur-nav-bg, color-mix(in srgb, var(--color-surface) 80%, transparent))",
         color: "var(--ur-nav-ink, var(--color-primary))",
@@ -38,18 +38,18 @@ export function TopNav() {
       <nav aria-label="Main navigation" className="mx-auto flex min-h-16 max-w-container-max items-center justify-between gap-3 px-4 py-2 md:px-margin-desktop md:py-4">
         <Link
           href="/"
-          className="flex min-h-11 shrink-0 items-center gap-2 font-headline text-headline-md font-bold"
+          className="brand-wordmark flex min-h-11 shrink-0 items-center gap-2 font-headline text-headline-md"
         >
           <Leaf className="size-6" aria-hidden />
           UrbanRise
         </Link>
 
-        <ul className="hidden items-center gap-4 xl:flex">
+        <ul className="nav-capsule hidden items-center xl:flex">
           {LINKS.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="text-sm opacity-70 transition-opacity hover:opacity-100"
+                className="nav-link"
               >
                 {link.shortLabel}
               </Link>
@@ -61,13 +61,13 @@ export function TopNav() {
           <ThemeSelect />
           <Link
             href="/comparables"
-            className="hidden text-sm opacity-70 transition-opacity hover:opacity-100 2xl:block"
+            className="nav-utility hidden 2xl:inline-flex"
           >
             Sign in
           </Link>
           <Link
             href="/search"
-            className="btn-leaf hidden min-h-11 items-center rounded-md bg-primary-container px-4 py-2 text-sm text-on-primary-container hover:bg-primary hover:text-on-primary sm:inline-flex"
+            className="action-primary hidden min-h-11 items-center px-5 py-2 sm:inline-flex"
           >
             List a property
           </Link>

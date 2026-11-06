@@ -41,7 +41,7 @@ export function WorkflowTabs() {
   }, [current]);
 
   return (
-    <nav ref={tabsRef} aria-label="Valuation workflow" className={`relative min-w-0 basis-full items-center gap-1 overflow-x-auto overscroll-x-contain scrollbar-slim md:flex md:flex-1 md:basis-auto ${inWorkflow ? "flex" : "hidden"}`}>
+    <nav ref={tabsRef} aria-label="Valuation workflow" className={`workflow-nav relative min-w-0 basis-full items-center overflow-x-auto overscroll-x-contain scrollbar-slim md:flex md:flex-1 md:basis-auto ${inWorkflow ? "flex" : "hidden"}`}>
       {STAGES.map((stage) => {
         const active = inWorkflow && current === stage.id;
         const href =
@@ -54,7 +54,7 @@ export function WorkflowTabs() {
             key={stage.id}
             href={href}
             aria-current={active ? "page" : undefined}
-            className={`flex shrink-0 items-center gap-1.5 border-b-2 px-3 py-3 text-label-caps uppercase transition-colors ${
+            className={`workflow-link flex shrink-0 items-center gap-1.5 transition-colors ${
               active
                 ? "border-inverse-on-surface text-inverse-on-surface"
                 : "border-transparent text-inverse-on-surface/60 hover:text-inverse-on-surface"
@@ -62,7 +62,7 @@ export function WorkflowTabs() {
           >
             {stage.label}
             {stage.id === "shortlist" && count > 0 && (
-              <span className="rounded-sm bg-secondary-container px-1.5 py-px font-data text-[11px] font-semibold text-on-secondary-fixed">
+              <span className="rounded-full bg-secondary-container px-1.5 py-px font-data text-[11px] font-semibold text-on-secondary-container">
                 {count}
               </span>
             )}
@@ -77,7 +77,7 @@ export function WorkbenchBrand() {
   return (
     <Link
       href="/"
-      className="flex min-h-14 shrink-0 items-center gap-2 font-headline text-xl font-bold text-inverse-on-surface md:pr-4 md:text-headline-md"
+      className="brand-wordmark flex min-h-14 shrink-0 items-center gap-2 font-headline text-xl text-inverse-on-surface md:pr-4 md:text-headline-md"
     >
       <Leaf className="size-5" aria-hidden />
       UrbanRise

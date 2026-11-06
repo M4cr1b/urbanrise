@@ -5,7 +5,10 @@ const appearanceButton = (page: Page) => page.getByRole("button", { name: /^Appe
 async function chooseAppearance(page: Page, mode: "light" | "dark" | "system") {
   const panel = page.getByRole("dialog", { name: "Appearance settings" });
   if (!await panel.isVisible()) await appearanceButton(page).click();
-  await panel.getByRole("radio", { name: mode[0].toUpperCase() + mode.slice(1), exact: true }).check();
+  const choice = panel.getByRole("radio", { name: mode[0].toUpperCase() + mode.slice(1), exact: true });
+  // The view-transition callback commits controlled radio state asynchronously.
+  await choice.click();
+  await expect(choice).toBeChecked();
   await expect(appearanceButton(page)).toHaveAttribute("aria-label", "Appearance: " + mode);
 }
 

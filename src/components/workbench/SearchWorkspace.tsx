@@ -233,7 +233,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
         </div>
       </MobileSheet>
       {/* --- Search and filter bar -------------------------------------------------------- */}
-      <div className="shrink-0 border-b border-outline-variant bg-surface-container-lowest p-4">
+      <div className="search-toolbar shrink-0 border-b border-outline-variant bg-surface-container-lowest p-4">
         <div className="flex flex-col gap-3">
           {/* Search row */}
           <div className="flex flex-wrap items-center gap-2">
@@ -293,7 +293,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
           </div>
 
           {/* Filter chip bar */}
-          <div className="hidden flex-wrap items-center gap-2 rounded-lg border border-outline-variant bg-surface-container-lowest p-3 md:flex">
+          <div className="search-filter-bar hidden flex-wrap items-center gap-2 border p-3 md:flex">
             <FilterChip
               label="Type"
               icon={Home}
@@ -472,7 +472,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
 
           {/* Quick browse */}
           {!showAll && (
-            <div aria-label="Quick browse locations" className="flex min-w-0 gap-2 overflow-x-auto overscroll-x-contain pb-1 md:flex-wrap">
+            <div aria-label="Quick browse locations" className="quick-locations flex min-w-0 gap-2 overflow-x-auto overscroll-x-contain pb-1 md:flex-wrap">
               <span className="hidden font-data text-data-sm text-on-surface-variant md:inline-block">
                 Quick browse:
               </span>
@@ -496,7 +496,7 @@ export function SearchWorkspace({ properties }: { properties: Property[] }) {
       </div>
 
       {/* --- Results Grid -------------------------------------------------------- */}
-      <div className="flex-1 bg-surface-container md:min-h-0 md:overflow-auto scrollbar-slim">
+      <div className="search-results flex-1 md:min-h-0 md:overflow-auto scrollbar-slim">
         {results.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full p-8">
             <Heart className="size-12 mb-4 text-outline-variant opacity-50" aria-hidden />
@@ -547,7 +547,7 @@ function PropertyResultCard({
   return (
     <Link
       href={`/property/${p.id}`}
-      className="group flex flex-col overflow-hidden rounded-lg border border-primary/10 bg-surface-container-lowest text-left transition-shadow hover:shadow-[var(--shadow-level-2)]"
+      className="surface-card group flex flex-col overflow-hidden text-left"
     >
       {/* Fill the thumbnail edge to edge with the selected exterior. */}
       <div className="relative aspect-4/3 w-full flex-shrink-0 overflow-hidden bg-surface">
@@ -584,9 +584,9 @@ function PropertyResultCard({
       </div>
 
       {/* Card body - compact */}
-      <div className="relative flex flex-1 flex-col p-4">
+      <div className="property-card-body relative flex flex-1 flex-col">
         {/* Price row */}
-        <div className="mb-1 font-data text-data-md font-bold text-primary">
+        <div className="property-card-price mb-1 text-primary">
           {formatCedi(p.askingPrice)}
         </div>
         {rate && (
@@ -596,7 +596,7 @@ function PropertyResultCard({
         )}
 
         {/* Address */}
-        <div className="mb-3 line-clamp-2 text-body-sm font-medium text-on-surface">
+        <div className="property-card-address mb-3 line-clamp-2 text-on-surface">
           {p.address}
         </div>
 
@@ -615,7 +615,7 @@ function PropertyResultCard({
 
         {/* Status and tenure row */}
         <div className="mb-2 flex flex-wrap items-center gap-2 font-data text-data-xs">
-          <span className="inline-flex items-center rounded-sm px-1.5 py-0.5 text-data-xs font-semibold bg-secondary text-on-secondary">
+          <span className="property-card-status inline-flex items-center">
             {p.status}
           </span>
           <span className="text-on-surface-variant">{p.tenure}</span>

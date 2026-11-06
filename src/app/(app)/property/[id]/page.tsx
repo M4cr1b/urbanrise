@@ -98,7 +98,7 @@ export default async function PropertyPage({ params }: { params: Params }) {
         </div>
 
         {/* Header Section with Premium Layout */}
-        <div className="mb-6 min-w-0 rounded-2xl bg-gradient-to-br from-primary/5 via-primary/2 to-transparent p-5 ring-1 ring-primary/10 sm:mb-10 sm:p-8">
+        <div className="property-overview surface-panel mb-6 min-w-0 p-5 sm:mb-10 sm:p-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
             <div className="min-w-0 flex-1">
               <h1 className="mb-3 wrap-anywhere font-headline text-3xl font-bold text-primary sm:text-5xl">
@@ -124,7 +124,7 @@ export default async function PropertyPage({ params }: { params: Params }) {
 
             {/* Price Section */}
             <div className="flex min-w-0 flex-col items-start gap-3 sm:items-end">
-              <div className="max-w-full wrap-anywhere text-3xl font-bold text-primary sm:text-5xl">
+              <div className="property-overview-price max-w-full wrap-anywhere text-3xl text-primary sm:text-[2.5rem]">
                 {formatCedi(property.askingPrice)}
               </div>
               {rate && (
@@ -333,7 +333,7 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <section className="min-w-0 rounded-2xl border border-outline-variant/40 bg-gradient-to-br from-surface-container-lowest to-surface-container-lowest/50 p-4 hover:border-primary/30 hover:shadow-lg transition-all duration-300 sm:p-6">
+    <section className="property-detail-panel surface-panel min-w-0 p-4 sm:p-6">
       <div className="flex items-center gap-3 mb-6">
         {icon && (
           <div className="shrink-0 text-primary">{icon}</div>
