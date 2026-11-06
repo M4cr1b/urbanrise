@@ -3,7 +3,7 @@ import gallery37 from "../../../data/property-photo-galleries/adabraka-apartment
 import gallery38 from "../../../data/property-photo-galleries/adabraka-compound-house-soundwave.json";
 import gallery39 from "../../../data/property-photo-galleries/adabraka-compound-house-ultimateheights.json";
 import gallery40 from "../../../data/property-photo-galleries/adenta-ashiyie-townhouse-legacy.json";
-import gallery41 from "../../../data/property-photo-galleries/adenta-villa-ernestdoyi.json";
+import gallery41 from "../../../data/property-photo-galleries/adenta-ssnit-villa-mainstay.json";
 import gallery42 from "../../../data/property-photo-galleries/adenta-amrahia-bungalow-dekscom.json";
 import gallery43 from "../../../data/property-photo-galleries/adenta-oyarifa-duplex-homehaven.json";
 import gallery44 from "../../../data/property-photo-galleries/adenta-ssnit-duplex-hometrust.json";
@@ -156,42 +156,41 @@ export const properties37To44: Property[] = [
     "images": gallery40.images,
     "summary": "3-bedroom townhouse in Adenta, Ashiyie."
   },
-  // Property 41; the source states property size without a measurement basis.
+  // Property 41; replaced from the revised Database.docx on 4 November 2026.
   {
-    "id": "adenta-villa-ernestdoyi",
-    "address": "Adenta",
+    "id": "adenta-ssnit-villa-mainstay",
+    "address": "Adenta, SSNIT",
     "district": "La-Nkwantanang-Madina Municipal District",
     "region": "Greater Accra",
     "type": "Villa",
     "style": "Detached",
     "storey": "Multi Storey",
-    "bedrooms": 4,
-    "bathrooms": 4,
-    "toilets": 5,
-    "floorAreaSqm": 1222,
-    "askingPrice": 21100000,
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "toilets": 6,
+    "floorAreaSqm": 97,
+    "askingPrice": 2690000,
     "status": "Available",
     "tenure": "Leasehold",
     "remainingLeaseTerm": "Not specified",
     "ecoRating": "D",
     "condition": "Newly Built",
-    "furnishing": "Semi-Furnished",
+    "furnishing": "Unfurnished",
     "facilities": [
-      "Tiled Floor",
-      "Dining Area",
-      "24-hour Electricity",
-      "Pop Ceiling",
-      "Pre-Paid Meter",
       "Air Conditioning",
       "Balcony",
-      "Borehole",
-      "Children's Play Area",
-      "Dishwasher",
-      "En Suite Bathroom",
-      "Fitted Kitchen",
+      "Chandelier",
+      "Dining Area",
+      "En Suite",
       "Hot Water",
+      "Kitchen Cabinets",
+      "Kitchen Shelf",
       "Microwave",
-      "Sectionals"
+      "Pop Ceiling",
+      "Pre-Paid Meter",
+      "Refrigerator",
+      "Tiled Floor",
+      "Wardrobe"
     ],
     "greenFeatures": [
       {
@@ -200,11 +199,11 @@ export const properties37To44: Property[] = [
       }
     ],
     "agent": {
-      "name": "Ernest Delvys Doyi",
-      "phone": "+233540649229"
+      "name": "Mainstay Property Management",
+      "phone": "+233592023296"
     },
     "images": gallery41.images,
-    "summary": "4-bedroom villa in Adenta."
+    "summary": "5-bedroom villa in Adenta, SSNIT."
   },
   // Property 42; the source states property size without a measurement basis.
   {

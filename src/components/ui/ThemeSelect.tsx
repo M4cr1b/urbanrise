@@ -1,28 +1,123 @@
 "use client";
 
-import { Monitor, Moon, Sun } from "lucide-react";
-import { isThemePreference } from "@/lib/theme";
+import { Check, ChevronDown, Monitor, Moon, Sun, X } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
+import type { ThemePreference } from "@/lib/theme";
 import { useTheme } from "./ThemeProvider";
+import styles from "./ThemeSelect.module.css";
+
+const MODES = [
+  { value: "light", label: "Light", description: "Bright & airy", icon: Sun },
+  { value: "dark", label: "Dark", description: "Calm & focused", icon: Moon },
+  { value: "system", label: "System", description: "Match device", icon: Monitor },
+] as const;
 
 export function ThemeSelect() {
-  const { preference, setPreference } = useTheme();
-  const Icon = preference === "system" ? Monitor : preference === "dark" ? Moon : Sun;
+  const { preference, resolvedTheme, setPreference } = useTheme();
+  const id = useId();
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false);
+
+  function positionPanel() {
+    const panel = panelRef.current;
+    const trigger = triggerRef.current;
+    if (!panel || !trigger) return;
+    const rect = trigger.getBoundingClientRect();
+    const width = Math.min(364, window.innerWidth - 24);
+    panel.style.width = `${width}px`;
+    panel.style.left = `${Math.max(12, Math.min(rect.right - width, window.innerWidth - width - 12))}px`;
+    panel.style.top = `${Math.max(12, Math.min(rect.bottom + 12, window.innerHeight - panel.offsetHeight - 12))}px`;
+    panel.style.maxHeight = `${window.innerHeight - 24}px`;
+  }
+
+  useEffect(() => {
+    if (!open) return;
+    positionPanel();
+    panelRef.current?.querySelector<HTMLInputElement>("input:checked")?.focus({ preventScroll: true });
+    window.addEventListener("resize", positionPanel);
+    window.addEventListener("scroll", positionPanel, true);
+    return () => {
+      window.removeEventListener("resize", positionPanel);
+      window.removeEventListener("scroll", positionPanel, true);
+    };
+  }, [open]);
+
+  function choose(next: ThemePreference) {
+    const rect = triggerRef.current?.getBoundingClientRect();
+    setPreference(next, rect ? { x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 } : undefined);
+  }
 
   return (
-    <label title={`Appearance: ${preference}`} className="relative flex min-h-11 min-w-11 shrink-0 items-center justify-center gap-1.5 rounded-full border border-current/20 px-2.5 hover:bg-current/5 focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-current">
-      <Icon className="pointer-events-none size-4" aria-hidden />
-      <span className="sr-only">Appearance</span>
-      <select
-        value={preference}
-        onChange={(event) => {
-          if (isThemePreference(event.target.value)) setPreference(event.target.value);
-        }}
-        className="absolute inset-0 min-h-11 w-full cursor-pointer bg-transparent text-xs font-medium opacity-0 sm:static sm:w-[4.5rem] sm:opacity-100"
+    <>
+      <button
+        ref={triggerRef}
+        type="button"
+        popoverTarget={id}
+        aria-label={`Appearance: ${preference}`}
+        aria-haspopup="dialog"
+        aria-expanded={open}
+        className={styles.trigger}
+        data-mode={resolvedTheme}
+        data-open={open}
       >
-        <option value="system" className="bg-surface text-on-surface">System</option>
-        <option value="light" className="bg-surface text-on-surface">Light</option>
-        <option value="dark" className="bg-surface text-on-surface">Dark</option>
-      </select>
-    </label>
+        <span className={styles.orb} aria-hidden="true">
+          <Sun className={styles.sun} size={17} />
+          <Moon className={styles.moon} size={16} />
+          <span className={styles.star} />
+        </span>
+        <span className={styles.triggerLabel}>{preference === "system" ? "Auto" : preference === "dark" ? "Dark" : "Light"}</span>
+        <ChevronDown size={13} className={styles.chevron} aria-hidden="true" />
+      </button>
+      <div
+        ref={panelRef}
+        id={id}
+        popover="auto"
+        role="dialog"
+        aria-label="Appearance settings"
+        aria-describedby={`${id}-description`}
+        className={styles.panel}
+        onBeforeToggle={(event) => { if (event.newState === "open") positionPanel(); }}
+        onToggle={(event) => setOpen(event.newState === "open")}
+      >
+        <div className={styles.heading}>
+          <div>
+            <p className={styles.eyebrow}>MAKE IT YOURS</p>
+            <h2>A little change of atmosphere.</h2>
+          </div>
+          <button type="button" popoverTarget={id} popoverTargetAction="hide" aria-label="Close appearance settings" className={styles.close}>
+            <X size={17} aria-hidden="true" />
+          </button>
+        </div>
+        <p id={`${id}-description`} className={styles.description}>The same UrbanRise. In your favourite light.</p>
+        <fieldset className={styles.options}>
+          <legend className="sr-only">Choose appearance</legend>
+          {MODES.map(({ value, label, description, icon: Icon }) => (
+            <label key={value} className={styles.option}>
+              <input type="radio" name={`${id}-theme`} value={value} aria-label={label} checked={preference === value} onChange={() => choose(value)} className={styles.input} />
+              <span className={styles.card}>
+                <span className={styles.preview} data-preview={value} aria-hidden="true">
+                  <span className={styles.previewBar}><i /><i /><i /></span>
+                  <span className={styles.previewContent}>
+                    <span className={styles.previewCopy}><i /><i /><i /></span>
+                    <span className={styles.previewHouse}><i /><i /></span>
+                  </span>
+                  <span className={styles.previewTiles}><i /><i /><i /></span>
+                </span>
+                <span className={styles.cardLabel}><Icon size={14} aria-hidden="true" />{label}</span>
+                <span className={styles.cardDescription}>{description}</span>
+                <span className={styles.selected} aria-hidden="true"><Check size={10} strokeWidth={3} /></span>
+              </span>
+            </label>
+          ))}
+        </fieldset>
+        <div className={styles.footer}>
+          <span className={styles.statusDot} aria-hidden="true" />
+          <p role="status">{preference === "system" ? `Following your device · ${resolvedTheme} mode` : `${preference === "dark" ? "Dark" : "Light"} mode, made for you`}</p>
+          <Monitor size={13} aria-hidden="true" />
+        </div>
+        <p className={styles.saved}>Remembered on this browser. Always your choice.</p>
+      </div>
+    </>
   );
 }

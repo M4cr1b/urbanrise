@@ -2,6 +2,23 @@
 
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
+/* Animate one page snapshot instead of every individual DOM element. */
+html[data-theme-transition]::view-transition-old(root),
+html[data-theme-transition]::view-transition-new(root) {
+  mix-blend-mode: normal;
+  animation: none;
+}
+html[data-theme-transition]::view-transition-new(root) {
+  animation: ur-theme-reveal 520ms cubic-bezier(.22,.68,0,1) both;
+}
+@keyframes ur-theme-reveal {
+  from { clip-path: circle(0 at var(--theme-reveal-x) var(--theme-reveal-y)); }
+  to { clip-path: circle(var(--theme-reveal-radius) at var(--theme-reveal-x) var(--theme-reveal-y)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme-transition]::view-transition-new(root) { animation: none; }
+}
+
 /* ============================================================================
    UrbanRise Ghana — Sustainability Edition
    Design tokens ported from `Urban Rise Design system/DESIGN.md`.

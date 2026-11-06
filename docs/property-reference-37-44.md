@@ -1,5 +1,7 @@
 # Properties 37–44: retrieved data and photograph review
 
+**Property 41 was replaced on 4 November 2026.** Its current entry is the Mainstay Property Management villa at Adenta, SSNIT, priced at GH₵2,690,000, with 5 bedrooms, 5 bathrooms, 6 toilets, 97 sqm and six photographs. Its only documented contact is +233592023296. See [the replacement record](property-41-update.md). The October retrieval details below remain as historical evidence; the verifier uses the updated reference for property 41. The group now has 61 active photographs, and the complete catalog includes 51 listings after the later 45–51 import.
+
 Source: `C:/Users/Admin/Desktop/Round two/Urbanw.docx` and the matching numbered image folders. The reviewed listings and 63 selected photographs are now imported into the application on `Actual-view`. Original documents and photographs remain intact. The live site receives them when this branch is merged and deployed.
 
 All eight entries contain 20 source fields. All 65 image files decoded successfully, representing 64 unique images. The proposed galleries contain 63 photos after removing one duplicate from property 38 and the unselected exterior from property 42. All source files are retained. Full filenames, hashes, dimensions, field paragraphs and decisions are in [the structured reference](../data/property-reference-37-44.json).

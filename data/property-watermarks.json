@@ -2,7 +2,7 @@
   "version": 1,
   "caption": "POSTED ON URBAN RISE",
   "method": "Local masked editing; no generative photo changes",
-  "editedPhotographs": 416,
+  "editedPhotographs": 554,
   "images": {
     "/properties/achimota-acp-duplex-kingscity/01.webp": {
       "url": "/property-photos/achimota-acp-duplex-kingscity/01-urbanrise.webp",
@@ -12310,6 +12310,2214 @@
       "maskPixels": 2774,
       "changedOutsideMask": 0,
       "fontSize": 30,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/01.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/01.png",
+      "sourceSha256": "c4ae831f10c00f1514eeb974dea1034e12864344527d3c4fbe19a8b330a24588",
+      "sha256": "3db82086c865d10c0d662bdc2c643259e3f7bf4e1c79e66f256c4ec1700c003d",
+      "maskSha256": "b3a803822754486a418f31ab407235bf3ed21573d5ca6e5e6c38621fdc79410d",
+      "width": 1440,
+      "height": 1920,
+      "changedPixels": 7084,
+      "maskPixels": 7127,
+      "changedOutsideMask": 0,
+      "fontSize": 55,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/02.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/02.png",
+      "sourceSha256": "8bee40298faa87b0b8be5d3ffaf61ffe6167a8ebcbd4f16185a00bd80a67bf56",
+      "sha256": "7737b38fb4151ab6fd8964b4bb24dbcc9fd6a3ebfe198483e743879bc316021f",
+      "maskSha256": "7277e8d91267cba963764cf976bb4bc499dd333af76e8b3aad83125ecc1d7d25",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 2945,
+      "maskPixels": 2955,
+      "changedOutsideMask": 0,
+      "fontSize": 31,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/03.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/03.png",
+      "sourceSha256": "291dec17d7c6a5190d33fbc7ff2895bce93482f8d2109c4527d3da18b4882146",
+      "sha256": "746cd471034cacd9f5531a093a3f9ab620c9337daf433b3a967c9d3e45f05c90",
+      "maskSha256": "cd0608e5ef44d4d4e4fc9cd6863a19f21da73e89046f3933ad795b5c3a3b0553",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 2110,
+      "maskPixels": 2114,
+      "changedOutsideMask": 0,
+      "fontSize": 24,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/04.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/04.png",
+      "sourceSha256": "d11158b479f43fad3da3084f49bf3fd7ce4f828a06431a35df2b7a7cdc4889e2",
+      "sha256": "5e32bf80c71ab1944fc1443f710e8d5ba7ba38c5f992a88e4be63c8c13609b61",
+      "maskSha256": "311852ef2e2b77e3033222d3b7396e9f9005a35d2a696d7aafd30d965a92e2cb",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 2709,
+      "maskPixels": 2896,
+      "changedOutsideMask": 0,
+      "fontSize": 31,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/05.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/05.png",
+      "sourceSha256": "f159460b9a8a135293277a7c5504e2e1c0332ccceec375b61abdb57662dc44c3",
+      "sha256": "5c96b7259ff4423f20782c5f1d392e55b9f132b76f4af6645efe145ab07b4f33",
+      "maskSha256": "7277e8d91267cba963764cf976bb4bc499dd333af76e8b3aad83125ecc1d7d25",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 2952,
+      "maskPixels": 2955,
+      "changedOutsideMask": 0,
+      "fontSize": 31,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/06.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/06.png",
+      "sourceSha256": "df1512e98eea816206ca2e1a55fbc0167809a95ea58ab017139959dd3001c8da",
+      "sha256": "55ef56673682fb6984be553d6c2d6ae51f313428938b1575a9f9baa065573426",
+      "maskSha256": "7277e8d91267cba963764cf976bb4bc499dd333af76e8b3aad83125ecc1d7d25",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 2949,
+      "maskPixels": 2955,
+      "changedOutsideMask": 0,
+      "fontSize": 31,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/07.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/07.png",
+      "sourceSha256": "1c9a45a01ca2502219425e9b6a7299d08d14624a731707bcf137de7e38125348",
+      "sha256": "822ca2d1c7c484a5bf6114e3a13fbcf498940666e572ee70bb91ccc8fd839c52",
+      "maskSha256": "7277e8d91267cba963764cf976bb4bc499dd333af76e8b3aad83125ecc1d7d25",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 2939,
+      "maskPixels": 2955,
+      "changedOutsideMask": 0,
+      "fontSize": 31,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/08.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/08.png",
+      "sourceSha256": "1d2bbc2d32ccaa6b2e494bb6242150fbf567577731cb1e219d1258574b722852",
+      "sha256": "3ce9eaf0c3b2b0191ef1af5ba6b404efbd2cbee7ebf969175f056ebb5e8ecdca",
+      "maskSha256": "7277e8d91267cba963764cf976bb4bc499dd333af76e8b3aad83125ecc1d7d25",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 2938,
+      "maskPixels": 2955,
+      "changedOutsideMask": 0,
+      "fontSize": 31,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/09.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/09.png",
+      "sourceSha256": "3044a56bad4f254c1771aca7f8a4aa10508bab72da4723a0660677a48189aeef",
+      "sha256": "19a40c3b637483b3e9f502c839a67a7c29850d6618a0e37ddb50f869a07579e4",
+      "maskSha256": "b3a803822754486a418f31ab407235bf3ed21573d5ca6e5e6c38621fdc79410d",
+      "width": 1440,
+      "height": 1920,
+      "changedPixels": 6932,
+      "maskPixels": 7127,
+      "changedOutsideMask": 0,
+      "fontSize": 55,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/10.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/10-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/10.png",
+      "sourceSha256": "8c5dbb6e67b526c3dce3e7749aefc97fd10be15f323b95faa79eb0563569e16e",
+      "sha256": "aa6cc4c2ba6f1ba277c2880eda65ba321932a90c72873fbfaea53dfd48c26650",
+      "maskSha256": "97705c8a5c69dd0b6fecbb5683a86eeaba7ed82ed4c612cf3c88026721333d62",
+      "width": 1440,
+      "height": 1920,
+      "changedPixels": 6297,
+      "maskPixels": 6459,
+      "changedOutsideMask": 0,
+      "fontSize": 55,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/11.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/11-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/11.png",
+      "sourceSha256": "4d9c25c322c47c08b03f64281cdb8c6c3089c998e40e35a2306383239f1a06f2",
+      "sha256": "e6aeabe4e21edd60c82ee441f5ceb7503ce16460a0bc21cd8c623348f95c393b",
+      "maskSha256": "ae913c8b38ff32349960e6f3d78c9ce809d7444cdd9f37b95ada843ea881fa98",
+      "width": 1440,
+      "height": 1920,
+      "changedPixels": 7382,
+      "maskPixels": 7549,
+      "changedOutsideMask": 0,
+      "fontSize": 55,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-duplex-dollardream/12.webp": {
+      "url": "/property-photos/adenta-duplex-dollardream/12-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-duplex-dollardream/12.png",
+      "sourceSha256": "dd7f6f2fd9f97597b76079b3f1ae048d644dd3e6514a0cdada886474f95dc808",
+      "sha256": "e940b04eb35676963e4a077b8221a6a3e341d79d11bc5751937309c8fe5eafbf",
+      "maskSha256": "ae913c8b38ff32349960e6f3d78c9ce809d7444cdd9f37b95ada843ea881fa98",
+      "width": 1440,
+      "height": 1920,
+      "changedPixels": 7481,
+      "maskPixels": 7549,
+      "changedOutsideMask": 0,
+      "fontSize": 55,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/01.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/01.png",
+      "sourceSha256": "b80c690fa6f64ad9312bf12fdf455a45bff60ed91a05c9ffea9d0342a8b4dd12",
+      "sha256": "f110d00c739c182894552702731161170653b6ea793ee482e554df743f6ac6a9",
+      "maskSha256": "f6cf2ffb8986ab73a0eaf45f878b1cd2779fbd2da15e7ac841c5ac9640b93e2e",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 7376,
+      "maskPixels": 7408,
+      "changedOutsideMask": 0,
+      "fontSize": 54,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/02.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/02.png",
+      "sourceSha256": "110f9e8d6a30a933f11dd3ea2d9e3a6809d0a7ed7cafde59b95a627a85b60c92",
+      "sha256": "521d0e060e532458e5ac805637311d2bcceedd31fb9f6798695cef7f6d652cfb",
+      "maskSha256": "d2316d515d4c211672dea1254cf66a24dbb107bfa2cbc9f6d53a0c8e905aae8c",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 4921,
+      "maskPixels": 4935,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/03.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/03.png",
+      "sourceSha256": "2a402ca39f8d6bcdf14ac73f07b96844c09ba060a9bccfb26e8419958f71793d",
+      "sha256": "61e21993eea8f404ec017613dd76c08fe0d295dc80a70acae2f6df462c50fd05",
+      "maskSha256": "f64cbd260795f55435ef0ffb4e60b0472d2f1d6f0b0497f76bda2e5e4cbbcea4",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 11730,
+      "maskPixels": 11834,
+      "changedOutsideMask": 0,
+      "fontSize": 71,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/04.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/04.png",
+      "sourceSha256": "14b36cada631c849dd48cfd2e64bb7ca04266548dc91ee26e36fc6f48fb49ba4",
+      "sha256": "fd0f76216c54394fc74694fbba5cd7179f392e9556ee4907540b3b0f703339bb",
+      "maskSha256": "3682e9b06796a649bf12b641d237a1a078f11378f59bf7efed314fc02cefbf0a",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 7851,
+      "maskPixels": 7910,
+      "changedOutsideMask": 0,
+      "fontSize": 57,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/05.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/05.png",
+      "sourceSha256": "897acf259183fc1e0042360a40766814053c4f1a59f93870c4b1dfe95cce4b2b",
+      "sha256": "2992e03fabecdcd7fea279e4fd14a3040eccce22c0a07406c474c719bd08df16",
+      "maskSha256": "75567fd79388a2f89aace9c5a966bcadc6b03c409c810902972117cdb7b3ec3e",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 11731,
+      "maskPixels": 11837,
+      "changedOutsideMask": 0,
+      "fontSize": 71,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/06.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/06.png",
+      "sourceSha256": "fcc9e289fdb7bd6654e80d676af25e197a1da1e3bf7c70200a2b994e7de79798",
+      "sha256": "3ac497e7201c2137d7090cd6f7256443be73fe7b20663d4d1f449b3769891161",
+      "maskSha256": "f115b3048275392a80a71ef4cf2935e42d95fe8218c94439cfe6bd1e645cf3fc",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 7135,
+      "maskPixels": 7151,
+      "changedOutsideMask": 0,
+      "fontSize": 54,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/07.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/07.png",
+      "sourceSha256": "59d2786eb1716fff1b3fb99d1d1bbc9f33ef17d06d0f25705421175894a790fd",
+      "sha256": "c6471266b82ea9a03a4f28a32c6fce902ddd65809d5f62576c95b4aa05df62bb",
+      "maskSha256": "8f18b4f3fe53e48dbca04767be4e9cedc1be61b161c66e593fe6ff265dde3962",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 7879,
+      "maskPixels": 7910,
+      "changedOutsideMask": 0,
+      "fontSize": 57,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/08.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/08.png",
+      "sourceSha256": "d2b15e95205a4c00a8475cb6d873d599428a322e5679a913b9de81c4e4daf3c1",
+      "sha256": "5b4e1597a0e5585e51f55ca847f3628259ab25c007e0d6bdf6e4242bd1473d41",
+      "maskSha256": "d2316d515d4c211672dea1254cf66a24dbb107bfa2cbc9f6d53a0c8e905aae8c",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 4902,
+      "maskPixels": 4935,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amrahia-bungalow-justice/09.webp": {
+      "url": "/property-photos/adenta-amrahia-bungalow-justice/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amrahia-bungalow-justice/09.png",
+      "sourceSha256": "2c648df5c1f71768dcf4295e3b4d3b7f183a6e8e072c6619462a518ed18bd063",
+      "sha256": "1ee7e63c9aaf169fe3b23cbdc7f59025bd999224a5f7e31706ce08578bc641da",
+      "maskSha256": "d2316d515d4c211672dea1254cf66a24dbb107bfa2cbc9f6d53a0c8e905aae8c",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 4929,
+      "maskPixels": 4935,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/01.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/01.png",
+      "sourceSha256": "b0bccf8e27c447bcf6a300462cab14540e128e47fc92493ecfc9fd88018bd8fd",
+      "sha256": "9599f1545edc3f24cc38ea4a52fcf1acbc884105671aad98e3e3de47eac90383",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6038,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/02.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/02.png",
+      "sourceSha256": "9fdca4ec3f7ddea1da2d74eee47b6258c0958d17e6eecea43ddf58f14599def6",
+      "sha256": "0f8fb7b775537bc3e605b7ab6708cddf997d738d88c29adc466cf7fc75f29891",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6043,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/03.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/03.png",
+      "sourceSha256": "d3a3f25e7d37d9b3e7616ea032d265725f774d3f1d59d3fda8639a9e944e0046",
+      "sha256": "1b041811be3d6c2786042e374ad5ba36aa73670beb4b7a612ae1236791fe23b6",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6064,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/04.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/04.png",
+      "sourceSha256": "ba9062f038fe36f3ae4c9cefcc7924b1fe69940404cb0469af23ebc6a36c4d1d",
+      "sha256": "76d2a95e59de6eadfb013c8f11a801c9f071d281a8a7708ea250cc25df7419b8",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6065,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/05.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/05.png",
+      "sourceSha256": "d3c0cba580fffc36c5f51b9f129d20fd8c08cda0baba7afb7dc4e1fa7cd51a94",
+      "sha256": "b56805b923b36ea0e2a5c273f60a45a0fcfd3563e318151cfb09a9bf414e8a7d",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6052,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/06.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/06.png",
+      "sourceSha256": "5834275b40f0763445b6e3687608878020a645e8eccd543d6387e4f7f830f150",
+      "sha256": "0429b1de81b70b10d0bb53366e4f278e28ce0099a5514bd6049fc85c729fb60a",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6047,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/07.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/07.png",
+      "sourceSha256": "696daac7feba312832fd619ed582cdbc55321fabf96eaf03d0d0beb4789e2181",
+      "sha256": "2b3ba24bce9180d99d0ac9760a4e5dcf53b75f6e94fd0ff5f370f2cfbd5cea65",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6047,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/08.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/08.png",
+      "sourceSha256": "2d6fe58a4eef52c7dd740f547da1820b6006e13408bcd77822f79cda976d9ef7",
+      "sha256": "e596af5e76df0471997b8898febe63a0f9de41e62d27ec7c81188b58cd25f2b6",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6075,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/09.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/09.png",
+      "sourceSha256": "c01e663e2c25ca0662dea23ad92cd47c456082bab333d92233c24cfd8ada0c6d",
+      "sha256": "86e0c7b077b497605669a7287a08b09ba2d9f12751e876b0c4b18b6d900e323a",
+      "maskSha256": "b40df0319523ed47b8d1ce17fae21e6a4754ba787a6c89d97fe407af6074f89f",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 6065,
+      "maskPixels": 6109,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-pantang-villa-unitedhomes/10.webp": {
+      "url": "/property-photos/adenta-pantang-villa-unitedhomes/10-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-pantang-villa-unitedhomes/10.png",
+      "sourceSha256": "8257c391227f537bfe9dba7da594031f831c28402309924984ba3875d6611504",
+      "sha256": "8266b7411b6dfa7edf47bf526a47cf0821b3ccb757ee83b7d80e2726f04efc1a",
+      "maskSha256": "dbe94c5b4a987dd16158a5ea47901bd7cca15b2f422360657c89001129199437",
+      "width": 819,
+      "height": 1024,
+      "changedPixels": 5979,
+      "maskPixels": 6051,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/01.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/01.png",
+      "sourceSha256": "dd5e1d6cda10376a9784b205743ca41de862d166a2cffbc3cb81f201ec44fcb6",
+      "sha256": "6cda6b7b74fa828f22a4ac27333484a64729ffa3940c7881d4bb269f353d9dd5",
+      "maskSha256": "08c544ef695f371d478e443b6c9fd0787f2fa6e01efc66c0bfc1966313b4130e",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5983,
+      "maskPixels": 6052,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/02.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/02.png",
+      "sourceSha256": "65b8ae4d34c45ac1bb801d677b687bcfb5f0069e5b8bb99f60ce0e7456939e20",
+      "sha256": "85d72be31c6783209a18de23308fdda992d0833a58b9cef87b6fe55fcb2a1e2a",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5782,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/03.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/03.png",
+      "sourceSha256": "5f0746600f657c46527e61a508ab5ee22f98644d7e0e363326cd1ee2b3483398",
+      "sha256": "e7ea72bd31c22e0a21a11f0bc38806f0b5473cd39a00d106e1a578edde7cf3e2",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5814,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/04.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/04.png",
+      "sourceSha256": "452620acd40df8c9772ecddbfc93b17b62369aed00c160add588ad5be5cf9715",
+      "sha256": "d8710162783c4115b2bcf1098bc93e04d319e0b6ffafbfd3ef38ff1880c7f307",
+      "maskSha256": "08c544ef695f371d478e443b6c9fd0787f2fa6e01efc66c0bfc1966313b4130e",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5958,
+      "maskPixels": 6052,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/05.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/05.png",
+      "sourceSha256": "9e17a13d1ed4a020524dfb356b464815e1eb0c36dde0071cbcb1d2562d92b2eb",
+      "sha256": "c5b683f2e59ba2f52860cdff893e2a58888a964a71fff06314a8ea51c3d429a2",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5765,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/06.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/06.png",
+      "sourceSha256": "a7c631a40cda66fac77e572c694546311d466a065c0c080eaa42c0750becdefd",
+      "sha256": "48e941b0d995fd6547514bc8745ecdab5152efcf061e90d5481bbdb0b0776365",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5829,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/07.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/07.png",
+      "sourceSha256": "1dee4e57db06ec91d5a63283f88754dfbf09e730ecda4f83cd877606b398d29e",
+      "sha256": "0e561f941e4ec35ce19c87b62a963791b0e27e50cc54e78577ba6dcf3c05e678",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5800,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/08.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/08.png",
+      "sourceSha256": "68dbd794fbe1591437e5b988ecb9cf94b2e1668713412cce37ac2ccf1fa3a5e4",
+      "sha256": "60a8981544b99b0450b068a9587bd39bcc8d164adcd050a4f7eb56defed5a3f9",
+      "maskSha256": "08c544ef695f371d478e443b6c9fd0787f2fa6e01efc66c0bfc1966313b4130e",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5936,
+      "maskPixels": 6052,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/09.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/09.png",
+      "sourceSha256": "f841be73bebd65ce9581253037614f969ab0802108c4947b015656ced78ea0ac",
+      "sha256": "885c350168b493081237b06b1c1f283ae90ddfd61e1faf23978a52784f33556f",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5809,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/10.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/10-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/10.png",
+      "sourceSha256": "63d9dbe2aac90ba2ed35348575f18b954829c17526611cfc2dfcfb0e78e07abf",
+      "sha256": "020dab695a5c61b13e90d48cb71b3e1d32544351e78242e048ce362c0aa1b918",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5822,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/11.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/11-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/11.png",
+      "sourceSha256": "ff8448cf2af6ed582f9d11c77d3a8e60019440a1edabfaed1e711e13bf3356f0",
+      "sha256": "d913047516a5e9f684af9a01147cf790852ca914c7fcfbaeb45d38478b67218c",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5827,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/12.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/12-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/12.png",
+      "sourceSha256": "bc49a942246045f93e989135aac60a5c1eb1bce572b251356cb33f302c6be848",
+      "sha256": "78103a4a77ac0f3ba1be93cd0efb78600936f238966e7215245365e2bf9275e9",
+      "maskSha256": "08c544ef695f371d478e443b6c9fd0787f2fa6e01efc66c0bfc1966313b4130e",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 6005,
+      "maskPixels": 6052,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/13.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/13-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/13.png",
+      "sourceSha256": "d26c58bab89b33718d5c8207211817627305b527b393e3eb894d64de02aafeee",
+      "sha256": "1eb82ee883505ec1accf80d34dda6f424781677dc1d1ee865bcede2ea2f1cf47",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5807,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-amanfro-duplex-alorex/14.webp": {
+      "url": "/property-photos/adenta-amanfro-duplex-alorex/14-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-amanfro-duplex-alorex/14.png",
+      "sourceSha256": "1450bb0375d45b66eae134ef44c6a657ef1baf0f758002fbf21a550be35b65a7",
+      "sha256": "5ccb72b97cdcd9c6e81e1761effa74d0ab7c096111faba1c18e7c222afaff374",
+      "maskSha256": "52e54f798fa7cd3482cb5a794e39316958929f93e608b2e62ef96ee01fc8e834",
+      "width": 1200,
+      "height": 1600,
+      "changedPixels": 5815,
+      "maskPixels": 5840,
+      "changedOutsideMask": 0,
+      "fontSize": 48,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/01.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/01.png",
+      "sourceSha256": "5a6b5088d4b696629ea83111893d2058f460fb4d781668c4687fe911ffbd8b86",
+      "sha256": "35b31ba266c5110b1c1f62a2fa434952f46c53ec6b97381c8c8bba840c331763",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5623,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/02.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/02.png",
+      "sourceSha256": "8cd134ff54e2b98c20303e0622387725d47cc8aaa9dc80d663310aefb69f90a4",
+      "sha256": "7051418ddaeba79f6d27aedd3e114b9d602db7e32221db91eb8f6de1027dd2d8",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5535,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/03.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/03.png",
+      "sourceSha256": "9b54a33c3124b76144f863b35608d749df8c5d86ae4a655ebb64657fc4145a02",
+      "sha256": "f509c962e03a0ce2003da5cbcd91bd25f0f3b6c4070b3bc76fe5e629a20dbfb8",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5570,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/04.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/04.png",
+      "sourceSha256": "3f70ca756506016d2afc51f2e33d1ac908a2c7c15108e546e264d2be012315d1",
+      "sha256": "130e23cb1973ff180671863e4247e26370fd8674d68483a146b43e7d300db45d",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5540,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/05.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/05.png",
+      "sourceSha256": "a844c6d307a1bd9f493a057e0a2551ca2a688c7372c96cbb78859c635be076b3",
+      "sha256": "2329465ea3370afe6d8450a962538ad7d05e29bfd298034edf1b73a9c4dd1789",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5556,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/06.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/06.png",
+      "sourceSha256": "cbfc6c9b7b60b9481ab87e4432e5c2bdbcc8422899a874fefbd455e5eaee525a",
+      "sha256": "4bd9db2f4af19cd48f04f8f94e1f14e0f7cdbab7111b66a19e59d394e2c7a795",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5502,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/07.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/07.png",
+      "sourceSha256": "f6633f512bef5a2cb313e5b469f9c6b1b35f5cf3be1de619a99f09ab80f642ce",
+      "sha256": "b1c1bc55479d9fbf63565b928d55f72f653ac9714f3262e007ac616558418890",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5167,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/08.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/08.png",
+      "sourceSha256": "82e018d4fe12afab10381610a76a01ba72b94d499de6c62d379cc211208bfb21",
+      "sha256": "d91ca0c03b8ce4444bc01f186e357f81d22b9c3c3bfc10d3e71953ce9824b8fe",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5608,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/09.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/09.png",
+      "sourceSha256": "e53f630f041d3359f172415d48c9e1186b4c4c96f454866456f24c4362170a40",
+      "sha256": "30123b7b6175f0d4ac31b7d867e4df6bc94af44f73569f569eae867634b060ac",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5622,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/10.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/10-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/10.png",
+      "sourceSha256": "f08bf012e008690354628e6950d1e3a4edb9104cdfa1681882db454f1f0d9a50",
+      "sha256": "d1521fb189f2a2cc4eb0cd03a357725e3424b7877b5ba7bbef54de783b4840fc",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5624,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-lakeside-bungalow-charclem/11.webp": {
+      "url": "/property-photos/adenta-lakeside-bungalow-charclem/11-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-lakeside-bungalow-charclem/11.png",
+      "sourceSha256": "0842d82dc5527f5bfd36bf29b5d03213360fc4179fafd915d203b314c07fd1c1",
+      "sha256": "cb5e9d90514df22163ce6f8543e64fd7eafa38f8eca26aabfbc51a395f43f495",
+      "maskSha256": "345cd4e75d64639b7a585f6a461c8e3f56d5a6a2873709b1ce9c0d64cf05022f",
+      "width": 1080,
+      "height": 1440,
+      "changedPixels": 5614,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/01.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/01.png",
+      "sourceSha256": "71090f1002ae462b8b647a130af0de703d439de052ef75ea1dcfe4a97b9b1819",
+      "sha256": "3a34bd5bb2a51d114329eb796f707c386824754d88883ff063919d9e1dc3f223",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8996,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/02.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/02.png",
+      "sourceSha256": "78855349e14aa2c063b758988ef5041eddcdeeaa1928ad2c1ae4fd452c1cd7f2",
+      "sha256": "8424b30b748456cffbce2e36650c5cf448e8847e5ed7ffd5568121c440ae6bb8",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 9005,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/03.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/03.png",
+      "sourceSha256": "0295ed2349878cc29429a13b9d9290a400b89ccd4c7ab7369c67b15af878c656",
+      "sha256": "831ee3c0d9008073354272dc8fe7b537dd73820277509af874dab4a0fe1e9ffe",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8957,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/04.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/04.png",
+      "sourceSha256": "eff22f18d805b979db131fa083c3605aa00b4153bfba18acd7691921bb864472",
+      "sha256": "786a2e7ddb4c785047589b754d4ec1052225118a60f42a6718c27cda767ea6fb",
+      "maskSha256": "41cb8066546cb6594d66b48943b495e3a733fb74799a7c641f8821ec06f1a802",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8970,
+      "maskPixels": 9087,
+      "changedOutsideMask": 0,
+      "fontSize": 62,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/05.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/05.png",
+      "sourceSha256": "a2bc3d5a8feddbfb76b5d45459a684f33f2c54d2b395cb26eafafa7dfb8a15de",
+      "sha256": "c2ccb7e54965ea0b4aea8b4207698eac779521be446c3ad5aa7da7b5dd22a378",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 9031,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/06.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/06.png",
+      "sourceSha256": "046f29dcbe8385f2926759d1fc8ff28962a9f7e24dd2922b799d5bead155e256",
+      "sha256": "77a99bcf02f14331ede562181c4d0371300b9cb79fa8e89a721211a57e8dd16f",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8984,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/07.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/07.png",
+      "sourceSha256": "5fcb7d14417928ee1a4539e26a51e38f27803a81a31b7bf88c3320d023e7e063",
+      "sha256": "1e490ee17d05f688dc668438c46ca0ab036cca59b19d2ecc58f3f86758fb59a3",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8990,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/08.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/08.png",
+      "sourceSha256": "eb37915b1b91ec67d61e4bb4052e14faedb23ea0ba490fc897431ba01c50597a",
+      "sha256": "a1d3b1a347ac4808d4d0a1324579f2171004357c756634401104d7eab182e42e",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8885,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/09.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/09.png",
+      "sourceSha256": "586fefd910357975d13807c05317c8aed89b002f9ab0e247b3800f99214db852",
+      "sha256": "7f622cdc63a51333b0e022cbe7e7a291306e278d6d6217a6257e63fc214d709e",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 9023,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/10.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/10-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/10.png",
+      "sourceSha256": "beae35d2ff31e41524f9e7fb123e4ed55d53da5ff9aff656ae7806857f308c08",
+      "sha256": "88aada00dd29be00840803bf4b6b97b4f396be8160a52fb98da49a68bab9c4bd",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8903,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/11.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/11-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/11.png",
+      "sourceSha256": "c5c5e850aa0a2e91ea93a29fa98116fcbfb71d0616d2bfadf2cacf5778e18ada",
+      "sha256": "31c9094bccf45ea0ca0a7b917485a90d1c2cae3a1edc94f2565e46fdc638f177",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 9030,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/12.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/12-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/12.png",
+      "sourceSha256": "c4b47363aa96ad00f33c37ad3f64dbb7c47da82495d26ac96fbda9a9213181ae",
+      "sha256": "7ddf8bf98430056a1e9cdd55f157cf754011f043710b8b5a6c552a2608de497a",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8980,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/13.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/13-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/13.png",
+      "sourceSha256": "629aaf07f3dfc6e17ae85b29e524e4ea0e78f4fb7798b3de725686bf5d44f6f2",
+      "sha256": "6ba9979a0bcd4f8218e25516002060a0e03ef8944fa3f0944b9e97ed93b747f1",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 9011,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/14.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/14-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/14.png",
+      "sourceSha256": "ffb527f14e31e413a282a341afa8a391e12e27c7f0ec035be138da4153b03cf8",
+      "sha256": "68c8a3d8e28a0178336ca927320dfd4253b434c63041cffffe67709e4f1d3b5b",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8984,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/15.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/15-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/15.png",
+      "sourceSha256": "2071f6af0dc114ee7fb0884d770d102b41e2354adbcf625f38fd4f605ee80f93",
+      "sha256": "47d3fad18cf70b71e6bcce49dcda5e47284189a2b26fb08e5ecbe77e9b76e596",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 8973,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/16.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/16-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/16.png",
+      "sourceSha256": "37e06a5aa76ec6be653a8d9f3139dab8d0c46001b4f2d8689ee2924113def001",
+      "sha256": "dc947215b31796560a172cfbb0a737e09c5352403a481b0cb8849dcfdaa88c5a",
+      "maskSha256": "0c5a8292ce014dc80dce5222895c8392c6bdd724cc70c2409a8873ea49b8cc5b",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 9027,
+      "maskPixels": 9037,
+      "changedOutsideMask": 0,
+      "fontSize": 61,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-villa-dollardream/17.webp": {
+      "url": "/property-photos/adenta-villa-dollardream/17-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-villa-dollardream/17.png",
+      "sourceSha256": "7a4a62957dfb53c6e24b6554355458a1b00d58dac3d1f949cffd3ef0f5b504eb",
+      "sha256": "952dba92c1c9c080936c122254024ea017c530a7e0b238966233e65e565a133a",
+      "maskSha256": "41cb8066546cb6594d66b48943b495e3a733fb74799a7c641f8821ec06f1a802",
+      "width": 1600,
+      "height": 2134,
+      "changedPixels": 9061,
+      "maskPixels": 9087,
+      "changedOutsideMask": 0,
+      "fontSize": 62,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-sda-apartment-unitedhomes/01.webp": {
+      "url": "/property-photos/adenta-sda-apartment-unitedhomes/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-sda-apartment-unitedhomes/01.png",
+      "sourceSha256": "3fd403eddac33f9ceb48187dcc6b07d90bafc8aa748d67eeaeb09f114ea4febd",
+      "sha256": "fd9214d852fafb7b90516c68ec431eb7ee2db0d876580af7c939270292a84597",
+      "maskSha256": "a843037a721c16ad0871004eac9cad5d0cb5739c00f008ba8d4dfb30c05488a2",
+      "width": 827,
+      "height": 581,
+      "changedPixels": 2503,
+      "maskPixels": 2518,
+      "changedOutsideMask": 0,
+      "fontSize": 29,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-sda-apartment-unitedhomes/02.webp": {
+      "url": "/property-photos/adenta-sda-apartment-unitedhomes/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-sda-apartment-unitedhomes/02.png",
+      "sourceSha256": "d39d58e8139d0cac8361f000e4caefea6c9906edad3ed6366463c2de21cb1c49",
+      "sha256": "534a0b9e01fc3cd23c0ce3b8a681a59b2210f7d106a5b86da87a20a7fb54b894",
+      "maskSha256": "f605ce956b260d2a6076dd769da20ae61af40ce0533b5cdff9163253fc8050c8",
+      "width": 528,
+      "height": 654,
+      "changedPixels": 2939,
+      "maskPixels": 2955,
+      "changedOutsideMask": 0,
+      "fontSize": 31,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-sda-apartment-unitedhomes/03.webp": {
+      "url": "/property-photos/adenta-sda-apartment-unitedhomes/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-sda-apartment-unitedhomes/03.png",
+      "sourceSha256": "1d8bf227fd14464b55df916c0d4d93a98a66cbce388d9f823e4096e94abe00f6",
+      "sha256": "350752e2f84da9662d29b08c283271292b5739d28b20b58cdb913543303685ad",
+      "maskSha256": "9f12e29ad82e45ec383db0debdb00242e5d9671c0dd61851e83fa21f267ce1e1",
+      "width": 870,
+      "height": 581,
+      "changedPixels": 2432,
+      "maskPixels": 2440,
+      "changedOutsideMask": 0,
+      "fontSize": 28,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-sda-apartment-unitedhomes/04.webp": {
+      "url": "/property-photos/adenta-sda-apartment-unitedhomes/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-sda-apartment-unitedhomes/04.png",
+      "sourceSha256": "c81b8feb51b3ce3aa20ed31d0d913a76afd0b3ff7000e7b0a77e8a743556d483",
+      "sha256": "c955cc4cc4455540f7a5eb20a3857aa73625cc4f883fe9ad09d2f24615f228c2",
+      "maskSha256": "891d2a9605124e62700ff3c111ef065cda0936434e4fafbb6fe1bc093d00889c",
+      "width": 864,
+      "height": 581,
+      "changedPixels": 2431,
+      "maskPixels": 2440,
+      "changedOutsideMask": 0,
+      "fontSize": 28,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-sda-apartment-unitedhomes/05.webp": {
+      "url": "/property-photos/adenta-sda-apartment-unitedhomes/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-sda-apartment-unitedhomes/05.png",
+      "sourceSha256": "9f8abd8d5131076e3abcf2a5bd5e8654abeb4729d5d1ec79873a6c1a831aa5d8",
+      "sha256": "a20f935c47620f950d4b66122f38855ff3bb3a06cc193d5c29c54452188d87c9",
+      "maskSha256": "b1071d61667e062e38c1e93cc5902e69014e3cb59ed9196966907c2940666b32",
+      "width": 969,
+      "height": 725,
+      "changedPixels": 3550,
+      "maskPixels": 3586,
+      "changedOutsideMask": 0,
+      "fontSize": 35,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/01.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/01.png",
+      "sourceSha256": "3c6dc766c8cd99cf450882b286eb6f489583465b0185cc4507f746c1e02f0a46",
+      "sha256": "90ef5a516ae280347f2dbb1fbc96b687eed25abb7d66846c5665377aa4fc3c53",
+      "maskSha256": "9fea3e43f1177984cd55c4498c48979736a74ad4d5d063730dd6a8c2b211ff41",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 4846,
+      "maskPixels": 4943,
+      "changedOutsideMask": 0,
+      "fontSize": 42,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/02.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/02.png",
+      "sourceSha256": "491cea573117db0551732d9427d5835eed71f5fcd5cd776233b0f00db1300bc5",
+      "sha256": "f3c03cd727a5bd57a817b55296c437e9436070d8710e7dd9275c6c2215029a16",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 5000,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/03.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/03.png",
+      "sourceSha256": "47f4e4960d7c233bff9cb65428eaedb9cf0e5a5711cbf610bd0454479e5cc187",
+      "sha256": "fa852bf21d7eb2f9d5d54e408e85f7af8edfb8e65b4466eeda64509f755591e1",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 5015,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/04.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/04.png",
+      "sourceSha256": "4dfddd1ebada44af25b9cbc0f2d4971815ea1d1dc9aa6975e026a42c4e59c3d6",
+      "sha256": "6a26a2998cf0504230ff111860168c49e44d58bde564e23d1b3169dcc7712dc9",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 4992,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/05.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/05.png",
+      "sourceSha256": "2606005154e0cab392cf6e8cc9d47dcfb61490bc2d32c877bbc03869b73bcec6",
+      "sha256": "2e69dcd01ebaa585248c12d2610b6bb8b4d9a547fea97e910e06eb7fa5386134",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 4883,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/adenta-ssnit-villa-mainstay/06.webp": {
+      "url": "/property-photos/adenta-ssnit-villa-mainstay/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/adenta-ssnit-villa-mainstay/06.png",
+      "sourceSha256": "bf6f0453944ae597cf22dfea05840a20dfea40c9b08ca7a2284194342bec1725",
+      "sha256": "d1e92ca884e13b566aab86bd7b0ce74fd1b70e0be14b4fd1f378ffd6858b2cd3",
+      "maskSha256": "a74460c9527e8ee3a594bfbf9f3358c5c62daf24d3597502c92a228ed19311c5",
+      "width": 959,
+      "height": 1280,
+      "changedPixels": 5015,
+      "maskPixels": 5030,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/01.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/01.png",
+      "sourceSha256": "38284756ea7d73cb2f6db5d1ffd091ae9289185c6ed2824961fd985b8d38744a",
+      "sha256": "46afbbc19d221c8830f8fe0ca9312bafeb5378351718ebc87e2214a44adfa6b8",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8403,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/02.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/02.png",
+      "sourceSha256": "00aeebd35f753051da399b636a8703ce170a6abe161dac354fc3e21921d311b8",
+      "sha256": "a191317d31eca5082cbe7ca42e5db5939917c53f64cfa03cf4112c9c51facdfd",
+      "maskSha256": "d5d284938cb959fb941373c4da835750bb3c0e1b64fe6e63f95e8408ed2757c4",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8372,
+      "maskPixels": 8415,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/03.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/03.png",
+      "sourceSha256": "c0b9a16a8e3f784fe4505c9f92aa2fa56ee9b79763ff6693757b22e0a55fee13",
+      "sha256": "d44cbf7dc9610b0a208d693f80d7c2206ae9626ebd059097794e3a07d6a77024",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8380,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/04.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/04.png",
+      "sourceSha256": "8d756867af1c752b29f92287b88429e55a230e4725e9c9c9a9ab9f937529da3c",
+      "sha256": "2165500027869764bee1d2a25bdff0620ba9e0189b46188ff91b32668dc7077b",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8354,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/05.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/05.png",
+      "sourceSha256": "41c0cf93dd5782cf7abde610cb649a015f19f485801fdc6aab36b6567d99007d",
+      "sha256": "b1cdf6ad123812961dda69439f0b026803dd004b8c39eacf36600e74fc19ce42",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8393,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/06.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/06.png",
+      "sourceSha256": "0ba0cfab525046e72741ff183e978f477f551269a63009d500d017b3e0929178",
+      "sha256": "59d81558c58f80598099633e73e76f9983f6bb99c59105c05a10508298d09ea7",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8359,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-compound-house-dki/07.webp": {
+      "url": "/property-photos/kwashieman-compound-house-dki/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-compound-house-dki/07.png",
+      "sourceSha256": "86ed6b3c1b5d6a4ca3ee5b57465cda4b335728e3301d0bc8455b781a380d0e26",
+      "sha256": "ddcb90905c63b49d0535e4f9eda589cebda835ac384ba3961c36ff605ced2795",
+      "maskSha256": "2481b6625799f2cafc1415b0a8d3d2156a5be8964b960a1667b1a308e33ac61a",
+      "width": 1600,
+      "height": 1200,
+      "changedPixels": 8412,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-lapaz-compound-house-dollardream/01.webp": {
+      "url": "/property-photos/kwashieman-lapaz-compound-house-dollardream/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-lapaz-compound-house-dollardream/01.png",
+      "sourceSha256": "1b9fb21c9db256915f35b2b2b6a53140cb29f550cde0cdee95512233d9303f34",
+      "sha256": "38a9c855ebf69966a009157da4712f08c5a4281dc6851dfc6cc746b489dbc9a6",
+      "maskSha256": "6ab6fe97eb25ef206dfd11c825f6aaab16043927a0025c6a7e2c159bde99bbd0",
+      "width": 1125,
+      "height": 1500,
+      "changedPixels": 4898,
+      "maskPixels": 4935,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-lapaz-compound-house-dollardream/02.webp": {
+      "url": "/property-photos/kwashieman-lapaz-compound-house-dollardream/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-lapaz-compound-house-dollardream/02.png",
+      "sourceSha256": "f9a6356f964386fffd938c113424a9244fb4c96eb6d24efd015479a419b7a191",
+      "sha256": "585c1d63f1cd4a88fd4160e7237c6046b5aa9720665879bd89ef9ab97ea1edcf",
+      "maskSha256": "6ab6fe97eb25ef206dfd11c825f6aaab16043927a0025c6a7e2c159bde99bbd0",
+      "width": 1125,
+      "height": 1500,
+      "changedPixels": 4914,
+      "maskPixels": 4935,
+      "changedOutsideMask": 0,
+      "fontSize": 43,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/01.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/01.png",
+      "sourceSha256": "f1446ad14fb6e44611e69e359b3483aa4301f0c140e173b3245a1279a60cd5ce",
+      "sha256": "8d68719aa5370aa85daadd3150aead3ba6f7337a4f70285260756c28424d0e28",
+      "maskSha256": "311187bf146f6e5e0966ff609968b7da0c2904f77f2143c05340609ba8037613",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5335,
+      "maskPixels": 5338,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/02.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/02.png",
+      "sourceSha256": "3157af7c3804ed9ff59a5478934c238ad72dd8c46f126e2b3fab0a71cedc47c0",
+      "sha256": "9091ba08f268e4c721f70ea99a433d0e9a611bfe0479caeb2b0c9df1c368c790",
+      "maskSha256": "99860146a03e3a43812561f92030253cdfa7b14a636d558c6bc0d1fd95ebc540",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5608,
+      "maskPixels": 5641,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/03.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/03.png",
+      "sourceSha256": "37a04eef2cd6d60ef738d99cfeb44a37570d8884848138e8469bc7b8ee113961",
+      "sha256": "f28c39ae55801e90edf9317bbb7eb48e4883b5800d4e495d29b7a4a943931250",
+      "maskSha256": "32596b0ce18947782f6d371572f4ed15aaac096517ec76ac0a05efb31a97ac5b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 4717,
+      "maskPixels": 4726,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-villa-emmanuelappiah/04.webp": {
+      "url": "/property-photos/kwashieman-villa-emmanuelappiah/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-villa-emmanuelappiah/04.png",
+      "sourceSha256": "cb42e90e3d21cf21dc71e746a119ab6e9da7b973966df4a22a6c8330d7db539e",
+      "sha256": "81e3e4b503fc24e3e6daa2b9c1dda1689c770c16aec105e1a0647997d2ff7c3d",
+      "maskSha256": "ef6684edfc2981ed5c5ecbd3cdb5ff4f0165e2e6fad98a40aa90d73d65ba05f0",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 5639,
+      "maskPixels": 5641,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/01.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/01.png",
+      "sourceSha256": "c00ce70edeaf72c17dad75f3c5590f5a308f22dea472f1b0fb6acc075d0a25dd",
+      "sha256": "d1eb5f59657603a8e9b9ab854d03675529f023e452f8abbee8942b6a67efa69c",
+      "maskSha256": "be6850fe9200da30606287bef4e536bfbd6418e72441ef745eb8c26a629642cf",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12215,
+      "maskPixels": 12293,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/02.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/02.png",
+      "sourceSha256": "46728018244fb10df87c179499d4672e52f6cf3d6ec09fef3579351cbc7b0631",
+      "sha256": "94b91a997efcbda90088a63fb8db30b1a80a57596818aabd6fd18e484c2006cb",
+      "maskSha256": "83fd83af9a30df1e203ad83f369dea90970658abb0d2daaa46c53932ca368939",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12209,
+      "maskPixels": 12231,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/03.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/03.png",
+      "sourceSha256": "6ceb9057daf0d04870a8b92bf418cf59cbe5cf86ccda99d7c042783252bbdb17",
+      "sha256": "64e4b3231e561603f6feb35db634499430dead3902d319c49df8ed0e9fa37b45",
+      "maskSha256": "be6850fe9200da30606287bef4e536bfbd6418e72441ef745eb8c26a629642cf",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12175,
+      "maskPixels": 12293,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/04.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/04.png",
+      "sourceSha256": "2c1d8c072553f6a5c0d2a78f8d8b4af8fd87e68135a788b510df7eba1d97c28b",
+      "sha256": "064741f8a62c8e13e047f5dd60ae07d7856899e02d8ef15cd7c969074cb92ce5",
+      "maskSha256": "83fd83af9a30df1e203ad83f369dea90970658abb0d2daaa46c53932ca368939",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12180,
+      "maskPixels": 12231,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/05.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/05.png",
+      "sourceSha256": "2cf889601f773cdc86308b19d97dc6c6fdc6e34cb92825d2a4bb89cfdc0bfc1e",
+      "sha256": "bc4b68bf6d6a51a6ae3d59824a458434ad11b0efa4a3934cc9f6e03a68583268",
+      "maskSha256": "83fd83af9a30df1e203ad83f369dea90970658abb0d2daaa46c53932ca368939",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12155,
+      "maskPixels": 12231,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/kwashieman-hong-kong-apartment-prudential/06.webp": {
+      "url": "/property-photos/kwashieman-hong-kong-apartment-prudential/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/kwashieman-hong-kong-apartment-prudential/06.png",
+      "sourceSha256": "49cbef94c0df53b171500e15d6bb031089bbc04eed695ef45abac7aa43d6cf38",
+      "sha256": "a6d05ec62b1219e9c686fe7f0a0f2933d2c3ad75a01aaf4bd02494a988ba8b19",
+      "maskSha256": "be6850fe9200da30606287bef4e536bfbd6418e72441ef745eb8c26a629642cf",
+      "width": 900,
+      "height": 1600,
+      "changedPixels": 12232,
+      "maskPixels": 12293,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/01.webp": {
+      "url": "/property-photos/labone-apartment-edmark/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/01.png",
+      "sourceSha256": "f8deafda523a792508a136a91c2bca4904a1916df4ee0785ac4453e17d3ddf88",
+      "sha256": "3701a08c92f806dd3fcdc087f46653d95a6c4ac03877b11e9787d0080b3f8a62",
+      "maskSha256": "1d76e4c108f930a23df0089321325e843816a2cb421b8827002d719271bbff2a",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5638,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/02.webp": {
+      "url": "/property-photos/labone-apartment-edmark/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/02.png",
+      "sourceSha256": "ac0a9e4687cb4acc72566b8b9735bfd77c26ccdef0f7b0c6e19f5588df43e68d",
+      "sha256": "260fd6f00b7ed030b9104859f5b87f82b49606592c2a95dddba44edabb8e0098",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5632,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/03.webp": {
+      "url": "/property-photos/labone-apartment-edmark/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/03.png",
+      "sourceSha256": "bcb9091ad6074e43d360854df1f362cf4a5a6300a298a1a77a7a0185c50a8ee3",
+      "sha256": "6a12b33bd5b137e04dadf0cf888bf1af3f0810b3a9fb999f2281c5bdb63ace19",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5592,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/04.webp": {
+      "url": "/property-photos/labone-apartment-edmark/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/04.png",
+      "sourceSha256": "1eacfeb7f7ea6c66dfd1d17a8e069ab8f9666e03ef6fe22731928fd7fbf48207",
+      "sha256": "5ab18223754e0bbcbbbcda138069e6649c98ad3cd9077bb1737038033071e10e",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5601,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/05.webp": {
+      "url": "/property-photos/labone-apartment-edmark/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/05.png",
+      "sourceSha256": "9684bd4a48fb02359554321e580f52821935e05ccfd1a5f18ef044166e87155e",
+      "sha256": "e466545f3442a9f4ed6c4eba7f0dfad0f83db71c0ac76724cf5fb3a71f585a6b",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5625,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-edmark/06.webp": {
+      "url": "/property-photos/labone-apartment-edmark/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-edmark/06.png",
+      "sourceSha256": "82c8c85126ed81890cd369a7405b78dc7fc3bd7c709403d75a81899234e657c4",
+      "sha256": "4b92d499380c7ee1807994e07bde616b0a2ff9a64b51aa9b48eefa29040a8110",
+      "maskSha256": "1d76e4c108f930a23df0089321325e843816a2cb421b8827002d719271bbff2a",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5577,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/01.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/01.png",
+      "sourceSha256": "c4dc35d19e0ba20da1be3638f8a43cf7077cc78e1652baa14c193d762fa368c8",
+      "sha256": "3c3c3475913490ff659744b3c4ff4cc96281307cae665196c875099797f23a3c",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5625,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/02.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/02.png",
+      "sourceSha256": "6659877c4529a3a42f7e4ea7a5112b5d633dbe4509231ebc1fdb8cdae441604e",
+      "sha256": "dcbe94108dd0a15faebab0d392b37eee8f81a54be4f4761c07430ed1fae93465",
+      "maskSha256": "d55c862a41fea52118cbbaf73afd5320b44c26cc69cd87829df8324ee8a379a9",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6520,
+      "maskPixels": 6574,
+      "changedOutsideMask": 0,
+      "fontSize": 53,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/03.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/03.png",
+      "sourceSha256": "4daabb85eda263b039e04aa2afcd7ae36015530bc6a91f64a912f5bc783d4be7",
+      "sha256": "edc499f9c480f54ba826dc5707765b4b9b9cbddcf18609fff4e9d2990be647ac",
+      "maskSha256": "d55c862a41fea52118cbbaf73afd5320b44c26cc69cd87829df8324ee8a379a9",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6497,
+      "maskPixels": 6574,
+      "changedOutsideMask": 0,
+      "fontSize": 53,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/04.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/04.png",
+      "sourceSha256": "91f2b9bea0f60a8cb7053a11468f2d2283fcf6eddbde25b3fa4ba6be80d5420b",
+      "sha256": "e425e31be8857da50d625bff1d28381ad689f88578f992c1b7057a931ce71b6a",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5596,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/05.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/05.png",
+      "sourceSha256": "b8370c62e22acab3d874c5c62891f095b025cca61d97fe4d54c20bf8fabd3b56",
+      "sha256": "6b6843574535b2989f61616e36adbcccd73773ffbab46c2168d39cb0dea40e27",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6481,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/06.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/06.png",
+      "sourceSha256": "006778bbc521c2812e9dd27aec8dd1ade1aeb7e36d38c7088dbb7bfebdc5e080",
+      "sha256": "f8234aecd27e4fa81a635b87b2603cb06634a539c7166f9a17f98b1177f27095",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6514,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/07.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/07.png",
+      "sourceSha256": "ed7baaf41abe33d77dba99129d95d2826d1b2034a58ae7d2c1827b370353c361",
+      "sha256": "48d9419633b2b757ac340965dea6fad2c27be9bf65dbc5b792441978d0aecd33",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6514,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/08.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/08.png",
+      "sourceSha256": "6e8a9b56d3b3fe265a9026f816fc8590620aafdf2b1cc5745f5fed01497014c8",
+      "sha256": "d2a10e687d4c949c3383fc816f2ecc4b8297a0fada31faf35ff3f286d31f3a98",
+      "maskSha256": "654ddb592d380a83085b69423ba592084437350476d954142a980c226bf086be",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 6483,
+      "maskPixels": 6525,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-compound-house-brealty/09.webp": {
+      "url": "/property-photos/labone-compound-house-brealty/09-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-compound-house-brealty/09.png",
+      "sourceSha256": "89832b58840317459db3f354eb4f269e8b6a7abe4148942f774a005a7cf2f5a5",
+      "sha256": "1d9848a08ce82aac01357586995ff7eadc0f7b4dec5063b9cb37a5bb7a1fa467",
+      "maskSha256": "f10eb2995d63c0011c2bbbff65e8528729aa015d1adc2f35fca143f004a4091b",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 5599,
+      "maskPixels": 5639,
+      "changedOutsideMask": 0,
+      "fontSize": 46,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/01.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/01.png",
+      "sourceSha256": "49c392253611cabdc710decf079453d5db5857e39b401d12c1850b0a810edca3",
+      "sha256": "3e373721548733f671e20b202400a58ae6baa143a32b6369594b79b09253190c",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8366,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/02.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/02.png",
+      "sourceSha256": "adbb1e791cf03fa8617e5ff2a34dfe5aeb51d9a6a2c4b6c047c7466bf8efb273",
+      "sha256": "01b74f8fa4b0ca9dad0aa65556c98665a7e665ad7dd52b21081d8c75623daaa3",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8395,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/03.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/03.png",
+      "sourceSha256": "cbb9c53d947e0513928be25158c0d026f7754dca63d97080920a35ee3cb11209",
+      "sha256": "0c1fde5387ac432c82f3e4d28061e0556d67299a694895167842e22a13f6dbd5",
+      "maskSha256": "84ea7be5b51a88b27f72e5e96ecd9e5839f1d6f99dc8eadc13968a0edec04abd",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8406,
+      "maskPixels": 8415,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/04.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/04.png",
+      "sourceSha256": "aa4da868dfc2bf12668fa33ddae89ae5e92c28a77e776fb087c19a33db8cd0be",
+      "sha256": "fc04626444d7650d8a8bf9403a91b7150cb56444bb79659989ef1d83f4c8fb11",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8402,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/05.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/05.png",
+      "sourceSha256": "466c5f07876780c664035d8c71a18d4c120812512e43ce0e178737af24c95013",
+      "sha256": "5ee336ea9041d321fcacdea39e44ae6d74a88dfe81693c950726a4631b7fd815",
+      "maskSha256": "e933418e6dc5ce7b1343c82704594ba14ad8c9bd0029401ee8cbfd8af348512b",
+      "width": 1080,
+      "height": 810,
+      "changedPixels": 6095,
+      "maskPixels": 6110,
+      "changedOutsideMask": 0,
+      "fontSize": 49,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/06.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/06.png",
+      "sourceSha256": "c75db4b5e246406756b4536a1756db25bdbadf738a28ad5d785ce12acbc13fc4",
+      "sha256": "0c64f18c77f20931bbbdd3ec616a4e02430655eebee347b122d03b5b1797f14c",
+      "maskSha256": "c61dc8339014a9306b9dc3f28f2f85b4d7e40a62b2959c1d6caf81f02f842be1",
+      "width": 960,
+      "height": 1280,
+      "changedPixels": 10936,
+      "maskPixels": 10956,
+      "changedOutsideMask": 0,
+      "fontSize": 68,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/07.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/07.png",
+      "sourceSha256": "567bc3a1af87460a909213079d6db36ebb34ad4aa7c73303db6b3b077d2a28b7",
+      "sha256": "bccf6317d9467b1316cb335f67386b2d35fb5422b10e8bf38597025e0b54c40e",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8409,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-angelanartey/08.webp": {
+      "url": "/property-photos/labone-apartment-angelanartey/08-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-angelanartey/08.png",
+      "sourceSha256": "59e0c64944e17e9298d5e737d25a6e26a5e79558d15d695b2b8aa748c0a0e675",
+      "sha256": "5e774e918b842e6bf339352c9f0e0bc69e518d3fd6c4645027e2f79c4bc35d99",
+      "maskSha256": "b2a86e466c8cecdacccf5a121ecec2e5f11d50da25997ebb19492656370b7740",
+      "width": 1280,
+      "height": 960,
+      "changedPixels": 8410,
+      "maskPixels": 8417,
+      "changedOutsideMask": 0,
+      "fontSize": 58,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/01.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/01.png",
+      "sourceSha256": "bcf85226dbab39278d396c97153fa29150dec9e0cb541fb4f5d38f64627b6fb6",
+      "sha256": "d7d9e0ab0a43517e5b644bfe8927206bc9281c08a95495ffa9673c8baea0d0b2",
+      "maskSha256": "9044137e67247495bb31bed7315d351b0a6c506d6cf1e6daaf2cb84fe0e4b463",
+      "width": 768,
+      "height": 690,
+      "changedPixels": 3228,
+      "maskPixels": 3241,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/02.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/02.png",
+      "sourceSha256": "f2b7aa84845b7e8ad849396c9bca2985c2644eb92dbf539c9e4e7c637a123c00",
+      "sha256": "a8f68a39af105f79ff72a3b6ccb351fc7900c5df6741d5a1ef7533e0861844e1",
+      "maskSha256": "f0ee543db095209694c680b7588ee70a5ba6170832ddc40d8d3c63d2e07ae2c6",
+      "width": 768,
+      "height": 705,
+      "changedPixels": 3297,
+      "maskPixels": 3302,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/03.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/03.png",
+      "sourceSha256": "06f80bb930490d9435b2ff1e8c11e43b32a44248ab2a42f97e25d6dbc09fb2ae",
+      "sha256": "6c8692350bdaef5044c6b2cdf8483331a67167c5eda0d723b0c0ab5bbb46c3cb",
+      "maskSha256": "bc224e552c19f16f9da548304965cf79654824aef89d8492f1be242816d50aae",
+      "width": 750,
+      "height": 733,
+      "changedPixels": 3225,
+      "maskPixels": 3241,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/04.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/04.png",
+      "sourceSha256": "6556b1ab7d55462e1a550ba14ec1a9032da30f7e51e2642ecce4dfc68bb37e05",
+      "sha256": "b166d53e7afb9e88e5135bb52dc44033bcff1c84f866231017d9d437b6f4fa40",
+      "maskSha256": "7064b21bde8c2881535a8d3b9dd8ef58050ad2ea686306dcd98da076fda18e60",
+      "width": 750,
+      "height": 681,
+      "changedPixels": 3079,
+      "maskPixels": 3101,
+      "changedOutsideMask": 0,
+      "fontSize": 32,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/05.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/05.png",
+      "sourceSha256": "4d7c1d54ddced0c734853ae6f01b63f2bf74b1902e09415fad37bae527113ed0",
+      "sha256": "f172358ff36637e9e476a6d59fda9bb20986a13732b09fedb85fcaf565ea0f67",
+      "maskSha256": "3f3824f137a7bbe72cb7917e500eb0fc3d713ad155b97818f75743186a2a811a",
+      "width": 768,
+      "height": 729,
+      "changedPixels": 3296,
+      "maskPixels": 3302,
+      "changedOutsideMask": 0,
+      "fontSize": 33,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/06.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/06-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/06.png",
+      "sourceSha256": "328e3c42e5f089f898a4125eea4a01324c1527b9078abfee15f948d650853647",
+      "sha256": "f1020b9e66fb9225e32b72b1192f0c41d9ff14f3e99ad0dad23be6111d6762af",
+      "maskSha256": "1730d3516e07d5f23b8959acaadd953ed59f8be40f2ca79206cf19612c297d45",
+      "width": 768,
+      "height": 721,
+      "changedPixels": 2376,
+      "maskPixels": 2378,
+      "changedOutsideMask": 0,
+      "fontSize": 27,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-apartment-unitedhomes/07.webp": {
+      "url": "/property-photos/labone-apartment-unitedhomes/07-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-apartment-unitedhomes/07.png",
+      "sourceSha256": "946fb5b98bf743395308f5b43b87e2d25994a0213a505c28b5f66645c4777a3b",
+      "sha256": "df9548e1893e416924d8bd820fde4d06e23f639e7aff79416cc1c977a2eee035",
+      "maskSha256": "e8d7719d5f0a45d66f8987759d74c5a2fd6eff4e477ede973c3cc0c549c67a0b",
+      "width": 750,
+      "height": 788,
+      "changedPixels": 3967,
+      "maskPixels": 3970,
+      "changedOutsideMask": 0,
+      "fontSize": 38,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/01.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/01-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/01.png",
+      "sourceSha256": "4ee0bde8ce4caf375078925f18a0adf7d076f579ac251da5f4d5fde335139412",
+      "sha256": "b602c1d67623953c28d0ce9cc2a15697c30533aca2770209d77b76e8268dd24d",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6699,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/02.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/02-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/02.png",
+      "sourceSha256": "a83ef333c46c3bf23ded85b32ac32a9e7c245a64dcbed7dcd66ca23a58377d5d",
+      "sha256": "eb30d49c1fb5a519847b82297b1a2889894a1125a411c4c0f60e02f702e8e752",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6684,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/03.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/03-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/03.png",
+      "sourceSha256": "8f2e4d1174d8c6c270255d47ace99db42fa9edbc0053a81fcd67cfba402f5999",
+      "sha256": "9f9c83557831dc76697c0acf35d75ca9279872b602db1c153cd08ebf158df0d7",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6679,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/04.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/04-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/04.png",
+      "sourceSha256": "e7347b74efe3cf76e3014dc020d02767855b2b3a8dcf3fd3373ed5ea8136c042",
+      "sha256": "96b7f8374188fd905e5adc0fb2b8bb1f5a2a52aeb67407dec8a6dc962f6223be",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6690,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
+      "brand": {
+        "method": "reviewed-platform-replacement"
+      }
+    },
+    "/properties/labone-au-village-compound-house-tetteh/05.webp": {
+      "url": "/property-photos/labone-au-village-compound-house-tetteh/05-urbanrise.webp",
+      "mask": "data/property-watermark-masks/labone-au-village-compound-house-tetteh/05.png",
+      "sourceSha256": "47e32cd68dd4045f39eed2162112dfd1211161566bb7935fe1e02f48233693c4",
+      "sha256": "d2217e3360f538563a1fb6107a3e92b1f123ce2d9e701b277707c39da621f296",
+      "maskSha256": "c6f358aca355238da2a1640d7e2b9b7e8ab29aa9c54011e5849f5cd712833457",
+      "width": 810,
+      "height": 1080,
+      "changedPixels": 6408,
+      "maskPixels": 6710,
+      "changedOutsideMask": 0,
+      "fontSize": 52,
       "brand": {
         "method": "reviewed-platform-replacement"
       }

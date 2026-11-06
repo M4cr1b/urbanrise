@@ -1,4 +1,9 @@
 import { test, expect, type Page } from "@playwright/test";
+import { properties45To51 } from "../src/lib/data/properties-45-51";
+import { adomProperties } from "../src/lib/data/adom-properties";
+
+const catalogCount = 44 + properties45To51.length + adomProperties.length;
+const compoundCount = 2 + adomProperties.filter(property => property.type === "Compound House").length;
 
 const detail = "/property/adabraka-compound-house-soundwave";
 const routes = ["/", "/search", "/market", "/professionals", "/green-hub", "/comparables", detail, "/property/adenta-villa-ernestdoyi", "/about", "/help", "/legal"];
@@ -48,7 +53,7 @@ test("every main page fits the viewport and renders without exceptions", async (
 
 test("filters can be selected, reset and dismissed within the viewport", async ({ page }) => {
   await navigate(page, "/search");
-  await expect(cards(page)).toHaveCount(44);
+  await expect(cards(page)).toHaveCount(catalogCount);
   if (page.viewportSize()!.width < 768) {
     const trigger = page.getByRole("button", { name: /^Filters/ });
     await trigger.click();
@@ -60,12 +65,12 @@ test("filters can be selected, reset and dismissed within the viewport", async (
     expect(box!.width).toBeLessThanOrEqual(page.viewportSize()!.width);
     await sheet.getByRole("button", { name: "Compound House", exact: true }).click();
     await expect(sheet.getByRole("button", { name: "Compound House", exact: true })).toHaveAttribute("aria-pressed", "true");
-    await sheet.getByRole("button", { name: "Show 2 properties", exact: true }).click();
+    await sheet.getByRole("button", { name: `Show ${compoundCount} properties`, exact: true }).click();
     await expect(sheet).not.toBeVisible();
-    await expect(cards(page)).toHaveCount(2);
+    await expect(cards(page)).toHaveCount(compoundCount);
     await trigger.click();
     await sheet.getByRole("button", { name: "Reset filters", exact: true }).click();
-    await sheet.getByRole("button", { name: "Show 44 properties", exact: true }).click();
+    await sheet.getByRole("button", { name: `Show ${catalogCount} properties`, exact: true }).click();
     await trigger.click();
     for (let index = 0; index < 12; index++) {
       await page.keyboard.press("Tab");
@@ -77,7 +82,7 @@ test("filters can be selected, reset and dismissed within the viewport", async (
   } else {
     await page.getByRole("button", { name: "Type", exact: true }).click();
     await page.getByRole("button", { name: "Compound House", exact: true }).click();
-    await expect(cards(page)).toHaveCount(2);
+    await expect(cards(page)).toHaveCount(compoundCount);
     await page.getByRole("button", { name: /^Reset/ }).click();
     for (const name of ["Type", "Style", "Storey", "Tenure", "Eco", "Status", "Beds & price"]) {
       await page.getByRole("button", { name, exact: true }).click();
@@ -89,12 +94,12 @@ test("filters can be selected, reset and dismissed within the viewport", async (
       await page.keyboard.press("Escape");
     }
   }
-  await expect(cards(page)).toHaveCount(44);
+  await expect(cards(page)).toHaveCount(catalogCount);
 });
 
 test("search suggestions remain readable and Enter applies the entered locality", async ({ page }) => {
   await navigate(page, "/search");
-  const input = page.getByRole("combobox");
+  const input = page.getByRole("combobox", { name: "Search by address or district", exact: true });
   await input.fill("Adabraka");
   await expect(page.getByRole("listbox")).toBeVisible();
   await expect(page.getByRole("listbox").getByRole("option")).toHaveCount(4);
@@ -106,7 +111,7 @@ test("search suggestions remain readable and Enter applies the entered locality"
   await expect(page.getByRole("listbox")).not.toBeVisible();
   await page.getByRole("button", { name: "Clear property search" }).click();
   await input.press("Escape");
-  await expect(cards(page)).toHaveCount(44);
+  await expect(cards(page)).toHaveCount(catalogCount);
 });
 
 test("mobile navigation exposes the main sections and reaches the chosen page", async ({ page }) => {
@@ -178,6 +183,12 @@ test("professional discipline selection and market search work on touch layouts"
   await fitsScreen(page);
   await navigate(page, "/market");
   await page.getByRole("textbox", { name: "Search neighbourhoods" }).fill("Amrahia");
-  await expect(page.locator("main ul.grid > li")).toHaveCount(1);
+  const expectedAreas = [...new Set([
+    "Adenta, Amrahia",
+    ...properties45To51.filter(property => /amrahia/i.test(property.address)).map(property => property.address),
+  ])];
+  const areas = page.locator("main ul.grid > li");
+  await expect(areas).toHaveCount(expectedAreas.length);
+  expect((await areas.getByRole("heading", { level: 2 }).allTextContents()).sort()).toEqual(expectedAreas.sort());
   await fitsScreen(page);
 });

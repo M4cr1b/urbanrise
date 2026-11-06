@@ -1683,6 +1683,11 @@
           "/properties/adenta-villa-ernestdoyi/07.webp",
           "/properties/adenta-villa-ernestdoyi/08.webp"
         ]
+      },
+      "supersededBy": {
+        "date": "2026-11-04",
+        "reference": "data/property-reference-41-update.json",
+        "reason": "Owner replaced the entire property-41 entry and source photographs."
       }
     },
     {
@@ -2804,5 +2809,11 @@
     "sourceOmissions": "Greater Accra is application locality metadata. Summaries repeat only documented bedrooms, type and locality. Self-contained status, coordinates, dates, measured floor/plot basis and numeric lease terms remain unspecified.",
     "photographs": "All 63 edited full-resolution previews reviewed and registered through photos:prepare. Lossless WebP; identical dimensions; original bytes retained; zero changed pixels outside caption masks.",
     "property42Limit": "Selected gable-front exterior under the owner delegation. Interior association is retained from the source folder and is not independently proven by the supplied views."
+  },
+  "currentReview": {
+    "date": "2026-11-04",
+    "property41Replacement": "data/property-reference-41-update.json",
+    "activeGalleryPhotos": 61,
+    "historicalProperty41PhotosRetained": 8
   }
 }

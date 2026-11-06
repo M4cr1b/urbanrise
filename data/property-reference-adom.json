@@ -1,0 +1,2335 @@
+{
+  "scope": "Adom Data properties 1–10 (separate source numbering)",
+  "reviewDate": "2026-11-06",
+  "sourceDocument": {
+    "filename": "C:\\Users\\Admin\\Desktop\\Adom Data\\Document.docx",
+    "bytes": 20070,
+    "sha256": "1f5726993ca0f25026df002fa3e5108ded349af6012964a67d53cf7115ae9c8a"
+  },
+  "properties": [
+    {
+      "number": 1,
+      "id": "kwashieman-compound-house-dki",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Kwashieman",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "single-storey",
+        "PROPERTY SIZE": "200sqm",
+        "CONDITION": "Fairly used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "15",
+        "BATHROOMS": "14",
+        "TOILET": "10",
+        "ASKING PRICE": "GH₵ 4,500,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Dining Area, En Suite, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "DKI Properties",
+        "CONTACT": "0594835799",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Kwashieman",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "single-storey",
+        "PROPERTY SIZE": "200sqm",
+        "CONDITION": "Fairly used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "15",
+        "BATHROOMS": "14",
+        "TOILET": "10",
+        "ASKING PRICE": "GH₵ 4,500,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Air Conditioning, Balcony, Dining Area, En Suite, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "DKI Properties",
+        "CONTACT": "0594835799",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 1 DETAILS \nPROPERTY ADDRESS = Kwashieman\nPROPERTY TYPE = Compound House\nSTOREY = single-storey\nPROPERTY SIZE = 200sqm\nCondition = Fairly used \nFURNISHING = Unfurnished\nBEDROOM = 15\nBATHROOMS = 14\nTOILET = 10\nASKING PRICE = GH₵ 4,500,000\nPROPERTY STYLE = Detached \nFACILITIES =24-hour Electricity, Air Conditioning, Balcony, Dining Area, En Suite, Kitchen Cabinets, Kitchen Shelf, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe\nAGENT = DKI Properties\nCONTACT= 0594835799\nDISTRICT = Ablekuma North Municipal District\nECO RATING = \nGREEN FEATURES = Balcony\nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images",
+      "contacts": {
+        "primary": "+233594835799",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 1,
+          "filename": "53340957_MTYwMC0xMjAwLTQ1MGI5NTI5NjM.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340957_MTYwMC0xMjAwLTQ1MGI5NTI5NjM.webp",
+          "bytes": 43558,
+          "sha256": "00aeebd35f753051da399b636a8703ce170a6abe161dac354fc3e21921d311b8",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340958_MTYwMC0xMjAwLTc4OTMyY2M5MjQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340958_MTYwMC0xMjAwLTc4OTMyY2M5MjQ.webp",
+          "bytes": 75374,
+          "sha256": "c0b9a16a8e3f784fe4505c9f92aa2fa56ee9b79763ff6693757b22e0a55fee13",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340959_MTYwMC0xMjAwLWM5ZWUyZDViODU.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340959_MTYwMC0xMjAwLWM5ZWUyZDViODU.webp",
+          "bytes": 44114,
+          "sha256": "8d756867af1c752b29f92287b88429e55a230e4725e9c9c9a9ab9f937529da3c",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340960_MTYwMC0xMjAwLTUwZmE4MWIwYjc.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340960_MTYwMC0xMjAwLTUwZmE4MWIwYjc.webp",
+          "bytes": 41134,
+          "sha256": "41c0cf93dd5782cf7abde610cb649a015f19f485801fdc6aab36b6567d99007d",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340962_MTYwMC0xMjAwLTUwMzFjYzZkZmY.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340962_MTYwMC0xMjAwLTUwMzFjYzZkZmY.webp",
+          "bytes": 131712,
+          "sha256": "0ba0cfab525046e72741ff183e978f477f551269a63009d500d017b3e0929178",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM (1).webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM (1).webp",
+          "bytes": 89996,
+          "sha256": "86ed6b3c1b5d6a4ca3ee5b57465cda4b335728e3301d0bc8455b781a380d0e26",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM.webp",
+          "bytes": 89996,
+          "sha256": "86ed6b3c1b5d6a4ca3ee5b57465cda4b335728e3301d0bc8455b781a380d0e26",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg (1).webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg (1).webp",
+          "bytes": 91348,
+          "sha256": "38284756ea7d73cb2f6db5d1ffd091ae9289185c6ed2824961fd985b8d38744a",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 1,
+          "filename": "53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 1 Images\\53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg.webp",
+          "bytes": 91348,
+          "sha256": "38284756ea7d73cb2f6db5d1ffd091ae9289185c6ed2824961fd985b8d38744a",
+          "width": 1600,
+          "height": 1200,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [
+        {
+          "filename": "53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM (1).webp",
+          "duplicateOf": "53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM.webp"
+        },
+        {
+          "filename": "53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg (1).webp",
+          "duplicateOf": "53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg.webp"
+        }
+      ],
+      "proposedCover": {
+        "filename": "53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg.webp",
+        "53340957_MTYwMC0xMjAwLTQ1MGI5NTI5NjM.webp",
+        "53340958_MTYwMC0xMjAwLTc4OTMyY2M5MjQ.webp",
+        "53340959_MTYwMC0xMjAwLWM5ZWUyZDViODU.webp",
+        "53340960_MTYwMC0xMjAwLTUwZmE4MWIwYjc.webp",
+        "53340962_MTYwMC0xMjAwLTUwMzFjYzZkZmY.webp",
+        "53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM.webp"
+      ],
+      "sourceImageCount": 9,
+      "selectedImageCount": 7,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "single-storey",
+          "to": "Single Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "24-hour Electricity",
+        "Air Conditioning",
+        "Balcony",
+        "Dining Area",
+        "En Suite",
+        "Kitchen Cabinets",
+        "Kitchen Shelf",
+        "Pop Ceiling",
+        "Pre-Paid Meter",
+        "Tiled Floor",
+        "Wardrobe"
+      ],
+      "normalizedStorey": "Single Storey",
+      "normalizedType": "Compound House",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "53340969_MTYwMC0xMjAwLTBlMzc0NWQ1Nzg.webp",
+          "rawSourceSha256": "38284756ea7d73cb2f6db5d1ffd091ae9289185c6ed2824961fd985b8d38744a",
+          "originalUrl": "/properties/kwashieman-compound-house-dki/01.webp",
+          "registeredSourceSha256": "38284756ea7d73cb2f6db5d1ffd091ae9289185c6ed2824961fd985b8d38744a",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "sourceFilename": "53340957_MTYwMC0xMjAwLTQ1MGI5NTI5NjM.webp",
+          "rawSourceSha256": "00aeebd35f753051da399b636a8703ce170a6abe161dac354fc3e21921d311b8",
+          "originalUrl": "/properties/kwashieman-compound-house-dki/02.webp",
+          "registeredSourceSha256": "00aeebd35f753051da399b636a8703ce170a6abe161dac354fc3e21921d311b8",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "sourceFilename": "53340958_MTYwMC0xMjAwLTc4OTMyY2M5MjQ.webp",
+          "rawSourceSha256": "c0b9a16a8e3f784fe4505c9f92aa2fa56ee9b79763ff6693757b22e0a55fee13",
+          "originalUrl": "/properties/kwashieman-compound-house-dki/03.webp",
+          "registeredSourceSha256": "c0b9a16a8e3f784fe4505c9f92aa2fa56ee9b79763ff6693757b22e0a55fee13",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "sourceFilename": "53340959_MTYwMC0xMjAwLWM5ZWUyZDViODU.webp",
+          "rawSourceSha256": "8d756867af1c752b29f92287b88429e55a230e4725e9c9c9a9ab9f937529da3c",
+          "originalUrl": "/properties/kwashieman-compound-house-dki/04.webp",
+          "registeredSourceSha256": "8d756867af1c752b29f92287b88429e55a230e4725e9c9c9a9ab9f937529da3c",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "sourceFilename": "53340960_MTYwMC0xMjAwLTUwZmE4MWIwYjc.webp",
+          "rawSourceSha256": "41c0cf93dd5782cf7abde610cb649a015f19f485801fdc6aab36b6567d99007d",
+          "originalUrl": "/properties/kwashieman-compound-house-dki/05.webp",
+          "registeredSourceSha256": "41c0cf93dd5782cf7abde610cb649a015f19f485801fdc6aab36b6567d99007d",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "sourceFilename": "53340962_MTYwMC0xMjAwLTUwMzFjYzZkZmY.webp",
+          "rawSourceSha256": "0ba0cfab525046e72741ff183e978f477f551269a63009d500d017b3e0929178",
+          "originalUrl": "/properties/kwashieman-compound-house-dki/06.webp",
+          "registeredSourceSha256": "0ba0cfab525046e72741ff183e978f477f551269a63009d500d017b3e0929178",
+          "width": 1600,
+          "height": 1200
+        },
+        {
+          "sourceFilename": "53340968_MTYwMC0xMjAwLWVlNGE1NzVkOGM.webp",
+          "rawSourceSha256": "86ed6b3c1b5d6a4ca3ee5b57465cda4b335728e3301d0bc8455b781a380d0e26",
+          "originalUrl": "/properties/kwashieman-compound-house-dki/07.webp",
+          "registeredSourceSha256": "86ed6b3c1b5d6a4ca3ee5b57465cda4b335728e3301d0bc8455b781a380d0e26",
+          "width": 1600,
+          "height": 1200
+        }
+      ],
+      "importedListing": {
+        "id": "kwashieman-compound-house-dki",
+        "galleryFile": "data/property-photo-galleries/kwashieman-compound-house-dki.json",
+        "photos": 7
+      }
+    },
+    {
+      "number": 2,
+      "id": "kwashieman-lapaz-compound-house-dollardream",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Kwashieman-Lapaz",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "three-storey",
+        "PROPERTY SIZE": "450 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "18",
+        "BATHROOMS": "20",
+        "TOILET": "10",
+        "ASKING PRICE": "GH₵ 10,700,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Balcony, Dining Area, En Suite Hot Water Kitchen Cabinets, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "Dollar dream Estate",
+        "CONTACT": "0595369794",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Green Shade",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Kwashieman-Lapaz",
+        "PROPERTY TYPE": "Compound House",
+        "STOREY": "three-storey",
+        "PROPERTY SIZE": "450 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "18",
+        "BATHROOMS": "20",
+        "TOILET": "10",
+        "ASKING PRICE": "GH₵ 10,700,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Balcony, Dining Area, En Suite Hot Water Kitchen Cabinets, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe",
+        "AGENT": "Dollar dream Estate",
+        "CONTACT": "0595369794",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Green Shade",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 2 DETAILS \nPROPERTY ADDRESS = Kwashieman-Lapaz\nPROPERTY TYPE = Compound House\nSTOREY = three-storey\nPROPERTY SIZE = 450 sqm\nCondition = Fairly Used\nFURNISHING = Unfurnished\nBEDROOM = 18\nBATHROOMS = 20\nTOILET = 10\nASKING PRICE = GH₵ 10,700,000\nPROPERTY STYLE = Detached \nFACILITIES = Air Conditioning, Balcony, Dining Area, En Suite Hot Water Kitchen Cabinets, Pop Ceiling, Pre-Paid Meter, Tiled Floor, Wardrobe\nAGENT = Dollar dream Estate\nCONTACT=0595369794\nDISTRICT = Ablekuma North Municipal District\nECO RATING = \nGREEN FEATURES = Green Shade\nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 2 Images",
+      "contacts": {
+        "primary": "+233595369794",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 2,
+          "filename": "39245927_MTEyNS0xNTAwLTE3MzFhOTYyYmItMQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 2 Images\\39245927_MTEyNS0xNTAwLTE3MzFhOTYyYmItMQ.webp",
+          "bytes": 349900,
+          "sha256": "f9a6356f964386fffd938c113424a9244fb4c96eb6d24efd015479a419b7a191",
+          "width": 1125,
+          "height": 1500,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 2,
+          "filename": "39245932_MTEyNS0xNTAwLTRmMmRhYmZmMzgtMQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 2 Images\\39245932_MTEyNS0xNTAwLTRmMmRhYmZmMzgtMQ.webp",
+          "bytes": 223834,
+          "sha256": "1b9fb21c9db256915f35b2b2b6a53140cb29f550cde0cdee95512233d9303f34",
+          "width": 1125,
+          "height": 1500,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [],
+      "proposedCover": {
+        "filename": "39245932_MTEyNS0xNTAwLTRmMmRhYmZmMzgtMQ.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "39245932_MTEyNS0xNTAwLTRmMmRhYmZmMzgtMQ.webp",
+        "39245927_MTEyNS0xNTAwLTE3MzFhOTYyYmItMQ.webp"
+      ],
+      "sourceImageCount": 2,
+      "selectedImageCount": 2,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "FACILITIES",
+          "from": "En Suite Hot Water Kitchen Cabinets",
+          "to": "En Suite, Hot Water, Kitchen Cabinets",
+          "reason": "Separate explicitly named amenities where commas were omitted."
+        },
+        {
+          "field": "STOREY",
+          "from": "three-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "Air Conditioning",
+        "Balcony",
+        "Dining Area",
+        "En Suite",
+        "Hot Water",
+        "Kitchen Cabinets",
+        "Pop Ceiling",
+        "Pre-Paid Meter",
+        "Tiled Floor",
+        "Wardrobe"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Compound House",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "39245932_MTEyNS0xNTAwLTRmMmRhYmZmMzgtMQ.webp",
+          "rawSourceSha256": "1b9fb21c9db256915f35b2b2b6a53140cb29f550cde0cdee95512233d9303f34",
+          "originalUrl": "/properties/kwashieman-lapaz-compound-house-dollardream/01.webp",
+          "registeredSourceSha256": "1b9fb21c9db256915f35b2b2b6a53140cb29f550cde0cdee95512233d9303f34",
+          "width": 1125,
+          "height": 1500
+        },
+        {
+          "sourceFilename": "39245927_MTEyNS0xNTAwLTE3MzFhOTYyYmItMQ.webp",
+          "rawSourceSha256": "f9a6356f964386fffd938c113424a9244fb4c96eb6d24efd015479a419b7a191",
+          "originalUrl": "/properties/kwashieman-lapaz-compound-house-dollardream/02.webp",
+          "registeredSourceSha256": "f9a6356f964386fffd938c113424a9244fb4c96eb6d24efd015479a419b7a191",
+          "width": 1125,
+          "height": 1500
+        }
+      ],
+      "importedListing": {
+        "id": "kwashieman-lapaz-compound-house-dollardream",
+        "galleryFile": "data/property-photo-galleries/kwashieman-lapaz-compound-house-dollardream.json",
+        "photos": 2
+      }
+    },
+    {
+      "number": 3,
+      "id": "kwashieman-villa-emmanuelappiah",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Kwashieman",
+        "PROPERTY TYPE": "Bungalow",
+        "STOREY": "Two-storey",
+        "PROPERTY SIZE": "200sqm",
+        "CONDITION": "Newly-Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "8",
+        "BATHROOMS": "6",
+        "TOILET": "7",
+        "ASKING PRICE": "GH₵ 3,800,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen cabinets, Pre-paid meters, Dining area",
+        "AGENT": "Emmanuel Appiah",
+        "CONTACT": "0552885458",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Kwashieman",
+        "PROPERTY TYPE": "Villa",
+        "STOREY": "Two-storey",
+        "PROPERTY SIZE": "200sqm",
+        "CONDITION": "Newly-Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "8",
+        "BATHROOMS": "6",
+        "TOILET": "7",
+        "ASKING PRICE": "GH₵ 3,800,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen cabinets, Pre-paid meters, Dining area",
+        "AGENT": "Emmanuel Appiah",
+        "CONTACT": "0552885458",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony, Private garden, Mature trees, Landscaped compound",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 3 DETAILS \nPROPERTY ADDRESS = Kwashieman\nPROPERTY TYPE = Bungalow\nSTOREY = Two-storey\nPROPERTY SIZE = 200sqm\nCondition = Newly-Built \nFURNISHING = Unfurnished\nBEDROOM = 8\nBATHROOMS = 6\nTOILET = 7\nASKING PRICE = GH₵ 3,800,000\nPROPERTY STYLE = Detached \nFACILITIES =Kitchen cabinets, Pre-paid meters, Dining area\nAGENT = Emmanuel Appiah\nCONTACT=0552885458\nDISTRICT = Ablekuma North Municipal District\nECO RATING = \nGREEN FEATURES = Balcony\nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 3 Images",
+      "contacts": {
+        "primary": "+233552885458",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 3,
+          "filename": "61511065_MTI4MC05NjAtODQ4ODcwNDJiYg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 3 Images\\61511065_MTI4MC05NjAtODQ4ODcwNDJiYg.webp",
+          "bytes": 167558,
+          "sha256": "3157af7c3804ed9ff59a5478934c238ad72dd8c46f126e2b3fab0a71cedc47c0",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 3,
+          "filename": "61511066_MTI4MC05NjAtYTQzMjVjMDQ1OQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 3 Images\\61511066_MTI4MC05NjAtYTQzMjVjMDQ1OQ.webp",
+          "bytes": 245084,
+          "sha256": "f1446ad14fb6e44611e69e359b3483aa4301f0c140e173b3245a1279a60cd5ce",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 3,
+          "filename": "61511068_MTI4MC05NjAtZTVjMmRkNzk5ZA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 3 Images\\61511068_MTI4MC05NjAtZTVjMmRkNzk5ZA.webp",
+          "bytes": 323146,
+          "sha256": "37a04eef2cd6d60ef738d99cfeb44a37570d8884848138e8469bc7b8ee113961",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 3,
+          "filename": "61511069_OTYwLTEyODAtOGQ0ZTM0ZGRmYg (1).webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 3 Images\\61511069_OTYwLTEyODAtOGQ0ZTM0ZGRmYg (1).webp",
+          "bytes": 164938,
+          "sha256": "cb42e90e3d21cf21dc71e746a119ab6e9da7b973966df4a22a6c8330d7db539e",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [],
+      "proposedCover": {
+        "filename": "61511066_MTI4MC05NjAtYTQzMjVjMDQ1OQ.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "61511066_MTI4MC05NjAtYTQzMjVjMDQ1OQ.webp",
+        "61511065_MTI4MC05NjAtODQ4ODcwNDJiYg.webp",
+        "61511068_MTI4MC05NjAtZTVjMmRkNzk5ZA.webp",
+        "61511069_OTYwLTEyODAtOGQ0ZTM0ZGRmYg (1).webp"
+      ],
+      "sourceImageCount": 4,
+      "selectedImageCount": 4,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "D for all",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation",
+          "supersedes": {
+            "value": "C",
+            "ownerReply": "take the rating to c"
+          }
+        },
+        "PROPERTY TYPE": {
+          "value": "Villa",
+          "ownerReply": "change to Vila",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        },
+        "GREEN FEATURES": {
+          "value": "Balcony, Private garden, Mature trees, Landscaped compound",
+          "ownerReply": "Private garden, mature trees and landscaped compound as part of the green features",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "Two-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "Kitchen cabinets",
+        "Pre-paid meters",
+        "Dining area"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Villa",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "61511066_MTI4MC05NjAtYTQzMjVjMDQ1OQ.webp",
+          "rawSourceSha256": "f1446ad14fb6e44611e69e359b3483aa4301f0c140e173b3245a1279a60cd5ce",
+          "originalUrl": "/properties/kwashieman-villa-emmanuelappiah/01.webp",
+          "registeredSourceSha256": "f1446ad14fb6e44611e69e359b3483aa4301f0c140e173b3245a1279a60cd5ce",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "61511065_MTI4MC05NjAtODQ4ODcwNDJiYg.webp",
+          "rawSourceSha256": "3157af7c3804ed9ff59a5478934c238ad72dd8c46f126e2b3fab0a71cedc47c0",
+          "originalUrl": "/properties/kwashieman-villa-emmanuelappiah/02.webp",
+          "registeredSourceSha256": "3157af7c3804ed9ff59a5478934c238ad72dd8c46f126e2b3fab0a71cedc47c0",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "61511068_MTI4MC05NjAtZTVjMmRkNzk5ZA.webp",
+          "rawSourceSha256": "37a04eef2cd6d60ef738d99cfeb44a37570d8884848138e8469bc7b8ee113961",
+          "originalUrl": "/properties/kwashieman-villa-emmanuelappiah/03.webp",
+          "registeredSourceSha256": "37a04eef2cd6d60ef738d99cfeb44a37570d8884848138e8469bc7b8ee113961",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "61511069_OTYwLTEyODAtOGQ0ZTM0ZGRmYg (1).webp",
+          "rawSourceSha256": "cb42e90e3d21cf21dc71e746a119ab6e9da7b973966df4a22a6c8330d7db539e",
+          "originalUrl": "/properties/kwashieman-villa-emmanuelappiah/04.webp",
+          "registeredSourceSha256": "cb42e90e3d21cf21dc71e746a119ab6e9da7b973966df4a22a6c8330d7db539e",
+          "width": 960,
+          "height": 1280
+        }
+      ],
+      "importedListing": {
+        "id": "kwashieman-villa-emmanuelappiah",
+        "galleryFile": "data/property-photo-galleries/kwashieman-villa-emmanuelappiah.json",
+        "photos": 4
+      }
+    },
+    {
+      "number": 4,
+      "id": "kwashieman-hong-kong-apartment-prudential",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Kwashieman-Hong Kong",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "Single-storey",
+        "PROPERTY SIZE": "5000 sqm",
+        "CONDITION": "Fairly used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "3",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,300,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen cabinets, Pre-paid meters, Dining area, PoP ceiling",
+        "AGENT": "Prudential Properties Agency",
+        "CONTACT": "0244467680",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony, Green grass",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Kwashieman-Hong Kong",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "Single-storey",
+        "PROPERTY SIZE": "5000 sqm",
+        "CONDITION": "Fairly used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "3",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,300,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Kitchen cabinets, Pre-paid meters, Dining area, PoP ceiling",
+        "AGENT": "Prudential Properties Agency",
+        "CONTACT": "0244467680",
+        "DISTRICT": "Ablekuma North Municipal District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony, Green grass",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 4 DETAILS \nPROPERTY ADDRESS = Kwashieman-Hong Kong\nPROPERTY TYPE = Apartment\nSTOREY = Single-storey\nPROPERTY SIZE = 5000 sqm\nCondition = Fairly used \nFURNISHING =Unfurnished\nBEDROOM = 4\nBATHROOMS = 3\nTOILET = 4\nASKING PRICE = GH₵ 2,300,000\nPROPERTY STYLE = Detached \nFACILITIES =Kitchen cabinets, Pre-paid meters, Dining area, PoP ceiling\nAGENT = Prudential Properties Agency\nCONTACT=0244467680\nDISTRICT = Ablekuma North Municipal District\nECO RATING = \nGREEN FEATURES = Balcony, Green grass\nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images",
+      "contacts": {
+        "primary": "+233244467680",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 4,
+          "filename": "50315141_MTYwMC05MDAtYjNkYTNmZjgxMA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images\\50315141_MTYwMC05MDAtYjNkYTNmZjgxMA.webp",
+          "bytes": 39002,
+          "sha256": "5684660c06b5ec3f4f327bb0a224766d598cb58dcc222a39eedab32eaf4c0ddb",
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 4,
+          "filename": "50315142_MTYwMC05MDAtODRjMGU4MDc0ZA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images\\50315142_MTYwMC05MDAtODRjMGU4MDc0ZA.webp",
+          "bytes": 19172,
+          "sha256": "283aea95030cf06b88197a47e162015085883d7abbbaf81c27835792be18a5e3",
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 4,
+          "filename": "50315143_MTYwMC05MDAtNzExZGEzNzgyYQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images\\50315143_MTYwMC05MDAtNzExZGEzNzgyYQ.webp",
+          "bytes": 24350,
+          "sha256": "53ec669cfbb0bfef7743ba974815c32a2d00ae6ad64323e1c05b4cb3316db118",
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 4,
+          "filename": "50315144_MTYwMC05MDAtNjVhZjExODU4OQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images\\50315144_MTYwMC05MDAtNjVhZjExODU4OQ.webp",
+          "bytes": 24630,
+          "sha256": "1c6a2c85ce9db586c332991eeabbcd03d8e1178bab04f50c671929fb95b18aee",
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 4,
+          "filename": "50315152_MTYwMC05MDAtMjViYTI0YzUzYg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images\\50315152_MTYwMC05MDAtMjViYTI0YzUzYg.webp",
+          "bytes": 220578,
+          "sha256": "38933b87cf48a59a9d5f4770bb23038c513f4beb07a5e018d829e00145cdd63d",
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 4,
+          "filename": "50315154_MTYwMC05MDAtODEwNzc1M2NjMg (1).webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images\\50315154_MTYwMC05MDAtODEwNzc1M2NjMg (1).webp",
+          "bytes": 106548,
+          "sha256": "c094497f2dc509aa11fc551881877b4b850a8d8ea40b918fac465de2653ed9ce",
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 4,
+          "filename": "50315154_MTYwMC05MDAtODEwNzc1M2NjMg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 4 images\\50315154_MTYwMC05MDAtODEwNzc1M2NjMg.webp",
+          "bytes": 106548,
+          "sha256": "c094497f2dc509aa11fc551881877b4b850a8d8ea40b918fac465de2653ed9ce",
+          "width": 1600,
+          "height": 900,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [
+        {
+          "filename": "50315154_MTYwMC05MDAtODEwNzc1M2NjMg (1).webp",
+          "duplicateOf": "50315154_MTYwMC05MDAtODEwNzc1M2NjMg.webp"
+        }
+      ],
+      "proposedCover": {
+        "filename": "50315152_MTYwMC05MDAtMjViYTI0YzUzYg.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "50315152_MTYwMC05MDAtMjViYTI0YzUzYg.webp",
+        "50315141_MTYwMC05MDAtYjNkYTNmZjgxMA.webp",
+        "50315142_MTYwMC05MDAtODRjMGU4MDc0ZA.webp",
+        "50315143_MTYwMC05MDAtNzExZGEzNzgyYQ.webp",
+        "50315144_MTYwMC05MDAtNjVhZjExODU4OQ.webp",
+        "50315154_MTYwMC05MDAtODEwNzc1M2NjMg.webp"
+      ],
+      "sourceImageCount": 7,
+      "selectedImageCount": 6,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "Single-storey",
+          "to": "Single Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "Kitchen cabinets",
+        "Pre-paid meters",
+        "Dining area",
+        "PoP ceiling"
+      ],
+      "normalizedStorey": "Single Storey",
+      "normalizedType": "Apartment",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "50315152_MTYwMC05MDAtMjViYTI0YzUzYg.webp",
+          "rawSourceSha256": "38933b87cf48a59a9d5f4770bb23038c513f4beb07a5e018d829e00145cdd63d",
+          "originalUrl": "/properties/kwashieman-hong-kong-apartment-prudential/01.webp",
+          "registeredSourceSha256": "c00ce70edeaf72c17dad75f3c5590f5a308f22dea472f1b0fb6acc075d0a25dd",
+          "width": 900,
+          "height": 1600,
+          "rotationClockwiseDegrees": 90,
+          "rawSourceArchive": "data/property-source-originals/kwashieman-hong-kong-apartment-prudential/50315152_MTYwMC05MDAtMjViYTI0YzUzYg.webp"
+        },
+        {
+          "sourceFilename": "50315141_MTYwMC05MDAtYjNkYTNmZjgxMA.webp",
+          "rawSourceSha256": "5684660c06b5ec3f4f327bb0a224766d598cb58dcc222a39eedab32eaf4c0ddb",
+          "originalUrl": "/properties/kwashieman-hong-kong-apartment-prudential/02.webp",
+          "registeredSourceSha256": "46728018244fb10df87c179499d4672e52f6cf3d6ec09fef3579351cbc7b0631",
+          "width": 900,
+          "height": 1600,
+          "rotationClockwiseDegrees": 90,
+          "rawSourceArchive": "data/property-source-originals/kwashieman-hong-kong-apartment-prudential/50315141_MTYwMC05MDAtYjNkYTNmZjgxMA.webp"
+        },
+        {
+          "sourceFilename": "50315142_MTYwMC05MDAtODRjMGU4MDc0ZA.webp",
+          "rawSourceSha256": "283aea95030cf06b88197a47e162015085883d7abbbaf81c27835792be18a5e3",
+          "originalUrl": "/properties/kwashieman-hong-kong-apartment-prudential/03.webp",
+          "registeredSourceSha256": "6ceb9057daf0d04870a8b92bf418cf59cbe5cf86ccda99d7c042783252bbdb17",
+          "width": 900,
+          "height": 1600,
+          "rotationClockwiseDegrees": 90,
+          "rawSourceArchive": "data/property-source-originals/kwashieman-hong-kong-apartment-prudential/50315142_MTYwMC05MDAtODRjMGU4MDc0ZA.webp"
+        },
+        {
+          "sourceFilename": "50315143_MTYwMC05MDAtNzExZGEzNzgyYQ.webp",
+          "rawSourceSha256": "53ec669cfbb0bfef7743ba974815c32a2d00ae6ad64323e1c05b4cb3316db118",
+          "originalUrl": "/properties/kwashieman-hong-kong-apartment-prudential/04.webp",
+          "registeredSourceSha256": "2c1d8c072553f6a5c0d2a78f8d8b4af8fd87e68135a788b510df7eba1d97c28b",
+          "width": 900,
+          "height": 1600,
+          "rotationClockwiseDegrees": 90,
+          "rawSourceArchive": "data/property-source-originals/kwashieman-hong-kong-apartment-prudential/50315143_MTYwMC05MDAtNzExZGEzNzgyYQ.webp"
+        },
+        {
+          "sourceFilename": "50315144_MTYwMC05MDAtNjVhZjExODU4OQ.webp",
+          "rawSourceSha256": "1c6a2c85ce9db586c332991eeabbcd03d8e1178bab04f50c671929fb95b18aee",
+          "originalUrl": "/properties/kwashieman-hong-kong-apartment-prudential/05.webp",
+          "registeredSourceSha256": "2cf889601f773cdc86308b19d97dc6c6fdc6e34cb92825d2a4bb89cfdc0bfc1e",
+          "width": 900,
+          "height": 1600,
+          "rotationClockwiseDegrees": 90,
+          "rawSourceArchive": "data/property-source-originals/kwashieman-hong-kong-apartment-prudential/50315144_MTYwMC05MDAtNjVhZjExODU4OQ.webp"
+        },
+        {
+          "sourceFilename": "50315154_MTYwMC05MDAtODEwNzc1M2NjMg.webp",
+          "rawSourceSha256": "c094497f2dc509aa11fc551881877b4b850a8d8ea40b918fac465de2653ed9ce",
+          "originalUrl": "/properties/kwashieman-hong-kong-apartment-prudential/06.webp",
+          "registeredSourceSha256": "49cbef94c0df53b171500e15d6bb031089bbc04eed695ef45abac7aa43d6cf38",
+          "width": 900,
+          "height": 1600,
+          "rotationClockwiseDegrees": 90,
+          "rawSourceArchive": "data/property-source-originals/kwashieman-hong-kong-apartment-prudential/50315154_MTYwMC05MDAtODEwNzc1M2NjMg.webp"
+        }
+      ],
+      "importedListing": {
+        "id": "kwashieman-hong-kong-apartment-prudential",
+        "galleryFile": "data/property-photo-galleries/kwashieman-hong-kong-apartment-prudential.json",
+        "photos": 6
+      }
+    },
+    {
+      "number": 5,
+      "id": "labone-apartment-edmark",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "300 sqm",
+        "CONDITION": "Newly-Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "1",
+        "BATHROOMS": "1",
+        "TOILET": "2",
+        "ASKING PRICE": "GH₵ 1,530,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, CCTV, Fitted Kitchen \n swimming pool ,2 Air-conditions, Wardrobe",
+        "AGENT": "Edmark Agency",
+        "CONTACT": "0244119832",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "300 sqm",
+        "CONDITION": "Newly-Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "1",
+        "BATHROOMS": "1",
+        "TOILET": "2",
+        "ASKING PRICE": "GH₵ 1,530,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, CCTV, Fitted Kitchen \n swimming pool ,2 Air-conditions, Wardrobe",
+        "AGENT": "Edmark Agency",
+        "CONTACT": "0244119832",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 5 DETAILS \nPROPERTY ADDRESS = Labone\nPROPERTY TYPE = Apartment\nSTOREY = two-storey\nPROPERTY SIZE = 300 sqm\nCondition = Newly-Built \nFURNISHING =Unfurnished\nBEDROOM = 1\nBATHROOMS = 1\nTOILET = 2\nASKING PRICE = GH₵ 1,530,000\nPROPERTY STYLE = Detached \nFACILITIES = 24-hour Electricity, CCTV, Fitted Kitchen \n swimming pool ,2 Air-conditions, Wardrobe\nAGENT = Edmark Agency\nCONTACT=0244119832\nDISTRICT = Accra Metropolitan District\nECO RATING = \nGREEN FEATURES = Balcony \nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images",
+      "contacts": {
+        "primary": "+233244119832",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 5,
+          "filename": "63337334_MTI4MC05NjAtYWVjYmUwYjU0OQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images\\63337334_MTI4MC05NjAtYWVjYmUwYjU0OQ.webp",
+          "bytes": 69212,
+          "sha256": "ac0a9e4687cb4acc72566b8b9735bfd77c26ccdef0f7b0c6e19f5588df43e68d",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 5,
+          "filename": "63337336_MTI4MC05NjAtNGY1ZmNlMGIxZA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images\\63337336_MTI4MC05NjAtNGY1ZmNlMGIxZA.webp",
+          "bytes": 161220,
+          "sha256": "f8deafda523a792508a136a91c2bca4904a1916df4ee0785ac4453e17d3ddf88",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 5,
+          "filename": "63337387_MTI4MC05NjAtYTRhNDgwMzA3ZA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images\\63337387_MTI4MC05NjAtYTRhNDgwMzA3ZA.webp",
+          "bytes": 66302,
+          "sha256": "bcb9091ad6074e43d360854df1f362cf4a5a6300a298a1a77a7a0185c50a8ee3",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 5,
+          "filename": "63337394_MTI4MC05NjAtYzg1YWFiZTBhOA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images\\63337394_MTI4MC05NjAtYzg1YWFiZTBhOA.webp",
+          "bytes": 43092,
+          "sha256": "1eacfeb7f7ea6c66dfd1d17a8e069ab8f9666e03ef6fe22731928fd7fbf48207",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 5,
+          "filename": "63337395_MTI4MC05NjAtMmQwNzZmNzE2MQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images\\63337395_MTI4MC05NjAtMmQwNzZmNzE2MQ.webp",
+          "bytes": 58254,
+          "sha256": "9684bd4a48fb02359554321e580f52821935e05ccfd1a5f18ef044166e87155e",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 5,
+          "filename": "63337396_MTI4MC05NjAtNTdkNWVmMjExOQ (1).webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images\\63337396_MTI4MC05NjAtNTdkNWVmMjExOQ (1).webp",
+          "bytes": 40644,
+          "sha256": "82c8c85126ed81890cd369a7405b78dc7fc3bd7c709403d75a81899234e657c4",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [],
+      "proposedCover": {
+        "filename": "63337336_MTI4MC05NjAtNGY1ZmNlMGIxZA.webp",
+        "reason": "Only supplied exterior: pool courtyard with the apartment building visible."
+      },
+      "proposedImageOrder": [
+        "63337336_MTI4MC05NjAtNGY1ZmNlMGIxZA.webp",
+        "63337334_MTI4MC05NjAtYWVjYmUwYjU0OQ.webp",
+        "63337387_MTI4MC05NjAtYTRhNDgwMzA3ZA.webp",
+        "63337394_MTI4MC05NjAtYzg1YWFiZTBhOA.webp",
+        "63337395_MTI4MC05NjAtMmQwNzZmNzE2MQ.webp",
+        "63337396_MTI4MC05NjAtNTdkNWVmMjExOQ (1).webp"
+      ],
+      "sourceImageCount": 6,
+      "selectedImageCount": 6,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "FACILITIES",
+          "from": "Fitted Kitchen swimming pool",
+          "to": "Fitted Kitchen, swimming pool",
+          "reason": "Separate explicitly named amenities where commas were omitted."
+        },
+        {
+          "field": "STOREY",
+          "from": "two-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "24-hour Electricity",
+        "CCTV",
+        "Fitted Kitchen",
+        "swimming pool",
+        "2 Air-conditions",
+        "Wardrobe"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Apartment",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "63337336_MTI4MC05NjAtNGY1ZmNlMGIxZA.webp",
+          "rawSourceSha256": "f8deafda523a792508a136a91c2bca4904a1916df4ee0785ac4453e17d3ddf88",
+          "originalUrl": "/properties/labone-apartment-edmark/01.webp",
+          "registeredSourceSha256": "f8deafda523a792508a136a91c2bca4904a1916df4ee0785ac4453e17d3ddf88",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "63337334_MTI4MC05NjAtYWVjYmUwYjU0OQ.webp",
+          "rawSourceSha256": "ac0a9e4687cb4acc72566b8b9735bfd77c26ccdef0f7b0c6e19f5588df43e68d",
+          "originalUrl": "/properties/labone-apartment-edmark/02.webp",
+          "registeredSourceSha256": "ac0a9e4687cb4acc72566b8b9735bfd77c26ccdef0f7b0c6e19f5588df43e68d",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "63337387_MTI4MC05NjAtYTRhNDgwMzA3ZA.webp",
+          "rawSourceSha256": "bcb9091ad6074e43d360854df1f362cf4a5a6300a298a1a77a7a0185c50a8ee3",
+          "originalUrl": "/properties/labone-apartment-edmark/03.webp",
+          "registeredSourceSha256": "bcb9091ad6074e43d360854df1f362cf4a5a6300a298a1a77a7a0185c50a8ee3",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "63337394_MTI4MC05NjAtYzg1YWFiZTBhOA.webp",
+          "rawSourceSha256": "1eacfeb7f7ea6c66dfd1d17a8e069ab8f9666e03ef6fe22731928fd7fbf48207",
+          "originalUrl": "/properties/labone-apartment-edmark/04.webp",
+          "registeredSourceSha256": "1eacfeb7f7ea6c66dfd1d17a8e069ab8f9666e03ef6fe22731928fd7fbf48207",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "63337395_MTI4MC05NjAtMmQwNzZmNzE2MQ.webp",
+          "rawSourceSha256": "9684bd4a48fb02359554321e580f52821935e05ccfd1a5f18ef044166e87155e",
+          "originalUrl": "/properties/labone-apartment-edmark/05.webp",
+          "registeredSourceSha256": "9684bd4a48fb02359554321e580f52821935e05ccfd1a5f18ef044166e87155e",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "63337396_MTI4MC05NjAtNTdkNWVmMjExOQ (1).webp",
+          "rawSourceSha256": "82c8c85126ed81890cd369a7405b78dc7fc3bd7c709403d75a81899234e657c4",
+          "originalUrl": "/properties/labone-apartment-edmark/06.webp",
+          "registeredSourceSha256": "82c8c85126ed81890cd369a7405b78dc7fc3bd7c709403d75a81899234e657c4",
+          "width": 1280,
+          "height": 960
+        }
+      ],
+      "importedListing": {
+        "id": "labone-apartment-edmark",
+        "galleryFile": "data/property-photo-galleries/labone-apartment-edmark.json",
+        "photos": 6
+      }
+    },
+    {
+      "number": 6,
+      "id": "labone-compound-house-brealty",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Compound house",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 10,290,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Plant, Fitted Kitchen \n Air-conditions, Wardrobe",
+        "AGENT": "B. Realty Ghana",
+        "CONTACT": "0277451439/0545105124",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Compound house",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "100 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "5",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 10,290,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "24-hour Electricity, Plant, Fitted Kitchen \n Air-conditions, Wardrobe",
+        "AGENT": "B. Realty Ghana",
+        "CONTACT": "0277451439/0545105124",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 6 DETAILS \nPROPERTY ADDRESS = Labone\nPROPERTY TYPE = Compound house\nSTOREY = two-storey\nPROPERTY SIZE = 100 sqm\nCondition = Fairly Used \nFURNISHING =Unfurnished\nBEDROOM = 4\nBATHROOMS = 5\nTOILET = 5\nASKING PRICE = GH₵ 10,290,000\nPROPERTY STYLE = Detached \nFACILITIES = 24-hour Electricity, Plant, Fitted Kitchen \n Air-conditions, Wardrobe\nAGENT = B. Realty Ghana\nCONTACT=0277451439/0545105124\nDISTRICT = Accra Metropolitan District\nECO RATING = \nGREEN FEATURES = Balcony \nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images",
+      "contacts": {
+        "primary": "+233277451439",
+        "secondary": "+233545105124"
+      },
+      "images": [
+        {
+          "number": 6,
+          "filename": "51257095_OTYwLTEyODAtYTU4ZGU3ZmUyYg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257095_OTYwLTEyODAtYTU4ZGU3ZmUyYg.webp",
+          "bytes": 33820,
+          "sha256": "6659877c4529a3a42f7e4ea7a5112b5d633dbe4509231ebc1fdb8cdae441604e",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257096_OTYwLTEyODAtYmU1M2JmMTljMA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257096_OTYwLTEyODAtYmU1M2JmMTljMA.webp",
+          "bytes": 22868,
+          "sha256": "4daabb85eda263b039e04aa2afcd7ae36015530bc6a91f64a912f5bc783d4be7",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257097_MTI4MC05NjAtNTAwNDI5N2I5NQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257097_MTI4MC05NjAtNTAwNDI5N2I5NQ.webp",
+          "bytes": 50538,
+          "sha256": "91f2b9bea0f60a8cb7053a11468f2d2283fcf6eddbde25b3fa4ba6be80d5420b",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257098_OTYwLTEyODAtZmNmMWQ0NzcwNA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257098_OTYwLTEyODAtZmNmMWQ0NzcwNA.webp",
+          "bytes": 32824,
+          "sha256": "b8370c62e22acab3d874c5c62891f095b025cca61d97fe4d54c20bf8fabd3b56",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257099_OTYwLTEyODAtZmVmMmQ3ZDgyNQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257099_OTYwLTEyODAtZmVmMmQ3ZDgyNQ.webp",
+          "bytes": 40414,
+          "sha256": "006778bbc521c2812e9dd27aec8dd1ade1aeb7e36d38c7088dbb7bfebdc5e080",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257100_MTI4MC05NjAtNmZmNjJlN2IzMA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257100_MTI4MC05NjAtNmZmNjJlN2IzMA.webp",
+          "bytes": 60796,
+          "sha256": "c4dc35d19e0ba20da1be3638f8a43cf7077cc78e1652baa14c193d762fa368c8",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257101_OTYwLTEyODAtNjRlMDQzNWFiNg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257101_OTYwLTEyODAtNjRlMDQzNWFiNg.webp",
+          "bytes": 48270,
+          "sha256": "ed7baaf41abe33d77dba99129d95d2826d1b2034a58ae7d2c1827b370353c361",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257102_OTYwLTEyODAtM2UzNGNjYzJmZA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257102_OTYwLTEyODAtM2UzNGNjYzJmZA.webp",
+          "bytes": 132402,
+          "sha256": "6e8a9b56d3b3fe265a9026f816fc8590620aafdf2b1cc5745f5fed01497014c8",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 6,
+          "filename": "51257103_MTI4MC05NjAtYTQyNWNiMzEzZA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 6 Images\\51257103_MTI4MC05NjAtYTQyNWNiMzEzZA.webp",
+          "bytes": 84574,
+          "sha256": "89832b58840317459db3f354eb4f269e8b6a7abe4148942f774a005a7cf2f5a5",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [],
+      "proposedCover": {
+        "filename": "51257100_MTI4MC05NjAtNmZmNjJlN2IzMA.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "51257100_MTI4MC05NjAtNmZmNjJlN2IzMA.webp",
+        "51257095_OTYwLTEyODAtYTU4ZGU3ZmUyYg.webp",
+        "51257096_OTYwLTEyODAtYmU1M2JmMTljMA.webp",
+        "51257097_MTI4MC05NjAtNTAwNDI5N2I5NQ.webp",
+        "51257098_OTYwLTEyODAtZmNmMWQ0NzcwNA.webp",
+        "51257099_OTYwLTEyODAtZmVmMmQ3ZDgyNQ.webp",
+        "51257101_OTYwLTEyODAtNjRlMDQzNWFiNg.webp",
+        "51257102_OTYwLTEyODAtM2UzNGNjYzJmZA.webp",
+        "51257103_MTI4MC05NjAtYTQyNWNiMzEzZA.webp"
+      ],
+      "sourceImageCount": 9,
+      "selectedImageCount": 9,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "FACILITIES",
+          "from": "Fitted Kitchen Air-conditions",
+          "to": "Fitted Kitchen, Air-conditions",
+          "reason": "Separate explicitly named amenities where commas were omitted."
+        },
+        {
+          "field": "STOREY",
+          "from": "two-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "24-hour Electricity",
+        "Plant",
+        "Fitted Kitchen",
+        "Air-conditions",
+        "Wardrobe"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Compound House",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "51257100_MTI4MC05NjAtNmZmNjJlN2IzMA.webp",
+          "rawSourceSha256": "c4dc35d19e0ba20da1be3638f8a43cf7077cc78e1652baa14c193d762fa368c8",
+          "originalUrl": "/properties/labone-compound-house-brealty/01.webp",
+          "registeredSourceSha256": "c4dc35d19e0ba20da1be3638f8a43cf7077cc78e1652baa14c193d762fa368c8",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "51257095_OTYwLTEyODAtYTU4ZGU3ZmUyYg.webp",
+          "rawSourceSha256": "6659877c4529a3a42f7e4ea7a5112b5d633dbe4509231ebc1fdb8cdae441604e",
+          "originalUrl": "/properties/labone-compound-house-brealty/02.webp",
+          "registeredSourceSha256": "6659877c4529a3a42f7e4ea7a5112b5d633dbe4509231ebc1fdb8cdae441604e",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "sourceFilename": "51257096_OTYwLTEyODAtYmU1M2JmMTljMA.webp",
+          "rawSourceSha256": "4daabb85eda263b039e04aa2afcd7ae36015530bc6a91f64a912f5bc783d4be7",
+          "originalUrl": "/properties/labone-compound-house-brealty/03.webp",
+          "registeredSourceSha256": "4daabb85eda263b039e04aa2afcd7ae36015530bc6a91f64a912f5bc783d4be7",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "sourceFilename": "51257097_MTI4MC05NjAtNTAwNDI5N2I5NQ.webp",
+          "rawSourceSha256": "91f2b9bea0f60a8cb7053a11468f2d2283fcf6eddbde25b3fa4ba6be80d5420b",
+          "originalUrl": "/properties/labone-compound-house-brealty/04.webp",
+          "registeredSourceSha256": "91f2b9bea0f60a8cb7053a11468f2d2283fcf6eddbde25b3fa4ba6be80d5420b",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "51257098_OTYwLTEyODAtZmNmMWQ0NzcwNA.webp",
+          "rawSourceSha256": "b8370c62e22acab3d874c5c62891f095b025cca61d97fe4d54c20bf8fabd3b56",
+          "originalUrl": "/properties/labone-compound-house-brealty/05.webp",
+          "registeredSourceSha256": "b8370c62e22acab3d874c5c62891f095b025cca61d97fe4d54c20bf8fabd3b56",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "sourceFilename": "51257099_OTYwLTEyODAtZmVmMmQ3ZDgyNQ.webp",
+          "rawSourceSha256": "006778bbc521c2812e9dd27aec8dd1ade1aeb7e36d38c7088dbb7bfebdc5e080",
+          "originalUrl": "/properties/labone-compound-house-brealty/06.webp",
+          "registeredSourceSha256": "006778bbc521c2812e9dd27aec8dd1ade1aeb7e36d38c7088dbb7bfebdc5e080",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "sourceFilename": "51257101_OTYwLTEyODAtNjRlMDQzNWFiNg.webp",
+          "rawSourceSha256": "ed7baaf41abe33d77dba99129d95d2826d1b2034a58ae7d2c1827b370353c361",
+          "originalUrl": "/properties/labone-compound-house-brealty/07.webp",
+          "registeredSourceSha256": "ed7baaf41abe33d77dba99129d95d2826d1b2034a58ae7d2c1827b370353c361",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "sourceFilename": "51257102_OTYwLTEyODAtM2UzNGNjYzJmZA.webp",
+          "rawSourceSha256": "6e8a9b56d3b3fe265a9026f816fc8590620aafdf2b1cc5745f5fed01497014c8",
+          "originalUrl": "/properties/labone-compound-house-brealty/08.webp",
+          "registeredSourceSha256": "6e8a9b56d3b3fe265a9026f816fc8590620aafdf2b1cc5745f5fed01497014c8",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "sourceFilename": "51257103_MTI4MC05NjAtYTQyNWNiMzEzZA.webp",
+          "rawSourceSha256": "89832b58840317459db3f354eb4f269e8b6a7abe4148942f774a005a7cf2f5a5",
+          "originalUrl": "/properties/labone-compound-house-brealty/09.webp",
+          "registeredSourceSha256": "89832b58840317459db3f354eb4f269e8b6a7abe4148942f774a005a7cf2f5a5",
+          "width": 1280,
+          "height": 960
+        }
+      ],
+      "importedListing": {
+        "id": "labone-compound-house-brealty",
+        "galleryFile": "data/property-photo-galleries/labone-compound-house-brealty.json",
+        "photos": 9
+      }
+    },
+    {
+      "number": 7,
+      "id": "labone-apartment-angelanartey",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "350 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Furnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,600,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Gym, air conditioners, furniture and beds, a fitted well equipped kitchen with appliances, televisions sets, a spacious living room, dining area, all rooms en-suite with washrooms, balcony.",
+        "AGENT": "Angela Nartey",
+        "CONTACT": "0203262141",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "350 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Furnished",
+        "BEDROOM": "3",
+        "BATHROOMS": "3",
+        "TOILET": "4",
+        "ASKING PRICE": "GH₵ 2,600,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Gym, air conditioners, furniture and beds, a fitted well equipped kitchen with appliances, televisions sets, a spacious living room, dining area, all rooms en-suite with washrooms, balcony.",
+        "AGENT": "Angela Nartey",
+        "CONTACT": "0203262141",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 7 DETAILS \nPROPERTY ADDRESS = Labone\nPROPERTY TYPE = Apartment\nSTOREY = two-storey\nPROPERTY SIZE = 350 sqm\nCondition = Fairly Used \nFURNISHING =Furnished\nBEDROOM = 3\nBATHROOMS = 3\nTOILET = 4\nASKING PRICE = GH₵ 2,600,000\nPROPERTY STYLE = Detached \nFACILITIES = Gym, air conditioners, furniture and beds, a fitted well equipped kitchen with appliances, televisions sets, a spacious living room, dining area, all rooms en-suite with washrooms, balcony.\nAGENT = Angela Nartey\nCONTACT= 0203262141\nDISTRICT = Accra Metropolitan District\nECO RATING = \nGREEN FEATURES = Balcony \nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images",
+      "contacts": {
+        "primary": "+233203262141",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 7,
+          "filename": "37518805_MTI4MC05NjAtYWQ0NWM5YjUzOQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518805_MTI4MC05NjAtYWQ0NWM5YjUzOQ.webp",
+          "bytes": 124054,
+          "sha256": "49c392253611cabdc710decf079453d5db5857e39b401d12c1850b0a810edca3",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 7,
+          "filename": "37518807_MTI4MC05NjAtNWFhYzgwZjI1Mg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518807_MTI4MC05NjAtNWFhYzgwZjI1Mg.webp",
+          "bytes": 47278,
+          "sha256": "adbb1e791cf03fa8617e5ff2a34dfe5aeb51d9a6a2c4b6c047c7466bf8efb273",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 7,
+          "filename": "37518809_MTI4MC05NjAtNjcxMDQ3MjJkZg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518809_MTI4MC05NjAtNjcxMDQ3MjJkZg.webp",
+          "bytes": 48214,
+          "sha256": "cbb9c53d947e0513928be25158c0d026f7754dca63d97080920a35ee3cb11209",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 7,
+          "filename": "37518810_MTI4MC05NjAtODdiNjZjNzg5OA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518810_MTI4MC05NjAtODdiNjZjNzg5OA.webp",
+          "bytes": 72708,
+          "sha256": "aa4da868dfc2bf12668fa33ddae89ae5e92c28a77e776fb087c19a33db8cd0be",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 7,
+          "filename": "37518811_MTA4MC04MTAtZTFjZWY4MDY0MA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518811_MTA4MC04MTAtZTFjZWY4MDY0MA.webp",
+          "bytes": 60334,
+          "sha256": "466c5f07876780c664035d8c71a18d4c120812512e43ce0e178737af24c95013",
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 7,
+          "filename": "37518812_OTYwLTEyODAtZDhjNzQ1ZTU3Ng.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518812_OTYwLTEyODAtZDhjNzQ1ZTU3Ng.webp",
+          "bytes": 54618,
+          "sha256": "c75db4b5e246406756b4536a1756db25bdbadf738a28ad5d785ce12acbc13fc4",
+          "width": 960,
+          "height": 1280,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 7,
+          "filename": "37518814_MTI4MC05NjAtMzdhZjEzOGY4ZA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518814_MTI4MC05NjAtMzdhZjEzOGY4ZA.webp",
+          "bytes": 57324,
+          "sha256": "567bc3a1af87460a909213079d6db36ebb34ad4aa7c73303db6b3b077d2a28b7",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 7,
+          "filename": "37518815_MTI4MC05NjAtZmExZTg5MTBkMA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 7 Images\\37518815_MTI4MC05NjAtZmExZTg5MTBkMA.webp",
+          "bytes": 79760,
+          "sha256": "59e0c64944e17e9298d5e737d25a6e26a5e79558d15d695b2b8aa748c0a0e675",
+          "width": 1280,
+          "height": 960,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [],
+      "proposedCover": {
+        "filename": "37518805_MTI4MC05NjAtYWQ0NWM5YjUzOQ.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "37518805_MTI4MC05NjAtYWQ0NWM5YjUzOQ.webp",
+        "37518807_MTI4MC05NjAtNWFhYzgwZjI1Mg.webp",
+        "37518809_MTI4MC05NjAtNjcxMDQ3MjJkZg.webp",
+        "37518810_MTI4MC05NjAtODdiNjZjNzg5OA.webp",
+        "37518811_MTA4MC04MTAtZTFjZWY4MDY0MA.webp",
+        "37518812_OTYwLTEyODAtZDhjNzQ1ZTU3Ng.webp",
+        "37518814_MTI4MC05NjAtMzdhZjEzOGY4ZA.webp",
+        "37518815_MTI4MC05NjAtZmExZTg5MTBkMA.webp"
+      ],
+      "sourceImageCount": 8,
+      "selectedImageCount": 8,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "two-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "Gym",
+        "air conditioners",
+        "furniture and beds",
+        "a fitted well equipped kitchen with appliances",
+        "televisions sets",
+        "a spacious living room",
+        "dining area",
+        "all rooms en-suite with washrooms",
+        "balcony"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Apartment",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "37518805_MTI4MC05NjAtYWQ0NWM5YjUzOQ.webp",
+          "rawSourceSha256": "49c392253611cabdc710decf079453d5db5857e39b401d12c1850b0a810edca3",
+          "originalUrl": "/properties/labone-apartment-angelanartey/01.webp",
+          "registeredSourceSha256": "49c392253611cabdc710decf079453d5db5857e39b401d12c1850b0a810edca3",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "37518807_MTI4MC05NjAtNWFhYzgwZjI1Mg.webp",
+          "rawSourceSha256": "adbb1e791cf03fa8617e5ff2a34dfe5aeb51d9a6a2c4b6c047c7466bf8efb273",
+          "originalUrl": "/properties/labone-apartment-angelanartey/02.webp",
+          "registeredSourceSha256": "adbb1e791cf03fa8617e5ff2a34dfe5aeb51d9a6a2c4b6c047c7466bf8efb273",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "37518809_MTI4MC05NjAtNjcxMDQ3MjJkZg.webp",
+          "rawSourceSha256": "cbb9c53d947e0513928be25158c0d026f7754dca63d97080920a35ee3cb11209",
+          "originalUrl": "/properties/labone-apartment-angelanartey/03.webp",
+          "registeredSourceSha256": "cbb9c53d947e0513928be25158c0d026f7754dca63d97080920a35ee3cb11209",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "37518810_MTI4MC05NjAtODdiNjZjNzg5OA.webp",
+          "rawSourceSha256": "aa4da868dfc2bf12668fa33ddae89ae5e92c28a77e776fb087c19a33db8cd0be",
+          "originalUrl": "/properties/labone-apartment-angelanartey/04.webp",
+          "registeredSourceSha256": "aa4da868dfc2bf12668fa33ddae89ae5e92c28a77e776fb087c19a33db8cd0be",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "37518811_MTA4MC04MTAtZTFjZWY4MDY0MA.webp",
+          "rawSourceSha256": "466c5f07876780c664035d8c71a18d4c120812512e43ce0e178737af24c95013",
+          "originalUrl": "/properties/labone-apartment-angelanartey/05.webp",
+          "registeredSourceSha256": "466c5f07876780c664035d8c71a18d4c120812512e43ce0e178737af24c95013",
+          "width": 1080,
+          "height": 810
+        },
+        {
+          "sourceFilename": "37518812_OTYwLTEyODAtZDhjNzQ1ZTU3Ng.webp",
+          "rawSourceSha256": "c75db4b5e246406756b4536a1756db25bdbadf738a28ad5d785ce12acbc13fc4",
+          "originalUrl": "/properties/labone-apartment-angelanartey/06.webp",
+          "registeredSourceSha256": "c75db4b5e246406756b4536a1756db25bdbadf738a28ad5d785ce12acbc13fc4",
+          "width": 960,
+          "height": 1280
+        },
+        {
+          "sourceFilename": "37518814_MTI4MC05NjAtMzdhZjEzOGY4ZA.webp",
+          "rawSourceSha256": "567bc3a1af87460a909213079d6db36ebb34ad4aa7c73303db6b3b077d2a28b7",
+          "originalUrl": "/properties/labone-apartment-angelanartey/07.webp",
+          "registeredSourceSha256": "567bc3a1af87460a909213079d6db36ebb34ad4aa7c73303db6b3b077d2a28b7",
+          "width": 1280,
+          "height": 960
+        },
+        {
+          "sourceFilename": "37518815_MTI4MC05NjAtZmExZTg5MTBkMA.webp",
+          "rawSourceSha256": "59e0c64944e17e9298d5e737d25a6e26a5e79558d15d695b2b8aa748c0a0e675",
+          "originalUrl": "/properties/labone-apartment-angelanartey/08.webp",
+          "registeredSourceSha256": "59e0c64944e17e9298d5e737d25a6e26a5e79558d15d695b2b8aa748c0a0e675",
+          "width": 1280,
+          "height": 960
+        }
+      ],
+      "importedListing": {
+        "id": "labone-apartment-angelanartey",
+        "galleryFile": "data/property-photo-galleries/labone-apartment-angelanartey.json",
+        "photos": 8
+      }
+    },
+    {
+      "number": 8,
+      "id": "labone-apartment-unitedhomes",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "three-storey",
+        "PROPERTY SIZE": "1000 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "2",
+        "BATHROOMS": "3",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 2,250,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Dining Area, 24-hour Electricity, Kitchen Shelf, Microwave, Hot Water, En Suite, Kitchen Cabinets, Chandelier, Dishwasher, Balcony, Swimming pool, A gym",
+        "AGENT": "United Homes",
+        "CONTACT": "0545640939",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "three-storey",
+        "PROPERTY SIZE": "1000 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "2",
+        "BATHROOMS": "3",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 2,250,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Dining Area, 24-hour Electricity, Kitchen Shelf, Microwave, Hot Water, En Suite, Kitchen Cabinets, Chandelier, Dishwasher, Balcony, Swimming pool, A gym",
+        "AGENT": "United Homes",
+        "CONTACT": "0545640939",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 8 DETAILS \nPROPERTY ADDRESS = Labone\nPROPERTY TYPE = Apartment\nSTOREY = three-storey\nPROPERTY SIZE = 1000 sqm\nCondition = Newly Built \nFURNISHING =Unfurnished\nBEDROOM = 2\nBATHROOMS = 3\nTOILET = 3\nASKING PRICE = GH₵ 2,250,000\nPROPERTY STYLE = Detached \nFACILITIES = Air Conditioning, Dining Area, 24-hour Electricity, Kitchen Shelf, Microwave, Hot Water, En Suite, Kitchen Cabinets, Chandelier, Dishwasher, Balcony, Swimming pool, A gym\nAGENT = United Homes\nCONTACT= 0545640939\nDISTRICT = Accra Metropolitan District\nECO RATING = \nGREEN FEATURES = Balcony \nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images",
+      "contacts": {
+        "primary": "+233545640939",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 8,
+          "filename": "21181585_NzY4LTcwNS04NmIxNzlhNjY5LTE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images\\21181585_NzY4LTcwNS04NmIxNzlhNjY5LTE.webp",
+          "bytes": 36514,
+          "sha256": "f2b7aa84845b7e8ad849396c9bca2985c2644eb92dbf539c9e4e7c637a123c00",
+          "width": 768,
+          "height": 705,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 8,
+          "filename": "21181586_NzUwLTczMy0yODE1MDc3N2U0LTE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images\\21181586_NzUwLTczMy0yODE1MDc3N2U0LTE.webp",
+          "bytes": 27646,
+          "sha256": "06f80bb930490d9435b2ff1e8c11e43b32a44248ab2a42f97e25d6dbc09fb2ae",
+          "width": 750,
+          "height": 733,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 8,
+          "filename": "21181587_NzUwLTY4MS0yNjYyNGJjMWQ0LTE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images\\21181587_NzUwLTY4MS0yNjYyNGJjMWQ0LTE.webp",
+          "bytes": 17536,
+          "sha256": "6556b1ab7d55462e1a550ba14ec1a9032da30f7e51e2642ecce4dfc68bb37e05",
+          "width": 750,
+          "height": 681,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 8,
+          "filename": "21181588_NzY4LTcyOS02NzdlN2ZmMmY4LTE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images\\21181588_NzY4LTcyOS02NzdlN2ZmMmY4LTE.webp",
+          "bytes": 41982,
+          "sha256": "4d7c1d54ddced0c734853ae6f01b63f2bf74b1902e09415fad37bae527113ed0",
+          "width": 768,
+          "height": 729,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 8,
+          "filename": "21181589_NzY4LTY5MC0zNjIwNGQ3NTk2LTE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images\\21181589_NzY4LTY5MC0zNjIwNGQ3NTk2LTE.webp",
+          "bytes": 60950,
+          "sha256": "bcf85226dbab39278d396c97153fa29150dec9e0cb541fb4f5d38f64627b6fb6",
+          "width": 768,
+          "height": 690,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 8,
+          "filename": "21181591_NzY4LTcyMS00OTgxYjE4YzAxLTE.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images\\21181591_NzY4LTcyMS00OTgxYjE4YzAxLTE.webp",
+          "bytes": 51898,
+          "sha256": "328e3c42e5f089f898a4125eea4a01324c1527b9078abfee15f948d650853647",
+          "width": 768,
+          "height": 721,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 8,
+          "filename": "21181592_NzUwLTc4OC0zNjE5MDdkOTEwLTE (1).webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 8 Images\\21181592_NzUwLTc4OC0zNjE5MDdkOTEwLTE (1).webp",
+          "bytes": 68694,
+          "sha256": "946fb5b98bf743395308f5b43b87e2d25994a0213a505c28b5f66645c4777a3b",
+          "width": 750,
+          "height": 788,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [],
+      "proposedCover": {
+        "filename": "21181589_NzY4LTY5MC0zNjIwNGQ3NTk2LTE.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "21181589_NzY4LTY5MC0zNjIwNGQ3NTk2LTE.webp",
+        "21181585_NzY4LTcwNS04NmIxNzlhNjY5LTE.webp",
+        "21181586_NzUwLTczMy0yODE1MDc3N2U0LTE.webp",
+        "21181587_NzUwLTY4MS0yNjYyNGJjMWQ0LTE.webp",
+        "21181588_NzY4LTcyOS02NzdlN2ZmMmY4LTE.webp",
+        "21181591_NzY4LTcyMS00OTgxYjE4YzAxLTE.webp",
+        "21181592_NzUwLTc4OC0zNjE5MDdkOTEwLTE (1).webp"
+      ],
+      "sourceImageCount": 7,
+      "selectedImageCount": 7,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "three-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "Air Conditioning",
+        "Dining Area",
+        "24-hour Electricity",
+        "Kitchen Shelf",
+        "Microwave",
+        "Hot Water",
+        "En Suite",
+        "Kitchen Cabinets",
+        "Chandelier",
+        "Dishwasher",
+        "Balcony",
+        "Swimming pool",
+        "A gym"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Apartment",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "21181589_NzY4LTY5MC0zNjIwNGQ3NTk2LTE.webp",
+          "rawSourceSha256": "bcf85226dbab39278d396c97153fa29150dec9e0cb541fb4f5d38f64627b6fb6",
+          "originalUrl": "/properties/labone-apartment-unitedhomes/01.webp",
+          "registeredSourceSha256": "bcf85226dbab39278d396c97153fa29150dec9e0cb541fb4f5d38f64627b6fb6",
+          "width": 768,
+          "height": 690
+        },
+        {
+          "sourceFilename": "21181585_NzY4LTcwNS04NmIxNzlhNjY5LTE.webp",
+          "rawSourceSha256": "f2b7aa84845b7e8ad849396c9bca2985c2644eb92dbf539c9e4e7c637a123c00",
+          "originalUrl": "/properties/labone-apartment-unitedhomes/02.webp",
+          "registeredSourceSha256": "f2b7aa84845b7e8ad849396c9bca2985c2644eb92dbf539c9e4e7c637a123c00",
+          "width": 768,
+          "height": 705
+        },
+        {
+          "sourceFilename": "21181586_NzUwLTczMy0yODE1MDc3N2U0LTE.webp",
+          "rawSourceSha256": "06f80bb930490d9435b2ff1e8c11e43b32a44248ab2a42f97e25d6dbc09fb2ae",
+          "originalUrl": "/properties/labone-apartment-unitedhomes/03.webp",
+          "registeredSourceSha256": "06f80bb930490d9435b2ff1e8c11e43b32a44248ab2a42f97e25d6dbc09fb2ae",
+          "width": 750,
+          "height": 733
+        },
+        {
+          "sourceFilename": "21181587_NzUwLTY4MS0yNjYyNGJjMWQ0LTE.webp",
+          "rawSourceSha256": "6556b1ab7d55462e1a550ba14ec1a9032da30f7e51e2642ecce4dfc68bb37e05",
+          "originalUrl": "/properties/labone-apartment-unitedhomes/04.webp",
+          "registeredSourceSha256": "6556b1ab7d55462e1a550ba14ec1a9032da30f7e51e2642ecce4dfc68bb37e05",
+          "width": 750,
+          "height": 681
+        },
+        {
+          "sourceFilename": "21181588_NzY4LTcyOS02NzdlN2ZmMmY4LTE.webp",
+          "rawSourceSha256": "4d7c1d54ddced0c734853ae6f01b63f2bf74b1902e09415fad37bae527113ed0",
+          "originalUrl": "/properties/labone-apartment-unitedhomes/05.webp",
+          "registeredSourceSha256": "4d7c1d54ddced0c734853ae6f01b63f2bf74b1902e09415fad37bae527113ed0",
+          "width": 768,
+          "height": 729
+        },
+        {
+          "sourceFilename": "21181591_NzY4LTcyMS00OTgxYjE4YzAxLTE.webp",
+          "rawSourceSha256": "328e3c42e5f089f898a4125eea4a01324c1527b9078abfee15f948d650853647",
+          "originalUrl": "/properties/labone-apartment-unitedhomes/06.webp",
+          "registeredSourceSha256": "328e3c42e5f089f898a4125eea4a01324c1527b9078abfee15f948d650853647",
+          "width": 768,
+          "height": 721
+        },
+        {
+          "sourceFilename": "21181592_NzUwLTc4OC0zNjE5MDdkOTEwLTE (1).webp",
+          "rawSourceSha256": "946fb5b98bf743395308f5b43b87e2d25994a0213a505c28b5f66645c4777a3b",
+          "originalUrl": "/properties/labone-apartment-unitedhomes/07.webp",
+          "registeredSourceSha256": "946fb5b98bf743395308f5b43b87e2d25994a0213a505c28b5f66645c4777a3b",
+          "width": 750,
+          "height": 788
+        }
+      ],
+      "importedListing": {
+        "id": "labone-apartment-unitedhomes",
+        "galleryFile": "data/property-photo-galleries/labone-apartment-unitedhomes.json",
+        "photos": 7
+      }
+    },
+    {
+      "number": 9,
+      "id": "labone-apartment-frimpsglobal",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "600 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Furnished",
+        "BEDROOM": "2",
+        "BATHROOMS": "2",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 4,580,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Prepaid meter, Air Conditioning, Dining Area, 24-hour Electricity, Microwave, Wardrobe, PoP ceiling, Refrigerator, TV, En Suite, Kitchen Cabinets, Tiled floor, Balcony",
+        "AGENT": "Frimps Global Properties",
+        "CONTACT": "0540879287",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Labone",
+        "PROPERTY TYPE": "Apartment",
+        "STOREY": "two-storey",
+        "PROPERTY SIZE": "600 sqm",
+        "CONDITION": "Newly Built",
+        "FURNISHING": "Furnished",
+        "BEDROOM": "2",
+        "BATHROOMS": "2",
+        "TOILET": "3",
+        "ASKING PRICE": "GH₵ 4,580,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Prepaid meter, Air Conditioning, Dining Area, 24-hour Electricity, Microwave, Wardrobe, PoP ceiling, Refrigerator, TV, En Suite, Kitchen Cabinets, Tiled floor, Balcony",
+        "AGENT": "Frimps Global Properties",
+        "CONTACT": "0540879287",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 9 DETAILS \nPROPERTY ADDRESS = Labone\nPROPERTY TYPE = Apartment\nSTOREY = two-storey\nPROPERTY SIZE = 600 sqm\nCondition = Newly Built \nFURNISHING =Furnished\nBEDROOM = 2\nBATHROOMS = 2\nTOILET = 3\nASKING PRICE = GH₵ 4,580,000\nPROPERTY STYLE = Detached \nFACILITIES = Prepaid meter, Air Conditioning, Dining Area, 24-hour Electricity, Microwave, Wardrobe, PoP ceiling, Refrigerator, TV, En Suite, Kitchen Cabinets, Tiled floor, Balcony\nAGENT = Frimps Global Properties\nCONTACT= 0540879287\nDISTRICT = Accra Metropolitan District\nECO RATING = \nGREEN FEATURES = Balcony \nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n\n\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images",
+      "contacts": {
+        "primary": "+233540879287",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 9,
+          "filename": "60212479_MTA4MC04MTAtMmE1ZjcwZGQyMQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images\\60212479_MTA4MC04MTAtMmE1ZjcwZGQyMQ.webp",
+          "bytes": 64608,
+          "sha256": "bdcae729a0f0703493aff4a28e9fa191dae8a2c523b9bdb05a89a1b152d62d6f",
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 9,
+          "filename": "60212480_MTA4MC04MTAtMjViYjE4ZjE2NQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images\\60212480_MTA4MC04MTAtMjViYjE4ZjE2NQ.webp",
+          "bytes": 48434,
+          "sha256": "74d464d42dc6e6f438914ef707ba85ddabf4a690ae07e37ebf149e5604d5eee0",
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 9,
+          "filename": "60212481_MTA4MC04MTAtMDIyOTZmYzYwMg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images\\60212481_MTA4MC04MTAtMDIyOTZmYzYwMg.webp",
+          "bytes": 86616,
+          "sha256": "1ff32a8c568a9ced69a9427fe8e3d1d2870522ad57c27ad701fcabc4a9ad5cfb",
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 9,
+          "filename": "60212482_ODEwLTEwODAtOTBmMjQ5OWY5MQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images\\60212482_ODEwLTEwODAtOTBmMjQ5OWY5MQ.webp",
+          "bytes": 63368,
+          "sha256": "49d8a56259812967ae5c047b7463e11818fd61df5257d41b5c269688b7d6f7ff",
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 9,
+          "filename": "60212483_MTA4MC04MTAtMjRlMjJjYzNjMA (1).webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images\\60212483_MTA4MC04MTAtMjRlMjJjYzNjMA (1).webp",
+          "bytes": 53484,
+          "sha256": "66e2865c5859cbff80762be8dda09499a5ec36abb4c9d6af04df3c38449d10da",
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 9,
+          "filename": "60212483_MTA4MC04MTAtMjRlMjJjYzNjMA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images\\60212483_MTA4MC04MTAtMjRlMjJjYzNjMA.webp",
+          "bytes": 53484,
+          "sha256": "66e2865c5859cbff80762be8dda09499a5ec36abb4c9d6af04df3c38449d10da",
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 9,
+          "filename": "60212484_MTA4MC04MTAtYWEzMjdhYmYzNg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 9 Images\\60212484_MTA4MC04MTAtYWEzMjdhYmYzNg.webp",
+          "bytes": 55800,
+          "sha256": "0af9250501c1d750ba821229b28140ce85510224192ae14bfc4e6258a440d944",
+          "width": 1080,
+          "height": 810,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [
+        {
+          "filename": "60212483_MTA4MC04MTAtMjRlMjJjYzNjMA (1).webp",
+          "duplicateOf": "60212483_MTA4MC04MTAtMjRlMjJjYzNjMA.webp"
+        }
+      ],
+      "proposedCover": null,
+      "proposedImageOrder": [
+        "60212479_MTA4MC04MTAtMmE1ZjcwZGQyMQ.webp",
+        "60212480_MTA4MC04MTAtMjViYjE4ZjE2NQ.webp",
+        "60212481_MTA4MC04MTAtMDIyOTZmYzYwMg.webp",
+        "60212482_ODEwLTEwODAtOTBmMjQ5OWY5MQ.webp",
+        "60212483_MTA4MC04MTAtMjRlMjJjYzNjMA.webp",
+        "60212484_MTA4MC04MTAtYWEzMjdhYmYzNg.webp"
+      ],
+      "sourceImageCount": 7,
+      "selectedImageCount": 6,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [
+        "No exterior photograph supplied; owner requested this property remain on hold."
+      ],
+      "status": "On hold at owner request",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "two-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "Prepaid meter",
+        "Air Conditioning",
+        "Dining Area",
+        "24-hour Electricity",
+        "Microwave",
+        "Wardrobe",
+        "PoP ceiling",
+        "Refrigerator",
+        "TV",
+        "En Suite",
+        "Kitchen Cabinets",
+        "Tiled floor",
+        "Balcony"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Apartment"
+    },
+    {
+      "number": 10,
+      "id": "labone-au-village-compound-house-tetteh",
+      "sourceFields": {
+        "PROPERTY ADDRESS": "Labone-AU Village",
+        "PROPERTY TYPE": "Compound house",
+        "STOREY": "Two-storey",
+        "PROPERTY SIZE": "2332 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 15,940,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Dining Area, 24-hour Electricity, Wardrobe, PoP ceiling, Refrigerator, TV, En Suite, Kitchen Cabinets, Tiled floor, Balcony",
+        "AGENT": "Tetteh",
+        "CONTACT": "0550040400",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "",
+        "GREEN FEATURES": "Balcony, Green space",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "fields": {
+        "PROPERTY ADDRESS": "Labone-AU Village",
+        "PROPERTY TYPE": "Compound house",
+        "STOREY": "Two-storey",
+        "PROPERTY SIZE": "2332 sqm",
+        "CONDITION": "Fairly Used",
+        "FURNISHING": "Unfurnished",
+        "BEDROOM": "4",
+        "BATHROOMS": "4",
+        "TOILET": "5",
+        "ASKING PRICE": "GH₵ 15,940,000",
+        "PROPERTY STYLE": "Detached",
+        "FACILITIES": "Air Conditioning, Dining Area, 24-hour Electricity, Wardrobe, PoP ceiling, Refrigerator, TV, En Suite, Kitchen Cabinets, Tiled floor, Balcony",
+        "AGENT": "Tetteh",
+        "CONTACT": "0550040400",
+        "DISTRICT": "Accra Metropolitan District",
+        "ECO RATING": "D",
+        "GREEN FEATURES": "Balcony, Green space",
+        "TENURE": "Leasehold",
+        "REMAINING LEASE TERMS": "Not specified",
+        "STATUS": "Available"
+      },
+      "sourceText": "PROPERTY 10 DETAILS \nPROPERTY ADDRESS = Labone-AU Village\nPROPERTY TYPE = Compound house\nSTOREY = Two-storey\nPROPERTY SIZE = 2332 sqm\nCondition = Fairly Used \nFURNISHING =Unfurnished\nBEDROOM = 4\nBATHROOMS = 4\nTOILET = 5\nASKING PRICE = GH₵ 15,940,000\nPROPERTY STYLE = Detached \nFACILITIES = Air Conditioning, Dining Area, 24-hour Electricity, Wardrobe, PoP ceiling, Refrigerator, TV, En Suite, Kitchen Cabinets, Tiled floor, Balcony\nAGENT = Tetteh\nCONTACT= 0550040400\nDISTRICT = Accra Metropolitan District\nECO RATING = \nGREEN FEATURES = Balcony, Green space\nTENURE = Leasehold \nRemaining Lease Terms = Not specified \nSTATUS = Available \nSAFETY MEASURES \nIt's safer not to pay ahead for inspections. \nAsk friends or somebody you trust to accompany you for the viewing\nLook around the apartment to ensure it meets your expectations. \nDon't pay beforehand if they won't let you move in immediately.\nVerify that the account details belong to the right property owner before initiating payments\n\n\n\n",
+      "sourceImageFolder": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 10 Images",
+      "contacts": {
+        "primary": "+233550040400",
+        "secondary": null
+      },
+      "images": [
+        {
+          "number": 10,
+          "filename": "62396332_ODEwLTEwODAtZmRhYWE2YmM5Yg.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 10 Images\\62396332_ODEwLTEwODAtZmRhYWE2YmM5Yg.webp",
+          "bytes": 115626,
+          "sha256": "a83ef333c46c3bf23ded85b32ac32a9e7c245a64dcbed7dcd66ca23a58377d5d",
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 10,
+          "filename": "62396333_ODEwLTEwODAtMDc5ZWYzMDk5OA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 10 Images\\62396333_ODEwLTEwODAtMDc5ZWYzMDk5OA.webp",
+          "bytes": 72550,
+          "sha256": "8f2e4d1174d8c6c270255d47ace99db42fa9edbc0053a81fcd67cfba402f5999",
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 10,
+          "filename": "62396334_ODEwLTEwODAtMjc0OGVlZmUxYQ.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 10 Images\\62396334_ODEwLTEwODAtMjc0OGVlZmUxYQ.webp",
+          "bytes": 125432,
+          "sha256": "e7347b74efe3cf76e3014dc020d02767855b2b3a8dcf3fd3373ed5ea8136c042",
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 10,
+          "filename": "62396347_ODEwLTEwODAtYzBlZGY3Mjk0NA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 10 Images\\62396347_ODEwLTEwODAtYzBlZGY3Mjk0NA.webp",
+          "bytes": 116104,
+          "sha256": "4ee0bde8ce4caf375078925f18a0adf7d076f579ac251da5f4d5fde335139412",
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "decoded": true
+        },
+        {
+          "number": 10,
+          "filename": "62396351_ODEwLTEwODAtNWNlZGNiY2NlNA.webp",
+          "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 10 Images\\62396351_ODEwLTEwODAtNWNlZGNiY2NlNA.webp",
+          "bytes": 39834,
+          "sha256": "47e32cd68dd4045f39eed2162112dfd1211161566bb7935fe1e02f48233693c4",
+          "width": 810,
+          "height": 1080,
+          "format": "WEBP",
+          "decoded": true
+        }
+      ],
+      "duplicateImages": [],
+      "proposedCover": {
+        "filename": "62396347_ODEwLTEwODAtYzBlZGY3Mjk0NA.webp",
+        "reason": "Visually reviewed exterior with the listed agent watermark."
+      },
+      "proposedImageOrder": [
+        "62396347_ODEwLTEwODAtYzBlZGY3Mjk0NA.webp",
+        "62396332_ODEwLTEwODAtZmRhYWE2YmM5Yg.webp",
+        "62396333_ODEwLTEwODAtMDc5ZWYzMDk5OA.webp",
+        "62396334_ODEwLTEwODAtMjc0OGVlZmUxYQ.webp",
+        "62396351_ODEwLTEwODAtNWNlZGNiY2NlNA.webp"
+      ],
+      "sourceImageCount": 5,
+      "selectedImageCount": 5,
+      "sizeBasis": "Not specified in source",
+      "pendingIssues": [],
+      "confirmedFields": {
+        "ECO RATING": {
+          "value": "D",
+          "ownerReply": "use D for the rest",
+          "date": "2026-11-06",
+          "authority": "Owner confirmation in conversation"
+        }
+      },
+      "status": "Reviewed for import",
+      "normalizations": [
+        {
+          "field": "STOREY",
+          "from": "Two-storey",
+          "to": "Multi Storey",
+          "reason": "The existing model distinguishes single from multi storey; original two/three-storey wording is preserved."
+        }
+      ],
+      "normalizedFacilities": [
+        "Air Conditioning",
+        "Dining Area",
+        "24-hour Electricity",
+        "Wardrobe",
+        "PoP ceiling",
+        "Refrigerator",
+        "TV",
+        "En Suite",
+        "Kitchen Cabinets",
+        "Tiled floor",
+        "Balcony"
+      ],
+      "normalizedStorey": "Multi Storey",
+      "normalizedType": "Compound House",
+      "preparedPhotos": [
+        {
+          "sourceFilename": "62396347_ODEwLTEwODAtYzBlZGY3Mjk0NA.webp",
+          "rawSourceSha256": "4ee0bde8ce4caf375078925f18a0adf7d076f579ac251da5f4d5fde335139412",
+          "originalUrl": "/properties/labone-au-village-compound-house-tetteh/01.webp",
+          "registeredSourceSha256": "4ee0bde8ce4caf375078925f18a0adf7d076f579ac251da5f4d5fde335139412",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "sourceFilename": "62396332_ODEwLTEwODAtZmRhYWE2YmM5Yg.webp",
+          "rawSourceSha256": "a83ef333c46c3bf23ded85b32ac32a9e7c245a64dcbed7dcd66ca23a58377d5d",
+          "originalUrl": "/properties/labone-au-village-compound-house-tetteh/02.webp",
+          "registeredSourceSha256": "a83ef333c46c3bf23ded85b32ac32a9e7c245a64dcbed7dcd66ca23a58377d5d",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "sourceFilename": "62396333_ODEwLTEwODAtMDc5ZWYzMDk5OA.webp",
+          "rawSourceSha256": "8f2e4d1174d8c6c270255d47ace99db42fa9edbc0053a81fcd67cfba402f5999",
+          "originalUrl": "/properties/labone-au-village-compound-house-tetteh/03.webp",
+          "registeredSourceSha256": "8f2e4d1174d8c6c270255d47ace99db42fa9edbc0053a81fcd67cfba402f5999",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "sourceFilename": "62396334_ODEwLTEwODAtMjc0OGVlZmUxYQ.webp",
+          "rawSourceSha256": "e7347b74efe3cf76e3014dc020d02767855b2b3a8dcf3fd3373ed5ea8136c042",
+          "originalUrl": "/properties/labone-au-village-compound-house-tetteh/04.webp",
+          "registeredSourceSha256": "e7347b74efe3cf76e3014dc020d02767855b2b3a8dcf3fd3373ed5ea8136c042",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "sourceFilename": "62396351_ODEwLTEwODAtNWNlZGNiY2NlNA.webp",
+          "rawSourceSha256": "47e32cd68dd4045f39eed2162112dfd1211161566bb7935fe1e02f48233693c4",
+          "originalUrl": "/properties/labone-au-village-compound-house-tetteh/05.webp",
+          "registeredSourceSha256": "47e32cd68dd4045f39eed2162112dfd1211161566bb7935fe1e02f48233693c4",
+          "width": 810,
+          "height": 1080
+        }
+      ],
+      "importedListing": {
+        "id": "labone-au-village-compound-house-tetteh",
+        "galleryFile": "data/property-photo-galleries/labone-au-village-compound-house-tetteh.json",
+        "photos": 5
+      }
+    }
+  ],
+  "incompleteDownloads": [
+    {
+      "number": 2,
+      "filename": "39245923_MTEyNS0xNTAwLWQ0ZmE1NTYxMzUtMQ.webp.crdownload",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 2 Images\\39245923_MTEyNS0xNTAwLWQ0ZmE1NTYxMzUtMQ.webp.crdownload",
+      "bytes": 139707,
+      "sha256": "60e79b951d620f6f25bf128458b70d90d56338dce2f4425583b531bfed1d92ac",
+      "decoded": false,
+      "error": "could not create decoder object"
+    },
+    {
+      "number": 5,
+      "filename": "63337394_MTI4MC05NjAtYzg1YWFiZTBhOA.webp.crdownload",
+      "sourcePath": "C:\\Users\\Admin\\Desktop\\Adom Data\\Property 5 Images\\63337394_MTI4MC05NjAtYzg1YWFiZTBhOA.webp.crdownload",
+      "bytes": 32296,
+      "sha256": "06670879bbecf673ea8148f4c3d348def2e04f9eea40d1e338a192ea31a4cd2d",
+      "decoded": false,
+      "error": "could not create decoder object"
+    }
+  ],
+  "existingPhotoHashMatches": [],
+  "summary": {
+    "sourceListings": 10,
+    "sourceFields": 200,
+    "completeImageFiles": 64,
+    "uniqueImages": 60,
+    "duplicates": 4,
+    "incompleteDownloads": 2,
+    "documentedPhoneNumbers": 11,
+    "activeListings": 9,
+    "heldListings": [
+      9
+    ],
+    "selectedActivePhotos": 54,
+    "confirmedEcoRatings": 9
+  },
+  "status": "Nine listings imported with 54 reviewed photos; Adom property 9 remains on hold. No database rows inserted.",
+  "independentExtraction": {
+    "readers": [
+      "Python ElementTree with explicit line breaks",
+      "PowerShell .NET XmlDocument"
+    ],
+    "matchingSourceFields": 200
+  }
+}
