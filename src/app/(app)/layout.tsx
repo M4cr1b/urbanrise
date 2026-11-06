@@ -40,7 +40,7 @@ export default function WorkbenchLayout({
 
       {/* dvh, not vh: mobile browsers' collapsing URL bar makes vh overflow. */}
       <div className="flex h-dvh flex-col overflow-hidden bg-surface-container-low">
-        <header className="topo-bg-invert flex shrink-0 flex-wrap items-center gap-x-2 border-b border-white/10 bg-chrome px-4 pt-[env(safe-area-inset-top)] md:flex-nowrap md:px-3">
+        <header className="workbench-header topo-bg-invert flex shrink-0 flex-wrap items-center gap-x-2 border-b border-white/10 bg-chrome px-4 pt-[env(safe-area-inset-top)] md:flex-nowrap md:px-3">
           <WorkbenchBrand />
           <MobileModuleTitle />
           <div className="ml-auto py-1 text-inverse-on-surface md:order-last"><ThemeSelect /></div>
@@ -59,7 +59,7 @@ export default function WorkbenchLayout({
           <main
             id="workbench-main"
             tabIndex={-1}
-            className="min-h-0 min-w-0 flex-1 overflow-auto overscroll-y-contain scrollbar-slim"
+            className="workbench-content min-h-0 min-w-0 flex-1 overflow-auto overscroll-y-contain scrollbar-slim"
           >
             {children}
           </main>

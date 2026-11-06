@@ -267,7 +267,7 @@ function StagePad({ children }: { children: React.ReactNode }) {
 
 function StageHeading({ title, blurb }: { title: string; blurb: string }) {
   return (
-    <header className="mb-6">
+    <header className="workspace-heading mb-6">
       <h2 className="font-headline text-headline-lg text-primary">{title}</h2>
       <p className="mt-1 text-body-md text-on-surface-variant">{blurb}</p>
     </header>

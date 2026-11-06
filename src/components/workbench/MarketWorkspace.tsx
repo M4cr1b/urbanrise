@@ -70,7 +70,7 @@ export function MarketWorkspace({ markets }: { markets: LocalityStats[] }) {
 
   return (
     <div className="min-w-0 p-4 md:p-8">
-      <header className="mb-6">
+      <header className="workspace-heading mb-6">
         <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
           What homes cost in {PRIMARY_REGION}
         </h1>
@@ -191,7 +191,7 @@ function HeadlineTile({
   plain: string;
 }) {
   return (
-    <div className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-3.5 sm:p-5">
+    <div className="surface-panel min-w-0 p-3.5 sm:p-5">
       <Icon className="mb-3 size-5 text-secondary sm:size-6" aria-hidden />
       <p className="wrap-anywhere font-headline text-xl font-semibold text-primary sm:font-data sm:text-headline-md">{figure}</p>
       <p className="mt-1 text-xs font-semibold text-on-surface sm:font-data sm:text-data-sm">
@@ -208,7 +208,7 @@ function LocalityCard({ market: m }: { market: LocalityStats }) {
   const band = bandOf(m.medianPrice);
 
   return (
-    <li className="min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-4 sm:p-5">
+    <li className="surface-card min-w-0 p-4 sm:p-5">
       <div className="mb-3 flex items-start justify-between gap-2">
         <h2 className="min-w-0 wrap-anywhere font-headline text-headline-md text-primary">
           {m.locality}

@@ -55,7 +55,7 @@ export function ProfessionalsWorkspace({
 
   return (
     <div className="min-w-0 p-4 md:p-8">
-      <header className="mb-6">
+      <header className="workspace-heading mb-6">
         <h1 className="font-headline text-headline-lg-mobile text-primary md:text-headline-lg">
           Find a Professional
         </h1>
@@ -65,7 +65,7 @@ export function ProfessionalsWorkspace({
         </p>
       </header>
 
-      <div className="mb-6 space-y-3 rounded-md border border-outline-variant/60 bg-surface-container-lowest p-4">
+      <div className="surface-panel mb-6 space-y-3 p-4">
         <div className="flex flex-wrap items-center gap-3">
           <div className="relative min-w-0 basis-full md:flex-1 md:basis-auto">
             <Search
@@ -119,7 +119,7 @@ export function ProfessionalsWorkspace({
           {results.map((p) => (
             <li
               key={p.id}
-              className="overflow-hidden rounded-md border border-outline-variant/60 bg-surface-container-lowest"
+              className="surface-card overflow-hidden"
             >
               {/* Photograph first: engaging a valuer or lawyer is a personal
                   decision, and a wall of names tells you nothing about who you
@@ -164,7 +164,7 @@ export function ProfessionalsWorkspace({
                     </div>
                     {p.verified && (
                       <span
-                        className="flex shrink-0 items-center gap-1 rounded-sm bg-secondary-container px-2 py-1 text-label-caps text-on-secondary-fixed"
+                        className="registration-badge flex shrink-0 items-center gap-1 rounded-full bg-secondary-container px-2.5 py-1 text-[11px] font-semibold text-on-secondary-container"
                         title="Registration confirmed with the professional body"
                       >
                         <ShieldCheck className="size-3.5" aria-hidden />

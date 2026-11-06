@@ -55,7 +55,7 @@ export default async function LandingPage() {
               </div>
               <Link
                 href="/search"
-                className="btn-leaf inline-flex items-center gap-2 rounded-md bg-primary-container px-6 py-3 text-body-md text-on-primary-container md:hidden"
+                className="action-primary inline-flex min-h-12 items-center gap-2 px-6 py-3 md:hidden"
               >
                 <Search className="size-4" aria-hidden />
                 Search properties

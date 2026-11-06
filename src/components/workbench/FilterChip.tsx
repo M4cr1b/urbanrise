@@ -67,7 +67,7 @@ export function FilterChip({
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={isOpen ? panelId : undefined}
-        className={`flex items-center gap-2 rounded-md border px-3 py-2 font-data text-data-sm transition-all ${
+        className={`filter-trigger flex items-center gap-2 border px-3 py-2 transition-all ${
           isOpen
             ? "border-primary bg-primary/10 text-primary"
             : "border-outline-variant bg-surface text-on-surface-variant hover:border-primary/50 hover:text-primary"
@@ -85,7 +85,7 @@ export function FilterChip({
       {isOpen && (
         <div
           ref={panelRef} id={panelId} role="group" aria-label={`${label} filters`}
-          className="fixed z-50 max-h-[calc(100dvh-24px)] w-[min(300px,calc(100vw-24px))] overflow-y-auto overscroll-contain rounded-lg border border-outline-variant bg-surface-container-lowest p-4 shadow-[var(--shadow-level-2)]"
+          className="filter-panel fixed z-50 max-h-[calc(100dvh-24px)] w-[min(300px,calc(100vw-24px))] overflow-y-auto overscroll-contain border border-outline-variant bg-surface-container-lowest p-4"
           style={position}
         >
           {children}

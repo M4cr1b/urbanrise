@@ -39,21 +39,22 @@ export function SearchCard({ properties }: { properties: Property[] }) {
   }
 
   return (
-    <div className="topo-bg min-w-0 rounded-xl border border-primary/10 bg-surface-container-lowest p-4 shadow-[var(--shadow-level-2)] sm:p-6 md:p-8">
-      <div className="mb-6 grid grid-cols-[auto_auto_minmax(0,1fr)] gap-4 border-b border-outline-variant/30 sm:flex sm:gap-8">
+    <div className="home-search surface-panel min-w-0 p-4 sm:p-6 md:p-7">
+      <div className="home-search-tabs mb-6 grid grid-cols-3 sm:flex">
         {TABS.map((t) => (
           <button
             key={t}
             type="button"
             onClick={() => setTab(t)}
             aria-pressed={tab === t}
+            aria-label={t}
             className={`-mb-px min-h-11 border-b-2 pb-3 text-left font-headline text-base font-semibold transition-colors sm:pb-4 sm:text-headline-md ${
               tab === t
                 ? "border-primary font-bold text-primary"
                 : "border-transparent text-on-surface-variant hover:text-primary"
             }`}
           >
-            {t}
+            {t === "New Developments" ? <><span className="sm:hidden">New homes</span><span className="hidden sm:inline">{t}</span></> : t}
           </button>
         ))}
       </div>
@@ -136,7 +137,7 @@ export function SearchCard({ properties }: { properties: Property[] }) {
         <button
           type="button"
           onClick={submit}
-          className="btn-leaf flex w-full items-center justify-center gap-2 rounded-md bg-primary-container px-6 py-3 font-data text-data-lg text-on-primary-container hover:bg-primary hover:text-on-primary"
+          className="action-primary flex min-h-12 w-full items-center justify-center gap-2 px-6 py-3"
         >
           <Search className="size-5" aria-hidden />
           Search

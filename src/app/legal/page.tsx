@@ -10,7 +10,7 @@ export default function LegalPage() {
   return (
     <>
       <TopNav />
-      <main className="flex-1 pt-[calc(5rem+env(safe-area-inset-top))]">
+      <main className="editorial-page flex-1 pt-[calc(5rem+env(safe-area-inset-top))]">
         {/* Hero section */}
         <div className="border-b border-outline-variant bg-surface-container-lowest px-4 py-12 md:px-8 md:py-20">
           <div className="mx-auto max-w-2xl">
