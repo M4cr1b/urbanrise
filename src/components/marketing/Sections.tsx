@@ -16,6 +16,7 @@ import {
 import { EcoBadge } from "@/components/ui/Badges";
 import { formatCedi, formatCediCompact, formatSqm } from "@/lib/format";
 import type { Property, NationalStats } from "@/lib/types";
+import landing from "./Landing.module.css";
 
 /* ---------------------------------------------------------------------------
    Hero copy — the left column of the landing stage.
@@ -23,20 +24,20 @@ import type { Property, NationalStats } from "@/lib/types";
 
 export function HeroCopy({ children }: { children?: React.ReactNode }) {
   return (
-    <div>
-      <p className="section-kicker">Find your place in Ghana</p>
-      <h1 className="hero-title mb-4 font-headline text-primary md:mb-5">
+    <div className={landing.copy}>
+      <p className={`section-kicker ${landing.kicker}`}>A better way to find your place</p>
+      <h1 className={`hero-title font-headline text-primary ${landing.title}`}>
         <span className="hero-phrase">Live well.</span>{" "}
-        <span className="hero-phrase hero-accent">Build green.</span>{" "}
+        <span className={`hero-phrase hero-accent ${landing.accent}`}>Build green.</span>{" "}
         <span className="hero-phrase">Buy smart.</span>
       </h1>
-      <p className="hero-description mb-5 text-on-surface-variant md:mb-6">
-        Discover Ghana&apos;s most trusted, verified, and eco-rated homes.
-        Sustainable living starts with better data.
+      <p className={`hero-description text-on-surface-variant ${landing.description}`}>
+        Discover homes across Ghana, local expertise and the insight
+        to make your next move with confidence.
       </p>
-      <div className="hero-trust mb-6 flex items-center gap-2 text-on-surface-variant">
+      <div className={`hero-trust text-on-surface-variant ${landing.trust}`}>
         <ShieldCheck className="size-4 shrink-0 text-secondary" aria-hidden />
-        Every listing verified by GhIS-registered surveyors.
+        Property insight. Local expertise. Greener possibilities.
       </div>
       {children}
     </div>

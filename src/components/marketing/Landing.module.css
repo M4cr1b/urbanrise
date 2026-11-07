@@ -1,0 +1,48 @@
+.page { background: var(--color-surface); }
+.page :global(.marketing-header) { border-bottom-color: color-mix(in srgb, currentColor 8%, transparent); }
+.page :global(.brand-wordmark) { gap: 10px; }
+.page :global(.nav-capsule) { padding: 3px; background: color-mix(in srgb, currentColor 3%, transparent); }
+.copy { min-width: 0; position: relative; }
+.copy .kicker { gap: 10px; margin-bottom: 19px; font-size: 9px; letter-spacing: .16em; }
+.copy .title { max-width: none; margin: 0 0 20px; font-size: clamp(44px, 4.1vw, 60px); line-height: 1.03; font-weight: 600; letter-spacing: -.055em; text-wrap: initial; }
+.title > span:last-child { display: block; }
+.copy .accent { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-style: italic; letter-spacing: -.065em; }
+.copy .description { max-width: 46ch; margin-bottom: 16px; font-size: 14px; line-height: 1.85; }
+.copy .trust { display: flex; align-items: center; gap: 8px; margin-bottom: 25px; font-size: 10px; line-height: 18px; }
+.trust > svg { box-sizing: content-box; width: 13px; height: 13px; padding: 5px; border: 1px solid color-mix(in srgb, var(--color-secondary) 15%, transparent); border-radius: 50%; background: color-mix(in srgb, var(--color-secondary) 4%, transparent); }
+.staticStage { position: relative; padding-top: calc(110px + env(safe-area-inset-top)); overflow: hidden; }
+.staticGrid, .cinematicGrid { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(0, 1fr); gap: 56px; max-width: 1376px; margin-inline: auto; padding-inline: 48px; }
+.staticGrid { align-items: center; padding-top: 30px; padding-bottom: 54px; }
+.staticImage { position: relative; align-self: stretch; min-height: 560px; overflow: hidden; border: 1px solid color-mix(in srgb, var(--color-primary) 10%, transparent); border-radius: 140px 22px 22px 22px; background: var(--color-surface-container); }
+.staticImage img { object-position: 61% center; }
+.imageCaption { position: absolute; right: 30px; bottom: 30px; left: 30px; display: flex; align-items: flex-end; justify-content: space-between; gap: 15px; isolation: isolate; color: #fff; }
+.imageCaption::before { content: ""; position: absolute; z-index: -1; inset: -120px -100vw -100px; background: linear-gradient(transparent, rgb(0 25 13 / 70%)); }
+.imageCaption > div { min-width: 0; }
+.imageCaption p { margin-bottom: 7px; font-family: var(--font-body); font-size: 8px; line-height: 14px; font-weight: 600; letter-spacing: .17em; text-transform: uppercase; }
+.imageCaption span { font-family: Georgia, "Times New Roman", serif; font-size: 27px; line-height: 1.15; font-style: italic; }
+.imageCaption > svg { flex-shrink: 0; box-sizing: content-box; width: 21px; height: 21px; padding: 12px; border: 1px solid rgb(255 255 255 / 35%); border-radius: 50%; }
+.cinematicCopy { position: absolute; inset: 0; z-index: 20; display: flex; align-items: center; padding-top: 84px; padding-bottom: 68px; will-change: opacity, transform; }
+.cinematicGrid { width: 100%; }
+.cinematicCaption { right: 7%; bottom: 15%; left: 60%; z-index: 2; }
+.cue { position: absolute; z-index: 40; left: max(48px, calc((100vw - 1280px) / 2)); bottom: 23px; display: flex; align-items: center; gap: 10px; color: var(--color-primary); }
+.cue span { font-family: var(--font-body); font-size: 8px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+.cue svg { width: 28px; height: 28px; padding: 7px; border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent); border-radius: 50%; }
+.mobileSearch { display: none; }
+@media (min-width: 1024px) and (max-height: 799px) { .staticStage { padding-top: calc(90px + env(safe-area-inset-top)); } .staticGrid { padding-top: 20px; padding-bottom: 36px; } }
+@media (min-width: 1024px) and (max-height: 899px) { .copy .title { font-size: clamp(44px, 3.9vw, 54px); } .copy .kicker { margin-bottom: 14px; } .copy .description { margin-bottom: 12px; line-height: 1.7; } .copy .trust { margin-bottom: 19px; } }
+@media (max-width: 1199px) { .staticGrid, .cinematicGrid { gap: 36px; padding-inline: 36px; } .staticImage { min-height: 580px; border-top-left-radius: 110px; } .imageCaption { left: 24px; right: 24px; bottom: 24px; } .imageCaption span { font-size: 23px; } }
+@media (min-width: 768px) and (max-width: 1023px) { .staticGrid { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 24px; padding-inline: 24px; } .copy .title { font-size: 41px; } .staticImage { border-top-left-radius: 90px; } .imageCaption > svg { display: none; } .imageCaption span { font-size: 22px; } }
+@media (max-width: 767px) {
+  .staticStage { padding-top: calc(84px + env(safe-area-inset-top)); }
+  .staticGrid { grid-template-columns: minmax(0, 1fr); gap: 30px; padding: 24px 20px 0; }
+  .copy .kicker { margin-bottom: 18px; font-size: 8px; }
+  .copy .title { max-width: 12ch; margin-bottom: 19px; font-size: clamp(44px, 10.6vw, 64px); line-height: 1.04; }
+  .copy .description { max-width: 42ch; margin-bottom: 16px; font-size: 13px; line-height: 1.8; }
+  .copy .trust { max-width: 34ch; margin-bottom: 21px; font-size: 10px; }
+  .staticImage { min-height: 0; aspect-ratio: 1.25; border-radius: 85px 18px 18px 18px; }
+  .imageCaption { left: 24px; right: 24px; bottom: 24px; }
+  .imageCaption span { font-size: 25px; }
+  .imageCaption > svg { width: 17px; height: 17px; padding: 9px; }
+  .mobileSearch { display: block; padding: 22px 20px 36px; }
+}
+@media (max-width: 359px) { .copy .title { font-size: 43px; } .staticGrid { padding-inline: 16px; } .mobileSearch { padding-inline: 16px; } .imageCaption span { font-size: 22px; } .imageCaption > svg { display: none; } }

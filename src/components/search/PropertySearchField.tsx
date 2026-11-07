@@ -134,11 +134,20 @@ export function PropertySearchField({
     place();
     const observer = new ResizeObserver(place);
     if (dropdownRef.current) observer.observe(dropdownRef.current);
+    // The panel is portaled outside its input's ancestors. Close it when a
+    // parent becomes inert/hidden, including the landing hero's scroll handoff.
+    const visibilityObserver = new MutationObserver(() => {
+      if (inputRef.current?.closest("[inert], [hidden]")) setIsOpen(false);
+    });
+    visibilityObserver.observe(document.documentElement, {
+      attributes: true, attributeFilter: ["inert", "hidden"], subtree: true,
+    });
     window.addEventListener("resize", place);
     window.addEventListener("scroll", place, true);
     window.visualViewport?.addEventListener("resize", place);
     return () => {
       observer.disconnect();
+      visibilityObserver.disconnect();
       window.removeEventListener("resize", place);
       window.removeEventListener("scroll", place, true);
       window.visualViewport?.removeEventListener("resize", place);

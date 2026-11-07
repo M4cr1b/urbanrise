@@ -12,6 +12,7 @@ import {
 } from "@/components/marketing/Sections";
 import { PortalReveal } from "@/components/scroll/PortalReveal";
 import { getFeaturedProperties, getNationalStats, getProperties } from "@/lib/data";
+import landing from "@/components/marketing/Landing.module.css";
 
 
 /**
@@ -27,7 +28,7 @@ const HERO_IMAGE = {
   // generated assets with no durability guarantee, and this is the first thing
   // every visitor sees.
   src: "/hero-eco-home.webp",
-  alt: "A sustainable eco-home in Ghana with lush green walls, rooftop solar panels and large glass windows, overlooking the Accra skyline.",
+  alt: "A contemporary home framed by trees, with warm timber cladding and floor-to-ceiling windows.",
 };
 
 export default async function LandingPage() {
@@ -38,7 +39,7 @@ export default async function LandingPage() {
   ]);
 
   return (
-    <>
+    <div className={landing.page}>
       <TopNav />
 
       <main>
@@ -63,7 +64,7 @@ export default async function LandingPage() {
             </HeroCopy>
           }
         >
-          <div className="px-margin-mobile py-6 md:hidden">
+          <div className={landing.mobileSearch}>
             <SearchCard properties={properties} />
           </div>
           <PortalPanel />
@@ -75,6 +76,6 @@ export default async function LandingPage() {
       </main>
 
       <SiteFooter />
-    </>
+    </div>
   );
 }

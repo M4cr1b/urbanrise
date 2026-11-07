@@ -16,6 +16,9 @@ const RUNWAY = 'section[aria-label="Introduction"]';
  * in the scroll runway, so the runway is not present on first paint by design.
  */
 async function gotoAnimated(page: Page) {
+  // Cinematic motion is deliberately limited to roomy desktop viewports.
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto("/");
   await page.waitForSelector(RUNWAY, { state: "attached" });
 }
@@ -48,7 +51,7 @@ async function scrubTo(page: Page, progress: number) {
 function imageClip(page: Page) {
   return page.evaluate(() => {
     const wrap = document.querySelector(
-      'section[aria-label="Introduction"] .sticky > div:nth-child(2)',
+      'section[aria-label="Introduction"] [data-hero-image]',
     ) as HTMLElement;
     return getComputedStyle(wrap).clipPath;
   });
@@ -77,7 +80,7 @@ test.describe("portal reveal", () => {
     await scrubTo(page, 0.45);
     // Every inset has eased to ~0: the photograph now fills the viewport.
     const full = await imageClip(page);
-    const insets = [...full.matchAll(/([\d.]+)%/g)].map((m) => Number(m[1]));
+    const insets = [...full.matchAll(/([-+]?(?:\d*\.)?\d+(?:e[-+]?\d+)?)%/gi)].map((m) => Number(m[1]));
     expect(Math.max(...insets)).toBeLessThan(2);
 
     // By the end the panel behind the portal is fully revealed and legible.
@@ -86,6 +89,24 @@ test.describe("portal reveal", () => {
       page.getByRole("heading", { name: /property information, finally/i }),
     ).toBeInViewport();
     await expect(page.getByRole("link", { name: /Verified listings/i })).toBeVisible();
+  });
+
+  test("the fading hero leaves the keyboard order and returns on scroll back", async ({ page }) => {
+    await gotoAnimated(page);
+    const hero = page.locator(`${RUNWAY} [data-hero-copy]`);
+    await expect.poll(() => hero.evaluate(element => (element as HTMLElement).inert)).toBe(false);
+    await hero.getByRole("combobox", { name: "Search by address or district", exact: true }).focus();
+    await expect(page.getByRole("listbox", { name: "Property suggestions" })).toBeVisible();
+
+    await scrubTo(page, 0.45);
+    await expect.poll(() => hero.evaluate(element => (element as HTMLElement).inert)).toBe(true);
+    await expect(page.getByRole("listbox", { name: "Property suggestions" })).toHaveCount(0);
+    await page.keyboard.press("Tab");
+    expect(await hero.evaluate(element => element.contains(document.activeElement))).toBe(false);
+
+    await scrubTo(page, 0);
+    await expect.poll(() => hero.evaluate(element => (element as HTMLElement).inert)).toBe(false);
+    await expect(hero.getByRole("button", { name: "Search properties", exact: true })).toBeVisible();
   });
 
   test("no horizontal overflow at any point of the reveal", async ({ page }) => {
@@ -108,6 +129,7 @@ test.describe("reduced motion", () => {
   test("collapses the scroll-jack and stacks the content statically", async ({
     page,
   }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 });
     await page.goto("/");
 
     // The 320vh runway must not exist — that is the whole point of the query.

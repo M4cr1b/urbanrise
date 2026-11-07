@@ -1,14 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { ArrowDown, Leaf } from "lucide-react";
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { useMotionEnabled, useScrollScrub } from "./useScrollScrub";
+import landing from "@/components/marketing/Landing.module.css";
 
 /* ---------------------------------------------------------------------------
    Timing. Progress runs 0 → 1 across the runway.
    ------------------------------------------------------------------------ */
 
-/** Phase 1: the image opens out of its hero pill into full bleed. */
+/** Phase 1: the architectural image frame opens into full bleed. */
 const IMAGE_END = 0.45;
 /** Phase 2: a window opens at the centre and the page grows out of it. */
 const PORTAL_START = 0.45;
@@ -43,7 +45,7 @@ interface Props {
 /**
  * Scroll-driven portal reveal.
  *
- * The hero image expands out of its left-rounded pill until it fills the
+ * The hero image expands out of its rounded frame until it fills the
  * viewport, then a rounded window opens at its centre and the rest of the page
  * grows out of it. Scroll only drives progress — `position: sticky` does the
  * pinning, and `clip-path` runs on the compositor, so no layout is recalculated
@@ -62,13 +64,16 @@ export function PortalReveal({ image, hero, children }: Props) {
   const portalRef = useRef<HTMLDivElement | null>(null);
   const portalInnerRef = useRef<HTMLDivElement | null>(null);
   const cueRef = useRef<HTMLDivElement | null>(null);
+  const captionRef = useRef<HTMLDivElement | null>(null);
 
   const motion = useMotionEnabled();
-  const [narrow, setNarrow] = useState(false);
+  const [staticLayout, setStaticLayout] = useState(true);
 
   useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    const apply = () => setNarrow(mq.matches);
+    // Search controls need room below the fixed navigation. Short windows,
+    // tablets and phones use a normal-flow layout with no pinned content.
+    const mq = window.matchMedia("(min-width: 1024px) and (min-height: 800px)");
+    const apply = () => setStaticLayout(!mq.matches);
     apply();
     mq.addEventListener("change", apply);
     return () => mq.removeEventListener("change", apply);
@@ -79,13 +84,8 @@ export function PortalReveal({ image, hero, children }: Props) {
       const e1 = ease(phase(p, 0, IMAGE_END));
       const e2 = easeOut(phase(p, PORTAL_START, PORTAL_END));
 
-      // --- Phase 1: the image opens out of its hero pill -------------------
-      // The side-pill geometry only reads when there is a copy column beside
-      // it. On a phone the copy sits above instead, so the image starts as a
-      // rounded panel in the lower half rather than behind the text.
-      const start = narrow
-        ? { top: 44, right: 6, bottom: 6, left: 6, radius: 10 }
-        : { top: 10, right: 0, bottom: 10, left: 54, radius: 50 };
+      // The architectural frame opens into the full photograph.
+      const start = { top: 12, right: 4, bottom: 10, left: 55, radius: 14 };
 
       const top = lerp(start.top, 0, e1);
       const right = lerp(start.right, 0, e1);
@@ -94,15 +94,14 @@ export function PortalReveal({ image, hero, children }: Props) {
       const rad = lerp(start.radius, 0, e1);
 
       if (imageWrapRef.current) {
-        imageWrapRef.current.style.clipPath = narrow
-          ? `inset(${top}% ${right}% ${bottom}% ${left}% round ${rad}%)`
-          : `inset(${top}% ${right}% ${bottom}% ${left}% round ${rad}% 0% 0% ${rad}%)`;
+        const smallRad = lerp(1.8, 0, e1);
+        imageWrapRef.current.style.clipPath = `inset(${top}% ${right}% ${bottom}% ${left}% round ${rad}% ${smallRad}% ${smallRad}% ${smallRad}%)`;
       }
 
       // The image itself eases back from a slight push-in, so the clip opening
       // reads as a camera pulling out rather than a mask being wiped.
       if (imageInnerRef.current) {
-        imageInnerRef.current.style.transform = `scale(${lerp(1.18, 1, e1)})`;
+        imageInnerRef.current.style.transform = `scale(${lerp(1.08, 1, e1)})`;
       }
 
       // --- Hero copy hands over --------------------------------------------
@@ -113,10 +112,12 @@ export function PortalReveal({ image, hero, children }: Props) {
         heroRef.current.style.opacity = String(1 - heroOut);
         heroRef.current.style.transform = `translateY(${heroOut * 40}px)`;
         heroRef.current.style.pointerEvents = heroOut > 0.1 ? "none" : "auto";
+        heroRef.current.inert = heroOut > 0.1;
       }
       if (cueRef.current) {
         cueRef.current.style.opacity = String(1 - clamp01(p / 0.12));
       }
+      if (captionRef.current) captionRef.current.style.opacity = String(1 - e1);
 
       // --- Scrim -----------------------------------------------------------
       // Only once the image is essentially full-bleed: its job is to give the
@@ -136,6 +137,7 @@ export function PortalReveal({ image, hero, children }: Props) {
       if (portalRef.current) {
         portalRef.current.style.clipPath = `inset(${inset}% round ${portalRadius}px)`;
         portalRef.current.style.visibility = e2 <= 0 ? "hidden" : "visible";
+        portalRef.current.inert = e2 < 0.9;
       }
       if (portalInnerRef.current) {
         // A modest push-in: enough to read as arriving, not so much that the
@@ -152,14 +154,14 @@ export function PortalReveal({ image, hero, children }: Props) {
         `color-mix(in srgb, var(--color-surface) ${(1 - dark) * 80}%, transparent)`,
       );
     },
-    [narrow],
+    [],
   );
 
-  useScrollScrub(runwayRef, render, { disabled: !motion || narrow });
+  useScrollScrub(runwayRef, render, { disabled: !motion || staticLayout });
 
   // Leave the nav as the rest of the site expects it.
   useEffect(() => {
-    if (narrow || !motion) {
+    if (staticLayout || !motion) {
       document.documentElement.style.removeProperty("--ur-nav-ink");
       document.documentElement.style.removeProperty("--ur-nav-bg");
     }
@@ -168,25 +170,30 @@ export function PortalReveal({ image, hero, children }: Props) {
       root.style.removeProperty("--ur-nav-ink");
       root.style.removeProperty("--ur-nav-bg");
     };
-  }, [narrow, motion]);
+  }, [staticLayout, motion]);
 
   /* --- Static layout: the server render, and the permanent one for anyone
          who asked for reduced motion. No runway, no scrub, no clipping. --- */
-  if (!motion || narrow) {
+  if (!motion || staticLayout) {
     return (
       <>
-        <section className="hero-stage relative overflow-hidden pt-[calc(4rem+env(safe-area-inset-top))] md:min-h-[80vh] md:pt-24">
-          <div className="mx-auto grid max-w-container-max items-center gap-6 px-margin-mobile py-8 md:grid-cols-12 md:px-margin-desktop md:py-section-gap">
-            <div className="md:col-span-7">{hero}</div>
-            <div className="hero-image relative aspect-4/3 overflow-hidden rounded-3xl md:col-span-5">
+        <section className={`hero-stage ${landing.staticStage}`}>
+          <div className={landing.staticGrid}>
+            <div>{hero}</div>
+            <div className={landing.staticImage}>
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
-                priority
+                preload
+                quality={90}
                 sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover"
               />
+              <div className={landing.imageCaption}>
+                <div><p>The art of living well</p><span>A little closer to home.</span></div>
+                <Leaf aria-hidden />
+              </div>
             </div>
           </div>
         </section>
@@ -199,40 +206,46 @@ export function PortalReveal({ image, hero, children }: Props) {
     <>
       <section
         ref={runwayRef}
-        className={narrow ? "relative h-[200vh]" : "relative h-[320vh]"}
+        className="relative h-[320vh]"
         aria-label="Introduction"
       >
         <div className="hero-stage sticky top-0 h-screen overflow-hidden bg-surface">
           {/* Hero copy — present on load, hands over to the image */}
           <div
             ref={heroRef}
-            className="absolute inset-0 z-20 flex items-start pt-24 will-change-[opacity,transform] md:items-center md:pt-0"
+            data-hero-copy
+            className={landing.cinematicCopy}
           >
-            <div className="mx-auto grid w-full max-w-container-max gap-gutter px-margin-mobile md:grid-cols-12 md:px-margin-desktop md:pt-16">
-              <div className="md:col-span-7">{hero}</div>
+            <div className={landing.cinematicGrid}>
+              <div>{hero}</div>
             </div>
           </div>
 
           {/* The image that becomes the whole page */}
           <div
             ref={imageWrapRef}
+            data-hero-image
             className="absolute inset-0 z-10 will-change-[clip-path]"
-            style={{ clipPath: "inset(10% 0% 10% 54% round 50% 0% 0% 50%)" }}
+            style={{ clipPath: "inset(12% 4% 10% 55% round 14% 1.8% 1.8% 1.8%)" }}
           >
             <div
               ref={imageInnerRef}
               className="relative size-full will-change-transform"
-              style={{ transform: "scale(1.18)" }}
+              style={{ transform: "scale(1.08)" }}
             >
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
-                priority
-                quality={100}
+                preload
+                quality={90}
                 sizes="100vw"
                 className="object-cover"
               />
+            </div>
+            <div ref={captionRef} className={`${landing.imageCaption} ${landing.cinematicCaption}`}>
+              <div><p>The art of living well</p><span>A little closer to home.</span></div>
+              <Leaf aria-hidden />
             </div>
             <div
               ref={scrimRef}
@@ -273,10 +286,9 @@ export function PortalReveal({ image, hero, children }: Props) {
           <div
             ref={cueRef}
             aria-hidden
-            className="absolute inset-x-0 bottom-8 z-40 hidden flex-col items-center gap-2 text-primary md:flex"
+            className={landing.cue}
           >
-            <span className="text-label-caps opacity-70">Scroll to explore</span>
-            <span className="block h-10 w-px animate-pulse bg-primary/40" />
+            <ArrowDown /><span>Scroll to discover UrbanRise</span>
           </div>
         </div>
       </section>
