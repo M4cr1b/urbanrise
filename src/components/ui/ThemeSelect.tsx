@@ -24,7 +24,7 @@ export function ThemeSelect() {
     const trigger = triggerRef.current;
     if (!panel || !trigger) return;
     const rect = trigger.getBoundingClientRect();
-    const width = Math.min(332, window.innerWidth - 24);
+    const width = Math.min(260, window.innerWidth - 24);
     panel.style.width = `${width}px`;
     panel.style.left = `${Math.max(12, Math.min(rect.right - width, window.innerWidth - width - 12))}px`;
     panel.style.top = `${Math.max(12, Math.min(rect.bottom + 12, window.innerHeight - panel.offsetHeight - 12))}px`;
@@ -83,18 +83,18 @@ export function ThemeSelect() {
         <div className={styles.heading}>
           <div>
             <p className={styles.eyebrow}>MAKE IT YOURS</p>
-            <h2>A little change of atmosphere.</h2>
+            <h2>Appearance</h2>
           </div>
           <button type="button" popoverTarget={id} popoverTargetAction="hide" aria-label="Close appearance settings" className={styles.close}>
             <X size={17} aria-hidden="true" />
           </button>
         </div>
-        <p id={`${id}-description`} className={styles.description}>The same UrbanRise. In your favourite light.</p>
+        <p id={`${id}-description`} className="sr-only">Choose your favourite light for UrbanRise.</p>
         <fieldset className={styles.options}>
           <legend className="sr-only">Choose appearance</legend>
           {MODES.map(({ value, label, description, icon: Icon }) => (
-            <label key={value} className={styles.option}>
-              <input type="radio" name={`${id}-theme`} value={value} aria-label={label} checked={preference === value} onChange={() => choose(value)} className={styles.input} />
+            <label key={value} className={styles.option} title={description}>
+              <input type="radio" name={`${id}-theme`} value={value} aria-label={label} aria-describedby={`${id}-${value}-description`} checked={preference === value} onChange={() => choose(value)} className={styles.input} />
               <span className={styles.card}>
                 <span className={styles.preview} data-preview={value} aria-hidden="true">
                   <span className={styles.previewBar}><i /><i /><i /></span>
@@ -105,7 +105,7 @@ export function ThemeSelect() {
                   <span className={styles.previewTiles}><i /><i /><i /></span>
                 </span>
                 <span className={styles.cardLabel}><Icon size={14} aria-hidden="true" />{label}</span>
-                <span className={styles.cardDescription}>{description}</span>
+                <span id={`${id}-${value}-description`} className="sr-only">{description}</span>
                 <span className={styles.selected} aria-hidden="true"><Check size={10} strokeWidth={3} /></span>
               </span>
             </label>
@@ -113,10 +113,9 @@ export function ThemeSelect() {
         </fieldset>
         <div className={styles.footer}>
           <span className={styles.statusDot} aria-hidden="true" />
-          <p role="status">{preference === "system" ? `Following your device · ${resolvedTheme} mode` : `${preference === "dark" ? "Dark" : "Light"} mode, made for you`}</p>
+          <p role="status">{preference === "system" ? `Auto · ${resolvedTheme === "dark" ? "Dark" : "Light"}` : `${preference === "dark" ? "Dark" : "Light"} mode`}</p>
           <Monitor size={13} aria-hidden="true" />
         </div>
-        <p className={styles.saved}>Remembered on this browser. Always your choice.</p>
       </div>
     </>
   );
